@@ -11,7 +11,7 @@ zTree `初始化`方法，创建 zTree 必须使用此方法
 用于展现 zTree 的 `DOM 容器`(jQuery Object)
 
 #### zSetting
-zTree 的配置数据，具体参考「setting配置详情」中的各个属性详情说明(JSON)
+zTree 的配置数据，具体参考「setting配置详解」中的各个属性详情说明(JSON)
 
 #### zNodes
 zTree 的节点数据，具体参考「treeNode节点数据详解」中的各个属性详情说明(Array(JSON)/JSON)

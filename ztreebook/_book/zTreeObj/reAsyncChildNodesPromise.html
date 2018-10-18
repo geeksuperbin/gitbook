@@ -1,0 +1,986 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>reAsyncChildNodesPromise · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="refresh.html" />
+    
+    
+    <link rel="prev" href="reAsyncChildNodes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    zTree 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../zTreeFunc/">
+            
+                <a href="../zTreeFunc/">
+            
+                    
+                    $.fn.zTree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../zTreeFunc/init.html">
+            
+                <a href="../zTreeFunc/init.html">
+            
+                    
+                    init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../zTreeFunc/getZTreeObj.html">
+            
+                <a href="../zTreeFunc/getZTreeObj.html">
+            
+                    
+                    getZTreeObj
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../zTreeFunc/destroy.html">
+            
+                <a href="../zTreeFunc/destroy.html">
+            
+                    
+                    destroy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../zTreeFunc/_z.html">
+            
+                <a href="../zTreeFunc/_z.html">
+            
+                    
+                    _z
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../setting/README.md">
+            
+                <span>
+            
+                    
+                    setting 配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../setting/treeId.md">
+            
+                <span>
+            
+                    
+                    treeId
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../setting/treeObj.md">
+            
+                <span>
+            
+                    
+                    treeObj
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../setting/async.md">
+            
+                <span>
+            
+                    
+                    async
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../setting/autoParam.md">
+            
+                <span>
+            
+                    
+                    autoParam
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../setting/contentType.md">
+            
+                <span>
+            
+                    
+                    contentType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../setting/dataFilter.md">
+            
+                <span>
+            
+                    
+                    dataFilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../setting/dataType.md">
+            
+                <span>
+            
+                    
+                    dataType
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../setting/enable.md">
+            
+                <span>
+            
+                    
+                    enable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../setting/otherParam.md">
+            
+                <span>
+            
+                    
+                    otherParam
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../setting/type.md">
+            
+                <span>
+            
+                    
+                    type
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../setting/headers.md">
+            
+                <span>
+            
+                    
+                    headers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.9" data-path="../setting/xhrFields.md">
+            
+                <span>
+            
+                    
+                    xhrFields
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    zTreeObj 实例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="setting.html">
+            
+                <a href="setting.html">
+            
+                    
+                    setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="addNodes.html">
+            
+                <a href="addNodes.html">
+            
+                    
+                    addNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="cancelEditName.html">
+            
+                <a href="cancelEditName.html">
+            
+                    
+                    cancelEditName
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="cancelSelectedNode.html">
+            
+                <a href="cancelSelectedNode.html">
+            
+                    
+                    cancelSelectedNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="checkAllNodes.html">
+            
+                <a href="checkAllNodes.html">
+            
+                    
+                    checkAllNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="copyNode.html">
+            
+                <a href="copyNode.html">
+            
+                    
+                    copyNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="copyNode.html">
+            
+                <a href="copyNode.html">
+            
+                    
+                    copyNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="destroy.html">
+            
+                <a href="destroy.html">
+            
+                    
+                    destroy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="editName.html">
+            
+                <a href="editName.html">
+            
+                    
+                    editName
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="expandAll.html">
+            
+                <a href="expandAll.html">
+            
+                    
+                    expandAll
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="expandNode.html">
+            
+                <a href="expandNode.html">
+            
+                    
+                    expandNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="getChangeCheckedNodes.html">
+            
+                <a href="getChangeCheckedNodes.html">
+            
+                    
+                    getChangeCheckedNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="getCheckedNodes.html">
+            
+                <a href="getCheckedNodes.html">
+            
+                    
+                    getCheckedNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="getNodeByParam.html">
+            
+                <a href="getNodeByParam.html">
+            
+                    
+                    getNodeByParam
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="getNodeByTId.html">
+            
+                <a href="getNodeByTId.html">
+            
+                    
+                    getNodeByTId
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="getNodeIndex.html">
+            
+                <a href="getNodeIndex.html">
+            
+                    
+                    getNodeIndex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="getNodes.html">
+            
+                <a href="getNodes.html">
+            
+                    
+                    getNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="getNodesByFilter.html">
+            
+                <a href="getNodesByFilter.html">
+            
+                    
+                    getNodesByFilter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="getNodesByParam.html">
+            
+                <a href="getNodesByParam.html">
+            
+                    
+                    getNodesByParam
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="getNodesByParamFuzzy.html">
+            
+                <a href="getNodesByParamFuzzy.html">
+            
+                    
+                    getNodesByParamFuzzy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="getSelectedNodes.html">
+            
+                <a href="getSelectedNodes.html">
+            
+                    
+                    getSelectedNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="hideNode.html">
+            
+                <a href="hideNode.html">
+            
+                    
+                    hideNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="hideNodes.html">
+            
+                <a href="hideNodes.html">
+            
+                    
+                    hideNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="moveNode.html">
+            
+                <a href="moveNode.html">
+            
+                    
+                    moveNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="reAsyncChildNodes.html">
+            
+                <a href="reAsyncChildNodes.html">
+            
+                    
+                    reAsyncChildNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.26" data-path="reAsyncChildNodesPromise.html">
+            
+                <a href="reAsyncChildNodesPromise.html">
+            
+                    
+                    reAsyncChildNodesPromise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="refresh.html">
+            
+                <a href="refresh.html">
+            
+                    
+                    refresh
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="removeChildNodes.html">
+            
+                <a href="removeChildNodes.html">
+            
+                    
+                    removeChildNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="removeNode.html">
+            
+                <a href="removeNode.html">
+            
+                    
+                    removeNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="selectNode.html">
+            
+                <a href="selectNode.html">
+            
+                    
+                    selectNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.31" data-path="setChkDisabled.html">
+            
+                <a href="setChkDisabled.html">
+            
+                    
+                    setChkDisabled
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.32" data-path="setEditable.html">
+            
+                <a href="setEditable.html">
+            
+                    
+                    setEditable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.33" data-path="showNode.html">
+            
+                <a href="showNode.html">
+            
+                    
+                    showNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.34" data-path="showNodes.html">
+            
+                <a href="showNodes.html">
+            
+                    
+                    showNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.35" data-path="transformToArray.html">
+            
+                <a href="transformToArray.html">
+            
+                    
+                    transformToArray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.36" data-path="transformTozTreeNodes.html">
+            
+                <a href="transformTozTreeNodes.html">
+            
+                    
+                    transformTozTreeNodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.37" data-path="updateNode.html">
+            
+                <a href="updateNode.html">
+            
+                    
+                    updateNode
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >reAsyncChildNodesPromise</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="reasyncchildnodespromise">reAsyncChildNodesPromise</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="reAsyncChildNodes.html" class="navigation navigation-prev " aria-label="Previous page: reAsyncChildNodes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="refresh.html" class="navigation navigation-next " aria-label="Next page: refresh">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"reAsyncChildNodesPromise","level":"1.4.26","depth":2,"next":{"title":"refresh","level":"1.4.27","depth":2,"path":"zTreeObj/refresh.md","ref":"zTreeObj/refresh.md","articles":[]},"previous":{"title":"reAsyncChildNodes","level":"1.4.25","depth":2,"path":"zTreeObj/reAsyncChildNodes.md","ref":"zTreeObj/reAsyncChildNodes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"zTreeObj/reAsyncChildNodesPromise.md","mtime":"2018-10-18T15:48:51.190Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-18T13:51:42.763Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
