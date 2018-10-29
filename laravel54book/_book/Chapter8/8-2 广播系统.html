@@ -1,0 +1,1713 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8-2 广播系统 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8-3 缓存系统.html" />
+    
+    
+    <link rel="prev" href="8-1 Artisan命令行.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8-1 Artisan命令行.html">
+            
+                <a href="8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.2" data-path="8-2 广播系统.html">
+            
+                <a href="8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="8-3 缓存系统.html">
+            
+                <a href="8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="8-4 集合.html">
+            
+                <a href="8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="8-5 错误与日志.html">
+            
+                <a href="8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="8-6 事件系统.html">
+            
+                <a href="8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="8-7 文件存储.html">
+            
+                <a href="8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="8-8 辅助函数.html">
+            
+                <a href="8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="8-9 邮件发送.html">
+            
+                <a href="8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="8-10 消息通知.html">
+            
+                <a href="8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="8-11 扩展包开发.html">
+            
+                <a href="8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="8-12 队列.html">
+            
+                <a href="8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="8-13 任务调度.html">
+            
+                <a href="8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8-2 广播系统</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x7CFB;&#x7EDF;">Laravel &#x7684;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x7CFB;&#x7EDF;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a><ul>
+<li><a href="#configuration">&#x914D;&#x7F6E;</a></li>
+<li><a href="#driver-prerequisites">&#x5BF9;&#x9A71;&#x52A8;&#x5668;&#x7684;&#x8981;&#x6C42;</a></li>
+</ul>
+</li>
+<li><a href="#concept-overview">&#x6982;&#x5FF5;&#x7EFC;&#x8FF0;</a><ul>
+<li><a href="#using-example-application">&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;</a></li>
+</ul>
+</li>
+<li><a href="#defining-broadcast-events">&#x5B9A;&#x4E49;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;</a><ul>
+<li><a href="#broadcast-name">&#x5E7F;&#x64AD;&#x540D;&#x79F0;</a></li>
+<li><a href="#broadcast-data">&#x5E7F;&#x64AD;&#x6570;&#x636E;</a></li>
+<li><a href="#broadcast-queue">&#x5E7F;&#x64AD;&#x961F;&#x5217;</a></li>
+</ul>
+</li>
+<li><a href="#authorizing-channels">&#x9891;&#x9053;&#x6388;&#x6743;</a><ul>
+<li><a href="#defining-authorization-routes">&#x5B9A;&#x4E49;&#x6388;&#x6743;&#x8DEF;&#x7531;</a></li>
+<li><a href="#defining-authorization-callbacks">&#x5B9A;&#x4E49;&#x6388;&#x6743;&#x56DE;&#x8C03;</a></li>
+</ul>
+</li>
+<li><a href="#broadcasting-events">&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;</a><ul>
+<li><a href="#only-to-others">&#x53EA;&#x5E7F;&#x64AD;&#x7ED9;&#x4ED6;&#x4EBA;</a></li>
+</ul>
+</li>
+<li><a href="#receiving-broadcasts">&#x63A5;&#x6536;&#x5E7F;&#x64AD;</a><ul>
+<li><a href="#installing-laravel-echo">&#x5B89;&#x88C5; Laravel Echo</a></li>
+<li><a href="#listening-for-events">&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x76D1;&#x542C;</a></li>
+<li><a href="#leaving-a-channel">&#x9000;&#x51FA;&#x9891;&#x9053;</a></li>
+<li><a href="#namespaces">&#x547D;&#x540D;&#x7A7A;&#x95F4;</a></li>
+</ul>
+</li>
+<li><a href="#presence-channels">Presence &#x9891;&#x9053;</a><ul>
+<li><a href="#authorizing-presence-channels">&#x6388;&#x6743; Presence &#x9891;&#x9053;</a></li>
+<li><a href="#joining-presence-channels">&#x52A0;&#x5165; Presence &#x9891;&#x9053;</a></li>
+<li><a href="#broadcasting-to-presence-channels">&#x5E7F;&#x64AD;&#x5230; Presence &#x9891;&#x9053;</a></li>
+</ul>
+</li>
+<li><a href="#client-events">&#x5BA2;&#x6237;&#x7AEF;&#x4E8B;&#x4EF6;</a></li>
+<li><a href="#notifications">&#x6D88;&#x606F;&#x901A;&#x77E5;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x5728;&#x73B0;&#x4EE3;&#x7684; web &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;WebSockets &#x88AB;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x5B9E;&#x65F6;&#x3001;&#x5373;&#x65F6;&#x66F4;&#x65B0;&#x7684;&#x63A5;&#x53E3;&#x3002;&#x5F53;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x88AB;&#x66F4;&#x65B0;&#x540E;&#xFF0C;&#x66F4;&#x65B0;&#x4FE1;&#x606F;&#x5C06;&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x53D1;&#x9001;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x7B49;&#x5F85;&#x5904;&#x7406;&#x3002;&#x76F8;&#x6BD4;&#x4E8E;&#x4E0D;&#x505C;&#x5730;&#x8F6E;&#x8BE2;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;WebSocket &#x662F;&#x4E00;&#x79CD;&#x66F4;&#x52A0;&#x53EF;&#x9760;&#x548C;&#x9AD8;&#x6548;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x5E2E;&#x52A9;&#x4F60;&#x5EFA;&#x7ACB;&#x8FD9;&#x7C7B;&#x5E94;&#x7528;&#xFF0C;Laravel &#x5C06;&#x901A;&#x8FC7; WebSocket &#x8FDE;&#x63A5;&#x6765;&#x4F7F;&#x300C;&#x5E7F;&#x64AD;&#x300D;<a href="../docs/events">&#x4E8B;&#x4EF6;</a> &#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x8F7B;&#x677E;&#x3002;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x4EE3;&#x7801;&#x548C;&#x5BA2;&#x6237;&#x7AEF; JavaScript &#x5E94;&#x7528;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x76F8;&#x540C;&#x7684;&#x4E8B;&#x4EF6;&#x540D;&#x3002;</p>
+<blockquote>
+<p>{tip} &#x5728;&#x6DF1;&#x5165;&#x4E86;&#x89E3;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x4E4B;&#x524D;&#xFF0C;&#x8BF7;&#x786E;&#x8BA4;&#x4F60;&#x5DF2;&#x9605;&#x8BFB;&#x6240;&#x6709;&#x5173;&#x4E8E; Laravel <a href="../docs/events">&#x4E8B;&#x4EF6;&#x548C;&#x4FA6;&#x542C;&#x5668;</a> &#x7684;&#x6587;&#x6863;&#x3002;</p>
+</blockquote>
+<p><a name="configuration"></a></p>
+<h3 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h3>
+<p>&#x6240;&#x6709;&#x5173;&#x4E8E;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x7684;&#x914D;&#x7F6E;&#x90FD;&#x88AB;&#x4FDD;&#x5B58;&#x5728; <code>config/broadcasting.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x3002;Laravel &#x81EA;&#x5E26;&#x4E86;&#x51E0;&#x4E2A;&#x5E7F;&#x64AD;&#x9A71;&#x52A8;&#x5668;&#xFF1A;<a href="https://pusher.com" target="_blank">Pusher</a>&#xFF0C; <a href="../docs/redis">Redis</a>&#xFF0C; &#x548C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x672C;&#x5730;&#x5F00;&#x53D1;&#x4E0E;&#x8C03;&#x8BD5;&#x7684; <code>log</code> &#x9A71;&#x52A8;&#x5668;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A; <code>null</code> &#x9A71;&#x52A8;&#x5668;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5B8C;&#x5168;&#x5173;&#x95ED;&#x5E7F;&#x64AD;&#x529F;&#x80FD;&#x3002;&#x6BCF;&#x4E00;&#x4E2A;&#x9A71;&#x52A8;&#x7684;&#x793A;&#x4F8B;&#x914D;&#x7F6E;&#x90FD;&#x53EF;&#x4EE5;&#x5728; <code>config/broadcasting.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x88AB;&#x627E;&#x5230;&#x3002;</p>
+<h4 id="&#x5E7F;&#x64AD;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;">&#x5E7F;&#x64AD;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;</h4>
+<p>&#x5728;&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x5148;&#x6CE8;&#x518C; <code>App\Providers\BroadcastServiceProvider</code>&#x3002;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x5B89;&#x88C5;&#x7684; Laravel &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x5728; <code>config/app.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684; <code>providers</code> &#x6570;&#x7EC4;&#x4E2D;&#x53D6;&#x6D88;&#x5BF9;&#x8BE5;&#x63D0;&#x4F9B;&#x8005;&#x7684;&#x6CE8;&#x91CA;&#x5373;&#x53EF;&#x3002;&#x8BE5;&#x63D0;&#x4F9B;&#x8005;&#x5C06;&#x5141;&#x8BB8;&#x4F60;&#x6CE8;&#x518C;&#x5E7F;&#x64AD;&#x6388;&#x6743;&#x8DEF;&#x7531;&#x548C;&#x56DE;&#x8C03;&#x3002;</p>
+<h4 id="csrf-&#x4EE4;&#x724C;">CSRF &#x4EE4;&#x724C;</h4>
+<p><a href="#installing-laravel-echo">Laravel Echo</a> &#x4F1A;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x7684; CSRF &#x4EE4;&#x724C;&#x3002;&#x5982;&#x679C;&#x53EF;&#x7528;&#xFF0C;Echo &#x4F1A;&#x4ECE; <code>Laravel.csrfToken</code> JavaScript &#x5BF9;&#x8C61;&#x4E2D;&#x83B7;&#x53D6;&#x8BE5;&#x4EE4;&#x724C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x8FD0;&#x884C;&#x4E86; <code>make:auth</code> Artisan &#x547D;&#x4EE4;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x4F1A;&#x5728; <code>resources/views/layouts/app.blade.php</code> &#x5E03;&#x5C40;&#x6587;&#x4EF6;&#x4E2D;&#x88AB;&#x5B9A;&#x4E49;&#x3002;&#x5982;&#x679C;&#x4F60;&#x672A;&#x4F7F;&#x7528;&#x8BE5;&#x5E03;&#x5C40;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; <code>head</code> HTML &#x5143;&#x7D20;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>meta</code> &#x6807;&#x7B7E;&#xFF1A;</p>
+<pre><code>&lt;meta name=&quot;csrf-token&quot; content=&quot;{{ csrf_token() }}&quot;&gt;
+</code></pre><p><a name="driver-prerequisites"></a></p>
+<h3 id="&#x5BF9;&#x9A71;&#x52A8;&#x5668;&#x7684;&#x8981;&#x6C42;">&#x5BF9;&#x9A71;&#x52A8;&#x5668;&#x7684;&#x8981;&#x6C42;</h3>
+<h4 id="pusher">Pusher</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; <a href="https://pusher.com" target="_blank">Pusher</a> &#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#xFF0C;&#x8BF7;&#x7528; Composer &#x5305;&#x7BA1;&#x7406;&#x5668;&#x6765;&#x5B89;&#x88C5; Pusher PHP SDK&#xFF1A;</p>
+<pre><code>composer require pusher/pusher-php-server
+</code></pre><p>&#x7136;&#x540E;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728; <code>config/broadcasting.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x586B;&#x5199;&#x4F60;&#x7684; Pusher &#x8BC1;&#x4E66;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A; Pusher &#x793A;&#x4F8B;&#x914D;&#x7F6E;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x6307;&#x5B9A; Pusher key&#x3001;secret &#x548C; application ID &#x5373;&#x53EF;&#x3002;<code>config/broadcasting.php</code> &#x4E2D;&#x7684; <code>pusher</code> &#x914D;&#x7F6E;&#x9879;&#x540C;&#x65F6;&#x4E5F;&#x5141;&#x8BB8;&#x4F60;&#x6307;&#x5B9A; Pusher &#x652F;&#x6301;&#x7684; <code>options</code>&#xFF0C;&#x4F8B;&#x5982; cluster&#xFF1A;</p>
+<pre><code>&apos;options&apos; =&gt; [
+    &apos;cluster&apos; =&gt; &apos;eu&apos;,
+    &apos;encrypted&apos; =&gt; true
+],
+</code></pre><p>&#x5F53;&#x628A; Pusher &#x4E0E; <a href="#installing-laravel-echo">Laravel Echo</a> &#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x5B9E;&#x4F8B;&#x5316; Echo &#x5BF9;&#x8C61;&#x65F6;&#x6307;&#x5B9A; broadcaster &#x4E3A; <code>pusher</code>&#xFF1A;</p>
+<pre><code>import Echo from &quot;laravel-echo&quot;
+
+window.Echo = new Echo({
+    broadcaster: &apos;pusher&apos;,
+    key: &apos;your-pusher-key&apos;
+});
+</code></pre><h4 id="redis">Redis</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; Redis &#x5E7F;&#x64AD;&#x5668;&#xFF0C;&#x8BF7;&#x5B89;&#x88C5; Predis &#x5E93;&#xFF1A;</p>
+<pre><code>composer require predis/predis
+</code></pre><p>Redis &#x5E7F;&#x64AD;&#x5668;&#x4F1A;&#x4F7F;&#x7528; Redis &#x7684;&#x300C;&#x751F;&#x4EA7;&#x8005;/&#x6D88;&#x8D39;&#x8005;&#x300D;&#x7279;&#x6027;&#x6765;&#x5E7F;&#x64AD;&#x6D88;&#x606F;&#xFF1B;&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x4F60;&#x4ECD;&#x9700;&#x5C06;&#x5B83;&#x4E0E; WebSocket &#x670D;&#x52A1;&#x5668;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x3002;WebSocket &#x670D;&#x52A1;&#x5668;&#x4F1A;&#x4ECE; Redis &#x63A5;&#x6536;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x6D88;&#x606F;&#x5E7F;&#x64AD;&#x5230;&#x4F60;&#x7684; WebSocket &#x9891;&#x9053;&#x4E0A;&#x53BB;&#x3002;</p>
+<p>&#x5F53; Redis &#x5E7F;&#x64AD;&#x5668;&#x53D1;&#x5E03;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x8BE5;&#x4E8B;&#x4EF6;&#x4F1A;&#x88AB;&#x53D1;&#x5E03;&#x5230;&#x5B83;&#x6307;&#x5B9A;&#x7684;&#x9891;&#x9053;&#x4E0A;&#x53BB;&#xFF0C;&#x4F20;&#x8F93;&#x7684;&#x6570;&#x636E;&#x662F;&#x4E00;&#x4E2A;&#x91C7;&#x7528; JSON &#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8BE5;&#x5B57;&#x7B26;&#x4E32;&#x5305;&#x542B;&#x4E86;&#x4E8B;&#x4EF6;&#x540D;&#x3001;<code>data</code> &#x6570;&#x636E;&#x548C;&#x751F;&#x6210;&#x8BE5;&#x4E8B;&#x4EF6;&#x5957;&#x63A5;&#x5B57; ID &#x7684;&#x7528;&#x6237;&#xFF08;&#x5982;&#x679C;&#x53EF;&#x7528;&#x7684;&#x8BDD;&#xFF09;&#x3002;</p>
+<h4 id="socketio">Socket.IO</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x628A; Redis &#x5E7F;&#x64AD;&#x5668;&#x548C; Socket.IO &#x670D;&#x52A1;&#x5668;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5C06; Socket.IO JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x5230;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; <code>head</code> HTML &#x5143;&#x7D20;&#x4E2D;&#x3002;&#x5F53; Socket.IO &#x670D;&#x52A1;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x628A; Socket.IO JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x66B4;&#x9732;&#x5728;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684; URL&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x548C; Socket.IO &#x670D;&#x52A1;&#x5668;&#x8FD0;&#x884C;&#x5728;&#x540C;&#x57DF;&#x540D;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x6765;&#x8BBF;&#x95EE;&#x4F60;&#x7684; Socket.IO JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#xFF1A;</p>
+<pre><code>&lt;script src=&quot;//{{ Request::getHost() }}:6001/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>&#x63A5;&#x7740;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x5B9E;&#x4F8B;&#x5316; Echo &#x65F6;&#x6307;&#x5B9A; <code>socket.io</code> &#x8FDE;&#x63A5;&#x5668;&#x548C; <code>host</code> &#x3002;</p>
+<pre><code>import Echo from &quot;laravel-echo&quot;
+
+window.Echo = new Echo({
+    broadcaster: &apos;socket.io&apos;,
+    host: window.location.hostname + &apos;:6001&apos;
+});
+</code></pre><p>&#x6700;&#x540E;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x4E0E; Laravel &#x517C;&#x5BB9;&#x7684; Socket.IO &#x670D;&#x52A1;&#x5668;&#x3002;Laravel &#x5B98;&#x65B9;&#x5E76;&#x6CA1;&#x6709;&#x5B9E;&#x73B0; Socket.IO &#x670D;&#x52A1;&#x5668;&#xFF1B;&#x4E0D;&#x8FC7;&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x7531;&#x793E;&#x533A;&#x9A71;&#x52A8;&#x7EF4;&#x62A4;&#x7684;&#x9879;&#x76EE; <a href="https://github.com/tlaverdure/laravel-echo-server" target="_blank">tlaverdure/laravel-echo-server</a>&#xFF0C;&#x76EE;&#x524D;&#x6258;&#x7BA1;&#x5728; GitHub&#x3002;</p>
+<h4 id="&#x5BF9;&#x961F;&#x5217;&#x7684;&#x8981;&#x6C42;">&#x5BF9;&#x961F;&#x5217;&#x7684;&#x8981;&#x6C42;</h4>
+<p>&#x5728;&#x5F00;&#x59CB;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x8FD8;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x548C;&#x8FD0;&#x884C; <a href="../docs/queues">&#x961F;&#x5217;&#x4FA6;&#x542C;&#x5668;</a>&#x3002;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x961F;&#x5217;&#x4EFB;&#x52A1;&#x6765;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x4E0D;&#x4F1A;&#x53D7;&#x5230;&#x660E;&#x663E;&#x5F71;&#x54CD;&#x3002;</p>
+<p><a name="concept-overview"></a></p>
+<h2 id="&#x6982;&#x5FF5;&#x7EFC;&#x8FF0;">&#x6982;&#x5FF5;&#x7EFC;&#x8FF0;</h2>
+<p>Laravel &#x7684;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x5141;&#x8BB8;&#x4F60;&#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x9A71;&#x52A8;&#x7684; WebSockets &#x5C06;&#x670D;&#x52A1;&#x7AEF;&#x7684; Larevel &#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x7684; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5F53;&#x524D;&#x7684; Laravel &#x81EA;&#x5E26;&#x4E86; <a href="http://pusher.com" target="_blank">Pusher</a> and Redis &#x9A71;&#x52A8;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <a href="#installing-laravel-echo">Laravel Echo</a> &#x7684; Javascript &#x5305;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x6D88;&#x8D39;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p>&#x4E8B;&#x4EF6;&#x901A;&#x8FC7;&#x300C;&#x9891;&#x9053;&#x300D;&#x6765;&#x5E7F;&#x64AD;&#xFF0C;&#x8FD9;&#x4E9B;&#x9891;&#x9053;&#x53EF;&#x4EE5;&#x88AB;&#x6307;&#x5B9A;&#x4E3A;&#x516C;&#x5F00;&#x7684;&#x6216;&#x79C1;&#x6709;&#x7684;&#x3002;&#x4EFB;&#x4F55;&#x8BBF;&#x5BA2;&#x90FD;&#x53EF;&#x4EE5;&#x8BA2;&#x9605;&#x4E00;&#x4E2A;&#x4E0D;&#x9700;&#x8981;&#x8BA4;&#x8BC1;&#x548C;&#x6388;&#x6743;&#x7684;&#x516C;&#x5F00;&#x9891;&#x9053;&#xFF1B;&#x7136;&#x800C;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8BA2;&#x9605;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x9891;&#x9053;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x7528;&#x6237;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x8BA4;&#x8BC1;&#xFF0C;&#x5E76;&#x83B7;&#x5F97;&#x8BE5;&#x9891;&#x9053;&#x7684;&#x6388;&#x6743;&#x3002;</p>
+<p><a name="using-example-application"></a></p>
+<h3 id="&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;">&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#x7A0B;&#x5E8F;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5148;&#x7528;&#x4E00;&#x4E2A;&#x7535;&#x5B50;&#x5546;&#x52A1;&#x7F51;&#x7AD9;&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#x6765;&#x6982;&#x89C8;&#x4E00;&#x4E0B;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x3002;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x8BA8;&#x8BBA;&#x5982;&#x4F55;&#x914D;&#x7F6E; <a href="http://pusher.com" target="_blank">Pusher</a> &#x548C; <a href="#echo">Laravel Echo</a> &#x7684;&#x7EC6;&#x8282;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x4F1A;&#x5728;&#x672C;&#x6587;&#x6863;&#x7684;&#x5176;&#x4ED6;&#x7AE0;&#x8282;&#x88AB;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p>&#x5728;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x914D;&#x9001;&#x72B6;&#x6001;&#x7684;&#x9875;&#x9762;&#x3002;&#x6709;&#x4E00;&#x4E2A; <code>ShippingStatusUpdated</code> &#x4E8B;&#x4EF6;&#x4F1A;&#x5728;&#x914D;&#x9001;&#x72B6;&#x6001;&#x66F4;&#x65B0;&#x65F6;&#x88AB;&#x89E6;&#x53D1;&#xFF1A;</p>
+<pre><code>event(new ShippingStatusUpdated($update));
+</code></pre><h4 id="shouldbroadcast-&#x63A5;&#x53E3;"><code>ShouldBroadcast</code> &#x63A5;&#x53E3;</h4>
+<p>&#x5F53;&#x7528;&#x6237;&#x5728;&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x7684;&#x8BA2;&#x5355;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E0C;&#x671B;&#x4ED6;&#x4EEC;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x5237;&#x65B0;&#x9875;&#x9762;&#x624D;&#x80FD;&#x770B;&#x5230;&#x72B6;&#x6001;&#x66F4;&#x65B0;&#x3002;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x4E00;&#x65E6;&#x6709;&#x66F4;&#x65B0;&#x65F6;&#x5C31;&#x4E3B;&#x52A8;&#x5C06;&#x66F4;&#x65B0;&#x4FE1;&#x606F;&#x5E7F;&#x64AD;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x8BA9; <code>ShippingStatusUpdated</code> &#x4E8B;&#x4EF6;&#x5B9E;&#x73B0; <code>ShouldBroadcast</code> &#x63A5;&#x53E3;&#x3002;&#x8FD9;&#x4F1A;&#x8BA9; Laravel &#x5728;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#x65F6;&#x5E7F;&#x64AD;&#x8BE5;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Events;
+
+use Illuminate\Broadcasting\Channel;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+
+class ShippingStatusUpdated implements ShouldBroadcast
+{
+    /**
+     * Information about the shipping status update.
+     *
+     * @var string
+     */
+    public $update;
+}
+</code></pre><p><code>ShouldBroadcast</code> &#x63A5;&#x53E3;&#x8981;&#x6C42;&#x4E8B;&#x4EF6;&#x5B9E;&#x73B0; <code>broadcastOn</code> &#x65B9;&#x6CD5;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x8D1F;&#x8D23;&#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x88AB;&#x5E7F;&#x64AD;&#x5230;&#x54EA;&#x4E9B;&#x9891;&#x9053;&#x3002;&#x5728;&#x901A;&#x8FC7; Artisan &#x547D;&#x4EE4;&#x751F;&#x6210;&#x7684;&#x4E8B;&#x4EF6;&#x7C7B;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A;&#x7A7A;&#x7684; <code>broadcastOn</code> &#x65B9;&#x6CD5;&#x5DF2;&#x7ECF;&#x88AB;&#x9884;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x505A;&#x7684;&#x4EC5;&#x4EC5;&#x662F;&#x6307;&#x5B9A;&#x9891;&#x9053;&#x3002;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x53EA;&#x6709;&#x8BA2;&#x5355;&#x7684;&#x521B;&#x5EFA;&#x8005;&#x80FD;&#x591F;&#x770B;&#x5230;&#x72B6;&#x6001;&#x66F4;&#x65B0;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x628A;&#x8BE5;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x5230;&#x4E0E;&#x8FD9;&#x4E2A;&#x8BA2;&#x5355;&#x7ED1;&#x5B9A;&#x7684;&#x79C1;&#x6709;&#x9891;&#x9053;&#x4E0A;&#x53BB;&#xFF1A;</p>
+<pre><code>/**
+ * Get the channels the event should broadcast on.
+ *
+ * @return array
+ */
+public function broadcastOn()
+{
+    return new PrivateChannel(&apos;order.&apos;.$this-&gt;update-&gt;order_id);
+}
+</code></pre><h4 id="&#x9891;&#x9053;&#x6388;&#x6743;">&#x9891;&#x9053;&#x6388;&#x6743;</h4>
+<p>&#x8BB0;&#x4F4F;&#xFF0C;&#x7528;&#x6237;&#x53EA;&#x6709;&#x5728;&#x88AB;&#x6388;&#x6743;&#x540E;&#x624D;&#x80FD;&#x76D1;&#x542C;&#x79C1;&#x6709;&#x9891;&#x9053;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; <code>routes/channels.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x9891;&#x9053;&#x7684;&#x6388;&#x6743;&#x89C4;&#x5219;&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;&#x8BD5;&#x56FE;&#x76D1;&#x542C;&#x79C1;&#x6709; <code>order.1</code> &#x9891;&#x9053;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF0C;&#x786E;&#x4FDD;&#x53EA;&#x6709;&#x8BA2;&#x5355;&#x7684;&#x521B;&#x5EFA;&#x8005;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x76D1;&#x542C;&#xFF1A;</p>
+<pre><code>Broadcast::channel(&apos;order.{orderId}&apos;, function ($user, $orderId) {
+    return $user-&gt;id === Order::findOrNew($orderId)-&gt;user_id;
+});
+</code></pre><p><code>channel</code> &#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x9891;&#x9053;&#x540D;&#x79F0;&#x548C;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x901A;&#x8FC7;&#x8FD4;&#x56DE; <code>true</code> &#x6216; <code>false</code> &#x6765;&#x8868;&#x793A;&#x7528;&#x6237;&#x662F;&#x5426;&#x88AB;&#x6388;&#x6743;&#x76D1;&#x542C;&#x8BE5;&#x9891;&#x9053;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x7684;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x63A5;&#x6536;&#x5F53;&#x524D;&#x88AB;&#x8BA4;&#x8BC1;&#x7684;&#x7528;&#x6237;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x7684;&#x901A;&#x914D;&#x7B26;&#x53C2;&#x6570;&#x4F5C;&#x4E3A;&#x540E;&#x7EED;&#x53C2;&#x6570;&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>{orderId}</code> &#x5360;&#x4F4D;&#x7B26;&#x6765;&#x8868;&#x793A;&#x9891;&#x9053;&#x540D;&#x79F0;&#x7684;&#x300C;ID&#x300D;&#x90E8;&#x5206;&#x662F;&#x901A;&#x914D;&#x7B26;&#x3002;</p>
+<h4 id="&#x5BF9;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x8FDB;&#x884C;&#x76D1;&#x542C;">&#x5BF9;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x8FDB;&#x884C;&#x76D1;&#x542C;</h4>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5C31;&#x53EA;&#x5269;&#x4E0B;&#x5728; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Laravel Echo &#x6765;&#x5B9E;&#x73B0;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528; <code>private</code> &#x65B9;&#x6CD5;&#x6765;&#x8BA2;&#x9605;&#x79C1;&#x6709;&#x9891;&#x9053;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x4F7F;&#x7528; <code>listen</code> &#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C; <code>ShippingStatusUpdated</code> &#x4E8B;&#x4EF6;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E8B;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x516C;&#x6709;&#x5C5E;&#x6027;&#x4F1A;&#x88AB;&#x5305;&#x62EC;&#x5728;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x4E2D;&#xFF1A;</p>
+<pre><code>Echo.private(`order.${orderId}`)
+    .listen(&apos;ShippingStatusUpdated&apos;, (e) =&gt; {
+        console.log(e.update);
+    });
+</code></pre><p><a name="defining-broadcast-events"></a></p>
+<h2 id="&#x5B9A;&#x4E49;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;">&#x5B9A;&#x4E49;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;</h2>
+<p>&#x8981;&#x544A;&#x77E5; Laravel &#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#x662F;&#x5E7F;&#x64AD;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x9700;&#x5728;&#x4E8B;&#x4EF6;&#x7C7B;&#x4E2D;&#x5B9E;&#x73B0; <code>Illuminate\Contracts\Broadcasting\ShouldBroadcast</code> &#x63A5;&#x53E3;&#x5373;&#x53EF;&#x3002;&#x8BE5;&#x63A5;&#x53E3;&#x5DF2;&#x7ECF;&#x88AB;&#x5BFC;&#x5165;&#x5230;&#x6240;&#x6709;&#x7531;&#x6846;&#x67B6;&#x751F;&#x6210;&#x7684;&#x4E8B;&#x4EF6;&#x7C7B;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x5C06;&#x5B83;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x4E8B;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p><code>ShouldBroadcast</code> &#x63A5;&#x53E3;&#x8981;&#x6C42;&#x4F60;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;<code>broadcastOn</code>&#x3002;<code>broadcastOn</code> &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#x6216;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#x6570;&#x7EC4;&#xFF0C;&#x4E8B;&#x4EF6;&#x4F1A;&#x88AB;&#x5E7F;&#x64AD;&#x5230;&#x8FD9;&#x4E9B;&#x9891;&#x9053;&#x3002;&#x9891;&#x9053;&#x5FC5;&#x987B;&#x662F; <code>Channel</code>&#x3001;<code>PrivateChannel</code> &#x6216; <code>PresenceChannel</code> &#x7684;&#x5B9E;&#x4F8B;&#x3002;<code>Channel</code> &#x5B9E;&#x4F8B;&#x8868;&#x793A;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x90FD;&#x53EF;&#x4EE5;&#x8BA2;&#x9605;&#x7684;&#x516C;&#x5F00;&#x9891;&#x9053;&#xFF0C;&#x800C; <code>PrivateChannels</code> &#x548C; <code>PresenceChannels</code> &#x5219;&#x8868;&#x793A;&#x9700;&#x8981; <a href="#authorizing-channels">&#x9891;&#x9053;&#x6388;&#x6743;</a> &#x7684;&#x79C1;&#x6709;&#x9891;&#x9053;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Events;
+
+use Illuminate\Broadcasting\Channel;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+
+class ServerCreated implements ShouldBroadcast
+{
+    use SerializesModels;
+
+    public $user;
+
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4E8B;&#x4EF6;&#x5B9E;&#x4F8B;
+     *
+     * @return void
+     */
+    public function __construct(User $user)
+    {
+        $this-&gt;user = $user;
+    }
+
+    /**
+     * &#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x5728;&#x54EA;&#x4E9B;&#x9891;&#x9053;&#x4E0A;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;
+     *
+     * @return Channel|array
+     */
+    public function broadcastOn()
+    {
+        return new PrivateChannel(&apos;user.&apos;.$this-&gt;user-&gt;id);
+    }
+}
+</code></pre><p>&#x7136;&#x540E;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x50CF;&#x4F60;&#x5E73;&#x65F6;&#x90A3;&#x6837; <a href="../docs/events">&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;</a>&#x3002;&#x4E00;&#x65E6;&#x4E8B;&#x4EF6;&#x88AB;&#x89E6;&#x53D1;&#xFF0C;&#x4E00;&#x4E2A; <a href="../docs/queues">&#x961F;&#x5217;&#x4EFB;&#x52A1;</a> &#x4F1A;&#x81EA;&#x52A8;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x5230;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x5E7F;&#x64AD;&#x9A71;&#x52A8;&#x5668;&#x4E0A;&#x3002;</p>
+<p><a name="broadcast-name"></a></p>
+<h3 id="&#x5E7F;&#x64AD;&#x540D;&#x79F0;">&#x5E7F;&#x64AD;&#x540D;&#x79F0;</h3>
+<p>Laravel &#x9ED8;&#x8BA4;&#x4F1A;&#x4F7F;&#x7528;&#x4E8B;&#x4EF6;&#x7684;&#x7C7B;&#x540D;&#x4F5C;&#x4E3A;&#x5E7F;&#x64AD;&#x540D;&#x79F0;&#x6765;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4E8B;&#x4EF6;&#x7C7B;&#x4E2D;&#x901A;&#x8FC7;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>broadcastAs</code> &#x65B9;&#x6CD5;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x5E7F;&#x64AD;&#x540D;&#x79F0;:</p>
+<pre><code>/**
+ * &#x4E8B;&#x4EF6;&#x7684;&#x5E7F;&#x64AD;&#x540D;&#x79F0;&#x3002;
+ *
+ * @return string
+ */
+public function broadcastAs()
+{
+    return &apos;server.created&apos;;
+}
+</code></pre><p><a name="broadcast-data"></a></p>
+<h3 id="&#x5E7F;&#x64AD;&#x6570;&#x636E;">&#x5E7F;&#x64AD;&#x6570;&#x636E;</h3>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x88AB;&#x5E7F;&#x64AD;&#x65F6;&#xFF0C;&#x5B83;&#x6240;&#x6709;&#x7684; <code>public</code> &#x5C5E;&#x6027;&#x4F1A;&#x81EA;&#x52A8;&#x88AB;&#x5E8F;&#x5217;&#x5316;&#x4E3A;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x4F60;&#x7684; JavaScript &#x5E94;&#x7528;&#x4E2D;&#x8BBF;&#x95EE;&#x4E8B;&#x4EF6;&#x7684;&#x516C;&#x6709;&#x6570;&#x636E;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x4E8B;&#x4EF6;&#x6709;&#x4E00;&#x4E2A;&#x516C;&#x6709;&#x7684; <code>$user</code> &#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A; Elouqent &#x6A21;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x4E8B;&#x4EF6;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x4F1A;&#x662F;&#xFF1A;</p>
+<pre><code>{
+    &quot;user&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;Patrick Stewart&quot;
+        ...
+    }
+}
+</code></pre><p>&#x7136;&#x800C;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x66F4;&#x7EC6;&#x7C92;&#x5EA6;&#x5730;&#x63A7;&#x5236;&#x4F60;&#x7684;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>broadcastWith</code> &#x65B9;&#x6CD5;&#x5230;&#x4F60;&#x7684;&#x4E8B;&#x4EF6;&#x4E2D;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x8BE5;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x5E7F;&#x64AD;&#x6570;&#x636E;&#x4E2D;&#xFF1A;</p>
+<pre><code>/**
+ * &#x6307;&#x5B9A;&#x5E7F;&#x64AD;&#x6570;&#x636E;
+ *
+ * @return array
+ */
+public function broadcastWith()
+{
+    return [&apos;id&apos; =&gt; $this-&gt;user-&gt;id];
+}
+</code></pre><p><a name="broadcast-queue"></a></p>
+<h3 id="&#x5E7F;&#x64AD;&#x961F;&#x5217;">&#x5E7F;&#x64AD;&#x961F;&#x5217;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x90FD;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x9ED8;&#x8BA4;&#x7684;&#x961F;&#x5217;&#x4E0A;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x961F;&#x5217;&#x8FDE;&#x63A5;&#x5728; <code>queue.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x4E8B;&#x4EF6;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>broadcastQueue</code> &#x5C5E;&#x6027;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x5E7F;&#x64AD;&#x5668;&#x4F7F;&#x7528;&#x7684;&#x961F;&#x5217;&#x3002;&#x8BE5;&#x5C5E;&#x6027;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5E7F;&#x64AD;&#x4F7F;&#x7528;&#x7684;&#x961F;&#x5217;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code>/**
+ * &#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x88AB;&#x653E;&#x7F6E;&#x5728;&#x54EA;&#x4E2A;&#x961F;&#x5217;&#x4E0A;
+ *
+ * @var string
+ */
+public $broadcastQueue = &apos;your-queue-name&apos;;
+</code></pre><p><a name="authorizing-channels"></a></p>
+<h2 id="&#x9891;&#x9053;&#x6388;&#x6743;">&#x9891;&#x9053;&#x6388;&#x6743;</h2>
+<p>&#x5BF9;&#x4E8E;&#x79C1;&#x6709;&#x9891;&#x9053;&#xFF0C;&#x7528;&#x6237;&#x53EA;&#x6709;&#x88AB;&#x6388;&#x6743;&#x540E;&#x624D;&#x80FD;&#x76D1;&#x542C;&#x3002;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x662F;&#x7528;&#x6237;&#x5411;&#x4F60;&#x7684; Laravel &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x8D77;&#x4E00;&#x4E2A;&#x643A;&#x5E26;&#x9891;&#x9053;&#x540D;&#x79F0;&#x7684; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5224;&#x65AD;&#x8BE5;&#x7528;&#x6237;&#x662F;&#x5426;&#x80FD;&#x591F;&#x76D1;&#x542C;&#x8BE5;&#x9891;&#x9053;&#x3002;&#x5728;&#x4F7F;&#x7528; <a href="#installing-laravel-echo">Laravel Echo</a> &#x65F6;&#xFF0C;&#x4E0A;&#x8FF0; HTTP &#x8BF7;&#x6C42;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x53D1;&#x9001;&#xFF1B;&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x4F60;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x9002;&#x5F53;&#x7684;&#x8DEF;&#x7531;&#x6765;&#x54CD;&#x5E94;&#x8FD9;&#x4E9B;&#x8BF7;&#x6C42;&#x3002;</p>
+<p><a name="defining-authorization-routes"></a></p>
+<h3 id="&#x5B9A;&#x4E49;&#x6388;&#x6743;&#x8DEF;&#x7531;">&#x5B9A;&#x4E49;&#x6388;&#x6743;&#x8DEF;&#x7531;</h3>
+<p>&#x5E78;&#x8FD0;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; Laravel &#x91CC;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x5B9A;&#x4E49;&#x8DEF;&#x7531;&#x6765;&#x54CD;&#x5E94;&#x9891;&#x9053;&#x6388;&#x6743;&#x8BF7;&#x6C42;&#x3002;&#x5728; <code>BroadcastServiceProvider</code> &#x4E2D;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x5BF9; <code>Broadcast::routes</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x6CE8;&#x518C; <code>/broadcasting/auth</code> &#x8DEF;&#x7531;&#x6765;&#x5904;&#x7406;&#x6388;&#x6743;&#x8BF7;&#x6C42;&#xFF1A;</p>
+<pre><code>Broadcast::routes();
+</code></pre><p><code>Broadcast::routes</code> &#x65B9;&#x6CD5;&#x4F1A;&#x81EA;&#x52A8;&#x628A;&#x5B83;&#x7684;&#x8DEF;&#x7531;&#x653E;&#x8FDB; <code>web</code> &#x4E2D;&#x95F4;&#x4EF6;&#x7EC4;&#x4E2D;&#xFF1B;&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5BF9;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x53EF;&#x4EE5;&#x5411;&#x8BE5;&#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x8DEF;&#x7531;&#x5C5E;&#x6027;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>Broadcast::routes($attributes);
+</code></pre><p><a name="defining-authorization-callbacks"></a></p>
+<h3 id="&#x5B9A;&#x4E49;&#x6388;&#x6743;&#x56DE;&#x8C03;">&#x5B9A;&#x4E49;&#x6388;&#x6743;&#x56DE;&#x8C03;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x771F;&#x6B63;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x9891;&#x9053;&#x6388;&#x6743;&#x7684;&#x903B;&#x8F91;&#x3002;&#x8FD9;&#x662F;&#x5728; <code>routes/channels.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x5B8C;&#x6210;&#x3002;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>Broadcast::channel</code> &#x65B9;&#x6CD5;&#x6765;&#x6CE8;&#x518C;&#x9891;&#x9053;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code>Broadcast::channel(&apos;order.{orderId}&apos;, function ($user, $orderId) {
+    return $user-&gt;id === Order::findOrNew($orderId)-&gt;user_id;
+});
+</code></pre><p><code>channel</code> &#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x9891;&#x9053;&#x540D;&#x79F0;&#x548C;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x56DE;&#x8C03;&#x901A;&#x8FC7;&#x8FD4;&#x56DE; <code>true</code> &#x6216; <code>false</code> &#x6765;&#x8868;&#x793A;&#x7528;&#x6237;&#x662F;&#x5426;&#x88AB;&#x6388;&#x6743;&#x76D1;&#x542C;&#x8BE5;&#x9891;&#x9053;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x7684;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x63A5;&#x6536;&#x5F53;&#x524D;&#x88AB;&#x8BA4;&#x8BC1;&#x7684;&#x7528;&#x6237;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x7684;&#x901A;&#x914D;&#x7B26;&#x53C2;&#x6570;&#x4F5C;&#x4E3A;&#x540E;&#x7EED;&#x53C2;&#x6570;&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>{orderId}</code> &#x5360;&#x4F4D;&#x7B26;&#x6765;&#x8868;&#x793A;&#x9891;&#x9053;&#x540D;&#x79F0;&#x7684;&#x300C;ID&#x300D;&#x90E8;&#x5206;&#x662F;&#x901A;&#x914D;&#x7B26;&#x3002;</p>
+<h4 id="&#x6388;&#x6743;&#x56DE;&#x8C03;&#x6A21;&#x578B;&#x7ED1;&#x5B9A;">&#x6388;&#x6743;&#x56DE;&#x8C03;&#x6A21;&#x578B;&#x7ED1;&#x5B9A;</h4>
+<p>&#x5C31;&#x50CF; HTTP &#x8DEF;&#x7531;&#x4E00;&#x6837;&#xFF0C;&#x9891;&#x9053;&#x8DEF;&#x7531;&#x4E5F;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x663E;&#x5F0F;&#x6216;&#x9690;&#x5F0F;<a href="../docs/routing#route-model-binding">&#x8DEF;&#x7531;&#x6A21;&#x578B;&#x7ED1;&#x5B9A;</a>&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x76F8;&#x6BD4;&#x4E8E;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x6570;&#x5B57;&#x7C7B;&#x578B;&#x7684; order ID&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x8BF7;&#x6C42;&#x4E00;&#x4E2A;&#x771F;&#x6B63;&#x7684; <code>Order</code> &#x6A21;&#x578B;&#x5B9E;&#x4F8B;:</p>
+<pre><code>use App\Order;
+
+Broadcast::channel(&apos;order.{order}&apos;, function ($user, Order $order) {
+    return $user-&gt;id === $order-&gt;user_id;
+});
+</code></pre><p><a name="broadcasting-events"></a></p>
+<h2 id="&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;">&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;</h2>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5E76;&#x5B9E;&#x73B0;&#x4E86; <code>ShouldBroadcast</code> &#x63A5;&#x53E3;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x662F;&#x4F7F;&#x7528; <code>event</code> &#x51FD;&#x6570;&#x6765;&#x89E6;&#x53D1;&#x8BE5;&#x4E8B;&#x4EF6;&#x3002;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5668;&#x4F1A;&#x8BC6;&#x522B;&#x51FA;&#x5B9E;&#x73B0;&#x4E86; <code>ShouldBroadcast</code> &#x63A5;&#x53E3;&#x7684;&#x4E8B;&#x4EF6;&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x52A0;&#x5165;&#x5230;&#x961F;&#x5217;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#xFF1A;</p>
+<pre><code>event(new ShippingStatusUpdated($update));
+</code></pre><p><a name="only-to-others"></a></p>
+<h3 id="&#x53EA;&#x5E7F;&#x64AD;&#x7ED9;&#x4ED6;&#x4EBA;">&#x53EA;&#x5E7F;&#x64AD;&#x7ED9;&#x4ED6;&#x4EBA;</h3>
+<p>&#x5F53;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x5230;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>broadcast</code> &#x51FD;&#x6570;&#x6765;&#x66FF;&#x4EE3; <code>event</code> &#x51FD;&#x6570;&#x3002;&#x548C; <code>event</code> &#x51FD;&#x6570;&#x4E00;&#x6837;&#xFF0C;<code>broadcast</code> &#x51FD;&#x6570;&#x5C06;&#x4E8B;&#x4EF6;&#x5206;&#x53D1;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x4FA6;&#x542C;&#x5668;&#xFF1A;</p>
+<pre><code>broadcast(new ShippingStatusUpdated($update));
+</code></pre><p>&#x4E0D;&#x540C;&#x7684;&#x662F; <code>broadcast</code> &#x51FD;&#x6570;&#x6709;&#x4E00;&#x4E2A; <code>toOthers</code> &#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x4F60;&#x5C06;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4ECE;&#x5E7F;&#x64AD;&#x63A5;&#x6536;&#x8005;&#x4E2D;&#x6392;&#x9664;&#xFF1A;</p>
+<pre><code>broadcast(new ShippingStatusUpdated($update))-&gt;toOthers();
+</code></pre><p>&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x5730;&#x7406;&#x89E3;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4F7F;&#x7528; <code>toOthers</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x6709;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x5217;&#x8868;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F93;&#x5165;&#x4EFB;&#x52A1;&#x540D;&#x79F0;&#x6765;&#x65B0;&#x5EFA;&#x4EFB;&#x52A1;&#x3002;&#x4E3A;&#x4E86;&#x65B0;&#x5EFA;&#x4EFB;&#x52A1;&#xFF0C;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x53D1;&#x8D77;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x5230; <code>/task</code> &#x8DEF;&#x7531;&#xFF0C;&#x8BE5;&#x8DEF;&#x7531;&#x5728;&#x63A5;&#x6536;&#x5230;&#x8BF7;&#x6C42;&#x5E76;&#x6210;&#x529F;&#x521B;&#x5EFA;&#x65B0;&#x4EFB;&#x52A1;&#x540E;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x88AB;&#x65B0;&#x5EFA;&#x7684;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x65B0;&#x4EFB;&#x52A1;&#x7684; JSON &#x54CD;&#x5E94;&#x3002;&#x5F53;&#x4F60;&#x7684; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x63A5;&#x6536;&#x5230;&#x6765;&#x81EA;&#x8BE5;&#x8DEF;&#x7531;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x76F4;&#x63A5;&#x5C06;&#x65B0;&#x4EFB;&#x52A1;&#x63D2;&#x5165;&#x5230;&#x4EFB;&#x52A1;&#x5217;&#x8868;&#xFF0C;&#x5C31;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code>axios.post(&apos;/task&apos;, task)
+    .then((response) =&gt; {
+        this.tasks.push(response.data);
+    });
+</code></pre><p>&#x7136;&#x800C;&#xFF0C;&#x522B;&#x5FD8;&#x4E86;&#x6211;&#x4EEC;&#x8FD8;&#x5C06;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x540C;&#x65F6;&#x76D1;&#x542C;&#x8BE5;&#x4E8B;&#x4EF6;&#x4EE5;&#x4FBF;&#x6DFB;&#x52A0;&#x65B0;&#x4EFB;&#x52A1;&#x5230;&#x4EFB;&#x52A1;&#x5217;&#x8868;&#xFF0C;&#x4F60;&#x5C06;&#x4F1A;&#x5728;&#x4F60;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x770B;&#x5230;&#x91CD;&#x590D;&#x7684;&#x4EFB;&#x52A1;&#xFF1A;&#x4E00;&#x4EFD;&#x6765;&#x81EA;&#x8DEF;&#x7531;&#x54CD;&#x5E94;&#xFF0C;&#x53E6;&#x4E00;&#x4EFD;&#x6765;&#x81EA;&#x5E7F;&#x64AD;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>toOthers</code> &#x65B9;&#x6CD5;&#x8BA9;&#x5E7F;&#x64AD;&#x5668;&#x53EA;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x5230;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x6765;&#x89E3;&#x51B3;&#x8BE5;&#x95EE;&#x9898;&#x3002;</p>
+<h4 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h4>
+<p>&#x5F53;&#x4F60;&#x5B9E;&#x4F8B;&#x5316; Laravel Echo &#x5B9E;&#x4F8B;&#x65F6;&#xFF0C;&#x4E00;&#x4E2A;&#x5957;&#x63A5;&#x5B57; ID &#x4F1A;&#x88AB;&#x6307;&#x5B9A;&#x5230;&#x8BE5;&#x8FDE;&#x63A5;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528; <a href="https://vuejs.org" target="_blank">Vue</a> &#x548C; <a href="https://github.com/mzabriskie/axios" target="_blank">Axios</a>&#xFF0C;&#x5957;&#x63A5;&#x5B57; ID &#x4F1A;&#x81EA;&#x52A8;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x6BCF;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684; <code>X-Socket-ID</code> &#x5934;&#x4E2D;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x5F53;&#x4F60;&#x8C03;&#x7528; <code>toOthers</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;Laravel &#x4F1A;&#x4ECE;&#x5934;&#x4E2D;&#x63D0;&#x53D6;&#x51FA;&#x5957;&#x63A5;&#x5B57; ID&#xFF0C;&#x5E76;&#x544A;&#x8BC9;&#x5E7F;&#x64AD;&#x5668;&#x4E0D;&#x8981;&#x5E7F;&#x64AD;&#x4EFB;&#x4F55;&#x6D88;&#x606F;&#x5230;&#x8BE5;&#x5957;&#x63A5;&#x5B57; ID &#x7684;&#x8FDE;&#x63A5;&#x4E0A;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x4F7F;&#x7528; Vue &#x548C; Axios&#xFF0C;&#x5219;&#x9700;&#x8981;&#x624B;&#x52A8;&#x914D;&#x7F6E; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x53D1;&#x9001; <code>X-Socket-ID</code> &#x5934;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>Echo.socketId</code> &#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;&#x5957;&#x63A5;&#x5B57; ID&#xFF1A;</p>
+<pre><code>var socketId = Echo.socketId();
+</code></pre><p><a name="receiving-broadcasts"></a></p>
+<h2 id="&#x63A5;&#x6536;&#x5E7F;&#x64AD;">&#x63A5;&#x6536;&#x5E7F;&#x64AD;</h2>
+<p><a name="installing-laravel-echo"></a></p>
+<h3 id="&#x5B89;&#x88C5;-laravel-echo">&#x5B89;&#x88C5; Laravel Echo</h3>
+<p>Laravel Echo &#x662F;&#x4E00;&#x4E2A; JavaScript &#x5E93;&#xFF0C;&#x5B83;&#x4F7F;&#x5F97;&#x8BA2;&#x9605;&#x9891;&#x9053;&#x548C;&#x76D1;&#x542C;&#x7531; Laravel &#x5E7F;&#x64AD;&#x7684;&#x4E8B;&#x4EF6;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; NPM &#x5305;&#x7BA1;&#x7406;&#x5668;&#x6765;&#x5B89;&#x88C5; Echo&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528; Pusher &#x5E7F;&#x64AD;&#x5668;&#xFF0C;&#x8BF7;&#x5B89;&#x88C5; <code>pusher-js</code> &#x5305;&#xFF1A;</p>
+<pre><code>npm install --save laravel-echo pusher-js
+</code></pre><p>&#x4E00;&#x65E6; Echo &#x88AB;&#x5B89;&#x88C5;&#x597D;&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; JavaScript &#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684; Echo &#x5B9E;&#x4F8B;&#x3002;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#x7684;&#x4E00;&#x4E2A;&#x7406;&#x60F3;&#x5730;&#x65B9;&#x662F;&#x5728; <code>resources/assets/js/bootstrap.js</code> &#x6587;&#x4EF6;&#x7684;&#x5E95;&#x90E8;&#xFF0C;Laravel &#x6846;&#x67B6;&#x81EA;&#x5E26;&#x4E86;&#x8BE5;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>import Echo from &quot;laravel-echo&quot;
+
+window.Echo = new Echo({
+    broadcaster: &apos;pusher&apos;,
+    key: &apos;your-pusher-key&apos;
+});
+</code></pre><p>&#x5F53;&#x4F60;&#x4F7F;&#x7528; <code>pusher</code> &#x8FDE;&#x63A5;&#x5668;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Echo &#x5B9E;&#x4F8B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x6307;&#x5B9A; <code>cluster</code> &#x4EE5;&#x53CA;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x662F;&#x5426;&#x9700;&#x8981;&#x52A0;&#x5BC6;&#xFF1A;</p>
+<pre><code>window.Echo = new Echo({
+    broadcaster: &apos;pusher&apos;,
+    key: &apos;your-pusher-key&apos;,
+    cluster: &apos;eu&apos;,
+    encrypted: true
+});
+</code></pre><p><a name="listening-for-events"></a></p>
+<h3 id="&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x76D1;&#x542C;">&#x5BF9;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x76D1;&#x542C;</h3>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x5B89;&#x88C5;&#x597D;&#x5E76;&#x5B9E;&#x4F8B;&#x5316;&#x4E86; Echo&#xFF0C;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x76D1;&#x542C;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x4E86;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528; <code>chennel</code> &#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#x5B9E;&#x4F8B;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>listen</code> &#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C;&#x6307;&#x5B9A;&#x7684;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code>Echo.channel(&apos;orders&apos;)
+    .listen(&apos;OrderShipped&apos;, (e) =&gt; {
+        console.log(e.order.name);
+    });
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x76D1;&#x542C;&#x79C1;&#x6709;&#x9891;&#x9053;&#x4E0A;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <code>private</code> &#x65B9;&#x6CD5;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x94FE;&#x5F0F;&#x8C03;&#x7528; <code>listen</code> &#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#x4E0A;&#x7684;&#x591A;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code>Echo.private(&apos;orders&apos;)
+    .listen(...)
+    .listen(...)
+    .listen(...);
+</code></pre><p><a name="leaving-a-channel"></a></p>
+<h3 id="&#x9000;&#x51FA;&#x9891;&#x9053;">&#x9000;&#x51FA;&#x9891;&#x9053;</h3>
+<p>&#x5982;&#x679C;&#x60F3;&#x9000;&#x51FA;&#x9891;&#x9053;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684; Echo &#x5B9E;&#x4F8B;&#x4E0A;&#x8C03;&#x7528; <code>leave</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>Echo.leave(&apos;orders&apos;);
+</code></pre><p><a name="namespaces"></a></p>
+<h3 id="&#x547D;&#x540D;&#x7A7A;&#x95F4;">&#x547D;&#x540D;&#x7A7A;&#x95F4;</h3>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x6CE8;&#x610F;&#x5230;&#x4E86;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x4E3A;&#x4E8B;&#x4EF6;&#x7C7B;&#x6307;&#x5B9A;&#x5B8C;&#x6574;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; Echo &#x4F1A;&#x81EA;&#x52A8;&#x8BA4;&#x4E3A;&#x4E8B;&#x4EF6;&#x5728; <code>App\Events</code> &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E0B;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x5B9E;&#x4F8B;&#x5316; Echo &#x7684;&#x65F6;&#x5019;&#x4F20;&#x9012;&#x4E00;&#x4E2A; <code>namespace</code> &#x914D;&#x7F6E;&#x9009;&#x9879;&#x6765;&#x6307;&#x5B9A;&#x6839;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF1A;</p>
+<pre><code>window.Echo = new Echo({
+    broadcaster: &apos;pusher&apos;,
+    key: &apos;your-pusher-key&apos;,
+    namespace: &apos;App.Other.Namespace&apos;
+});
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528; Echo &#x8BA2;&#x9605;&#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x4E3A;&#x4E8B;&#x4EF6;&#x7C7B;&#x52A0;&#x4E0A; <code>.</code> &#x524D;&#x7F00;&#x3002;&#x8FD9;&#x65F6;&#x9700;&#x8981;&#x586B;&#x5199;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x540D;&#x79F0;&#x7684;&#x7C7B;&#x540D;&#xFF1A;</p>
+<pre><code>Echo.channel(&apos;orders&apos;)
+    .listen(&apos;.Namespace.Event.Class&apos;, (e) =&gt; {
+        //
+    });
+</code></pre><p><a name="presence-channels"></a></p>
+<h2 id="presence-&#x9891;&#x9053;">Presence &#x9891;&#x9053;</h2>
+<p>Presence &#x9891;&#x9053;&#x662F;&#x5728;&#x79C1;&#x6709;&#x9891;&#x9053;&#x7684;&#x5B89;&#x5168;&#x6027;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x989D;&#x5916;&#x66B4;&#x9732;&#x51FA;&#x6709;&#x54EA;&#x4E9B;&#x4EBA;&#x8BA2;&#x9605;&#x4E86;&#x8BE5;&#x9891;&#x9053;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;&#x5B83;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x5EFA;&#x7ACB;&#x5F3A;&#x5927;&#x7684;&#x3001;&#x534F;&#x540C;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5982;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5728;&#x6D4F;&#x89C8;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x901A;&#x77E5;&#x5176;&#x4ED6;&#x6B63;&#x5728;&#x6D4F;&#x89C8;&#x76F8;&#x540C;&#x9875;&#x9762;&#x7684;&#x7528;&#x6237;&#x3002;</p>
+<p><a name="joining-a-presence-channel"></a></p>
+<h3 id="&#x6388;&#x6743;-presence-&#x9891;&#x9053;">&#x6388;&#x6743; Presence &#x9891;&#x9053;</h3>
+<p>Presence &#x9891;&#x9053;&#x4E5F;&#x662F;&#x79C1;&#x6709;&#x9891;&#x9053;&#xFF1B;&#x56E0;&#x6B64;&#xFF0C;&#x7528;&#x6237;&#x5FC5;&#x987B; <a href="#authorizing-channels">&#x83B7;&#x5F97;&#x6388;&#x6743;&#x540E;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x4ED6;&#x4EEC;</a>&#x3002;&#x4E0E;&#x79C1;&#x6709;&#x9891;&#x9053;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5728;&#x7ED9; presence &#x9891;&#x9053;&#x5B9A;&#x4E49;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x52A0;&#x5165;&#x4E86;&#x8BE5;&#x9891;&#x9053;&#xFF0C;&#x90A3;&#x4E48;&#x4E0D;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE; <code>true</code>&#xFF0C;&#x800C;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x8BE5;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x7531;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x80FD;&#x591F;&#x5728;&#x4F60;&#x7684; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x88AB; presence &#x9891;&#x9053;&#x4E8B;&#x4EF6;&#x4FA6;&#x542C;&#x5668;&#x6240;&#x4F7F;&#x7528;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x83B7;&#x5F97;&#x52A0;&#x5165;&#x8BE5; presence &#x9891;&#x9053;&#x7684;&#x6388;&#x6743;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE; <code>false</code> &#x6216; <code>null</code>&#xFF1A;</p>
+<pre><code>Broadcast::channel(&apos;chat.*&apos;, function ($user, $roomId) {
+    if ($user-&gt;canJoinRoom($roomId)) {
+        return [&apos;id&apos; =&gt; $user-&gt;id, &apos;name&apos; =&gt; $user-&gt;name];
+    }
+});
+</code></pre><p><a name="joining-presence-channels"></a></p>
+<h3 id="&#x52A0;&#x5165;-presence-&#x9891;&#x9053;">&#x52A0;&#x5165; Presence &#x9891;&#x9053;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x7528; Echo &#x7684; <code>join</code> &#x65B9;&#x6CD5;&#x6765;&#x52A0;&#x5165; presence &#x9891;&#x9053;&#x3002;<code>join</code> &#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x4E86; <code>PresenceChannel</code> &#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;&#x66B4;&#x9732; <code>listen</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5141;&#x8BB8;&#x4F60;&#x8BA2;&#x9605; <code>here</code>&#x3001;<code>joining</code> &#x548C; <code>leaving</code> &#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code>Echo.join(`chat.${roomId}`)
+    .here((users) =&gt; {
+        //
+    })
+    .joining((user) =&gt; {
+        console.log(user.name);
+    })
+    .leaving((user) =&gt; {
+        console.log(user.name);
+    });
+</code></pre><p><code>here</code> &#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F1A;&#x5728;&#x4F60;&#x6210;&#x529F;&#x52A0;&#x5165;&#x9891;&#x9053;&#x540E;&#x88AB;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x5B83;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x7528;&#x6765;&#x544A;&#x77E5;&#x5F53;&#x524D;&#x8BA2;&#x9605;&#x5728;&#x8BE5;&#x9891;&#x9053;&#x4E0A;&#x7684;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x3002;<code>joining</code> &#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x5176;&#x4ED6;&#x65B0;&#x7528;&#x6237;&#x52A0;&#x5165;&#x5230;&#x9891;&#x9053;&#x65F6;&#x88AB;&#x6267;&#x884C;&#xFF0C;<code>leaving</code> &#x4F1A;&#x5728;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x9000;&#x51FA;&#x9891;&#x9053;&#x65F6;&#x88AB;&#x6267;&#x884C;&#x3002;</p>
+<p><a name="broadcasting-to-presence-channels"></a></p>
+<h3 id="&#x5E7F;&#x64AD;&#x5230;-presence-&#x9891;&#x9053;">&#x5E7F;&#x64AD;&#x5230; Presence &#x9891;&#x9053;</h3>
+<p>Presence &#x9891;&#x9053;&#x53EF;&#x4EE5;&#x50CF;&#x516C;&#x5F00;&#x548C;&#x79C1;&#x6709;&#x9891;&#x9053;&#x4E00;&#x6837;&#x63A5;&#x6536;&#x4E8B;&#x4EF6;&#x3002;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x804A;&#x5929;&#x5BA4;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x628A; <code>NewMessage</code> &#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x5230;&#x804A;&#x5929;&#x5BA4;&#x7684; presence &#x9891;&#x9053;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x5B83;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4ECE;&#x4E8B;&#x4EF6;&#x7684; <code>broadcastOn</code> &#x65B9;&#x6CD5;&#x4E2D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>PresenceChannel</code> &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>/**
+ * &#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x5728;&#x54EA;&#x4E9B;&#x9891;&#x9053;&#x4E0A;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;
+ *
+ * @return Channel|array
+ */
+public function broadcastOn()
+{
+    return new PresenceChannel(&apos;room.&apos;.$this-&gt;message-&gt;room_id);
+}
+</code></pre><p>&#x548C;&#x516C;&#x5F00;&#x6216;&#x79C1;&#x6709;&#x4E8B;&#x4EF6;&#x4E00;&#x6837;&#xFF0C;presence &#x9891;&#x9053;&#x4E8B;&#x4EF6;&#x4E5F;&#x80FD;&#x4F7F;&#x7528; <code>broadcast</code> &#x51FD;&#x6570;&#x6765;&#x5E7F;&#x64AD;&#x3002;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x4F60;&#x8FD8;&#x80FD;&#x7528; <code>toOthers</code> &#x65B9;&#x6CD5;&#x5C06;&#x5F53;&#x524D;&#x7528;&#x6237;&#x4ECE;&#x5E7F;&#x64AD;&#x63A5;&#x6536;&#x8005;&#x4E2D;&#x6392;&#x9664;&#xFF1A;</p>
+<pre><code>broadcast(new NewMessage($message));
+
+broadcast(new NewMessage($message))-&gt;toOthers();
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Echo &#x7684; <code>listen</code> &#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C; join &#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code>Echo.join(`chat.${roomId}`)
+    .here(...)
+    .joining(...)
+    .leaving(...)
+    .listen(&apos;NewMessage&apos;, (e) =&gt; {
+        //
+    });
+</code></pre><p><a name="client-events"></a></p>
+<h2 id="&#x5BA2;&#x6237;&#x7AEF;&#x4E8B;&#x4EF6;">&#x5BA2;&#x6237;&#x7AEF;&#x4E8B;&#x4EF6;</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5E7F;&#x64AD;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x7ED9;&#x5176;&#x4ED6;&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4F46;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x901A;&#x77E5;&#x4F60;&#x7684; Laravel &#x7A0B;&#x5E8F;&#x3002;&#x8BD5;&#x60F3;&#x4E00;&#x4E0B;&#x5F53;&#x4F60;&#x60F3;&#x63D0;&#x9192;&#x7528;&#x6237;&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x6B63;&#x5728;&#x8F93;&#x5165;&#x4E2D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x663E;&#x800C;&#x6613;&#x89C1;&#x5BA2;&#x670D;&#x7AEF;&#x4E8B;&#x4EF6;&#x5BF9;&#x4E8E;&#x300C;&#x8F93;&#x5165;&#x4E2D;&#x300D;&#x4E4B;&#x7C7B;&#x7684;&#x901A;&#x77E5;&#x5C31;&#x663E;&#x5F97;&#x975E;&#x5E38;&#x6709;&#x7528;&#x4E86;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Echo &#x7684; <code>whisper</code> &#x65B9;&#x6CD5;&#x6765;&#x5E7F;&#x64AD;&#x5BA2;&#x6237;&#x7AEF;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code>Echo.channel(&apos;chat&apos;)
+    .whisper(&apos;typing&apos;, {
+        name: this.user.name
+    });
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>listenForWhisper</code> &#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C;&#x5BA2;&#x6237;&#x7AEF;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code>Echo.channel(&apos;chat&apos;)
+    .listenForWhisper(&apos;typing&apos;, (e) =&gt; {
+        console.log(e.name);
+    });
+</code></pre><p><a name="notifications"></a></p>
+<h2 id="&#x6D88;&#x606F;&#x901A;&#x77E5;">&#x6D88;&#x606F;&#x901A;&#x77E5;</h2>
+<p>&#x5C06; <a href="../docs/notifications">&#x6D88;&#x606F;&#x901A;&#x77E5;</a> &#x548C;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x4E00;&#x540C;&#x4F7F;&#x7528;&#xFF0C;&#x4F60;&#x7684; JavaScript &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x5237;&#x65B0;&#x9875;&#x9762;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x63A5;&#x6536;&#x65B0;&#x7684;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x8BF7;&#x5148;&#x9605;&#x8BFB;&#x5173;&#x4E8E;&#x5982;&#x4F55;&#x4F7F;&#x7528; <a href="../docs/notifications#broadcast-notifications">&#x5E7F;&#x64AD;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x9891;&#x9053;</a> &#x7684;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x5C06;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x914D;&#x7F6E;&#x4E3A;&#x4F7F;&#x7528;&#x5E7F;&#x64AD;&#x9891;&#x9053;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528; Echo &#x7684; <code>notification</code> &#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C;&#x5E7F;&#x64AD;&#x4E8B;&#x4EF6;&#x3002;&#x8C28;&#x8BB0;&#xFF0C;&#x9891;&#x9053;&#x540D;&#x79F0;&#x5E94;&#x8BE5;&#x548C;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x7684;&#x5B9E;&#x4F53;&#x7C7B;&#x540D;&#x76F8;&#x5339;&#x914D;&#xFF1A;</p>
+<pre><code>Echo.private(`App.User.${userId}`)
+    .notification((notification) =&gt; {
+        console.log(notification.type);
+    });
+</code></pre><p>&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x901A;&#x8FC7; <code>broadcast</code> &#x9891;&#x9053;&#x53D1;&#x9001;&#x5230; <code>App\User</code> &#x5B9E;&#x4F8B;&#x7684;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x90FD;&#x4F1A;&#x88AB;&#x8BE5;&#x56DE;&#x8C03;&#x63A5;&#x6536;&#x5230;&#x3002;&#x4E00;&#x4E2A;&#x9488;&#x5BF9; <code>App.User.{id}</code> &#x9891;&#x9053;&#x7684;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x88AB;&#x5305;&#x542B;&#x5728; Laravel &#x7684; <code>BroadcastServiceProvider</code> &#x4E2D;&#x4E86;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8-1 Artisan命令行.html" class="navigation navigation-prev " aria-label="Previous page: 8-1 Artisan命令行">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8-3 缓存系统.html" class="navigation navigation-next " aria-label="Next page: 8-3 缓存系统">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8-2 广播系统","level":"1.9.2","depth":2,"next":{"title":"8-3 缓存系统","level":"1.9.3","depth":2,"path":"Chapter8/8-3 缓存系统.md","ref":"Chapter8/8-3 缓存系统.md","articles":[]},"previous":{"title":"8-1 Artisan命令行","level":"1.9.1","depth":2,"path":"Chapter8/8-1 Artisan命令行.md","ref":"Chapter8/8-1 Artisan命令行.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter8/8-2 广播系统.md","mtime":"2018-10-29T12:40:15.142Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

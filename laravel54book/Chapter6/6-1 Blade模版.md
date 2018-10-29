@@ -92,10 +92,10 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
     <!-- /resources/views/alert.blade.php -->
     
     <div class="alert alert-danger">
-        {{ $slot }}
+        {% raw %}{{ $slot }} {% endraw %}
     </div>
 
-`{{ $slot }}` 变量将包含我们希望注入到组件的内容。现在，我们可以使用 `@component` 指令来构造这个组件：
+`{% raw %}{{ $slot }} {% endraw %}` 变量将包含我们希望注入到组件的内容。现在，我们可以使用 `@component` 指令来构造这个组件：
 
     @component('alert')
         <strong>哇！</strong> 出现了一些问题！
@@ -106,9 +106,9 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
     <!-- /resources/views/alert.blade.php -->
     
     <div class="alert alert-danger">
-        <div class="alert-title">{{ $title }}</div>
+        <div class="alert-title">{% raw %}{{ $title }} {% endraw %}</div>
     
-        {{ $slot }}
+        {% raw %}{{ $slot }} {% endraw %}
     </div>
 
 现在，我们可以使用 `@slot` 指令注入内容到已命名的 slot 中，任何没有被 `@slot` 指令包裹住的内容将传递给组件中的 `$slot` 变量:
@@ -140,33 +140,33 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
 
 你可以像这样显示 `name` 变量的内容：
 
-    Hello, {{ $name }}.
+    Hello, {% raw %}{{ $name }} {% endraw %}.
 
 当然也不是说一定只能显示传递至视图的变量内容。你也可以显示 PHP 函数的结果。事实上，你可以在 Blade 中显示任意的 PHP 代码：
 
-    The current UNIX timestamp is {{ time() }}.
+    The current UNIX timestamp is {% raw %}{{ time() }} {% endraw %}.
 
-> {note} Blade `{{ }}` 语法会自动调用 PHP `htmlspecialchars` 函数来避免 XSS 攻击。
+> {note} Blade `{% raw %}{{ }} {% endraw %}` 语法会自动调用 PHP `htmlspecialchars` 函数来避免 XSS 攻击。
 
 #### 当数据存在时输出
 
 有时候你可能想要输出一个变量，但是你并不确定这个变量是否已经被定义，我们可以用像这样的冗长 PHP 代码表达：
 
-    {{ isset($name) ? $name : 'Default' }}
+    {% raw %}{{ isset($name) ? $name : 'Default' }} {% endraw %}
 
 事实上，Blade 提供了更便捷的方式来代替这种三元运算符表达式：
 
-    {{ $name or 'Default' }}
+    {% raw %}{{ $name or 'Default' }} {% endraw %}
 
 在这个例子中，如果 `$name` 变量存在，它的值将被显示出来。但是，如果它不存在，则会显示 `Default` 。
 
 #### 显示未转义过的数据
 
-在默认情况下，Blade 模板中的 `{{ }}` 表达式将会自动调用 PHP `htmlspecialchars` 函数来转义数据以避免 XSS 的攻击。如果你不想你的数据被转义，你可以使用下面的语法：
+在默认情况下，Blade 模板中的 `{% raw %}{{ }} {% endraw %}` 表达式将会自动调用 PHP `htmlspecialchars` 函数来转义数据以避免 XSS 的攻击。如果你不想你的数据被转义，你可以使用下面的语法：
 
     Hello, {!! $name !!}.
 
-> {note} 要非常小心处理用户输入的数据时，你应该总是使用 `{{  }}` 语法来转义内容中的任何的 HTML 元素，以避免 XSS 攻击。
+> {note} 要非常小心处理用户输入的数据时，你应该总是使用 `{% raw %}{{  }} {% endraw %}` 语法来转义内容中的任何的 HTML 元素，以避免 XSS 攻击。
 
 <a name="blade-and-javascript-frameworks"></a>
 ### Blade & JavaScript 框架
@@ -175,9 +175,9 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
 
     <h1>Laravel</h1>
     
-    Hello, @{{ name }}.
+    Hello, @{% raw %}{{ name }} {% endraw %}.
 
-在这个例子里，`@` 符号最终会被 Blade 引擎剔除，并且 `{{ name }}` 表达式会被原样的保留下来，这样就允许你的 JavaScript 框架来使用它了。
+在这个例子里，`@` 符号最终会被 Blade 引擎剔除，并且 `{% raw %}{{ name }} {% endraw %}` 表达式会被原样的保留下来，这样就允许你的 JavaScript 框架来使用它了。
 
 #### `@verbatim` 指令
 
@@ -185,7 +185,7 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
 
     @verbatim
         <div class="container">
-            Hello, {{ name }}.
+            Hello, {% raw %}{{ name }} {% endraw %}.
         </div>
     @endverbatim
 
@@ -219,15 +219,15 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
 除了条件表达式外，Blade 也支持 PHP 的循环结构，这些命令的功能等同于在 PHP 中的语法：
 
     @for ($i = 0; $i < 10; $i++)
-        目前的值为 {{ $i }}
+        目前的值为 {% raw %}{{ $i }} {% endraw %}
     @endfor
     
     @foreach ($users as $user)
-        <p>此用户为 {{ $user->id }}</p>
+        <p>此用户为 {% raw %}{{ $user->id }} {% endraw %}</p>
     @endforeach
     
     @forelse ($users as $user)
-        <li>{{ $user->name }}</li>
+        <li>{% raw %}{{ $user->name }} {% endraw %}</li>
     @empty
         <p>没有用户</p>
     @endforelse
@@ -245,7 +245,7 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
             @continue
         @endif
     
-        <li>{{ $user->name }}</li>
+        <li>{% raw %}{{ $user->name }} {% endraw %}</li>
     
         @if ($user->number == 5)
             @break
@@ -257,7 +257,7 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
     @foreach ($users as $user)
         @continue($user->type == 1)
     
-        <li>{{ $user->name }}</li>
+        <li>{% raw %}{{ $user->name }} {% endraw %}</li>
     
         @break($user->number == 5)
     @endforeach
@@ -276,7 +276,7 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
             This is the last iteration.
         @endif
     
-        <p>This is user {{ $user->id }}</p>
+        <p>This is user {% raw %}{{ $user->id }} {% endraw %}</p>
     @endforeach
 
 如果你是在一个嵌套的循环中，你可以通过使用 `$loop` 变量的 `parent` 属性来获取父循环中的 `$loop` 变量：
@@ -307,7 +307,7 @@ Blade 的两个主要优点是 _模板继承_ 和 _区块_ 。
 
 Blade 也允许在页面中定义注释，然而，跟 HTML 的注释不同的是，Blade 注释不会被包含在应用程序返回的 HTML 内：
 
-    {{-- 此注释将不会出现在渲染后的 HTML --}}
+    {% raw %}{{-- 此注释将不会出现在渲染后的 HTML --}} {% endraw %}
 
 <a name="php"></a>
 ### PHP
@@ -376,12 +376,12 @@ Blade 也允许你在其它视图或布局中为已经命名的堆栈中压入�
 <a name="service-injection"></a>
 ## 服务注入
 
-你可以使用 `@inject` 命令来从 Larvel [service container](/docs/{{version}}/container) 中取出服务。传递给 `@inject` 的第一个参数为置放该服务的变量名称，而第二个参数为你想要解析的服务的类或是接口的名称：
+你可以使用 `@inject` 命令来从 Larvel [service container](/docs/{% raw %}{{version}} {% endraw %}/container) 中取出服务。传递给 `@inject` 的第一个参数为置放该服务的变量名称，而第二个参数为你想要解析的服务的类或是接口的名称：
 
     @inject('metrics', 'App\Services\MetricsService')
     
     <div>
-        Monthly Revenue: {{ $metrics->monthlyRevenue() }}.
+        Monthly Revenue: {% raw %}{{ $metrics->monthlyRevenue() }} {% endraw %}.
     </div>
 
 <a name="extending-blade"></a>

@@ -1,0 +1,1518 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9-6 Redis · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../10  Eloquent ORM.html" />
+    
+    
+    <link rel="prev" href="9-5 数据填充.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Chapter8/8-1 Artisan命令行.html">
+            
+                <a href="../Chapter8/8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Chapter8/8-2 广播系统.html">
+            
+                <a href="../Chapter8/8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Chapter8/8-3 缓存系统.html">
+            
+                <a href="../Chapter8/8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Chapter8/8-4 集合.html">
+            
+                <a href="../Chapter8/8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Chapter8/8-5 错误与日志.html">
+            
+                <a href="../Chapter8/8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Chapter8/8-6 事件系统.html">
+            
+                <a href="../Chapter8/8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Chapter8/8-7 文件存储.html">
+            
+                <a href="../Chapter8/8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Chapter8/8-8 辅助函数.html">
+            
+                <a href="../Chapter8/8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Chapter8/8-9 邮件发送.html">
+            
+                <a href="../Chapter8/8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Chapter8/8-10 消息通知.html">
+            
+                <a href="../Chapter8/8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../Chapter8/8-11 扩展包开发.html">
+            
+                <a href="../Chapter8/8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../Chapter8/8-12 队列.html">
+            
+                <a href="../Chapter8/8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../Chapter8/8-13 任务调度.html">
+            
+                <a href="../Chapter8/8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="9-1 快速入门.html">
+            
+                <a href="9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="9-2 查询构造器.html">
+            
+                <a href="9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="9-3 分页.html">
+            
+                <a href="9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="9-4 数据库迁移.html">
+            
+                <a href="9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="9-5 数据填充.html">
+            
+                <a href="9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.6" data-path="9-6 Redis.html">
+            
+                <a href="9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >9-6 Redis</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;-redis-&#x4F7F;&#x7528;&#x6307;&#x5357;">Laravel &#x7684; Redis &#x4F7F;&#x7528;&#x6307;&#x5357;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a><ul>
+<li><a href="#configuration">&#x914D;&#x7F6E;</a></li>
+<li><a href="#predis">Predis</a></li>
+<li><a href="#phpredis">PhpRedis</a></li>
+</ul>
+</li>
+<li><a href="#interacting-with-redis">&#x57FA;&#x672C;&#x7528;&#x6CD5;</a><ul>
+<li><a href="#pipelining-commands">&#x7BA1;&#x9053;&#x5316;&#x547D;&#x4EE4;</a></li>
+</ul>
+</li>
+<li><a href="#pubsub">&#x53D1;&#x5E03;&#x4E0E;&#x8BA2;&#x9605;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p><a href="http://redis.io" target="_blank">Redis</a> &#x662F;&#x4E00;&#x6B3E;&#x5F00;&#x6E90;&#x4E14;&#x5148;&#x8FDB;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x3002;&#x7531;&#x4E8E;&#x5B83;&#x7684;&#x952E;&#x6307;&#x5411;&#x7684;&#x6570;&#x636E;&#x5305;&#x542B;&#x4E86; <a href="http://redis.io/topics/data-types#strings" target="_blank">&#x5B57;&#x7B26;&#x4E32;</a>&#x3001;<a href="http://redis.io/topics/data-types#hashes" target="_blank">&#x54C8;&#x5E0C;</a>&#x3001;<a href="http://redis.io/topics/data-types#lists" target="_blank">&#x5217;&#x8868;</a>&#x3001;<a href="http://redis.io/topics/data-types#sets" target="_blank">&#x96C6;&#x5408;</a> &#x548C; <a href="http://redis.io/topics/data-types#sorted-sets" target="_blank">&#x6709;&#x5E8F;&#x96C6;&#x5408;</a> &#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x56E0;&#x6B64;&#x5E38;&#x88AB;&#x7528;&#x4F5C;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p>&#x5728;&#x4F7F;&#x7528; Redis &#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x901A;&#x8FC7; Composer &#x5B89;&#x88C5; <code>predis/predis</code>  &#x6269;&#x5C55;&#x5305;&#x3002;</p>
+<pre><code>composer require predis/predis
+</code></pre><p>&#x8FD8;&#x6709;&#x4E00;&#x79CD;&#x9009;&#x62E9;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; PECL &#x5B89;&#x88C5; <a href="https://github.com/phpredis/phpredis" target="_blank">PhpRedis</a> PHP &#x6269;&#x5C55;&#x3002;&#x8FD9;&#x4E2A;&#x6269;&#x5C55;&#x5B89;&#x88C5;&#x8D77;&#x6765;&#x66F4;&#x590D;&#x6742;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x91CD;&#x5EA6;&#x4F7F;&#x7528; redis &#x65F6;&#x83B7;&#x5F97;&#x4E00;&#x5B9A;&#x7684;&#x6027;&#x80FD;&#x63D0;&#x5347;&#x3002;</p>
+<p><a name="configuration"></a></p>
+<h3 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h3>
+<p>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; Redis &#x914D;&#x7F6E;&#x90FD;&#x5728; <code>config/database.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>redis</code> &#x6570;&#x7EC4;&#x91CC;&#x9762;&#x5305;&#x542B;&#x4E86;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528;&#x7684; Redis &#x670D;&#x52A1;&#x5668;&#xFF1A;</p>
+<pre><code>&apos;redis&apos; =&gt; [
+
+    &apos;client&apos; =&gt; &apos;predis&apos;,
+
+    &apos;default&apos; =&gt; [
+        &apos;host&apos; =&gt; env(&apos;REDIS_HOST&apos;, &apos;localhost&apos;),
+        &apos;password&apos; =&gt; env(&apos;REDIS_PASSWORD&apos;, null),
+        &apos;port&apos; =&gt; env(&apos;REDIS_PORT&apos;, 6379),
+        &apos;database&apos; =&gt; 0,
+    ],
+
+],
+</code></pre><p>&#x9ED8;&#x8BA4;&#x7684;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x5BF9;&#x4E8E;&#x5F00;&#x53D1;&#x6765;&#x8BF4;&#x5E94;&#x8BE5;&#x8DB3;&#x591F;&#x4E86;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4F7F;&#x7528;&#x7684;&#x73AF;&#x5883;&#x6765;&#x968F;&#x610F;&#x66F4;&#x6539;&#x6570;&#x7EC4;&#x3002;&#x53EA;&#x9700;&#x7ED9;&#x6BCF;&#x4E2A; Redis &#x670D;&#x52A1;&#x5668;&#x6307;&#x5B9A;&#x540D;&#x79F0;&#x3001;host &#x548C; port &#x5373;&#x53EF;&#x3002;</p>
+<blockquote>
+<p>&#x8BD1;&#x8005;&#x6CE8;&#xFF1A; &#x5173;&#x4E8E; Redis &#x591A;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; - <a href="https://laravel-china.org/topics/2466" target="_blank">Laravel &#x4E0B;&#x914D;&#x7F6E; Redis &#x8BA9;&#x7F13;&#x5B58;&#x3001;Session &#x5404;&#x81EA;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684; Redis &#x6570;&#x636E;&#x5E93;</a>&#x3002;</p>
+</blockquote>
+<h4 id="redis-&#x96C6;&#x7FA4;&#x914D;&#x7F6E;">redis &#x96C6;&#x7FA4;&#x914D;&#x7F6E;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x7A0B;&#x5E8F;&#x4F7F;&#x7528; redis &#x670D;&#x52A1;&#x5668;&#x96C6;&#x7FA4;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728; redis &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528; <code>clusters</code> &#x952E;&#x6765;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre><code>&apos;redis&apos; =&gt; [
+
+    &apos;client&apos; =&gt; &apos;predis&apos;,
+
+    &apos;clusters&apos; =&gt; [
+        &apos;default&apos; =&gt; [
+            [
+                &apos;host&apos; =&gt; env(&apos;REDIS_HOST&apos;, &apos;localhost&apos;),
+                &apos;password&apos; =&gt; env(&apos;REDIS_PASSWORD&apos;, null),
+                &apos;port&apos; =&gt; env(&apos;REDIS_PORT&apos;, 6379),
+                &apos;database&apos; =&gt; 0,
+            ],
+        ],
+    ],
+
+],
+</code></pre><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x96C6;&#x7FA4;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x8DE8;&#x8282;&#x70B9;&#x95F4;&#x5BA2;&#x6237;&#x7AEF;&#x5171;&#x4EAB;&#xFF0C;&#x5141;&#x8BB8;&#x4F60;&#x5B9E;&#x73B0;&#x8282;&#x70B9;&#x6C60;&#x4EE5;&#x53CA;&#x521B;&#x5EFA;&#x5927;&#x91CF;&#x53EF;&#x7528;&#x5185;&#x5B58;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x6CE8;&#x610F;&#x5BA2;&#x6237;&#x7AEF;&#x5171;&#x4EAB;&#x5E76;&#x6CA1;&#x6709;&#x5904;&#x7406;&#x5931;&#x8D25;&#x60C5;&#x51B5;&#xFF1B;&#x56E0;&#x6B64;&#xFF0C;&#x4E3B;&#x8981;&#x9002;&#x7528;&#x4E8E;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x4E3B;&#x8981;&#x7684;&#x6570;&#x636E;&#x6E90;&#x6765;&#x5EFA;&#x7ACB;&#x7F13;&#x5B58;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x4F60;&#x559C;&#x6B22;&#x4F7F;&#x7528; redis &#x539F;&#x751F;&#x96C6;&#x7FA4;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E; <code>options</code> &#x952E;&#xFF1A;</p>
+<pre><code>&apos;redis&apos; =&gt; [
+
+    &apos;client&apos; =&gt; &apos;predis&apos;,
+
+    &apos;options&apos; =&gt; [
+        &apos;cluster&apos; =&gt; &apos;redis&apos;,
+    ],
+
+    &apos;clusters&apos; =&gt; [
+        // ...
+    ],
+
+],
+</code></pre><p><a name="predis"></a></p>
+<h3 id="predis">Predis</h3>
+<p>&#x9664;&#x4E86;&#x9ED8;&#x8BA4;&#x7684; <code>Host</code>&#xFF0C;<code>port</code>&#xFF0C;<code>database</code> &#x548C; <code>password</code> &#x670D;&#x52A1;&#x914D;&#x7F6E;&#x9879;&#x4E4B;&#x5916;&#xFF0C;Predis &#x8FD8;&#x53EF;&#x4EE5;&#x4E3A;&#x6BCF;&#x4E2A; redis &#x5B9A;&#x4E49;&#x5176;&#x4ED6;&#x7684; <a href="https://github.com/nrk/predis/wiki/Connection-Parameters" target="_blank">&#x8FDE;&#x63A5;&#x53C2;&#x6570;</a>&#x3002;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF0C;&#x53EA;&#x9700;&#x5C06;&#x5B83;&#x4EEC;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x7684; <code>config/database.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684; Redis &#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x9879;&#x4E2D;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code>&apos;default&apos; =&gt; [
+    &apos;host&apos; =&gt; env(&apos;REDIS_HOST&apos;, &apos;localhost&apos;),
+    &apos;password&apos; =&gt; env(&apos;REDIS_PASSWORD&apos;, null),
+    &apos;port&apos; =&gt; env(&apos;REDIS_PORT&apos;, 6379),
+    &apos;database&apos; =&gt; 0,
+    &apos;read_write_timeout&apos; =&gt; 60,
+],
+</code></pre><p><a name="phpredis"></a></p>
+<h3 id="phpredis">PhpRedis</h3>
+<blockquote>
+<p>{note} &#x5982;&#x679C;&#x4F60;&#x662F;&#x901A;&#x8FC7; PECL &#x5B89;&#x88C5; Redis PHP &#x6269;&#x5C55;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x91CD;&#x547D;&#x540D; <code>config/app.php</code> &#x6587;&#x4EF6;&#x91CC;&#x7684; Redis &#x522B;&#x540D;&#x3002;</p>
+</blockquote>
+<p>&#x8981;&#x4F7F;&#x7528; Phpredis &#x6269;&#x5C55;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5C06; <code>client</code> &#x9009;&#x9879;&#x914D;&#x7F6E;&#x4E3A; <code>phpredis</code>&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x5728; <code>config/database.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;&#xFF1A;</p>
+<pre><code>&apos;redis&apos; =&gt; [
+
+    &apos;client&apos; =&gt; &apos;phpredis&apos;,
+
+    // Rest of Redis configuration...
+],
+</code></pre><p>&#x9664;&#x4E86;&#x9ED8;&#x8BA4;&#x7684; <code>Host</code>&#xFF0C;<code>port</code>&#xFF0C;<code>database</code> &#x548C; <code>password</code> &#x670D;&#x52A1;&#x914D;&#x7F6E;&#x9879;&#x4E4B;&#x5916;&#xFF0C;Phpredis &#x8FD8;&#x652F;&#x6301;&#x4E0B;&#x5217;&#x989D;&#x5916;&#x8FDE;&#x63A5;&#x914D;&#x7F6E;&#xFF1A;<code>persistent</code>&#xFF0C;<code>prefix</code>&#xFF0C;<code>read_timeout</code> &#x548C; <code>timeout</code>&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#x52A0;&#x5230; <code>config/database.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D; redis &#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x9879;&#x4E0B;&#xFF1A;</p>
+<pre><code>&apos;default&apos; =&gt; [
+    &apos;host&apos; =&gt; env(&apos;REDIS_HOST&apos;, &apos;localhost&apos;),
+    &apos;password&apos; =&gt; env(&apos;REDIS_PASSWORD&apos;, null),
+    &apos;port&apos; =&gt; env(&apos;REDIS_PORT&apos;, 6379),
+    &apos;database&apos; =&gt; 0,
+    &apos;read_timeout&apos; =&gt; 60,
+],
+</code></pre><p><a name="interacting-with-redis"></a></p>
+<h2 id="&#x57FA;&#x672C;&#x7528;&#x6CD5;">&#x57FA;&#x672C;&#x7528;&#x6CD5;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>Redis</code> <a href="../docs/facades">facade</a> &#x7684;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#x4E0E; <code>Redis</code> &#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;<code>Redis</code> facade &#x652F;&#x6301;&#x52A8;&#x6001;&#x65B9;&#x6CD5;&#xFF0C;&#x610F;&#x601D;&#x5C31;&#x662F;&#x6307;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8BE5; facade &#x8C03;&#x7528;&#x4EFB;&#x4F55; <a href="http://redis.io/commands" target="_blank">Redis &#x547D;&#x4EE4;</a>&#xFF0C;&#x8BE5;&#x547D;&#x4EE4;&#x4F1A;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#x7ED9; Redis&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x901A;&#x8FC7; <code>Redis</code> facade &#x7684; <code>get</code> &#x65B9;&#x6CD5;&#x6765;&#x8C03;&#x7528; Redis &#x7684; <code>GET</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Support\Facades\Redis;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * Show the profile for the given user.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function showProfile($id)
+    {
+        $user = Redis::get(&apos;user:profile:&apos;.$id);
+
+        return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; $user]);
+    }
+}
+</code></pre><p>&#x5982;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>Redis</code> facade &#x8C03;&#x7528;&#x4EFB;&#x4F55;&#x7684; Redis &#x547D;&#x4EE4;&#x3002;Laravel &#x4F7F;&#x7528;&#x9B54;&#x672F;&#x65B9;&#x6CD5;&#x6765;&#x4F20;&#x9012;&#x547D;&#x4EE4;&#x81F3; Redis &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x4F20;&#x9012; Redis &#x547D;&#x4EE4;&#x6240;&#x9700;&#x8981;&#x7684;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>Redis::set(&apos;name&apos;, &apos;Taylor&apos;);
+
+$values = Redis::lrange(&apos;names&apos;, 5, 10);
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>command</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x547D;&#x4EE4;&#x81F3;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5B83;&#x63A5;&#x6536;&#x547D;&#x4EE4;&#x7684;&#x540D;&#x79F0;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5219;&#x4E3A;&#x503C;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>$values = Redis::command(&apos;lrange&apos;, [&apos;name&apos;, 5, 10]);
+</code></pre><h4 id="&#x4F7F;&#x7528;&#x591A;&#x4E2A;-redis-&#x8FDE;&#x63A5;">&#x4F7F;&#x7528;&#x591A;&#x4E2A; Redis &#x8FDE;&#x63A5;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>Redis::connection</code> &#x65B9;&#x6CD5;&#x6765;&#x5F97;&#x5230; Redis &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>$redis = Redis::connection();
+</code></pre><p>&#x8FD9;&#x4F1A;&#x8FD4;&#x56DE;&#x914D;&#x7F6E;&#x9879;&#x4E2D;&#x7684;&#x9ED8;&#x8BA4;&#x7684; redis &#x670D;&#x52A1;&#x5668;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x8FDE;&#x63A5;&#x6216;&#x8005;&#x96C6;&#x7FA4;&#x7684;&#x540D;&#x5B57;&#x7ED9; <code>connection</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6765;&#x83B7;&#x53D6;&#x5728; Redis &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;&#x7684;&#x7279;&#x5B9A;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6216;&#x8005;&#x96C6;&#x7FA4;&#xFF1A;</p>
+<pre><code>$redis = Redis::connection(&apos;my-connection&apos;);
+</code></pre><p><a name="pipelining-commands"></a></p>
+<h3 id="&#x7BA1;&#x9053;&#x5316;&#x547D;&#x4EE4;">&#x7BA1;&#x9053;&#x5316;&#x547D;&#x4EE4;</h3>
+<p>&#x5F53;&#x4F60;&#x60F3;&#x8981;&#x5728;&#x5355;&#x6B21;&#x64CD;&#x4F5C;&#x4E2D;&#x53D1;&#x9001;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x81F3;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x5316;&#x547D;&#x4EE4;&#x3002; <code>pipeline</code> &#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5E26;&#x6709; Redis &#x5B9E;&#x4F8B;&#x7684; <code>&#x95ED;&#x5305;</code> &#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x6240;&#x6709;&#x7684;&#x547D;&#x4EE4;&#x81F3;&#x6B64; Redis &#x5B9E;&#x4F8B;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x4F1A;&#x5728;&#x5355;&#x6B21;&#x64CD;&#x4F5C;&#x4E2D;&#x8FD0;&#x884C;&#xFF1A;</p>
+<pre><code>Redis::pipeline(function ($pipe) {
+    for ($i = 0; $i &lt; 1000; $i++) {
+        $pipe-&gt;set(&quot;key:$i&quot;, $i);
+    }
+});
+</code></pre><p><a name="pubsub"></a></p>
+<h2 id="&#x53D1;&#x5E03;&#x4E0E;&#x8BA2;&#x9605;">&#x53D1;&#x5E03;&#x4E0E;&#x8BA2;&#x9605;</h2>
+<p>Laravel &#x4E5F;&#x5BF9; Redis &#x7684; <code>publish</code> &#x53CA; <code>subscribe</code> &#x63D0;&#x4F9B;&#x4E86;&#x65B9;&#x4FBF;&#x7684;&#x63A5;&#x53E3;&#x3002;&#x8FD9;&#x4E9B; Redis &#x547D;&#x4EE4;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x76D1;&#x542C;&#x6307;&#x5B9A;&#x300C;&#x9891;&#x9053;&#x300D;&#x7684;&#x6D88;&#x606F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x81F3;&#x9891;&#x9053;&#xFF0C;&#x751A;&#x81F3;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x79CD;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x8BA9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6216;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x5BB9;&#x6613;&#x6C9F;&#x901A;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x901A;&#x8FC7; <code>Redis</code> &#x6765;&#x4F7F;&#x7528; <code>subscribe</code> &#x65B9;&#x6CD5;&#x5728;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#x8BBE;&#x7F6E;&#x4FA6;&#x542C;&#x5668;&#x3002;&#x6211;&#x4EEC;&#x4F1A;&#x5C06;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x653E;&#x7F6E;&#x4E8E;&#x4E00;&#x4E2A; <a href="../docs/artisan">Artisan &#x547D;&#x4EE4;</a> &#x4E2D;&#xFF0C;&#x56E0;&#x4E3A;&#x8C03;&#x7528; <code>subscribe</code> &#x65B9;&#x6CD5;&#x4F1A;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x957F;&#x65F6;&#x95F4;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Console\Commands;
+
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Redis;
+
+class RedisSubscribe extends Command
+{
+    /**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */
+    protected $signature = &apos;redis:subscribe&apos;;
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = &apos;Subscribe to a Redis channel&apos;;
+
+    /**
+     * Execute the console command.
+     *
+     * @return mixed
+     */
+    public function handle()
+    {
+        Redis::subscribe([&apos;test-channel&apos;], function ($message) {
+            echo $message;
+        });
+    }
+}
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>publish</code> &#x65B9;&#x6CD5;&#x53D1;&#x5E03;&#x6D88;&#x606F;&#x81F3;&#x8BE5;&#x9891;&#x9053;&#xFF1A;</p>
+<pre><code>Route::get(&apos;publish&apos;, function () {
+    // Route logic...
+
+    Redis::publish(&apos;test-channel&apos;, json_encode([&apos;foo&apos; =&gt; &apos;bar&apos;]));
+});
+</code></pre><h4 id="&#x901A;&#x914D;&#x7B26;&#x8BA2;&#x9605;">&#x901A;&#x914D;&#x7B26;&#x8BA2;&#x9605;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>psubscribe</code> &#x65B9;&#x6CD5;&#x8BA2;&#x9605;&#x4E00;&#x4E2A;&#x901A;&#x914D;&#x7B26;&#x9891;&#x9053;&#xFF0C;&#x8FD9;&#x5728;&#x5BF9;&#x6240;&#x6709;&#x9891;&#x9053;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6D88;&#x606F;&#x65F6;&#x76F8;&#x5F53;&#x6709;&#x7528;&#x3002; <code>$channel</code> &#x540D;&#x79F0;&#x4F1A;&#x88AB;&#x4F20;&#x9012;&#x81F3;&#x8BE5;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x7684;&#x56DE;&#x8C03; <code>&#x95ED;&#x5305;</code> &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>Redis::psubscribe([&apos;*&apos;], function ($message, $channel) {
+    echo $message;
+});
+
+Redis::psubscribe([&apos;users.*&apos;], function ($message, $channel) {
+    echo $message;
+});
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="9-5 数据填充.html" class="navigation navigation-prev " aria-label="Previous page: 9-5 数据填充">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../10  Eloquent ORM.html" class="navigation navigation-next " aria-label="Next page: 10 Eloquent ORM">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9-6 Redis","level":"1.10.6","depth":2,"next":{"title":"10 Eloquent ORM","level":"1.11","depth":1,"path":"10  Eloquent ORM.md","ref":"10  Eloquent ORM.md","articles":[{"title":"10-1 快速入门","level":"1.11.1","depth":2,"path":"Chapter10/10-1 快速入门.md","ref":"Chapter10/10-1 快速入门.md","articles":[]},{"title":"10-2 模型关联","level":"1.11.2","depth":2,"path":"Chapter10/10-2 模型关联.md","ref":"Chapter10/10-2 模型关联.md","articles":[]},{"title":"10-3 Eloquent 集合","level":"1.11.3","depth":2,"path":"Chapter10/10-3 Eloquent 集合.md","ref":"Chapter10/10-3 Eloquent 集合.md","articles":[]},{"title":"10-4 修改器","level":"1.11.4","depth":2,"path":"Chapter10/10-4 修改器.md","ref":"Chapter10/10-4 修改器.md","articles":[]},{"title":"10-5 序列化","level":"1.11.5","depth":2,"path":"Chapter10/10-5 序列化.md","ref":"Chapter10/10-5 序列化.md","articles":[]}]},"previous":{"title":"9-5 数据填充","level":"1.10.5","depth":2,"path":"Chapter9/9-5 数据填充.md","ref":"Chapter9/9-5 数据填充.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter9/9-6 Redis.md","mtime":"2018-10-29T12:40:15.145Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

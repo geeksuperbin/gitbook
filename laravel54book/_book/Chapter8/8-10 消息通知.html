@@ -1,0 +1,2070 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8-10 消息通知 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8-11 扩展包开发.html" />
+    
+    
+    <link rel="prev" href="8-9 邮件发送.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8-1 Artisan命令行.html">
+            
+                <a href="8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8-2 广播系统.html">
+            
+                <a href="8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="8-3 缓存系统.html">
+            
+                <a href="8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="8-4 集合.html">
+            
+                <a href="8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="8-5 错误与日志.html">
+            
+                <a href="8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="8-6 事件系统.html">
+            
+                <a href="8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="8-7 文件存储.html">
+            
+                <a href="8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="8-8 辅助函数.html">
+            
+                <a href="8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="8-9 邮件发送.html">
+            
+                <a href="8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.10" data-path="8-10 消息通知.html">
+            
+                <a href="8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="8-11 扩展包开发.html">
+            
+                <a href="8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="8-12 队列.html">
+            
+                <a href="8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="8-13 任务调度.html">
+            
+                <a href="8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8-10 消息通知</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x7CFB;&#x7EDF;">Laravel &#x7684;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x7CFB;&#x7EDF;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#creating-notifications">&#x521B;&#x5EFA;&#x901A;&#x77E5;</a></li>
+<li><a href="#sending-notifications">&#x53D1;&#x9001;&#x901A;&#x77E5;</a><ul>
+<li><a href="#using-the-notifiable-trait">&#x4F7F;&#x7528; Notifiable Trait</a></li>
+<li><a href="#using-the-notification-facade">&#x4F7F;&#x7528; Notification Facade</a></li>
+<li><a href="#specifying-delivery-channels">&#x6307;&#x5B9A;&#x53D1;&#x9001;&#x9891;&#x9053;</a></li>
+<li><a href="#queueing-notifications">&#x961F;&#x5217;&#x5316;&#x901A;&#x77E5;</a></li>
+</ul>
+</li>
+<li><a href="#mail-notifications">&#x90AE;&#x4EF6;&#x901A;&#x77E5;</a><ul>
+<li><a href="#formatting-mail-messages">&#x683C;&#x5F0F;&#x5316;&#x90AE;&#x4EF6;&#x6D88;&#x606F;</a></li>
+<li><a href="#customizing-the-recipient">&#x81EA;&#x5B9A;&#x4E49;&#x63A5;&#x53D7;&#x8005;</a></li>
+<li><a href="#customizing-the-subject">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x9898;</a></li>
+<li><a href="#customizing-the-templates">&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x677F;</a></li>
+</ul>
+</li>
+<li><a href="#markdown-mail-notifications">Markdown &#x90AE;&#x4EF6;&#x901A;&#x77E5;</a><ul>
+<li><a href="#generating-the-message">&#x751F;&#x6210;&#x6D88;&#x606F;</a></li>
+<li><a href="#writing-the-message">&#x5199;&#x6D88;&#x606F;</a></li>
+<li><a href="#customizing-the-components">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</a></li>
+</ul>
+</li>
+<li><a href="#database-notifications">&#x6570;&#x636E;&#x5E93;&#x901A;&#x77E5;</a><ul>
+<li><a href="#database-prerequisites">&#x5148;&#x51B3;&#x6761;&#x4EF6;</a></li>
+<li><a href="#formatting-database-notifications">&#x683C;&#x5F0F;&#x5316;&#x6570;&#x636E;&#x5E93;&#x901A;&#x77E5;</a></li>
+<li><a href="#accessing-the-notifications">&#x8BBF;&#x95EE;&#x901A;&#x77E5;</a></li>
+<li><a href="#marking-notifications-as-read">&#x6807;&#x4E3A;&#x5DF2;&#x8BFB;</a></li>
+</ul>
+</li>
+<li><a href="#broadcast-notifications">&#x5E7F;&#x64AD;&#x901A;&#x77E5;</a><ul>
+<li><a href="#broadcast-prerequisites">&#x5148;&#x51B3;&#x6761;&#x4EF6;</a></li>
+<li><a href="#formatting-broadcast-notifications">&#x683C;&#x5F0F;&#x5316;&#x5E7F;&#x64AD;&#x901A;&#x77E5;</a></li>
+<li><a href="#listening-for-notifications">&#x76D1;&#x542C;&#x901A;&#x77E5;</a></li>
+</ul>
+</li>
+<li><a href="#sms-notifications">&#x77ED;&#x4FE1;&#x901A;&#x77E5;</a><ul>
+<li><a href="#sms-prerequisites">&#x5148;&#x51B3;&#x6761;&#x4EF6;</a></li>
+<li><a href="#formatting-sms-notifications">&#x683C;&#x5F0F;&#x5316;&#x77ED;&#x4FE1;&#x901A;&#x77E5;</a></li>
+<li><a href="#customizing-the-from-number">&#x81EA;&#x5B9A;&#x4E49; <code>From</code> &#x53F7;&#x7801;</a></li>
+<li><a href="#routing-sms-notifications">&#x8DEF;&#x7531;&#x77ED;&#x4FE1;&#x901A;&#x77E5;</a></li>
+</ul>
+</li>
+<li><a href="#slack-notifications">Slack &#x901A;&#x77E5;</a><ul>
+<li><a href="#slack-prerequisites">&#x5148;&#x51B3;&#x6761;&#x4EF6;</a></li>
+<li><a href="#formatting-slack-notifications">&#x683C;&#x5F0F;&#x5316; Slack &#x901A;&#x77E5;</a></li>
+<li><a href="#slack-attachments">Slack Attachments</a></li>
+<li><a href="#routing-slack-notifications">&#x8DEF;&#x7531; Slack &#x901A;&#x77E5;</a></li>
+</ul>
+</li>
+<li><a href="#notification-events">&#x901A;&#x77E5;&#x4E8B;&#x4EF6;</a></li>
+<li><a href="#custom-channels">&#x81EA;&#x5B9A;&#x4E49;&#x53D1;&#x9001;&#x9891;&#x9053;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x9664;&#x4E86; <a href="../docs/mail">&#x53D1;&#x9001;&#x90AE;&#x4EF6;</a>&#xFF0C;Laravel &#x8FD8;&#x652F;&#x6301;&#x901A;&#x8FC7;&#x591A;&#x79CD;&#x9891;&#x9053;&#x53D1;&#x9001;&#x901A;&#x77E5;&#xFF0C;&#x5305;&#x62EC;&#x90AE;&#x4EF6;&#x3001;&#x77ED;&#x4FE1;&#xFF08;&#x901A;&#x8FC7; <a href="https://www.nexmo.com/" target="_blank">Nexmo</a>&#xFF09;&#x4EE5;&#x53CA; <a href="https://slack.com" target="_blank">Slack</a> &#x3002;&#x901A;&#x77E5;&#x8FD8;&#x80FD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x5728;&#x7F51;&#x9875;&#x754C;&#x9762;&#x4E0A;&#x663E;&#x793A;&#x4E86;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x901A;&#x77E5;&#x5E94;&#x8BE5;&#x662F;&#x7B80;&#x77ED;&#x3001;&#x6709;&#x4FE1;&#x606F;&#x91CF;&#x7684;&#x6D88;&#x606F;&#x6765;&#x901A;&#x77E5;&#x7528;&#x6237;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x53D1;&#x751F;&#x4E86;&#x4EC0;&#x4E48;&#x3002;&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5728;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x5728;&#x7EBF;&#x4EA4;&#x6613;&#x5E94;&#x7528;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4F1A;&#x901A;&#x8FC7;&#x90AE;&#x4EF6;&#x548C;&#x77ED;&#x4FE1;&#x9891;&#x9053;&#x6765;&#x7ED9;&#x7528;&#x6237;&#x53D1;&#x9001;&#x4E00;&#x6761; &#x300C;&#x8D26;&#x5355;&#x5DF2;&#x4ED8;&#x300D; &#x7684;&#x901A;&#x77E5;&#x3002;</p>
+<p><a name="creating-notifications"></a></p>
+<h2 id="&#x521B;&#x5EFA;&#x901A;&#x77E5;">&#x521B;&#x5EFA;&#x901A;&#x77E5;</h2>
+<p>Laravel &#x4E2D;&#x4E00;&#x6761;&#x901A;&#x77E5;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#xFF08;&#x901A;&#x5E38;&#x5B58;&#x5728; <code>app/Notifications</code> &#x6587;&#x4EF6;&#x5939;&#x91CC;&#xFF09;&#x3002;&#x770B;&#x4E0D;&#x5230;&#x7684;&#x8BDD;&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#xFF0C;&#x8FD0;&#x884C;&#x4E00;&#x4E0B; <code>make:notification</code> &#x547D;&#x4EE4;&#x5C31;&#x80FD;&#x521B;&#x5EFA;&#x4E86;&#xFF1A;</p>
+<pre><code>php artisan make:notification InvoicePaid
+</code></pre><p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x5728; <code>app/Notifications</code> &#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x901A;&#x77E5;&#x7C7B;&#x3002;&#x8FD9;&#x4E2A;&#x7C7B;&#x5305;&#x542B; <code>via</code> &#x65B9;&#x6CD5;&#x548C;&#x51E0;&#x4E2A;&#x6D88;&#x606F;&#x6784;&#x5EFA;&#x65B9;&#x6CD5;&#xFF08;&#x6BD4;&#x5982; <code>toMail</code> &#x6216; <code>toDatabase</code>&#xFF09;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x9488;&#x5BF9;&#x6307;&#x5B9A;&#x7684;&#x6E20;&#x9053;&#x628A;&#x901A;&#x77E5;&#x8F6C;&#x6362;&#x8FC7;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x6D88;&#x606F;&#x3002;</p>
+<p><a name="sending-notifications"></a></p>
+<h2 id="&#x53D1;&#x9001;&#x901A;&#x77E5;">&#x53D1;&#x9001;&#x901A;&#x77E5;</h2>
+<p><a name="using-the-notifiable-trait"></a></p>
+<h3 id="&#x4F7F;&#x7528;-notifiable-trait">&#x4F7F;&#x7528; Notifiable Trait</h3>
+<p>&#x901A;&#x77E5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x53D1;&#x9001;&#xFF1A; <code>Notifiable</code> trait &#x7684; <code>notify</code> &#x65B9;&#x6CD5;&#x6216; <code>Notification</code> <a href="../docs/facades">facade</a> &#x3002;&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x63A2;&#x7D22;&#x4F7F;&#x7528; trait &#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+}
+</code></pre><p>&#x9ED8;&#x8BA4;&#x7684; <code>App\User</code> &#x6A21;&#x578B;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x4E2A; trait&#xFF0C;&#x5B83;&#x5305;&#x542B;&#x7740;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x53D1;&#x901A;&#x77E5;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;<code>notify</code> &#x3002; <code>notify</code> &#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x901A;&#x77E5;&#x5B9E;&#x4F8B;&#x505A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>use App\Notifications\InvoicePaid;
+
+$user-&gt;notify(new InvoicePaid($invoice));
+</code></pre><blockquote>
+<p>{tip} &#x8BB0;&#x4F4F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x6A21;&#x578B;&#x4E2D;&#x4F7F;&#x7528; <code>Illuminate\Notifications\Notifiable</code> trait&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5728; <code>User</code> &#x6A21;&#x578B;&#x4E2D;&#x3002;</p>
+</blockquote>
+<p><a name="using-the-notification-facade"></a></p>
+<h3 id="&#x4F7F;&#x7528;-notification-facade">&#x4F7F;&#x7528; Notification Facade</h3>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>Notification</code> <a href="../docs/facades">facade</a> &#x6765;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x3002;&#x5B83;&#x4E3B;&#x8981;&#x7528;&#x5728;&#x5F53;&#x4F60;&#x7ED9;&#x591A;&#x4E2A;&#x53EF;&#x63A5;&#x6536;&#x901A;&#x77E5;&#x7684;&#x5B9E;&#x4F53;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6BD4;&#x5982;&#x7ED9;&#x7528;&#x6237;&#x96C6;&#x5408;&#x53D1;&#x901A;&#x77E5;&#x3002;&#x8981;&#x7528; facade &#x53D1;&#x9001;&#x901A;&#x77E5;&#x7684;&#x8BDD;&#xFF0C;&#x8981;&#x628A;&#x53EF;&#x63A5;&#x6536;&#x901A;&#x77E5;&#x7684;&#x5B9E;&#x4F53;&#x548C;&#x901A;&#x77E5;&#x7684;&#x5B9E;&#x4F8B;&#x4F20;&#x9012;&#x7ED9; <code>send</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>Notification::send($users, new InvoicePaid($invoice));
+</code></pre><p><a name="specifying-delivery-channels"></a></p>
+<h3 id="&#x6307;&#x5B9A;&#x53D1;&#x9001;&#x9891;&#x9053;">&#x6307;&#x5B9A;&#x53D1;&#x9001;&#x9891;&#x9053;</h3>
+<p>&#x6BCF;&#x4E2A;&#x901A;&#x77E5;&#x7C7B;&#x90FD;&#x6709;&#x4E2A; <code>via</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x51B3;&#x5B9A;&#x4E86;&#x901A;&#x77E5;&#x5728;&#x54EA;&#x4E2A;&#x9891;&#x9053;&#x4E0A;&#x53D1;&#x9001;&#x3002;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;&#x901A;&#x77E5;&#x9891;&#x9053;&#x6709; <code>mail</code>, <code>database</code>, <code>broadcast</code>, <code>nexmo</code>, &#x548C; <code>slack</code> &#x3002;</p>
+<blockquote>
+<p>{tip} &#x5982;&#x679C;&#x4F60;&#x60F3;&#x7528;&#x5176;&#x4ED6;&#x7684;&#x9891;&#x9053;&#x6BD4;&#x5982; Telegram &#x6216;&#x8005; Pusher &#xFF0C;&#x53EF;&#x4EE5;&#x53BB;&#x770B;&#x4E0B;&#x793E;&#x533A;&#x9A71;&#x52A8;&#x7684; <a href="http://laravel-notification-channels.com" target="_blank">Laravel &#x901A;&#x77E5;&#x9891;&#x9053;&#x7F51;&#x7AD9;</a> &#x3002;</p>
+</blockquote>
+<p><code>via</code> &#x65B9;&#x6CD5;&#x53D7;&#x5230;&#x4E00;&#x4E2A; <code>$notifiable</code> &#x5B9E;&#x4F8B;&#xFF0C;&#x5B83;&#x662F;&#x63A5;&#x6536;&#x901A;&#x77E5;&#x7684;&#x7C7B;&#x5B9E;&#x4F8B;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>$notifiable</code> &#x6765;&#x51B3;&#x5B9A;&#x901A;&#x77E5;&#x7528;&#x54EA;&#x4E2A;&#x9891;&#x9053;&#x6765;&#x53D1;&#x9001;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x53D1;&#x9001;&#x9891;&#x9053;
+ *
+ * @param  mixed  $notifiable
+ * @return array
+ */
+public function via($notifiable)
+{
+    return $notifiable-&gt;prefers_sms ? [&apos;nexmo&apos;] : [&apos;mail&apos;, &apos;database&apos;];
+}
+</code></pre><p><a name="queueing-notifications"></a></p>
+<h3 id="&#x961F;&#x5217;&#x5316;&#x901A;&#x77E5;">&#x961F;&#x5217;&#x5316;&#x901A;&#x77E5;</h3>
+<blockquote>
+<p>{note} &#x5728;&#x961F;&#x5217;&#x5316;&#x901A;&#x77E5;&#x524D;&#x4F60;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x961F;&#x5217;&#xFF0C;&#x5E76; <a href="../docs/queues">&#x8FD0;&#x884C;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;</a>&#x3002;</p>
+</blockquote>
+<p>&#x53D1;&#x9001;&#x901A;&#x77E5;&#x53EF;&#x80FD;&#x4F1A;&#x82B1;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x53D1;&#x9001;&#x9891;&#x9053;&#x9700;&#x8981;&#x8C03;&#x7528;&#x5916;&#x90E8; API &#x7684;&#x65F6;&#x5019;&#x3002;&#x8981;&#x52A0;&#x901F;&#x5E94;&#x7528;&#x54CD;&#x5E94;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6DFB;&#x52A0; <code>ShouldQueue</code> &#x63A5;&#x53E3;&#x548C; <code>Queueable</code> trait &#x628A;&#x901A;&#x77E5;&#x52A0;&#x5165;&#x961F;&#x5217;&#x3002;&#x5B83;&#x4EEC;&#x4E24;&#x4E2A;&#x5728;&#x4F7F;&#x7528; <code>make:notification</code> &#x547D;&#x4EE4;&#x6765;&#x751F;&#x6210;&#x901A;&#x77E5;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x5DF2;&#x7ECF;&#x88AB;&#x5BFC;&#x5165;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x7684;&#x901A;&#x77E5;&#x7C7B;&#x5C31;&#x884C;&#x4E86;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Notifications;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class InvoicePaid extends Notification implements ShouldQueue
+{
+    use Queueable;
+
+    // ...
+}
+</code></pre><p>&#x4E00;&#x65E6;&#x52A0;&#x5165; <code>ShouldQueue</code> &#x63A5;&#x53E3;&#xFF0C;&#x4F60;&#x5C31;&#x80FD;&#x50CF;&#x5E73;&#x5E38;&#x90A3;&#x6837;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x4E86;&#x3002;Laravel &#x4F1A;&#x68C0;&#x6D4B; <code>ShouldQueue</code> &#x63A5;&#x53E3;&#x5E76;&#x81EA;&#x52A8;&#x5C06;&#x901A;&#x77E5;&#x7684;&#x53D1;&#x9001;&#x653E;&#x5165;&#x961F;&#x5217;&#x4E2D;&#x3002;</p>
+<pre><code>$user-&gt;notify(new InvoicePaid($invoice));
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5EF6;&#x8FDF;&#x53D1;&#x9001;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>delay</code> &#x65B9;&#x6CD5;&#x6765;&#x94FE;&#x5F0F;&#x64CD;&#x4F5C;&#x4F60;&#x7684;&#x901A;&#x77E5;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>$when = Carbon::now()-&gt;addMinutes(10);
+
+$user-&gt;notify((new InvoicePaid($invoice))-&gt;delay($when));
+</code></pre><p><a name="mail-notifications"></a></p>
+<h2 id="&#x90AE;&#x4EF6;&#x901A;&#x77E5;">&#x90AE;&#x4EF6;&#x901A;&#x77E5;</h2>
+<p><a name="formatting-mail-messages"></a></p>
+<h3 id="&#x683C;&#x5F0F;&#x5316;&#x90AE;&#x4EF6;&#x6D88;&#x606F;">&#x683C;&#x5F0F;&#x5316;&#x90AE;&#x4EF6;&#x6D88;&#x606F;</h3>
+<p>&#x5982;&#x679C;&#x4E00;&#x6761;&#x901A;&#x77E5;&#x652F;&#x6301;&#x4EE5;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x901A;&#x77E5;&#x7C7B;&#x91CC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>toMail</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x6536;&#x5230;&#x4E00;&#x4E2A; <code>$notifiable</code> &#x5B9E;&#x4F53;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>Illuminate\Notifications\Messages\MailMessage</code> &#x5B9E;&#x4F8B;&#x3002;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x884C;&#x6587;&#x672C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5F15;&#x5BFC;&#x94FE;&#x63A5;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A; <code>toMail</code> &#x65B9;&#x6CD5;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x90AE;&#x4EF6;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return \Illuminate\Notifications\Messages\MailMessage
+ */
+public function toMail($notifiable)
+{
+    $url = url(&apos;/invoice/&apos;.$this-&gt;invoice-&gt;id);
+
+    return (new MailMessage)
+                -&gt;line(&apos;One of your invoices has been paid!&apos;)
+                -&gt;action(&apos;View Invoice&apos;, $url)
+                -&gt;line(&apos;Thank you for using our application!&apos;);
+}
+</code></pre><blockquote>
+<p>{tip} &#x6CE8;&#x610F;&#x6211;&#x4EEC;&#x5728;&#x65B9;&#x6CD5;&#x4E2D;&#x7528;&#x4E86; <code>$this-&gt;invoice-&gt;id</code> &#xFF0C;&#x5176;&#x5B9E;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x5E94;&#x7528;&#x6240;&#x9700;&#x8981;&#x7684;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x6765;&#x4F20;&#x9012;&#x7ED9;&#x901A;&#x77E5;&#x7684;&#x6784;&#x9020;&#x5668;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6CE8;&#x518C;&#x4E86;&#x4E00;&#x884C;&#x6587;&#x672C;&#xFF0C;&#x5F15;&#x5BFC;&#x94FE;&#x63A5; &#xFF0C;&#x7136;&#x540E;&#x53C8;&#x662F;&#x4E00;&#x884C;&#x6587;&#x672C;&#x3002; <code>MailMessage</code> &#x63D0;&#x4F9B;&#x7684;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x7B80;&#x5316;&#x4E86;&#x5BF9;&#x5C0F;&#x7684;&#x4E8B;&#x52A1;&#x6027;&#x7684;&#x90AE;&#x4EF6;&#x8FDB;&#x884C;&#x683C;&#x5F0F;&#x5316;&#x64CD;&#x4F5C;&#x3002;&#x90AE;&#x4EF6;&#x9891;&#x9053;&#x5C06;&#x4F1A;&#x628A;&#x8FD9;&#x4E9B;&#x6D88;&#x606F;&#x7EC4;&#x4EF6;&#x8F6C;&#x6362;&#x6210;&#x6F02;&#x4EAE;&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x7684; HTML &#x90AE;&#x4EF6;&#x6A21;&#x677F;&#x5E76;&#x9644;&#x4E0A;&#x6587;&#x672C;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E2A; <code>mail</code> &#x9891;&#x9053;&#x751F;&#x6210;&#x7684;&#x90AE;&#x4EF6;&#x793A;&#x4F8B;&#xFF1A;</p>
+<p><img src="https://laravel.com/assets/img/notification-example.png" width="551" height="596"></p>
+<blockquote>
+<p>{tip} &#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x524D;&#xFF0C;&#x8BF7;&#x5728; <code>config/app.php</code> &#x4E2D;&#x8BBE;&#x7F6E; <code>name</code> &#x503C;&#x3002; &#x8FD9;&#x5C06;&#x4F1A;&#x5728;&#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x6D88;&#x606F;&#x7684;&#x5934;&#x90E8;&#x548C;&#x5C3E;&#x90E8;&#x4E2D;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+</blockquote>
+<h4 id="&#x5176;&#x4ED6;&#x901A;&#x77E5;&#x683C;&#x5F0F;&#x9009;&#x9879;">&#x5176;&#x4ED6;&#x901A;&#x77E5;&#x683C;&#x5F0F;&#x9009;&#x9879;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>view</code> &#x65B9;&#x6CD5;&#x6765;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x901A;&#x77E5;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x677F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x901A;&#x77E5;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x6587;&#x672C;&#x7684;&#x300C;&#x6A21;&#x677F;&#x300D;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x90AE;&#x4EF6;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return \Illuminate\Notifications\Messages\MailMessage
+ */
+public function toMail($notifiable)
+{
+    return (new MailMessage)-&gt;view(
+        &apos;emails.name&apos;, [&apos;invoice&apos; =&gt; $this-&gt;invoice]
+    );
+}
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4ECE; <code>toMail</code> &#x65B9;&#x6CD5;&#x4E2D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <a href="../docs/mail">mailable &#x5BF9;&#x8C61;</a> &#xFF1A;</p>
+<pre><code>use App\Mail\InvoicePaid as Mailable;
+
+/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x90AE;&#x4EF6;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return Mailable
+ */
+public function toMail($notifiable)
+{
+    return (new Mailable($this-&gt;invoice))-&gt;to($this-&gt;user-&gt;email);
+}
+</code></pre><p><a name="error-messages"></a></p>
+<h4 id="&#x9519;&#x8BEF;&#x6D88;&#x606F;">&#x9519;&#x8BEF;&#x6D88;&#x606F;</h4>
+<p>&#x6709;&#x4E9B;&#x901A;&#x77E5;&#x662F;&#x7ED9;&#x7528;&#x6237;&#x63D0;&#x793A;&#x9519;&#x8BEF;&#xFF0C;&#x6BD4;&#x5982;&#x8D26;&#x5355;&#x652F;&#x4ED8;&#x5931;&#x8D25;&#x7684;&#x63D0;&#x793A;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x7528; <code>error</code> &#x65B9;&#x6CD5;&#x6765;&#x6307;&#x5B9A;&#x8FD9;&#x6761;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x88AB;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x63D0;&#x793A;&#x3002;&#x5F53;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x4F7F;&#x7528;&#x4E86; <code>error</code> &#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x5F15;&#x5BFC;&#x94FE;&#x63A5;&#x6309;&#x94AE;&#x4F1A;&#x53D8;&#x6210;&#x7EA2;&#x8272;&#x800C;&#x975E;&#x84DD;&#x8272;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x90AE;&#x4EF6;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return \Illuminate\Notifications\Messages\MailMessage
+ */
+public function toMail($notifiable)
+{
+   return (new MailMessage)
+                -&gt;error()
+                -&gt;subject(&apos;Notification Subject&apos;)
+                -&gt;line(&apos;...&apos;);
+}
+</code></pre><p><a name="customizing-the-recipient"></a></p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x63A5;&#x6536;&#x8005;">&#x81EA;&#x5B9A;&#x4E49;&#x63A5;&#x6536;&#x8005;</h3>
+<p>&#x5F53;&#x901A;&#x8FC7; <code>mail</code> &#x9891;&#x9053;&#x6765;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x77E5;&#x7CFB;&#x7EDF;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x5BFB;&#x627E;&#x4F60;&#x7684; notifiable &#x5B9E;&#x4F53;&#x4E2D;&#x7684; <code>email</code> &#x5C5E;&#x6027;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x5B9E;&#x4F53;&#x4E2D;&#x5B9A;&#x4E49; <code>routeNotificationForMail</code> &#x65B9;&#x6CD5;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x3002;</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    /**
+     * &#x90AE;&#x4EF6;&#x9891;&#x9053;&#x7684;&#x8DEF;&#x7531;
+     *
+     * @return string
+     */
+    public function routeNotificationForMail()
+    {
+        return $this-&gt;email_address;
+    }
+}
+</code></pre><p><a name="customizing-the-subject"></a></p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x9898;">&#x81EA;&#x5B9A;&#x4E49;&#x4E3B;&#x9898;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x90AE;&#x4EF6;&#x4E3B;&#x9898;&#x662F;&#x683C;&#x5F0F;&#x5316;&#x6210;&#x4E86;&#x6807;&#x9898;&#x683C;&#x5F0F;&#x7684;&#x901A;&#x77E5;&#x7C7B;&#x7684;&#x7C7B;&#x540D;&#x3002;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x901A;&#x77E5;&#x7C7B;&#x540D;&#x4E3A; <code>InvoicePaid</code> &#xFF0C;&#x90AE;&#x4EF6;&#x4E3B;&#x9898;&#x5C06;&#x4F1A;&#x662F; <code>Invoice Paid</code> &#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x663E;&#x5F0F;&#x6307;&#x5B9A;&#x6D88;&#x606F;&#x7684;&#x4E3B;&#x9898;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x5EFA;&#x6D88;&#x606F;&#x65F6;&#x8C03;&#x7528; <code>subject</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x90AE;&#x4EF6;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return \Illuminate\Notifications\Messages\MailMessage
+ */
+public function toMail($notifiable)
+{
+    return (new MailMessage)
+                -&gt;subject(&apos;Notification Subject&apos;)
+                -&gt;line(&apos;...&apos;);
+}
+</code></pre><p><a name="customizing-the-templates"></a></p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x677F;">&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x677F;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D1;&#x5E03;&#x901A;&#x77E5;&#x5305;&#x7684;&#x8D44;&#x6E90;&#x6765;&#x4FEE;&#x6539; HTML &#x6A21;&#x677F;&#x548C;&#x7EAF;&#x6587;&#x672C;&#x6A21;&#x677F;&#x3002;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x6A21;&#x677F;&#x5C31;&#x88AB;&#x653E;&#x5728;&#x4E86; <code>resources/views/vendor/notifications</code> &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF1A;</p>
+<pre><code>php artisan vendor:publish --tag=laravel-notifications
+</code></pre><p><a name="markdown-mail-notifications"></a></p>
+<h2 id="markdown-&#x90AE;&#x4EF6;&#x901A;&#x77E5;">Markdown &#x90AE;&#x4EF6;&#x901A;&#x77E5;</h2>
+<p>Markdown &#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x53EF;&#x8BA9;&#x60A8;&#x5229;&#x7528;&#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x7684;&#x9884;&#x5148;&#x6784;&#x5EFA;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x540C;&#x65F6;&#x7ED9;&#x4E88;&#x60A8;&#x66F4;&#x591A;&#x81EA;&#x7531;&#x5730;&#x64B0;&#x5199;&#x66F4;&#x957F;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x90AE;&#x4EF6;&#x3002; &#x7531;&#x4E8E;&#x6D88;&#x606F;&#x662F;&#x7528; Markdown &#x7F16;&#x5199;&#x7684;&#xFF0C; Laravel &#x80FD;&#x591F;&#x4E3A;&#x6D88;&#x606F;&#x5448;&#x73B0;&#x6F02;&#x4EAE;&#xFF0C;&#x54CD;&#x5E94;&#x7684; HTML &#x6A21;&#x677F;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7EAF;&#x6587;&#x672C;&#x5BF9;&#x5E94;&#x3002;</p>
+<p><a name="generating-the-message"></a></p>
+<h3 id="&#x751F;&#x6210;&#x6D88;&#x606F;">&#x751F;&#x6210;&#x6D88;&#x606F;</h3>
+<p>&#x8981;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684; Markdown &#x6A21;&#x677F;&#x751F;&#x6210;&#x901A;&#x77E5;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>make&#xFF1A;notification</code> Artisan&#x547D;&#x4EE4;&#x7684; <code>--markdown</code> &#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>php artisan make:notification InvoicePaid --markdown=mail.invoice.paid
+</code></pre><p>&#x4E0E;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x4E00;&#x6837;&#xFF0C;&#x4F7F;&#x7528; Markdown &#x6A21;&#x677F;&#x7684;&#x901A;&#x77E5;&#x5E94;&#x5728;&#x5176;&#x901A;&#x77E5;&#x7C7B;&#x4E0A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>toMail</code> &#x65B9;&#x6CD5;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528; <code>line</code> &#x548C; <code>action</code> &#x65B9;&#x6CD5;&#x6765;&#x6784;&#x9020;&#x901A;&#x77E5;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528; <code>markdown</code> &#x65B9;&#x6CD5;&#x6765;&#x6307;&#x5B9A;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x7684; Markdown &#x6A21;&#x677F;&#x7684;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x90AE;&#x4EF6;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return \Illuminate\Notifications\Messages\MailMessage
+ */
+public function toMail($notifiable)
+{
+    $url = url(&apos;/invoice/&apos;.$this-&gt;invoice-&gt;id);
+
+    return (new MailMessage)
+                -&gt;subject(&apos;Invoice Paid&apos;)
+                -&gt;markdown(&apos;mail.invoice.paid&apos;, [&apos;url&apos; =&gt; $url]);
+}
+</code></pre><p><a name="writing-the-message"></a></p>
+<h3 id="&#x5199;&#x6D88;&#x606F;">&#x5199;&#x6D88;&#x606F;</h3>
+<p>Markdown &#x90AE;&#x4EF6;&#x901A;&#x77E5;&#x4F7F;&#x7528; Blade &#x7EC4;&#x4EF6;&#x548C;Markdown&#x8BED;&#x6CD5;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x5141;&#x8BB8;&#x60A8;&#x8F7B;&#x677E;&#x6784;&#x5EFA;&#x901A;&#x77E5;&#xFF0C;&#x540C;&#x65F6;&#x5229;&#x7528;Laravel&#x7684;&#x9884;&#x5236;&#x901A;&#x77E5;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code>@component(&apos;mail::message&apos;)
+# Invoice Paid
+
+Your invoice has been paid!
+
+@component(&apos;mail::button&apos;, [&apos;url&apos; =&gt; $url])
+View Invoice
+@endcomponent
+
+Thanks,&lt;br&gt;
+{{ config(&apos;app.name&apos;) }}
+@endcomponent
+</code></pre><h4 id="&#x6309;&#x94AE;&#x7EC4;&#x4EF6;">&#x6309;&#x94AE;&#x7EC4;&#x4EF6;</h4>
+<p>&#x6309;&#x94AE;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x4E86;&#x4E00;&#x4E2A;&#x5C45;&#x4E2D;&#x7684;&#x94FE;&#x63A5;&#x6309;&#x94AE;&#x3002;&#x7EC4;&#x4EF6;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C; <code>url</code> &#x548C;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570; <code>color</code> &#x3002;&#x652F;&#x6301;&#x7684;&#x989C;&#x8272;&#x6709; <code>blue</code> &#xFF0C; <code>green</code> &#xFF0C; &#x548C; <code>red</code> &#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4F60;&#x7684;&#x9700;&#x8981;&#x5411;&#x901A;&#x77E5;&#x4E2D;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x6309;&#x94AE;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code>@component(&apos;mail::button&apos;, [&apos;url&apos; =&gt; $url, &apos;color&apos; =&gt; &apos;green&apos;])
+View Invoice
+@endcomponent
+</code></pre><h4 id="&#x9762;&#x677F;&#x7EC4;&#x4EF6;">&#x9762;&#x677F;&#x7EC4;&#x4EF6;</h4>
+<p>&#x9762;&#x677F;&#x90E8;&#x4EF6;&#x5728;&#x9762;&#x677F;&#x4E2D;&#x5448;&#x73B0;&#x7ED9;&#x5B9A;&#x6587;&#x672C;&#x5757;&#xFF0C;&#x8BE5;&#x9762;&#x677F;&#x5177;&#x6709;&#x4E0E;&#x901A;&#x77E5;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;&#x7A0D;&#x5FAE;&#x4E0D;&#x540C;&#x7684;&#x80CC;&#x666F;&#x989C;&#x8272;&#x3002; &#x8FD9;&#x5C06;&#x4F1A;&#x5141;&#x8BB8;&#x4F60;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x6587;&#x672C;&#x5757;&#x5F15;&#x8D77;&#x6CE8;&#x610F;&#xFF1A;</p>
+<pre><code>@component(&apos;mail::panel&apos;)
+This is the panel content.
+@endcomponent
+</code></pre><h4 id="&#x8868;&#x683C;&#x7EC4;&#x4EF6;">&#x8868;&#x683C;&#x7EC4;&#x4EF6;</h4>
+<p>&#x8868;&#x683C;&#x7EC4;&#x4EF6;&#x5141;&#x8BB8;&#x4F60;&#x5C06;&#x4E00;&#x4E2A; Markdown &#x8868;&#x683C;&#x8F6C;&#x5316;&#x6210;&#x4E00;&#x4E2A; HTML &#x8868;&#x683C;&#x3002;&#x8868;&#x683C;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7; Markdown &#x8868;&#x683C;&#x4F5C;&#x4E3A;&#x5185;&#x5BB9;&#x3002;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684; Markdown &#x8868;&#x683C;&#x5BF9;&#x9F50;&#x8BED;&#x6CD5;&#x4F7F;&#x8868;&#x5217;&#x5BF9;&#x9F50;&#xFF1A;</p>
+<pre><code>@component(&apos;mail::table&apos;)
+| Laravel       | Table         | Example  |
+| ------------- |:-------------:| --------:|
+| Col 2 is      | Centered      | $10      |
+| Col 3 is      | Right-Aligned | $20      |
+@endcomponent
+</code></pre><p><a name="customizing-the-components"></a></p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h3>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x6240;&#x6709; Markdown &#x901A;&#x77E5;&#x7EC4;&#x4EF6;&#x5BFC;&#x51FA;&#x5230;&#x60A8;&#x81EA;&#x5DF1;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#x3002; &#x8981;&#x5BFC;&#x51FA;&#x7EC4;&#x4EF6;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528; <code>vendor&#xFF1A;publish</code> Artisan&#x547D;&#x4EE4;&#x6765;&#x53D1;&#x5E03; <code>laravel-mail</code> &#x6807;&#x7B7E;&#xFF1A;</p>
+<pre><code>php artisan vendor:publish --tag=laravel-mail
+</code></pre><p>&#x6B64;&#x547D;&#x4EE4;&#x5C06; Markdown &#x90AE;&#x4EF6;&#x7EC4;&#x4EF6;&#x53D1;&#x5E03;&#x5230; <code>resources/views/vendor/mail</code> &#x76EE;&#x5F55;&#x3002; <code>mail</code> &#x76EE;&#x5F55;&#x5C06;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>html</code> &#x548C;&#x4E00;&#x4E2A; <code>markdown</code> &#x76EE;&#x5F55;&#xFF0C;&#x6BCF;&#x4E2A;&#x76EE;&#x5F55;&#x5305;&#x542B;&#x5B83;&#x4EEC;&#x5404;&#x81EA;&#x53EF;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x5C55;&#x793A;&#x65B9;&#x5F0F;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x81EA;&#x5B9A;&#x4E49;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;css">&#x81EA;&#x5B9A;&#x4E49;CSS</h4>
+<p>&#x5BFC;&#x51FA;&#x7EC4;&#x4EF6;&#x540E;&#xFF0C; <code>resources/views/vendor/mail/html/themes</code> &#x76EE;&#x5F55;&#x5C06;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>default.css</code> &#x6587;&#x4EF6;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x6587;&#x4EF6;&#x4E2D;&#x81EA;&#x5B9A;&#x4E49; CSS &#xFF0C;&#x5E76;&#x4E14;&#x60A8;&#x7684;&#x6837;&#x5F0F;&#x5C06;&#x81EA;&#x52A8;&#x5185;&#x5D4C;&#x5728; Markdown &#x901A;&#x77E5;&#x7684;HTML&#x5C55;&#x793A;&#x4E2D;&#x3002;</p>
+<blockquote>
+<p>{tip} &#x5982;&#x679C;&#x60A8;&#x60F3;&#x4E3A; Markdown &#x7EC4;&#x4EF6;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x4E3B;&#x9898;&#xFF0C;&#x53EA;&#x9700;&#x5728; <code>html/themes</code> &#x76EE;&#x5F55;&#x4E2D;&#x5199;&#x4E00;&#x4E2A;&#x65B0;&#x7684; CSS &#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x66F4;&#x6539; <code>mail</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>theme</code> &#x9009;&#x9879;&#x3002;</p>
+</blockquote>
+<p><a name="database-notifications"></a></p>
+<h2 id="&#x6570;&#x636E;&#x5E93;&#x901A;&#x77E5;">&#x6570;&#x636E;&#x5E93;&#x901A;&#x77E5;</h2>
+<p><a name="database-prerequisites"></a></p>
+<h3 id="&#x5148;&#x51B3;&#x6761;&#x4EF6;">&#x5148;&#x51B3;&#x6761;&#x4EF6;</h3>
+<p><code>database</code> &#x901A;&#x77E5;&#x9891;&#x9053;&#x5728;&#x4E00;&#x5F20;&#x6570;&#x636E;&#x8868;&#x91CC;&#x5B58;&#x50A8;&#x901A;&#x77E5;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x5F20;&#x8868;&#x5305;&#x542B;&#x4E86;&#x6BD4;&#x5982;&#x901A;&#x77E5;&#x7C7B;&#x578B;&#x3001;JSON &#x683C;&#x5F0F;&#x6570;&#x636E;&#x7B49;&#x63CF;&#x8FF0;&#x901A;&#x77E5;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;&#x8FD9;&#x5F20;&#x8868;&#x7684;&#x5185;&#x5BB9;&#x5728;&#x5E94;&#x7528;&#x754C;&#x9762;&#x4E0A;&#x5C55;&#x793A;&#x901A;&#x77E5;&#x3002;&#x4F46;&#x662F;&#x5728;&#x8FD9;&#x4E4B;&#x524D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x8868;&#x6765;&#x4FDD;&#x5B58;&#x901A;&#x77E5;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>notifications:table</code> &#x547D;&#x4EE4;&#x6765;&#x751F;&#x6210;&#x8FC1;&#x79FB;&#x8868;&#xFF1A;</p>
+<pre><code>php artisan notifications:table
+
+php artisan migrate
+</code></pre><p><a name="formatting-database-notifications"></a></p>
+<h3 id="&#x683C;&#x5F0F;&#x5316;&#x6570;&#x636E;&#x5E93;&#x901A;&#x77E5;">&#x683C;&#x5F0F;&#x5316;&#x6570;&#x636E;&#x5E93;&#x901A;&#x77E5;</h3>
+<p>&#x5982;&#x679C;&#x901A;&#x77E5;&#x652F;&#x6301;&#x88AB;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x8868;&#x4E2D;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x901A;&#x77E5;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>toDatabase</code> &#x6216; <code>toArray</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x6536; <code>$notifiable</code> &#x5B9E;&#x4F53;&#x53C2;&#x6570;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684; PHP &#x6570;&#x7EC4;&#x3002;&#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x5C06;&#x88AB;&#x8F6C;&#x6210; JSON &#x683C;&#x5F0F;&#x5E76;&#x5B58;&#x50A8;&#x5230;&#x901A;&#x77E5;&#x6570;&#x636E;&#x8868;&#x7684; <code>data</code> &#x5217;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A; <code>toArray</code> &#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x6570;&#x7EC4;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return array
+ */
+public function toArray($notifiable)
+{
+    return [
+        &apos;invoice_id&apos; =&gt; $this-&gt;invoice-&gt;id,
+        &apos;amount&apos; =&gt; $this-&gt;invoice-&gt;amount,
+    ];
+}
+</code></pre><h4 id="todatabase-vs-toarray"><code>toDatabase</code> Vs <code>toArray</code></h4>
+<p><code>toArray</code> &#x65B9;&#x6CD5;&#x5728; <code>broadcast</code> &#x9891;&#x9053;&#x4E5F;&#x7528;&#x5230;&#x4E86;&#xFF0C;&#x5B83;&#x7528;&#x6765;&#x51B3;&#x5B9A;&#x5E7F;&#x64AD;&#x7ED9; JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728; <code>database</code> &#x548C; <code>broadcast</code> &#x9891;&#x9053;&#x4E2D;&#x91C7;&#x7528;&#x4E24;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x7EC4;&#x5C55;&#x793A;&#x65B9;&#x5F0F;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5B9A;&#x4E49; <code>toDatabase</code> &#x65B9;&#x6CD5;&#x800C;&#x975E; <code>toArray</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<p><a name="accessing-the-notifications"></a></p>
+<h3 id="&#x8BBF;&#x95EE;&#x901A;&#x77E5;">&#x8BBF;&#x95EE;&#x901A;&#x77E5;</h3>
+<p>&#x4E00;&#x65E6;&#x901A;&#x77E5;&#x88AB;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4E00;&#x79CD;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4ECE;&#x901A;&#x77E5;&#x5B9E;&#x4F53;&#x4E2D;&#x8BBF;&#x95EE;&#x5B83;&#x4EEC;&#x3002; <code>Illuminate\Notifications\Notifiable</code> trait &#x5305;&#x542B;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F53;&#x6240;&#x6709;&#x901A;&#x77E5;&#x7684; <code>notifications</code> Eloquent &#x5173;&#x8054;&#x3002;&#x8981;&#x83B7;&#x53D6;&#x8FD9;&#x4E9B;&#x901A;&#x77E5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x7528;&#x5176;&#x4ED6; Eloquent &#x5173;&#x8054;&#x4E00;&#x6837;&#x6765;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x901A;&#x77E5;&#x5C06;&#x4F1A;&#x4EE5; <code>created_at</code> &#x65F6;&#x95F4;&#x6233;&#x6765;&#x6392;&#x5E8F;&#xFF1A;</p>
+<pre><code>$user = App\User::find(1);
+
+foreach ($user-&gt;notifications as $notification) {
+    echo $notification-&gt;type;
+}
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x53EA;&#x60F3;&#x68C0;&#x7D22;&#x672A;&#x8BFB;&#x901A;&#x77E5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>unreadNotifications</code> &#x5173;&#x8054;&#x3002;&#x68C0;&#x7D22;&#x51FA;&#x6765;&#x7684;&#x901A;&#x77E5;&#x4E5F;&#x662F;&#x4EE5; <code>created_at</code> &#x65F6;&#x95F4;&#x6233;&#x6765;&#x6392;&#x5E8F;&#x7684;&#xFF1A;</p>
+<pre><code>$user = App\User::find(1);
+
+foreach ($user-&gt;unreadNotifications as $notification) {
+    echo $notification-&gt;type;
+}
+</code></pre><blockquote>
+<p>{tip} &#x8981;&#x4ECE; JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x6765;&#x8BBF;&#x95EE;&#x901A;&#x77E5;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x901A;&#x77E5;&#x63A7;&#x5236;&#x5668;&#x6765;&#x7ED9;&#x53EF;&#x901A;&#x77E5;&#x7684;&#x5B9E;&#x4F53;&#x8FD4;&#x56DE;&#x901A;&#x77E5;&#xFF0C;&#x6BD4;&#x5982;&#x7ED9;&#x5F53;&#x524D;&#x7528;&#x6237;&#x8FD4;&#x56DE;&#x901A;&#x77E5;&#x3002;&#x7136;&#x540E;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x5728; JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x6765;&#x53D1;&#x8D77;&#x5BF9;&#x5E94; URI &#x7684; HTTP &#x8BF7;&#x6C42;&#x4E86;&#x3002;</p>
+</blockquote>
+<p><a name="marking-notifications-as-read"></a></p>
+<h3 id="&#x6807;&#x4E3A;&#x5DF2;&#x8BFB;">&#x6807;&#x4E3A;&#x5DF2;&#x8BFB;</h3>
+<p>&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x67E5;&#x770B;&#x4E86;&#x901A;&#x77E5;&#x65F6;&#xFF0C;&#x4F60;&#x5C31;&#x5E0C;&#x671B;&#x628A;&#x901A;&#x77E5;&#x6807;&#x4E3A;&#x5DF2;&#x8BFB;&#x3002;<code>Illuminate\Notifications\Notifiable</code> trait &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A; <code>markAsRead</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x80FD;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;&#x91CC;&#x66F4;&#x65B0; <code>read_at</code> &#x5217;&#xFF1A;</p>
+<pre><code>$user = App\User::find(1);
+
+foreach ($user-&gt;unreadNotifications as $notification) {
+    $notification-&gt;markAsRead();
+}
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>markAsRead</code> &#x65B9;&#x6CD5;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;&#x4E00;&#x4E2A;&#x901A;&#x77E5;&#x96C6;&#x5408;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x6761;&#x6761;&#x904D;&#x5386;&#x6BCF;&#x4E2A;&#x901A;&#x77E5;&#xFF1A;</p>
+<pre><code>$user-&gt;unreadNotifications-&gt;markAsRead();
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x6279;&#x91CF;&#x66F4;&#x65B0;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x628A;&#x6240;&#x6709;&#x901A;&#x77E5;&#x6807;&#x4E3A;&#x5DF2;&#x8BFB;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x5728;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x68C0;&#x7D22;&#xFF1A;</p>
+<pre><code>$user = App\User::find(1);
+
+$user-&gt;unreadNotifications()-&gt;update([&apos;read_at&apos; =&gt; Carbon::now()]);
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>delete</code> &#x901A;&#x77E5;&#x6765;&#x628A;&#x5B83;&#x4EEC;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x5220;&#x9664;&#xFF1A;</p>
+<pre><code>$user-&gt;notifications()-&gt;delete();
+</code></pre><p><a name="broadcast-notifications"></a></p>
+<h2 id="&#x5E7F;&#x64AD;&#x901A;&#x77E5;">&#x5E7F;&#x64AD;&#x901A;&#x77E5;</h2>
+<p><a name="broadcast-prerequisites"></a></p>
+<h3 id="&#x5148;&#x51B3;&#x6761;&#x4EF6;">&#x5148;&#x51B3;&#x6761;&#x4EF6;</h3>
+<p>&#x5728;&#x5E7F;&#x64AD;&#x901A;&#x77E5;&#x524D;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x914D;&#x7F6E;&#x5E76;&#x719F;&#x6089; Laravel <a href="../docs/broadcasting">&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;</a> &#x670D;&#x52A1;&#x3002;&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD; JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x54CD;&#x5E94;&#x670D;&#x52A1;&#x7AEF; Laravel &#x4E8B;&#x4EF6;&#x7684;&#x673A;&#x5236;&#x3002;</p>
+<p><a name="formatting-broadcast-notifications"></a></p>
+<h3 id="&#x683C;&#x5F0F;&#x5316;&#x5E7F;&#x64AD;&#x901A;&#x77E5;">&#x683C;&#x5F0F;&#x5316;&#x5E7F;&#x64AD;&#x901A;&#x77E5;</h3>
+<p><code>broadcast</code> &#x9891;&#x9053;&#x4F7F;&#x7528; Laravel  <a href="../docs/broadcasting">&#x4E8B;&#x4EF6;&#x5E7F;&#x64AD;</a> &#x670D;&#x52A1;&#x6765;&#x5E7F;&#x64AD;&#x901A;&#x77E5;&#xFF0C;&#x5B83;&#x4F7F;&#x5F97; JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x5B9E;&#x65F6;&#x6355;&#x6349;&#x901A;&#x77E5;&#x3002;&#x5982;&#x679C;&#x4E00;&#x6761;&#x901A;&#x77E5;&#x652F;&#x6301;&#x5E7F;&#x64AD;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x901A;&#x77E5;&#x7C7B;&#x91CC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>toBroadcast</code> &#x6216; <code>toArray</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x6536;&#x5230;&#x4E00;&#x4E2A; <code>$notifiable</code> &#x5B9E;&#x4F53;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684; PHP &#x6570;&#x7EC4;&#x3002;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4F1A;&#x88AB;&#x7F16;&#x7801;&#x6210; JSON &#x683C;&#x5F0F;&#x5E76;&#x5E7F;&#x64AD;&#x7ED9;&#x4F60;&#x7684; JavaScript &#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E2A; <code>toArray</code> &#x65B9;&#x6CD5;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>use Illuminate\Notifications\Messages\BroadcastMessage;
+
+/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x6570;&#x7EC4;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return BroadcastMessage
+ */
+public function toBroadcast($notifiable)
+{
+    return new BroadcastMessage([
+        &apos;invoice_id&apos; =&gt; $this-&gt;invoice-&gt;id,
+        &apos;amount&apos; =&gt; $this-&gt;invoice-&gt;amount,
+    ]);
+}
+</code></pre><h4 id="&#x5E7F;&#x64AD;&#x961F;&#x5217;&#x914D;&#x7F6E;">&#x5E7F;&#x64AD;&#x961F;&#x5217;&#x914D;&#x7F6E;</h4>
+<p>&#x6240;&#x6709;&#x5E7F;&#x64AD;&#x901A;&#x77E5;&#x90FD;&#x6392;&#x961F;&#x7B49;&#x5F85;&#x5E7F;&#x64AD;&#x3002; &#x5982;&#x679C;&#x8981;&#x914D;&#x7F6E;&#x7528;&#x4E8E;&#x5E7F;&#x64AD;&#x961F;&#x5217;&#x64CD;&#x4F5C;&#x7684;&#x961F;&#x5217;&#x8FDE;&#x63A5;&#x6216;&#x961F;&#x5217;&#x540D;&#x79F0;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>BroadcastMessage</code> &#x7684; <code>onConnection</code> &#x548C; <code>onQueue</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>return new BroadcastMessage($data)
+                -&gt;onConnection(&apos;sqs&apos;)
+                -&gt;onQueue(&apos;broadcasts&apos;);
+</code></pre><blockquote>
+<p>{tip} &#x9664;&#x4E86;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5916;&#xFF0C;&#x5E7F;&#x64AD;&#x901A;&#x77E5;&#x4E5F;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>type</code> &#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x5305;&#x542B;&#x4E86;&#x901A;&#x77E5;&#x7C7B;&#x7684;&#x7C7B;&#x540D;&#x3002;</p>
+</blockquote>
+<p><a name="listening-for-notifications"></a></p>
+<h3 id="&#x76D1;&#x542C;&#x901A;&#x77E5;">&#x76D1;&#x542C;&#x901A;&#x77E5;</h3>
+<p>&#x901A;&#x77E5;&#x5C06;&#x4F1A;&#x5728;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x9891;&#x9053;&#x91CC;&#x8FDB;&#x884C;&#x5E7F;&#x64AD;&#xFF0C;&#x9891;&#x9053;&#x683C;&#x5F0F;&#x4E3A; <code>{notifiable}.{id}</code>&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7ED9; ID &#x4E3A; <code>1</code> &#x7684; <code>App\User</code> &#x5B9E;&#x4F8B;&#x53D1;&#x9001;&#x901A;&#x77E5;&#xFF0C;&#x8FD9;&#x4E2A;&#x901A;&#x77E5;&#x5C31;&#x5728; <code>App.User.1</code> &#x79C1;&#x6709;&#x9891;&#x9053;&#x91CC;&#x88AB;&#x53D1;&#x9001;&#x3002;&#x5F53;&#x4F60;&#x4F7F;&#x7528; <a href="../docs/broadcasting">Laravel Echo</a> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528; <code>notification</code> &#x8F85;&#x52A9;&#x51FD;&#x6570;&#x6765;&#x76D1;&#x542C;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#x7684;&#x901A;&#x77E5;&#xFF1A;</p>
+<pre><code>Echo.private(&apos;App.User.&apos; + userId)
+    .notification((notification) =&gt; {
+        console.log(notification.type);
+    });
+</code></pre><h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x901A;&#x77E5;&#x901A;&#x9053;">&#x81EA;&#x5B9A;&#x4E49;&#x901A;&#x77E5;&#x901A;&#x9053;</h4>
+<p>&#x5982;&#x679C;&#x60A8;&#x60F3;&#x81EA;&#x5B9A;&#x4E49;&#x5E94;&#x901A;&#x77E5;&#x5B9E;&#x4F53;&#x63A5;&#x6536;&#x5176;&#x5E7F;&#x64AD;&#x901A;&#x77E5;&#x7684;&#x6E20;&#x9053;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>receiveBroadcastNotificationsOn</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    /**
+     * &#x7528;&#x6237;&#x63A5;&#x6536;&#x7684;&#x901A;&#x77E5;&#x5E7F;&#x64AD;
+     *
+     * @return array
+     */
+    public function receivesBroadcastNotificationsOn()
+    {
+        return [
+            new PrivateChannel(&apos;users.&apos;.$this-&gt;id),
+        ];
+    }
+}
+</code></pre><p><a name="sms-notifications"></a></p>
+<h2 id="&#x77ED;&#x4FE1;&#x901A;&#x77E5;">&#x77ED;&#x4FE1;&#x901A;&#x77E5;</h2>
+<p><a name="sms-prerequisites"></a></p>
+<h3 id="&#x5148;&#x51B3;&#x6761;&#x4EF6;">&#x5148;&#x51B3;&#x6761;&#x4EF6;</h3>
+<p>&#x5728; Laravel &#x4E2D;&#x53D1;&#x9001;&#x77ED;&#x4FE1;&#x901A;&#x77E5;&#x662F;&#x57FA;&#x4E8E; <a href="https://www.nexmo.com/" target="_blank">Nexmo</a> &#x670D;&#x52A1;&#x7684;&#x3002;&#x5728;&#x901A;&#x8FC7; Nexmo &#x53D1;&#x9001;&#x77ED;&#x4FE1;&#x901A;&#x77E5;&#x524D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5B89;&#x88C5; <code>nexmo/client</code> Composer &#x5305;&#x5E76;&#x5728; <code>config/services.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x51E0;&#x4E2A;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x590D;&#x5236;&#x4E0B;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x793A;&#x4F8B;&#x6765;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code>&apos;nexmo&apos; =&gt; [
+    &apos;key&apos; =&gt; env(&apos;NEXMO_KEY&apos;),
+    &apos;secret&apos; =&gt; env(&apos;NEXMO_SECRET&apos;),
+    &apos;sms_from&apos; =&gt; &apos;15556666666&apos;,
+],
+</code></pre><p><code>sms_from</code> &#x9009;&#x9879;&#x662F;&#x77ED;&#x4FE1;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x8005;&#x7684;&#x624B;&#x673A;&#x53F7;&#x7801;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728; Nexmo &#x63A7;&#x5236;&#x9762;&#x677F;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x624B;&#x673A;&#x53F7;&#x7801;&#x3002;</p>
+<p><a name="formatting-sms-notifications"></a></p>
+<h3 id="&#x683C;&#x5F0F;&#x5316;&#x77ED;&#x4FE1;&#x901A;&#x77E5;">&#x683C;&#x5F0F;&#x5316;&#x77ED;&#x4FE1;&#x901A;&#x77E5;</h3>
+<p>&#x5982;&#x679C;&#x901A;&#x77E5;&#x652F;&#x6301;&#x4EE5;&#x77ED;&#x4FE1;&#x65B9;&#x5F0F;&#x53D1;&#x9001;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x901A;&#x77E5;&#x7C7B;&#x91CC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>toNexmo</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x4F1A;&#x6536;&#x5230;&#x4E00;&#x4E2A;  <code>$notifiable</code> &#x5B9E;&#x4F53;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>Illuminate\Notifications\Messages\NexmoMessage</code> &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Nexmo / &#x77ED;&#x4FE1;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return NexmoMessage
+ */
+public function toNexmo($notifiable)
+{
+    return (new NexmoMessage)
+                -&gt;content(&apos;Your SMS message content&apos;);
+}
+</code></pre><h4 id="unicode-&#x5185;&#x5BB9;">Unicode &#x5185;&#x5BB9;</h4>
+<p>&#x5982;&#x679C;&#x60A8;&#x7684; SMS &#x6D88;&#x606F;&#x5305;&#x542B; unicode &#x5B57;&#x7B26;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x5728;&#x6784;&#x5EFA; <code>NexmoMessage</code> &#x5B9E;&#x4F8B;&#x65F6;&#x8C03;&#x7528; <code>unicode</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Nexmo / &#x77ED;&#x4FE1;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return NexmoMessage
+ */
+public function toNexmo($notifiable)
+{
+    return (new NexmoMessage)
+                -&gt;content(&apos;Your unicode message&apos;)
+                -&gt;unicode();
+}
+</code></pre><p><a name="customizing-the-from-number"></a></p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;-from-&#x53F7;&#x7801;">&#x81EA;&#x5B9A;&#x4E49; <code>From</code> &#x53F7;&#x7801;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x624B;&#x673A;&#x53F7;&#x6765;&#x53D1;&#x9001;&#x67D0;&#x4E9B;&#x901A;&#x77E5;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x624B;&#x673A;&#x53F7;&#x4E0D;&#x540C;&#x4E8E;&#x4F60;&#x7684; <code>config/services.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>NexmoMessage</code> &#x5B9E;&#x4F8B;&#x4E2D;&#x4F7F;&#x7528; <code>from</code>&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Nexmo / &#x77ED;&#x4FE1;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return NexmoMessage
+ */
+public function toNexmo($notifiable)
+{
+    return (new NexmoMessage)
+                -&gt;content(&apos;Your SMS message content&apos;)
+                -&gt;from(&apos;15554443333&apos;);
+}
+</code></pre><p><a name="routing-sms-notifications"></a></p>
+<h3 id="&#x8DEF;&#x7531;&#x77ED;&#x4FE1;&#x901A;&#x77E5;">&#x8DEF;&#x7531;&#x77ED;&#x4FE1;&#x901A;&#x77E5;</h3>
+<p>&#x5F53;&#x901A;&#x8FC7; <code>nexmo</code> &#x9891;&#x9053;&#x6765;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x77E5;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x5BFB;&#x627E;&#x901A;&#x77E5;&#x5B9E;&#x4F53;&#x7684; <code>phone_number</code> &#x5C5E;&#x6027;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x81EA;&#x5B9A;&#x4E49;&#x901A;&#x77E5;&#x88AB;&#x53D1;&#x9001;&#x7684;&#x624B;&#x673A;&#x53F7;&#x7801;&#xFF0C;&#x4F60;&#x8981;&#x5728;&#x901A;&#x77E5;&#x5B9E;&#x4F53;&#x91CC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>routeNotificationForNexmo</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    /**
+     * Nexmo &#x9891;&#x9053;&#x7684;&#x8DEF;&#x7531;&#x901A;&#x77E5;
+     *
+     * @return string
+     */
+    public function routeNotificationForNexmo()
+    {
+        return $this-&gt;phone;
+    }
+}
+</code></pre><p><a name="slack-notifications"></a></p>
+<h2 id="slack-&#x901A;&#x77E5;">Slack &#x901A;&#x77E5;</h2>
+<p><a name="slack-prerequisites"></a></p>
+<h3 id="&#x5148;&#x51B3;&#x6761;&#x4EF6;">&#x5148;&#x51B3;&#x6761;&#x4EF6;</h3>
+<p>&#x901A;&#x8FC7; Slack &#x53D1;&#x9001;&#x901A;&#x77E5;&#x524D;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x901A;&#x8FC7; Composer &#x5B89;&#x88C5; Guzzle HTTP &#x5E93;&#xFF1A;</p>
+<pre><code>composer require guzzlehttp/guzzle
+</code></pre><p>&#x4F60;&#x8FD8;&#x9700;&#x8981;&#x7ED9; Slack &#x7EC4;&#x914D;&#x7F6E; &#x300C;Incoming Webhook&#x300D; &#x3002;&#x5B83;&#x5C06;&#x63D0;&#x4F9B;&#x4F60;&#x4F7F;&#x7528; <a href="#routing-slack-notifications">&#x8DEF;&#x7531; Slack &#x901A;&#x77E5;</a> &#x65F6;&#x7528;&#x5230;&#x7684; URL&#x3002;</p>
+<p><a name="formatting-slack-notifications"></a></p>
+<h3 id="&#x683C;&#x5F0F;&#x5316;-slack-&#x901A;&#x77E5;">&#x683C;&#x5F0F;&#x5316; Slack &#x901A;&#x77E5;</h3>
+<p>&#x5982;&#x679C;&#x901A;&#x77E5;&#x652F;&#x6301;&#x88AB;&#x5F53;&#x505A; Slack &#x6D88;&#x606F;&#x53D1;&#x9001;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x901A;&#x77E5;&#x7C7B;&#x91CC;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>toSlack</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x6536;&#x5230;&#x4E00;&#x4E2A; <code>$notifiable</code> &#x5B9E;&#x4F53;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>Illuminate\Notifications\Messages\SlackMessage</code> &#x5B9E;&#x4F8B;&#x3002;Slack &#x6D88;&#x606F;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A; &#x300C;attachment&#x300D; &#x7528;&#x6765;&#x683C;&#x5F0F;&#x5316;&#x989D;&#x5916;&#x6587;&#x672C;&#x6216;&#x8005;&#x5B57;&#x6BB5;&#x6570;&#x7EC4;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E2A;&#x57FA;&#x672C;&#x7684; <code>toSlack</code> &#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Slack &#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return SlackMessage
+ */
+public function toSlack($notifiable)
+{
+    return (new SlackMessage)
+                -&gt;content(&apos;One of your invoices has been paid!&apos;);
+}
+</code></pre><p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x53D1;&#x9001;&#x4E86;&#x4E00;&#x884C;&#x6587;&#x672C;&#x7ED9; Slack&#xFF0C;&#x8FD9;&#x4F1A;&#x521B;&#x5EFA;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x7684;&#x4E00;&#x6761;&#x6D88;&#x606F;&#xFF1A;</p>
+<p><img src="https://laravel.com/assets/img/basic-slack-notification.png"></p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x53D1;&#x4EF6;&#x4EBA;&#x548C;&#x6536;&#x4EF6;&#x4EBA;">&#x81EA;&#x5B9A;&#x4E49;&#x53D1;&#x4EF6;&#x4EBA;&#x548C;&#x6536;&#x4EF6;&#x4EBA;</h4>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>from</code> &#x548C; <code>to</code> &#x65B9;&#x6CD5;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x53D1;&#x4EF6;&#x4EBA;&#x548C;&#x6536;&#x4EF6;&#x4EBA;&#x3002; <code>from</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x7528;&#x6237;&#x540D;&#x548C;&#x8868;&#x60C5;&#x7B26;&#x53F7;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x800C; <code>to</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#x6216;&#x7528;&#x6237;&#x540D;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Slack &#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return SlackMessage
+ */
+public function toSlack($notifiable)
+{
+    return (new SlackMessage)
+                -&gt;from(&apos;Ghost&apos;, &apos;:ghost:&apos;)
+                -&gt;to(&apos;#other&apos;)
+                -&gt;content(&apos;This will be sent to #other&apos;);
+}
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x4F7F;&#x7528;&#x8868;&#x60C5;&#x7B26;&#x53F7;&#xFF0C;&#x6539;&#x4E3A;&#x4F7F;&#x7528;&#x56FE;&#x7247;&#x4F5C;&#x4E3A;&#x4F60;&#x7684; logo&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Slack &#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return SlackMessage
+ */
+public function toSlack($notifiable)
+{
+    return (new SlackMessage)
+                -&gt;from(&apos;Laravel&apos;)
+                -&gt;image(&apos;https://laravel.com/favicon.png&apos;)
+                -&gt;content(&apos;This will display the Laravel logo next to the message&apos;);
+}
+</code></pre><p><a name="slack-attachments"></a></p>
+<h3 id="slack-&#x9644;&#x52A0;&#x9879;-attachments">Slack &#x9644;&#x52A0;&#x9879; (Attachments)</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x7ED9; Slack &#x6D88;&#x606F;&#x6DFB;&#x52A0; &quot;&#x9644;&#x52A0;&#x9879;&quot;&#x3002;&#x9644;&#x52A0;&#x9879;&#x63D0;&#x4F9B;&#x4E86;&#x6BD4;&#x7B80;&#x5355;&#x6587;&#x672C;&#x6D88;&#x606F;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x9009;&#x9879;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x53D1;&#x9001;&#x4E00;&#x6761;&#x6709;&#x5173;&#x5E94;&#x7528;&#x4E2D;&#x5F02;&#x5E38;&#x7684;&#x9519;&#x8BEF;&#x901A;&#x77E5;&#xFF0C;&#x5B83;&#x91CC;&#x9762;&#x6709;&#x4E2A;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x66F4;&#x591A;&#x8BE6;&#x60C5;&#x7684;&#x94FE;&#x63A5;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Slack &#x5C55;&#x793A;&#x65B9;&#x5F0F;&#x3002;
+ *
+ * @param  mixed  $notifiable
+ * @return SlackMessage
+ */
+public function toSlack($notifiable)
+{
+    $url = url(&apos;/exceptions/&apos;.$this-&gt;exception-&gt;id);
+
+    return (new SlackMessage)
+                -&gt;error()
+                -&gt;content(&apos;Whoops! Something went wrong.&apos;)
+                -&gt;attachment(function ($attachment) use ($url) {
+                    $attachment-&gt;title(&apos;Exception: File Not Found&apos;, $url)
+                               -&gt;content(&apos;File [background.jpg] was not found.&apos;);
+                });
+}
+</code></pre><p>&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x5C06;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x6761;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x7684; Slack &#x6D88;&#x606F;&#xFF1A;</p>
+<p><img src="https://laravel.com/assets/img/basic-slack-attachment.png"></p>
+<p>&#x9644;&#x52A0;&#x9879;&#x4E5F;&#x5141;&#x8BB8;&#x4F60;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5E94;&#x8BE5;&#x88AB;&#x5C55;&#x793A;&#x7ED9;&#x7528;&#x6237;&#x7684;&#x6570;&#x636E;&#x7684;&#x6570;&#x7EC4;&#x3002;&#x7ED9;&#x5B9A;&#x7684;&#x6570;&#x636E;&#x5C06;&#x4F1A;&#x4EE5;&#x8868;&#x683C;&#x6837;&#x5F0F;&#x5C55;&#x793A;&#x51FA;&#x6765;&#xFF0C;&#x8FD9;&#x80FD;&#x65B9;&#x4FBF;&#x9605;&#x8BFB;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Slack &#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return SlackMessage
+ */
+public function toSlack($notifiable)
+{
+    $url = url(&apos;/invoices/&apos;.$this-&gt;invoice-&gt;id);
+
+    return (new SlackMessage)
+                -&gt;success()
+                -&gt;content(&apos;One of your invoices has been paid!&apos;)
+                -&gt;attachment(function ($attachment) use ($url) {
+                    $attachment-&gt;title(&apos;Invoice 1322&apos;, $url)
+                               -&gt;fields([
+                                    &apos;Title&apos; =&gt; &apos;Server Expenses&apos;,
+                                    &apos;Amount&apos; =&gt; &apos;$1,234&apos;,
+                                    &apos;Via&apos; =&gt; &apos;American Express&apos;,
+                                    &apos;Was Overdue&apos; =&gt; &apos;:-1:&apos;,
+                                ]);
+                });
+}
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5C06;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x6761;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x7684; Slack &#x6D88;&#x606F;&#xFF1A;</p>
+<p><img src="https://laravel.com/assets/img/slack-fields-attachment.png"></p>
+<h4 id="markdown-&#x9644;&#x4EF6;&#x5185;&#x5BB9;">Markdown &#x9644;&#x4EF6;&#x5185;&#x5BB9;</h4>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E9B;&#x9644;&#x4EF6;&#x5B57;&#x6BB5;&#x5305;&#x542B; Markdown &#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>markdown</code> &#x65B9;&#x6CD5;&#x6307;&#x793A; Slack &#x89E3;&#x6790;&#x5E76;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x9644;&#x4EF6;&#x5B57;&#x6BB5;&#x663E;&#x793A;&#x4E3A; Markdown &#x683C;&#x5F0F;&#x7684;&#x6587;&#x672C;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684; Slack &#x5C55;&#x793A;&#x65B9;&#x5F0F;
+ *
+ * @param  mixed  $notifiable
+ * @return SlackMessage
+ */
+public function toSlack($notifiable)
+{
+    $url = url(&apos;/exceptions/&apos;.$this-&gt;exception-&gt;id);
+
+    return (new SlackMessage)
+                -&gt;error()
+                -&gt;content(&apos;Whoops! Something went wrong.&apos;)
+                -&gt;attachment(function ($attachment) use ($url) {
+                    $attachment-&gt;title(&apos;Exception: File Not Found&apos;, $url)
+                               -&gt;content(&apos;File [background.jpg] was **not found**.&apos;)
+                               -&gt;markdown([&apos;title&apos;, &apos;text&apos;]);
+                });
+}
+</code></pre><p><a name="routing-slack-notifications"></a></p>
+<h3 id="&#x8DEF;&#x7531;-slack-&#x901A;&#x77E5;">&#x8DEF;&#x7531; Slack &#x901A;&#x77E5;</h3>
+<p>&#x8981;&#x628A; Slack &#x901A;&#x77E5;&#x8DEF;&#x7531;&#x5230;&#x6B63;&#x786E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x4F60;&#x8981;&#x5728;&#x901A;&#x77E5;&#x5B9E;&#x4F53;&#x4E2D;&#x5B9A;&#x4E49; <code>routeNotificationForSlack</code> &#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x8FD4;&#x56DE;&#x901A;&#x77E5;&#x8981;&#x88AB;&#x53D1;&#x5F80;&#x7684; URL &#x56DE;&#x8C03;&#x5730;&#x5740;&#x3002;URL &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728; Slack &#x7EC4;&#x91CC;&#x9762;&#x6DFB;&#x52A0; &quot;Incoming Webhook&quot; &#x670D;&#x52A1;&#x6765;&#x751F;&#x6210;&#x3002;</p>
+<pre><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    /**
+     * Slack &#x9891;&#x9053;&#x7684;&#x901A;&#x77E5;&#x8DEF;&#x7531;
+     *
+     * @return string
+     */
+    public function routeNotificationForSlack()
+    {
+        return $this-&gt;slack_webhook_url;
+    }
+}
+</code></pre><p><a name="notification-events"></a></p>
+<h2 id="&#x901A;&#x77E5;&#x4E8B;&#x4EF6;">&#x901A;&#x77E5;&#x4E8B;&#x4EF6;</h2>
+<p>&#x5F53;&#x901A;&#x77E5;&#x53D1;&#x9001;&#x540E;&#xFF0C;&#x901A;&#x77E5;&#x7CFB;&#x7EDF;&#x5C31;&#x4F1A;&#x89E6;&#x53D1; <code>Illuminate\Notifications\Events\NotificationSent</code> &#x4E8B;&#x4EF6;&#x3002;&#x5B83;&#x5305;&#x542B;&#x4E86; &#x300C;notifiable&#x300D; &#x5B9E;&#x4F53;&#x548C;&#x901A;&#x77E5;&#x5B9E;&#x4F8B;&#x672C;&#x8EAB;&#x3002;&#x4F60;&#x5E94;&#x8BE5;&#x5728; <code>EventServiceProvider</code> &#x4E2D;&#x6CE8;&#x518C;&#x76D1;&#x542C;&#x5668;&#xFF1A;</p>
+<pre><code>/**
+ * &#x5E94;&#x7528;&#x4E2D;&#x7684;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x6620;&#x5C04;
+ *
+ * @var array
+ */
+protected $listen = [
+    &apos;Illuminate\Notifications\Events\NotificationSent&apos; =&gt; [
+        &apos;App\Listeners\LogNotification&apos;,
+    ],
+];
+</code></pre><blockquote>
+<p>{tip} &#x6CE8;&#x518C;&#x5B8C;&#x76D1;&#x542C;&#x5668;&#x540E;&#xFF0C;&#x4F7F;&#x7528; <code>event:generate</code> Artisan &#x547D;&#x4EE4;&#x6765;&#x5FEB;&#x901F;&#x751F;&#x6210;&#x76D1;&#x542C;&#x5668;&#x7C7B;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x4E8B;&#x4EF6;&#x4E2D;&#x7684; <code>notifiable</code>, <code>notification</code>, &#x548C; <code>channel</code> &#x5C5E;&#x6027;&#xFF0C;&#x6765;&#x4E86;&#x89E3;&#x901A;&#x77E5;&#x63A5;&#x6536;&#x8005;&#x548C;&#x901A;&#x77E5;&#x672C;&#x8EAB;&#xFF1A;</p>
+<pre><code>/**
+ * &#x5904;&#x7406;&#x4E8B;&#x4EF6;
+ *
+ * @param  NotificationSent  $event
+ * @return void
+ */
+public function handle(NotificationSent $event)
+{
+    // $event-&gt;channel
+    // $event-&gt;notifiable
+    // $event-&gt;notification
+}
+</code></pre><p><a name="custom-channels"></a></p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x9891;&#x9053;">&#x81EA;&#x5B9A;&#x4E49;&#x9891;&#x9053;</h2>
+<p>Laravel &#x63D0;&#x4F9B;&#x4E86;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;&#x901A;&#x77E5;&#x9891;&#x9053;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x60F3;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x9A71;&#x52A8;&#x6765;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x9891;&#x9053;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x3002;Laravel &#x5F88;&#x5BB9;&#x6613;&#x5B9E;&#x73B0;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5305;&#x542B; <code>send</code> &#x65B9;&#x6CD5;&#x7684;&#x7C7B;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x6536;&#x5230;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;<code>$notifiable</code> &#x548C; <code>$notification</code>:</p>
+<pre><code>&lt;?php
+
+namespace App\Channels;
+
+use Illuminate\Notifications\Notification;
+
+class VoiceChannel
+{
+    /**
+     * &#x53D1;&#x9001;&#x7ED9;&#x5B9A;&#x901A;&#x77E5;
+     *
+     * @param  mixed  $notifiable
+     * @param  \Illuminate\Notifications\Notification  $notification
+     * @return void
+     */
+    public function send($notifiable, Notification $notification)
+    {
+        $message = $notification-&gt;toVoice($notifiable);
+
+        // &#x5C06;&#x901A;&#x77E5;&#x53D1;&#x9001;&#x7ED9; $notifiable &#x5B9E;&#x4F8B;
+    }
+}
+</code></pre><p>&#x4E00;&#x65E6;&#x5B9A;&#x4E49;&#x4E86;&#x901A;&#x77E5;&#x9891;&#x9053;&#x7C7B;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x6240;&#x6709;&#x901A;&#x77E5;&#x91CC;&#x901A;&#x8FC7; <code>via</code> &#x65B9;&#x6CD5;&#x6765;&#x7B80;&#x5355;&#x5730;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x9891;&#x9053;&#x7684;&#x7C7B;&#x540D;&#x3002;</p>
+<pre><code>&lt;?php
+
+namespace App\Notifications;
+
+use Illuminate\Bus\Queueable;
+use App\Channels\VoiceChannel;
+use App\Channels\Messages\VoiceMessage;
+use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class InvoicePaid extends Notification
+{
+    use Queueable;
+
+    /**
+     * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x9891;&#x9053;
+     *
+     * @param  mixed  $notifiable
+     * @return array|string
+     */
+    public function via($notifiable)
+    {
+        return [VoiceChannel::class];
+    }
+
+    /**
+     * &#x83B7;&#x53D6;&#x901A;&#x77E5;&#x7684;&#x58F0;&#x97F3;&#x5C55;&#x793A;&#x65B9;&#x5F0F;
+     *
+     * @param  mixed  $notifiable
+     * @return VoiceMessage
+     */
+    public function toVoice($notifiable)
+    {
+        // ...
+    }
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8-9 邮件发送.html" class="navigation navigation-prev " aria-label="Previous page: 8-9 邮件发送">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8-11 扩展包开发.html" class="navigation navigation-next " aria-label="Next page: 8-11 扩展包开发">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8-10 消息通知","level":"1.9.10","depth":2,"next":{"title":"8-11 扩展包开发","level":"1.9.11","depth":2,"path":"Chapter8/8-11 扩展包开发.md","ref":"Chapter8/8-11 扩展包开发.md","articles":[]},"previous":{"title":"8-9 邮件发送","level":"1.9.9","depth":2,"path":"Chapter8/8-9 邮件发送.md","ref":"Chapter8/8-9 邮件发送.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter8/8-10 消息通知.md","mtime":"2018-10-29T12:40:15.141Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

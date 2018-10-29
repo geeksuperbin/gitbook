@@ -1,0 +1,1461 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12-2 Envoy 部署工具 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="12-3  Scout 全文搜索.html" />
+    
+    
+    <link rel="prev" href="12-1 Cashier 交易工具包.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Chapter8/8-1 Artisan命令行.html">
+            
+                <a href="../Chapter8/8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Chapter8/8-2 广播系统.html">
+            
+                <a href="../Chapter8/8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Chapter8/8-3 缓存系统.html">
+            
+                <a href="../Chapter8/8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Chapter8/8-4 集合.html">
+            
+                <a href="../Chapter8/8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Chapter8/8-5 错误与日志.html">
+            
+                <a href="../Chapter8/8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Chapter8/8-6 事件系统.html">
+            
+                <a href="../Chapter8/8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Chapter8/8-7 文件存储.html">
+            
+                <a href="../Chapter8/8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Chapter8/8-8 辅助函数.html">
+            
+                <a href="../Chapter8/8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Chapter8/8-9 邮件发送.html">
+            
+                <a href="../Chapter8/8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Chapter8/8-10 消息通知.html">
+            
+                <a href="../Chapter8/8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../Chapter8/8-11 扩展包开发.html">
+            
+                <a href="../Chapter8/8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../Chapter8/8-12 队列.html">
+            
+                <a href="../Chapter8/8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../Chapter8/8-13 任务调度.html">
+            
+                <a href="../Chapter8/8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="12-1 Cashier 交易工具包.html">
+            
+                <a href="12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13.2" data-path="12-2 Envoy 部署工具.html">
+            
+                <a href="12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="12-3  Scout 全文搜索.html">
+            
+                <a href="12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="12-4 Socialite 社会化登录.html">
+            
+                <a href="12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >12-2 Envoy 部署工具</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4EFB;&#x52A1;&#x5904;&#x7406;&#x5668;-envoy">Laravel &#x7684;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4EFB;&#x52A1;&#x5904;&#x7406;&#x5668; Envoy</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a><ul>
+<li><a href="#installation">&#x5B89;&#x88C5;</a></li>
+</ul>
+</li>
+<li><a href="#writing-tasks">&#x7F16;&#x5199;&#x4EFB;&#x52A1;</a><ul>
+<li><a href="#setup">&#x4EFB;&#x52A1;&#x542F;&#x52A8;</a></li>
+<li><a href="#variables">&#x4EFB;&#x52A1;&#x53D8;&#x91CF;</a></li>
+<li><a href="#stories">&#x4EFB;&#x52A1;&#x6545;&#x4E8B;</a></li>
+<li><a href="#multiple-servers">&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;</a></li>
+</ul>
+</li>
+<li><a href="#running-tasks">&#x8FD0;&#x884C;&#x4EFB;&#x52A1;</a><ul>
+<li><a href="#confirming-task-execution">&#x4EFB;&#x52A1;&#x786E;&#x8BA4;</a></li>
+</ul>
+</li>
+<li><a href="#notifications">&#x901A;&#x77E5;</a><ul>
+<li><a href="#slack">Slack</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p><a href="https://github.com/laravel/envoy" target="_blank">Laravel Envoy</a> &#x4E3A;&#x5B9A;&#x4E49;&#x5728;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x901A;&#x7528;&#x4EFB;&#x52A1;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x7B80;&#x6D01;&#x3001;&#x8F7B;&#x4FBF;&#x7684;&#x8BED;&#x6CD5;&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x4E86; Blade &#x98CE;&#x683C;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x542F;&#x52A8;&#x4EFB;&#x52A1;&#x6765;&#x8FDB;&#x884C;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x3001;Artisan &#x547D;&#x4EE4;&#x8FD0;&#x884C;&#x7B49;&#x64CD;&#x4F5C;&#x3002;&#x76EE;&#x524D;&#xFF0C;Envoy &#x53EA;&#x652F;&#x6301; Mac &#x53CA; Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p><a name="installation"></a></p>
+<h3 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h3>
+<p>&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528; Composer <code>global require</code> &#x547D;&#x4EE4;&#x6765;&#x5B89;&#x88C5; Enovy &#xFF1A;</p>
+<pre><code>composer global require &quot;laravel/envoy=~1.0&quot;
+</code></pre><p>&#x56E0;&#x4E3A; Composer &#x7684;&#x5168;&#x5C40;&#x5E93;&#x6709;&#x65F6;&#x4F1A;&#x5BFC;&#x81F4;&#x5305;&#x7684;&#x7248;&#x672C;&#x51B2;&#x7A81;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528; <code>cgr</code> &#xFF0C;&#x5B83;&#x662F; <code>composer global require</code> &#x547D;&#x4EE4;&#x7684;&#x4E00;&#x79CD;&#x66FF;&#x4EE3;&#x5B9E;&#x73B0; <code>cgr</code> &#x5E93;&#x7684;&#x5B89;&#x88C5;&#x6307;&#x5BFC;&#x53EF;&#x4EE5;&#x5728; <a href="https://github.com/consolidation-org/cgr" target="_blank">GitHub&#x4E0A;&#x627E;&#x5230;</a>&#x3002;</p>
+<blockquote>
+<p>{note} &#x4E00;&#x5B9A;&#x8981;&#x786E;&#x4FDD; <code>~/.composer/vendor/bin</code> &#x76EE;&#x5F55;&#x52A0;&#x5165;&#x5230;&#x4E86;&#x4F60;&#x7684; PATH &#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C; <code>envoy</code> &#x3002;</p>
+</blockquote>
+<h4 id="&#x66F4;&#x65B0;-envoy">&#x66F4;&#x65B0; Envoy</h4>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Composer &#x6765;&#x66F4;&#x65B0; Envoy &#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;&#x3002; &#x8981;&#x6CE8;&#x610F; <code>composer global update</code> &#x547D;&#x4EE4;&#x662F;&#x66F4;&#x65B0;&#x4F60;&#x6240;&#x6709;&#x5728;&#x5168;&#x5C40;&#x5B89;&#x88C5;&#x7684;&#x5305;&#xFF1A;</p>
+<pre><code>composer global update
+</code></pre><p><a name="writing-tasks"></a></p>
+<h2 id="&#x7F16;&#x5199;&#x4EFB;&#x52A1;">&#x7F16;&#x5199;&#x4EFB;&#x52A1;</h2>
+<p>&#x6240;&#x6709;&#x7684; Envoy &#x4EFB;&#x52A1;&#x90FD;&#x5FC5;&#x987B;&#x5B9A;&#x4E49;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x7684; <code>Envoy.blade.php</code> &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>@servers([&apos;web&apos; =&gt; [&apos;user@192.168.1.1&apos;]])
+
+@task(&apos;foo&apos;, [&apos;on&apos; =&gt; &apos;web&apos;])
+    ls -la
+@endtask
+</code></pre><p>&#x5982;&#x4F60;&#x6240;&#x89C1;&#xFF0C; <code>@servers</code> &#x7684;&#x6570;&#x7EC4;&#x88AB;&#x5B9A;&#x4E49;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x5904;&#xFF0C;&#x8BA9;&#x4F60;&#x5728;&#x58F0;&#x660E;&#x4EFB;&#x52A1;&#x65F6;&#x53EF;&#x4EE5;&#x5728; <code>on</code> &#x9009;&#x9879;&#x91CC;&#x53C2;&#x7167;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x5668;&#x3002;&#x5728;&#x4F60;&#x7684;  <code>@task</code> &#x58F0;&#x660E;&#x91CC;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x653E;&#x7F6E;&#x5F53;&#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#x65F6;&#x60F3;&#x8981;&#x5728;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x8FD0;&#x884C;&#x7684; Bash &#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x670D;&#x52A1;&#x5668;&#x7684; IP &#x5730;&#x5740;&#x4E3A; <code>127.0.0.1</code> &#x6765;&#x6267;&#x884C;&#x672C;&#x5730;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<pre><code>@servers([&apos;localhost&apos; =&gt; &apos;127.0.0.1&apos;])
+</code></pre><p><a name="setup"></a></p>
+<h3 id="&#x4EFB;&#x52A1;&#x542F;&#x52A8;">&#x4EFB;&#x52A1;&#x542F;&#x52A8;</h3>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x5728;&#x4EFB;&#x52A1;&#x542F;&#x52A8;&#x524D;&#x8FD0;&#x884C;&#x4E00;&#x4E9B; PHP &#x4EE3;&#x7801;&#x3002;&#x8FD9;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>@setup</code> &#x533A;&#x5757;&#x5728; Envoy &#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x4EE5;&#x53CA;&#x8FD0;&#x884C;&#x666E;&#x901A;&#x7684; PHP &#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre><code>@setup
+    $now = new DateTime();
+
+    $environment = isset($env) ? $env : &quot;testing&quot;;
+@endsetup
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x524D;&#x5F15;&#x5165;&#x5176;&#x4ED6; PHP &#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728; <code>Envoy.blade.php</code> &#x6587;&#x4EF6;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#x4F7F;&#x7528; <code>@include</code> &#xFF1A;</p>
+<pre><code>@include(&apos;vendor/autoload.php&apos;)
+
+@task(&apos;foo&apos;)
+    # ...
+@endtask
+</code></pre><p><a name="variables"></a></p>
+<h3 id="&#x4EFB;&#x52A1;&#x53D8;&#x91CF;">&#x4EFB;&#x52A1;&#x53D8;&#x91CF;</h3>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#x6765;&#x4F20;&#x9012;&#x53D8;&#x91CF;&#x81F3; Envoy &#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x4FBF;&#x81EA;&#x5B9A;&#x4E49;&#x4F60;&#x7684;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<pre><code>envoy run deploy --branch=master
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Blade &#x7684;&#x300C;echo&#x300D;&#x8BED;&#x6CD5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x9009;&#x9879;&#xFF0C; &#x5F53;&#x7136;&#x4E5F;&#x80FD;&#x5728;&#x4EFB;&#x52A1;&#x91CC;&#x7528;&#x300C;if&#x300D; &#x548C;&#x5FAA;&#x73AF;&#x64CD;&#x4F5C;&#x3002;&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x6267;&#x884C; <code>git pull</code> &#x547D;&#x4EE4;&#x524D;&#xFF0C;&#x5148;&#x68C0;&#x67E5; <code>$branch</code> &#x53D8;&#x91CF;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF1A;</p>
+<pre><code>@servers([&apos;web&apos; =&gt; &apos;192.168.1.1&apos;])
+
+@task(&apos;deploy&apos;, [&apos;on&apos; =&gt; &apos;web&apos;])
+    cd site
+
+    @if ($branch)
+        git pull origin 
+    @endif
+
+    php artisan migrate
+@endtask
+</code></pre><p><a name="stories"></a></p>
+<h3 id="&#x4EFB;&#x52A1;&#x6545;&#x4E8B;">&#x4EFB;&#x52A1;&#x6545;&#x4E8B;</h3>
+<p>&#x4EFB;&#x52A1;&#x6545;&#x4E8B;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x3001;&#x4FBF;&#x6377;&#x7684;&#x540D;&#x5B57;&#x6765;&#x5212;&#x5206;&#x4E00;&#x7EC4;&#x4EFB;&#x52A1;&#xFF0C;&#x6765;&#x8BA9;&#x4F60;&#x628A;&#x5C0F;&#x800C;&#x4E13;&#x7684;&#x5B50;&#x4EFB;&#x52A1;&#x5408;&#x5E76;&#x5230;&#x5927;&#x7684;&#x4EFB;&#x52A1;&#x91CC;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;  <code>deploy</code> &#x7684;&#x4EFB;&#x52A1;&#x6545;&#x4E8B;&#x53EF;&#x4EE5;&#x5728;&#x5B83;&#x5B9A;&#x4E49;&#x8303;&#x56F4;&#x5185;&#x5217;&#x51FA;&#x5B50;&#x4EFB;&#x52A1;&#x540D;&#x5B57; <code>git</code> &#x548C; <code>composer</code> &#x6765;&#x8FD0;&#x884C;&#x5404;&#x81EA;&#x5BF9;&#x5E94;&#x7684;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<pre><code>@servers([&apos;web&apos; =&gt; &apos;192.168.1.1&apos;])
+
+@story(&apos;deploy&apos;)
+    git
+    composer
+@endstory
+
+@task(&apos;git&apos;)
+    git pull origin master
+@endtask
+
+@task(&apos;composer&apos;)
+    composer install
+@endtask
+</code></pre><p>&#x5F53; story &#x5199;&#x597D;&#x540E;&#xFF0C;&#x50CF;&#x8FD0;&#x884C;&#x666E;&#x901A;&#x4EFB;&#x52A1;&#x4E00;&#x6837;&#x8FD0;&#x884C;&#x5B83;&#x5C31;&#x597D;&#x4E86;&#xFF1A;</p>
+<pre><code>envoy run deploy
+</code></pre><p><a name="multiple-servers"></a></p>
+<h3 id="&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;">&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x589E;&#x52A0;&#x989D;&#x5916;&#x7684;&#x670D;&#x52A1;&#x5668;&#x81F3;&#x4F60;&#x7684; <code>@servers</code> &#x58F0;&#x660E;&#xFF0C;&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x5FC5;&#x987B;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;&#x540D;&#x79F0;&#x3002;&#x4E00;&#x65E6;&#x4F60;&#x5B9A;&#x4E49;&#x597D;&#x5176;&#x5B83;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x5C31;&#x80FD;&#x591F;&#x5728;&#x4EFB;&#x52A1;&#x58F0;&#x660E;&#x7684; <code>on</code> &#x6570;&#x7EC4;&#x4E2D;&#x5217;&#x51FA;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x5668;&#xFF1A;</p>
+<pre><code>@servers([&apos;web-1&apos; =&gt; &apos;192.168.1.1&apos;, &apos;web-2&apos; =&gt; &apos;192.168.1.2&apos;])
+
+@task(&apos;deploy&apos;, [&apos;on&apos; =&gt; [&apos;web-1&apos;, &apos;web-2&apos;]])
+    cd site
+    git pull origin 
+    php artisan migrate
+@endtask
+</code></pre><h4 id="&#x5E76;&#x884C;&#x8FD0;&#x884C;">&#x5E76;&#x884C;&#x8FD0;&#x884C;</h4>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4EFB;&#x52A1;&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x5728;&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FD0;&#x884C;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4EFB;&#x52A1;&#x4F1A;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x8FD0;&#x884C;&#x5B8C;&#x540E;&#x624D;&#x8DF3;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x591A;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5E76;&#x884C;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x53EA;&#x9700;&#x7B80;&#x5355;&#x7684;&#x5728;&#x4EFB;&#x52A1;&#x58F0;&#x660E;&#x91CC;&#x52A0;&#x4E0A; <code>parallel</code> &#x9009;&#x9879;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code>@servers([&apos;web-1&apos; =&gt; &apos;192.168.1.1&apos;, &apos;web-2&apos; =&gt; &apos;192.168.1.2&apos;])
+
+@task(&apos;deploy&apos;, [&apos;on&apos; =&gt; [&apos;web-1&apos;, &apos;web-2&apos;], &apos;parallel&apos; =&gt; true])
+    cd site
+    git pull origin 
+    php artisan migrate
+@endtask
+</code></pre><p><a name="running-tasks"></a></p>
+<h2 id="&#x8FD0;&#x884C;&#x4EFB;&#x52A1;">&#x8FD0;&#x884C;&#x4EFB;&#x52A1;</h2>
+<p>&#x8981;&#x60F3;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x5728; <code>Envoy.blade.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x4EFB;&#x52A1;&#x6216;&#x8005;&#x6545;&#x4E8B;&#xFF0C;&#x5C31;&#x6267;&#x884C; Envoy &#x7684; <code>run</code> &#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x5C06;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x7684;&#x540D;&#x5B57;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x3002;Envoy &#x4F1A;&#x53BB;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5E76;&#x4E14;&#x628A;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x8F93;&#x51FA;&#x7ED9;&#x6253;&#x5370;&#x51FA;&#x6765;&#xFF1A;</p>
+<pre><code>envoy run task
+</code></pre><p><a name="confirming-task-execution"></a></p>
+<h3 id="&#x4EFB;&#x52A1;&#x786E;&#x8BA4;">&#x4EFB;&#x52A1;&#x786E;&#x8BA4;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5728;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x4E4B;&#x524D;&#x8FDB;&#x884C;&#x63D0;&#x793A;&#x786E;&#x8BA4;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x589E;&#x52A0; <code>confirm</code> &#x547D;&#x4EE4;&#x5230;&#x4EFB;&#x52A1;&#x58F0;&#x660E;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x5BF9;&#x4E8E;&#x7834;&#x574F;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#x6765;&#x8BF4;&#x662F;&#x76F8;&#x5F53;&#x6709;&#x7528;&#x7684;&#xFF1A;</p>
+<pre><code>@task(&apos;deploy&apos;, [&apos;on&apos; =&gt; &apos;web&apos;, &apos;confirm&apos; =&gt; true])
+    cd site
+    git pull origin {{ $branch }}
+    php artisan migrate
+@endtask
+</code></pre><p><a name="notifications">&lt;/a&gt;
+<a name="hipchat-notifications"></a></a></p>
+<h2 id="&#x901A;&#x77E5;">&#x901A;&#x77E5;</h2>
+<p><a name="slack"></a></p>
+<h3 id="slack">Slack</h3>
+<p>Envoy &#x4E5F;&#x652F;&#x6301;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x540E;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x81F3; <a href="https://slack.com" target="_blank">Slack</a>&#x3002;<code>@slack</code> &#x547D;&#x4EE4;&#x63A5;&#x6536; Slack hook &#x7F51;&#x5740;&#x548C;&#x9891;&#x9053;&#x540D;&#x79F0;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x5728;&#x5728; Slack &#x7684;&#x63A7;&#x5236;&#x9762;&#x677F;&#x4E0A;&#x521B;&#x5EFA; &#x300C;Incoming WebHooks&#x300D; &#x65F6;&#x6765;&#x68C0;&#x7D22; webhook &#x7F51;&#x5740;&#x3002;webhook-url &#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F; <code>@slack</code> &#x7684; Incoming WebHooks &#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5B8C;&#x6574;&#x7F51;&#x5740;&#xFF1A;</p>
+<pre><code>@finished
+    @slack(&apos;webhook-url&apos;, &apos;#bots&apos;)
+@endfinished
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x4E0B;&#x65B9;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6765;&#x4F5C;&#x4E3A; channel &#x53C2;&#x6570;&#xFF1A;</p>
+<div class="content-list" markdown="1">
+- &#x5982;&#x679C;&#x8981;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x81F3;&#x4E00;&#x4E2A;&#x9891;&#x9053;&#xFF1A; `#channel`
+- &#x5982;&#x679C;&#x8981;&#x53D1;&#x9001;&#x901A;&#x77E5;&#x7ED9;&#x4E00;&#x4F4D;&#x7528;&#x6237;&#xFF1A; `@user`
+</div>
+
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="12-1 Cashier 交易工具包.html" class="navigation navigation-prev " aria-label="Previous page: 12-1 Cashier 交易工具包">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="12-3  Scout 全文搜索.html" class="navigation navigation-next " aria-label="Next page: 12-3 Scout 全文搜索">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"12-2 Envoy 部署工具","level":"1.13.2","depth":2,"next":{"title":"12-3 Scout 全文搜索","level":"1.13.3","depth":2,"path":"Chapter12/12-3  Scout 全文搜索.md","ref":"Chapter12/12-3  Scout 全文搜索.md","articles":[]},"previous":{"title":"12-1 Cashier 交易工具包","level":"1.13.1","depth":2,"path":"Chapter12/12-1 Cashier 交易工具包.md","ref":"Chapter12/12-1 Cashier 交易工具包.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter12/12-2 Envoy 部署工具.md","mtime":"2018-10-29T12:40:15.133Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

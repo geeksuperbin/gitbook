@@ -1,0 +1,1740 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8-9 邮件发送 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8-10 消息通知.html" />
+    
+    
+    <link rel="prev" href="8-8 辅助函数.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8-1 Artisan命令行.html">
+            
+                <a href="8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8-2 广播系统.html">
+            
+                <a href="8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="8-3 缓存系统.html">
+            
+                <a href="8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="8-4 集合.html">
+            
+                <a href="8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="8-5 错误与日志.html">
+            
+                <a href="8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="8-6 事件系统.html">
+            
+                <a href="8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="8-7 文件存储.html">
+            
+                <a href="8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="8-8 辅助函数.html">
+            
+                <a href="8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.9" data-path="8-9 邮件发送.html">
+            
+                <a href="8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="8-10 消息通知.html">
+            
+                <a href="8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="8-11 扩展包开发.html">
+            
+                <a href="8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="8-12 队列.html">
+            
+                <a href="8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="8-13 任务调度.html">
+            
+                <a href="8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8-9 邮件发送</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;-&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x529F;&#x80FD;">Laravel &#x7684; &#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x529F;&#x80FD;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a><ul>
+<li><a href="#driver-prerequisites">&#x9A71;&#x52A8;&#x524D;&#x63D0;</a></li>
+</ul>
+</li>
+<li><a href="#generating-mailables">&#x751F;&#x6210; mailables</a></li>
+<li><a href="#writing-mailables">&#x7F16;&#x5199; mailables</a><ul>
+<li><a href="#configuring-the-sender">&#x914D;&#x7F6E;&#x53D1;&#x9001;&#x8005;</a></li>
+<li><a href="#configuring-the-view">&#x914D;&#x7F6E;&#x89C6;&#x56FE;</a></li>
+<li><a href="#view-data">&#x89C6;&#x56FE;&#x6570;&#x636E;</a></li>
+<li><a href="#attachments">&#x9644;&#x4EF6;</a></li>
+<li><a href="#inline-attachments">&#x5185;&#x90E8;&#x9644;&#x4EF6;</a></li>
+</ul>
+</li>
+<li><a href="#markdown-mailables">Markdown &#x683C;&#x5F0F;&#x7684;&#x90AE;&#x4EF6;</a><ul>
+<li><a href="#generating-markdown-mailables">&#x751F;&#x6210; Markdown &#x683C;&#x5F0F;&#x7684;&#x90AE;&#x4EF6;</a></li>
+<li><a href="#writing-markdown-messages">&#x7F16;&#x5199; Markdown &#x683C;&#x5F0F;&#x7684;&#x90AE;&#x4EF6;</a></li>
+<li><a href="#customizing-the-components">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</a></li>
+</ul>
+</li>
+<li><a href="#sending-mail">&#x53D1;&#x9001;&#x90AE;&#x4EF6;</a><ul>
+<li><a href="#queueing-mail">&#x961F;&#x5217;&#x90AE;&#x4EF6;</a></li>
+</ul>
+</li>
+<li><a href="#mail-and-local-development">&#x90AE;&#x4EF6;&#x4E0E;&#x672C;&#x5730;&#x5F00;&#x53D1;</a></li>
+<li><a href="#events">&#x4E8B;&#x4EF6;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>Laravel &#x57FA;&#x4E8E; <a href="http://swiftmailer.org" target="_blank">SwiftMailer</a> &#x51FD;&#x6570;&#x5E93;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x5E72;&#x51C0;&#x3001;&#x7B80;&#x6D01;&#x7684;&#x90AE;&#x4EF6; API &#xFF0C;Laravel &#x4E3A; SMTP &#x3001;Mailgun &#x3001;SparkPost &#x3001; Amazon SES &#x3001; PHP &#x7684; <code>mail</code> &#x51FD;&#x6570;&#x53CA; <code>sendmail</code> &#x63D0;&#x4F9B;&#x9A71;&#x52A8;&#xFF0C;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x4ECE;&#x672C;&#x5730;&#x6216;&#x4E91;&#x7AEF;&#x670D;&#x52A1;&#x81EA;&#x7531;&#x5730;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x3002;</p>
+<p><a name="driver-prerequisites"></a></p>
+<h3 id="&#x9A71;&#x52A8;&#x524D;&#x63D0;">&#x9A71;&#x52A8;&#x524D;&#x63D0;</h3>
+<p>&#x57FA;&#x4E8E; API &#x7684;&#x9A71;&#x52A8;&#xFF0C;&#x4F8B;&#x5982; Mailgun &#x548C; SparkPost &#x901A;&#x5E38;&#x6BD4; SMTP &#x670D;&#x52A1;&#x5668;&#x66F4;&#x7B80;&#x5355;&#x5FEB;&#x901F;&#x3002;&#x5982;&#x679C;&#x53EF;&#x80FD;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x9A71;&#x52A8;&#x3002;&#x6240;&#x6709;&#x7684; API &#x9A71;&#x52A8;&#x90FD;&#x9700;&#x8981; Guzzle HTTP &#x51FD;&#x6570;&#x5E93;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Composer &#x5305;&#x7BA1;&#x7406;&#x5668;&#x5B89;&#x88C5;&#x5B83;&#xFF1A;</p>
+<pre><code>composer require guzzlehttp/guzzle
+</code></pre><h4 id="mailgun-&#x9A71;&#x52A8;">Mailgun &#x9A71;&#x52A8;</h4>
+<p>&#x8981;&#x4F7F;&#x7528; Mailgun &#x9A71;&#x52A8;&#xFF0C;&#x9996;&#x5148;&#x5FC5;&#x987B;&#x5B89;&#x88C5; Guzzle&#xFF0C;&#x4E4B;&#x540E;&#x5C06; <code>config/mail.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;  <code>driver</code> &#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x4E3A; <code>mailgun</code>&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x786E;&#x8BA4; <code>config/services.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>&apos;mailgun&apos; =&gt; [
+    &apos;domain&apos; =&gt; &apos;your-mailgun-domain&apos;,
+    &apos;secret&apos; =&gt; &apos;your-mailgun-key&apos;,
+],
+</code></pre><h4 id="sparkpost-&#x9A71;&#x52A8;">SparkPost &#x9A71;&#x52A8;</h4>
+<p>&#x8981;&#x4F7F;&#x7528; SparkPost &#x9A71;&#x52A8;&#xFF0C;&#x9996;&#x5148;&#x5FC5;&#x987B;&#x5B89;&#x88C5; Guzzle&#xFF0C;&#x4E4B;&#x540E;&#x5C06; <code>config/mail.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;  <code>driver</code> &#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x4E3A; <code>sparkpost</code>&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x786E;&#x8BA4; <code>config/services.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>&apos;sparkpost&apos; =&gt; [
+    &apos;secret&apos; =&gt; &apos;your-sparkpost-key&apos;,
+],
+</code></pre><h4 id="ses-&#x9A71;&#x52A8;">SES &#x9A71;&#x52A8;</h4>
+<p>&#x8981;&#x4F7F;&#x7528; Amazon SES &#x9A71;&#x52A8;&#xFF0C;&#x5FC5;&#x987B;&#x5B89;&#x88C5; PHP &#x7684; Amazon AWS SDK&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>composer.json</code> &#x6587;&#x4EF6;&#x7684; <code>require</code> &#x6BB5;&#x843D;&#x52A0;&#x5165;&#x4E0B;&#x9762;&#x8FD9;&#x4E00;&#x884C;&#x5E76;&#x8FD0;&#x884C; <code>composer update</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>&quot;aws/aws-sdk-php&quot;: &quot;~3.0&quot;
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5C06; <code>config/mail.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>driver</code> &#x8BBE;&#x7F6E;&#x4E3A; <code>ses</code>&#x3002;&#x7136;&#x540E;&#x786E;&#x8BA4; <code>config/services.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E0B;&#x5217;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>&apos;ses&apos; =&gt; [
+    &apos;key&apos; =&gt; &apos;your-ses-key&apos;,
+    &apos;secret&apos; =&gt; &apos;your-ses-secret&apos;,
+    &apos;region&apos; =&gt; &apos;ses-region&apos;,  // e.g. us-east-1
+],
+</code></pre><p><a name="generating-mailables"></a></p>
+<h2 id="&#x751F;&#x6210;-mailables">&#x751F;&#x6210; mailables</h2>
+<p>&#x5728; Laravel &#x4E2D;&#xFF0C;&#x6BCF;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x90AE;&#x4EF6;&#x90FD;&#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x300C;mailables&#x300D;&#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x5728; <code>app/Mail</code> &#x76EE;&#x5F55;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x5728;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#x6CA1;&#x6709;&#x770B;&#x89C1;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x522B;&#x62C5;&#x5FC3;&#xFF0C;&#x5728;&#x9996;&#x6B21;&#x4F7F;&#x7528; <code>make:mail</code> &#x547D;&#x4EE4;&#x521B;&#x5EFA; mailables &#x7C7B;&#x65F6;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4F1A;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>php artisan make:mail OrderShipped
+</code></pre><p><a name="writing-mailables"></a></p>
+<h2 id="&#x7F16;&#x5199;-mailables">&#x7F16;&#x5199; mailables</h2>
+<p>&#x6240;&#x6709;&#x7684; &#x300C;mailables&#x300D;&#x7C7B;&#x90FD;&#x5728;&#x5176; <code>build</code> &#x65B9;&#x6CD5;&#x4E2D;&#x5B8C;&#x6210;&#x914D;&#x7F6E;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5185;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5982; <code>from</code> &#x3001; <code>subject</code> &#x3001; <code>view</code> &#x548C; <code>attach</code> &#x6765;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x90AE;&#x4EF6;&#x7684;&#x8BE6;&#x60C5;&#x3002;</p>
+<p><a name="configuring-the-sender"></a></p>
+<h3 id="&#x914D;&#x7F6E;&#x53D1;&#x9001;&#x8005;">&#x914D;&#x7F6E;&#x53D1;&#x9001;&#x8005;</h3>
+<h4 id="&#x4F7F;&#x7528;-from-&#x65B9;&#x6CD5;">&#x4F7F;&#x7528; <code>from</code> &#x65B9;&#x6CD5;</h4>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6F14;&#x793A;&#x914D;&#x7F6E;&#x90AE;&#x4EF6;&#x7684;&#x53D1;&#x9001;&#x8005;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x90AE;&#x4EF6;&#x7684;&#x53C2;&#x6570; &#x300C;from&#x300D;&#xFF0C;&#x65E2;&#x8C01;&#x53D1;&#x9001;&#x4E86;&#x90AE;&#x4EF6;&#x3002;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x914D;&#x7F6E;&#x53D1;&#x9001;&#x8005;&#x3002;&#x7B2C;&#x4E00;&#x79CD;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>build</code> &#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528; <code>from</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>/**
+ * Build the message.
+ *
+ * @return $this
+ */
+public function build()
+{
+    return $this-&gt;from(&apos;example@example.com&apos;)
+                -&gt;view(&apos;emails.orders.shipped&apos;);
+}
+</code></pre><h4 id="&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5168;&#x5C40;-from-&#x5730;&#x5740;">&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5168;&#x5C40; <code>from</code> &#x5730;&#x5740;</h4>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5982;&#x679C;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684; <code>from</code> &#x5730;&#x5740;&#xFF0C;&#x4F60;&#x6BCF;&#x6B21;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x8FD9;&#x79CD;&#x8BBE;&#x7F6E;&#x65B9;&#x5F0F;&#x663E;&#x5F97;&#x7B28;&#x62D9;&#xFF0C;&#x66FF;&#x4EE3;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x5728; <code>config/mail.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5168;&#x5C40; <code>from</code> &#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x5728;&#x6CA1;&#x6709;&#x5355;&#x72EC;&#x6307;&#x5B9A; &#x300C;from&#x300D;&#x65F6;&#x662F;&#x9ED8;&#x8BA4;&#x7684; <code>from</code> &#xFF1A;</p>
+<pre><code>&apos;from&apos; =&gt; [&apos;address&apos; =&gt; &apos;example@example.com&apos;, &apos;name&apos; =&gt; &apos;App Name&apos;],
+</code></pre><p><a name="configuring-the-view"></a></p>
+<h3 id="&#x914D;&#x7F6E;&#x89C6;&#x56FE;">&#x914D;&#x7F6E;&#x89C6;&#x56FE;</h3>
+<p>&#x5728; <code>build</code>&#x65B9;&#x6CD5;&#x5185;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>view</code> &#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x90AE;&#x4EF6;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x4EE5;&#x6E32;&#x67D3;&#x90AE;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x90AE;&#x4EF6;&#x90FD;&#x4F1A;&#x4F7F;&#x7528; <a href="../docs/blade">Blade &#x6A21;&#x677F;</a> &#x6E32;&#x67D3;&#x5185;&#x5BB9;&#xFF0C;&#x4F60;&#x80FD;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x4F7F;&#x7528; Blade &#x6A21;&#x677F;&#x5F15;&#x64CE;&#x6784;&#x5EFA;&#x90AE;&#x4EF6;&#x7684; HTML&#xFF1A;</p>
+<pre><code>/**
+ * Build the message.
+ *
+ * @return $this
+ */
+public function build()
+{
+    return $this-&gt;view(&apos;emails.orders.shipped&apos;);
+}
+</code></pre><blockquote>
+<p>{tip} &#x4F60;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>resources/views/emails</code> &#x76EE;&#x5F55;&#x6765;&#x5B58;&#x653E;&#x6240;&#x6709;&#x7684;&#x90AE;&#x4EF6;&#x6A21;&#x677F;&#xFF1B;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x5F3A;&#x5236;&#x8981;&#x6C42;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6709;&#x7684;&#x5C06;&#x90AE;&#x4EF6;&#x6A21;&#x677F;&#x653E;&#x5728; <code>resources/views</code> &#x76EE;&#x5F55;&#x7684;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<h4 id="&#x7EAF;&#x6587;&#x672C;&#x90AE;&#x4EF6;">&#x7EAF;&#x6587;&#x672C;&#x90AE;&#x4EF6;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EAF;&#x6587;&#x672C;&#x90AE;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>text</code> &#x65B9;&#x6CD5;&#x3002;&#x5982;&#x540C; <code>view</code> &#x65B9;&#x6CD5;&#xFF0C;<code>text</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6A21;&#x677F;&#x540D;&#x79F0;&#xFF0C;&#x8FD9;&#x4E2A;&#x540D;&#x79F0;&#x544A;&#x8BC9;&#x65B9;&#x6CD5;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x6A21;&#x677F;&#x6765;&#x6E32;&#x67D3;&#x90AE;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5B9A;&#x4E49;&#x90AE;&#x4EF6; HTML &#x548C;&#x7EAF;&#x6587;&#x672C;&#x6D88;&#x606F;&#xFF1A;</p>
+<pre><code>/**
+ * Build the message.
+ *
+ * @return $this
+ */
+public function build()
+{
+    return $this-&gt;view(&apos;emails.orders.shipped&apos;)
+                -&gt;text(&apos;emails.orders.shipped_plain&apos;);
+}
+</code></pre><p><a name="view-data"></a></p>
+<h3 id="&#x89C6;&#x56FE;&#x6570;&#x636E;">&#x89C6;&#x56FE;&#x6570;&#x636E;</h3>
+<h4 id="&#x901A;&#x8FC7;&#x516C;&#x5171;&#x5C5E;&#x6027;">&#x901A;&#x8FC7;&#x516C;&#x5171;&#x5C5E;&#x6027;</h4>
+<p>&#x901A;&#x5E38;&#xFF0C;&#x4F60;&#x4F1A;&#x5E0C;&#x671B;&#x4F20;&#x9012;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x6765;&#x6E32;&#x67D3;&#x4F60;&#x7684;&#x90AE;&#x4EF6;&#x7684; HTML &#x3002;&#x90A3;&#x4E48;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BA9;&#x89C6;&#x56FE;&#x83B7;&#x5F97;&#x6570;&#x636E;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#xFF0C;mailable &#x7C7B;&#x4EFB;&#x4F55;&#x516C;&#x5171;&#x5C5E;&#x6027;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4F8B;&#x5982;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x6570;&#x636E;&#x5230; mailable &#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x5E76;&#x4E14;&#x5728;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7684;&#x516C;&#x5171;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Mail;
+
+use App\Order;
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+class OrderShipped extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    /**
+     * order &#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @var Order
+     */
+    public $order;
+
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6D88;&#x606F;&#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @return void
+     */
+    public function __construct(Order $order)
+    {
+        $this-&gt;order = $order;
+    }
+
+    /**
+     * &#x6784;&#x5EFA;&#x6D88;&#x606F;&#x3002;
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this-&gt;view(&apos;emails.orders.shipped&apos;);
+    }
+}
+</code></pre><p>&#x4E00;&#x65E6;&#x6570;&#x636E;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x516C;&#x5171;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EEC;&#x5C06;&#x81EA;&#x52A8;&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x52A0;&#x8F7D;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x50CF;&#x8BBF;&#x95EE;&#x5176;&#x4ED6; Blade &#x6A21;&#x677F;&#x6570;&#x636E;&#x4E00;&#x6837;&#x8BBF;&#x95EE;&#x5B83;&#x4EEC;&#xFF1A;</p>
+<pre><code>&lt;div&gt;
+    Price: {{ $order-&gt;price }}
+&lt;/div&gt;
+</code></pre><h4 id="&#x901A;&#x8FC7;-with-&#x65B9;&#x6CD5;&#xFF1A;">&#x901A;&#x8FC7; <code>with</code> &#x65B9;&#x6CD5;&#xFF1A;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>with</code> &#x65B9;&#x6CD5;&#x6765;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7ED9;&#x6A21;&#x677F;&#x3002;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x4ECD;&#x7136;&#x662F;&#x4F7F;&#x7528; mailable &#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x63A5;&#x53D7;&#x6570;&#x636E;&#x4F20;&#x53C2;&#x3002;&#x7136;&#x800C;&#x4F60;&#x9700;&#x8981;&#x4E3A;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5C5E;&#x6027;&#x8BBE;&#x7F6E; <code>protected</code> &#x6216; <code>private</code>  &#x58F0;&#x660E;&#xFF0C;&#x5426;&#x5219;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#x5230;&#x6A21;&#x677F;&#x4E2D;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>with</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x952E;&#x503C;&#x6570;&#x7EC4;&#x4F20;&#x53C2;&#x6765;&#x4F20;&#x9012;&#x6570;&#x636E;&#x7ED9;&#x6A21;&#x677F;&#xFF0C;&#x5C31;&#x5982;&#x63A7;&#x5236;&#x5668;&#x91CC;&#x4E3A;&#x89C6;&#x56FE;&#x4F20;&#x53C2;&#x4E00;&#x6837;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Mail;
+
+use App\Order;
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;
+use Illuminate\Queue\SerializesModels;
+
+class OrderShipped extends Mailable
+{
+    use Queueable, SerializesModels;
+
+    /**
+     * order &#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @var Order
+     */
+    protected $order;
+
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6D88;&#x606F;&#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @return void
+     */
+    public function __construct(Order $order)
+    {
+        $this-&gt;order = $order;
+    }
+
+    /**
+     * &#x6784;&#x5EFA;&#x6D88;&#x606F;&#x3002;
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this-&gt;view(&apos;emails.orders.shipped&apos;)
+                    -&gt;with([
+                        &apos;orderName&apos; =&gt; $this-&gt;order-&gt;name,
+                        &apos;orderPrice&apos; =&gt; $this-&gt;order-&gt;price,
+                    ]);
+    }
+}
+</code></pre><p>&#x4E00;&#x65E6;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x7528; <code>with</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#xFF0C;&#x5B83;&#x4EEC;&#x5C06;&#x81EA;&#x52A8;&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x52A0;&#x8F7D;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x50CF;&#x8BBF;&#x95EE;&#x5176;&#x4ED6; Blade &#x6A21;&#x677F;&#x6570;&#x636E;&#x4E00;&#x6837;&#x8BBF;&#x95EE;&#x5B83;&#x4EEC;&#xFF1A;</p>
+<pre><code>&lt;div&gt;
+    Price: {{ $orderPrice }}
+&lt;/div&gt;
+</code></pre><p><a name="attachments"></a></p>
+<h3 id="&#x9644;&#x4EF6;">&#x9644;&#x4EF6;</h3>
+<p>&#x8981;&#x5728;&#x90AE;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;&#x9644;&#x4EF6;&#xFF0C;&#x5728; <code>build</code> &#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528; <code>attach</code> &#x65B9;&#x6CD5;&#x3002;<code>attach</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x6587;&#x4EF6;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;&#x5B83;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this-&gt;view(&apos;emails.orders.shipped&apos;)
+                    -&gt;attach(&apos;/path/to/file&apos;);
+    }
+</code></pre><p>&#x9644;&#x52A0;&#x6587;&#x4EF6;&#x5230;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012; <code>&#x6570;&#x7EC4;</code> &#x7ED9; <code>attache</code> &#x65B9;&#x6CD5;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4EE5;&#x6307;&#x5B9A;&#x663E;&#x793A;&#x540D;&#x79F0;&#x548C; / &#x6216;&#x662F; MIME &#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code>    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this-&gt;view(&apos;emails.orders.shipped&apos;)
+                    -&gt;attach(&apos;/path/to/file&apos;, [
+                        &apos;as&apos; =&gt; &apos;name.pdf&apos;,
+                        &apos;mime&apos; =&gt; &apos;application/pdf&apos;,
+                    ]);
+    }
+</code></pre><h4 id="&#x539F;&#x59CB;&#x6570;&#x636E;&#x9644;&#x4EF6;">&#x539F;&#x59CB;&#x6570;&#x636E;&#x9644;&#x4EF6;</h4>
+<p><code>attachData</code> &#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B57;&#x8282;&#x6570;&#x636E;&#x4F5C;&#x4E3A;&#x9644;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x5185;&#x5B58;&#x4E2D;&#x751F;&#x6210;&#x800C;&#x6CA1;&#x6709;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#x4E2D;&#x7684; PDF &#x9644;&#x52A0;&#x5230;&#x90AE;&#x4EF6;&#x4E2D;&#x3002;<code>attachData</code> &#x65B9;&#x6CD5;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x63A5;&#x6536;&#x539F;&#x59CB;&#x5B57;&#x8282;&#x6570;&#x636E;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4EE5;&#x6307;&#x5B9A;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>    /**
+     * Build the message.
+     *
+     * @return $this
+     */
+    public function build()
+    {
+        return $this-&gt;view(&apos;emails.orders.shipped&apos;)
+                    -&gt;attachData($this-&gt;pdf, &apos;name.pdf&apos;, [
+                        &apos;mime&apos; =&gt; &apos;application/pdf&apos;,
+                    ]);
+    }
+</code></pre><p><a name="inline-attachments"></a></p>
+<h3 id="&#x5185;&#x90E8;&#x9644;&#x4EF6;">&#x5185;&#x90E8;&#x9644;&#x4EF6;</h3>
+<p>&#x5728;&#x90AE;&#x4EF6;&#x4E2D;&#x5D4C;&#x5165;&#x5185;&#x90E8;&#x56FE;&#x6807;&#x901A;&#x5E38;&#x662F;&#x4EF6;&#x9EBB;&#x70E6;&#x4E8B;&#xFF1B;&#x7136;&#x800C; Laravel &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x4FBF;&#x5229;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;&#x4F60;&#x5728;&#x90AE;&#x4EF6;&#x4E2D;&#x9644;&#x4EF6;&#x56FE;&#x7247;&#x5E76;&#x83B7;&#x53D6;&#x9002;&#x5F53;&#x7684; CID &#x3002;&#x8981;&#x5D4C;&#x5165;&#x5185;&#x90E8;&#x56FE;&#x7247;&#xFF0C;&#x5728;&#x90AE;&#x4EF6;&#x6A21;&#x677F;&#x7684; <code>$message</code> &#x53D8;&#x91CF;&#x4E0A;&#x8C03;&#x7528; <code>embed</code> &#x65B9;&#x6CD5;&#xFF0C;Laravel &#x4F1A;&#x81EA;&#x52A8;&#x8BA9;&#x4F60;&#x6240;&#x6709;&#x90AE;&#x4EF6;&#x6A21;&#x677F;&#x90FD;&#x80FD;&#x591F;&#x83B7;&#x53D6;&#x5230; <code>$message</code> &#x53D8;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x5FC5;&#x62C5;&#x5FC3;&#x5982;&#x4F55;&#x624B;&#x52A8;&#x4F20;&#x9012;&#x5B83;&#xFF1A;</p>
+<pre><code>&lt;body&gt;
+    &#x8FD9;&#x662F;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#xFF1A;
+
+    &lt;img src=&quot;{{ $message-&gt;embed($pathToFile) }}&quot;&gt;
+&lt;/body&gt;
+</code></pre><h4 id="&#x5D4C;&#x5165;&#x539F;&#x59CB;&#x6570;&#x636E;&#x9644;&#x4EF6;">&#x5D4C;&#x5165;&#x539F;&#x59CB;&#x6570;&#x636E;&#x9644;&#x4EF6;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x6709;&#x60F3;&#x5D4C;&#x5165;&#x539F;&#x59CB;&#x6570;&#x636E;&#xFF0C;&#x5E0C;&#x671B;&#x5D4C;&#x5165;&#x90AE;&#x4EF6;&#x6A21;&#x677F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x7528; <code>$message</code> &#x53D8;&#x91CF;&#x7684; <code>embedData</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;body&gt;
+    &#x8FD9;&#x662F;&#x4E00;&#x5F20;&#x539F;&#x59CB;&#x6570;&#x636E;&#x56FE;&#x7247;&#xFF1A;
+
+    &lt;img src=&quot;{{ $message-&gt;embedData($data, $name) }}&quot;&gt;
+&lt;/body&gt;
+</code></pre><p><a name="markdown-mailables"></a></p>
+<h2 id="markdown-&#x683C;&#x5F0F;&#x7684;-mailables-&#x7C7B;">Markdown &#x683C;&#x5F0F;&#x7684; Mailables &#x7C7B;</h2>
+<p>Markdown &#x683C;&#x5F0F;&#x7684; mailable &#x6D88;&#x606F;&#x5141;&#x8BB8;&#x4F60;&#x4ECE;&#x9884;&#x7F16;&#x8BD1;&#x7684;&#x6A21;&#x677F;&#x548C;&#x4F60;&#x7684; mailables &#x7C7B;&#x4E2D;&#x7684;&#x90AE;&#x4EF6;&#x63D0;&#x9192;&#x7EC4;&#x4EF6;&#x4E2D;&#x53D7;&#x76CA;&#x3002;&#x56E0;&#x4E3A;&#x6D88;&#x606F;&#x662F;&#x7528; Markdown &#x683C;&#x5F0F;&#x5199;&#x7684;&#xFF0C; Laravel &#x80FD;&#x4E3A;&#x6D88;&#x606F;&#x4F53;&#x6E32;&#x67D3;&#x51FA;&#x6F02;&#x4EAE;&#x3001;&#x54CD;&#x5E94;&#x5F0F;&#x7684; HTML &#x6A21;&#x677F;&#xFF0C;&#x4E5F;&#x80FD;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x7EAF;&#x6587;&#x672C;&#x7684;&#x526F;&#x672C;&#x3002;</p>
+<p><a name="generating-markdown-mailables"></a></p>
+<h3 id="&#x751F;&#x6210;-markdown-&#x683C;&#x5F0F;&#x7684;-mailables">&#x751F;&#x6210; Markdown &#x683C;&#x5F0F;&#x7684; Mailables</h3>
+<p>&#x8981;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x53CB;&#x597D;&#x7684; Markdown &#x6A21;&#x677F;&#x7684; mailable &#x7C7B;&#xFF0C;&#x4F60;&#x5728;&#x4F7F;&#x7528;  <code>make:mail</code> &#x8FD9;&#x4E2A; Artisan &#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x8981;&#x52A0;&#x4E0A; <code>--markdown</code> &#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>php artisan make:mail OrderShipped --markdown=emails.orders.shipped
+</code></pre><p>&#x7136;&#x540E;&#xFF0C;&#x5728;&#x4F7F;&#x7528; <code>build</code> &#x65B9;&#x6CD5;&#x914D;&#x7F6E; mailable &#x65F6;&#xFF0C;&#x7528; <code>markdown</code> &#x65B9;&#x6CD5;&#x6765;&#x6362;&#x6389; <code>view</code> &#x65B9;&#x6CD5;&#xFF0C; <code>markdown</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A; Markdown &#x6A21;&#x677F;&#x7684;&#x540D;&#x79F0;&#x548C;&#x4E00;&#x4E2A;&#x5C06;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x53EF;&#x7528;&#x7684;&#x9009;&#x9879;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>/**
+ * &#x6784;&#x5EFA;&#x6D88;&#x606F;&#x3002;
+ *
+ * @return $this
+ */
+public function build()
+{
+    return $this-&gt;from(&apos;example@example.com&apos;)
+                -&gt;markdown(&apos;emails.orders.shipped&apos;);
+}
+</code></pre><p><a name="writing-markdown-messages"></a></p>
+<h3 id="&#x7F16;&#x5199;-markdown-&#x683C;&#x5F0F;&#x7684;&#x6D88;&#x606F;">&#x7F16;&#x5199; Markdown &#x683C;&#x5F0F;&#x7684;&#x6D88;&#x606F;</h3>
+<p>Markdown mailables &#x4F7F;&#x7528; Blade &#x7EC4;&#x4EF6;&#x548C; Markdown &#x8BED;&#x6CD5;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x5141;&#x8BB8;&#x4F60;&#x8F7B;&#x677E;&#x5730;&#x6784;&#x5EFA;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#xFF0C;&#x540C;&#x65F6;&#x5229;&#x7528; Laravel &#x7684;&#x9884;&#x5236;&#x7EC4;&#x4EF6;&#x3002;</p>
+<pre><code>@component(&apos;mail::message&apos;)
+# Order Shipped
+
+Your order has been shipped!
+
+@component(&apos;mail::button&apos;, [&apos;url&apos; =&gt; $url])
+View Order
+@endcomponent
+
+Thanks,&lt;br&gt;
+{{ config(&apos;app.name&apos;) }}
+@endcomponent
+</code></pre><blockquote>
+<p>{tip} &#x5F53;&#x4F60;&#x5728;&#x5199; Markdown &#x683C;&#x5F0F;&#x90AE;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x5343;&#x4E07;&#x4E0D;&#x8981;&#x6709;&#x591A;&#x4F59;&#x7F29;&#x8FDB;&#xFF0C;&#x4E0D;&#x7136; Markdown &#x89E3;&#x6790;&#x5668;&#x5F88;&#x5BB9;&#x6613;&#x4F1A;&#x628A;&#x7F29;&#x8FDB;&#x7684;&#x5185;&#x5BB9;&#x6E32;&#x67D3;&#x6210;&#x4EE3;&#x7801;&#x5757;&#x3002;</p>
+</blockquote>
+<h4 id="&#x6309;&#x94AE;&#x7EC4;&#x4EF6;">&#x6309;&#x94AE;&#x7EC4;&#x4EF6;</h4>
+<p>&#x6309;&#x94AE;&#x8FDE;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x5C45;&#x4E2D;&#x7684;&#x8FDE;&#x63A5;&#x6309;&#x94AE;&#xFF0C;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x4E2A; <code>url</code> &#x548C;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684; <code>color</code> &#x3002;&#x652F;&#x6301;&#x7684;&#x989C;&#x8272;&#x6709; <code>blue</code> &#x3001; <code>green</code> &#x3001; &#x548C; <code>red</code> &#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x4F53;&#x4E2D;&#x52A0;&#x5165;&#x968F;&#x4FBF;&#x591A;&#x4E2A;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x6309;&#x94AE;&#x3002;</p>
+<pre><code>@component(&apos;mail::button&apos;, [&apos;url&apos; =&gt; $url, &apos;color&apos; =&gt; &apos;green&apos;])
+View Order
+@endcomponent
+</code></pre><h4 id="&#x9762;&#x677F;&#x7EC4;&#x4EF6;">&#x9762;&#x677F;&#x7EC4;&#x4EF6;</h4>
+<p>&#x9762;&#x677F;&#x7EC4;&#x4EF6;&#x5C06;&#x9762;&#x677F;&#x4E2D;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x5757;&#x6587;&#x5B57;&#x7684;&#x80CC;&#x666F;&#x6E32;&#x67D3;&#x6210;&#x8DDF;&#x5176;&#x4ED6;&#x7684;&#x6D88;&#x606F;&#x4F53;&#x80CC;&#x666F;&#x7A0D;&#x5FAE;&#x4E0D;&#x540C;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x8BA9;&#x8FD9;&#x5757;&#x6587;&#x5B57;&#x5F15;&#x8D77;&#x4EBA;&#x4EEC;&#x7684;&#x6CE8;&#x610F;&#x3002;</p>
+<pre><code>@component(&apos;mail::panel&apos;)
+This is the panel content.
+@endcomponent
+</code></pre><h4 id="&#x8868;&#x683C;&#x7EC4;&#x4EF6;">&#x8868;&#x683C;&#x7EC4;&#x4EF6;</h4>
+<p>&#x8868;&#x683C;&#x7EC4;&#x4EF6;&#x5141;&#x8BB8;&#x4F60;&#x5C06;&#x4E00;&#x4E2A; Markdown &#x683C;&#x5F0F;&#x7684;&#x8868;&#x683C;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A; HTML &#x683C;&#x5F0F;&#x7684;&#x8868;&#x683C;&#x3002;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7; Markdown &#x683C;&#x5F0F;&#x7684;&#x8868;&#x683C;&#x4F5C;&#x4E3A;&#x5B83;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x8868;&#x683C;&#x5217;&#x5BF9;&#x9F50;&#x65B9;&#x5F0F;&#x6309;&#x7167;&#x9ED8;&#x8BA4;&#x7684; Markdown &#x5BF9;&#x9F50;&#x98CE;&#x683C;&#x800C;&#x5B9A;&#x3002;</p>
+<pre><code>@component(&apos;mail::table&apos;)
+| Laravel       | Table         | Example  |
+| ------------- |:-------------:| --------:|
+| Col 2 is      | Centered      | $10      |
+| Col 3 is      | Right-Aligned | $20      |
+@endcomponent
+</code></pre><p><a name="customizing-the-components"></a></p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h3>
+<p>&#x4F60;&#x6216;&#x8BB8;&#x4F1A;&#x4E3A;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x800C;&#x5BFC;&#x51FA;&#x4F60;&#x5E94;&#x7528;&#x4E2D;&#x6240;&#x6709;&#x7684; Markdown &#x90AE;&#x4EF6;&#x7EC4;&#x4EF6;&#x3002;&#x8981;&#x5BFC;&#x51FA;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528; <code>vendor:publish</code> &#x8FD9;&#x4E2A; Artisan &#x547D;&#x4EE4;&#x6765;&#x53D1;&#x5E03;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x6807;&#x7B7E;&#x3002;</p>
+<pre><code>php artisan vendor:publish --tag=laravel-mail
+</code></pre><p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x53D1;&#x5E03; Markdown &#x90AE;&#x4EF6;&#x7EC4;&#x4EF6;&#x5230; <code>resources/views/vendor/mail</code> &#x6587;&#x4EF6;&#x5939;&#x3002;&#x800C; <code>mail</code> &#x6587;&#x4EF6;&#x5939;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>html</code> &#x6587;&#x4EF6;&#x5939;&#x548C;&#x4E00;&#x4E2A; <code>markdown</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x90FD;&#x5305;&#x542B;&#x4ED6;&#x4EEC;&#x7684;&#x53EF;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x63CF;&#x8FF0;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4F60;&#x7684;&#x610F;&#x613F;&#x81EA;&#x5B9A;&#x4E49;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x6837;&#x5F0F;&#x8868;-css">&#x81EA;&#x5B9A;&#x4E49;&#x6837;&#x5F0F;&#x8868; CSS</h4>
+<p>&#x5728;&#x5BFC;&#x51FA;&#x7EC4;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;<code>resources/views/vendor/mail/html/themes</code> &#x6587;&#x4EF6;&#x5939;&#x5C06;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684; <code>default.css</code> &#x6587;&#x4EF6;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x81EA;&#x5B9A;&#x4E49; CSS &#xFF0C;&#x4F60;&#x5B9A;&#x4E49;&#x7684;&#x8FD9;&#x4E9B;&#x6837;&#x5F0F;&#x5C06;&#x4F1A;&#x5728; Markdown &#x683C;&#x5F0F;&#x6D88;&#x606F;&#x4F53;&#x8F6C;&#x6362;&#x6210; HTML &#x683C;&#x5F0F;&#x65F6;&#x81EA;&#x52A8;&#x5F97;&#x5230;&#x5E94;&#x7528;&#x3002;</p>
+<blockquote>
+<p>{tip} &#x5982;&#x679C;&#x4F60;&#x60F3;&#x4E3A; Markdown &#x7EC4;&#x4EF6;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x5168;&#x65B0;&#x7684;&#x4E3B;&#x9898;&#xFF0C;&#x53EA;&#x8981;&#x5199;&#x4E00;&#x4E2A;&#x65B0;&#x7684; CSS &#x6587;&#x4EF6;&#xFF0C;&#x653E;&#x5728; <code>html/themes</code> &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4F60;&#x7684; <code>mail</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6539;&#x53D8; <code>theme</code> &#x9009;&#x9879;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+</blockquote>
+<p><a name="sending-mail"></a></p>
+<h2 id="&#x53D1;&#x9001;&#x90AE;&#x4EF6;">&#x53D1;&#x9001;&#x90AE;&#x4EF6;</h2>
+<p>&#x8981;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528; <code>Mail</code> <a href="../docs/facades">facade</a> &#x7684; <code>to</code> &#x65B9;&#x6CD5;&#x3002; <code>to</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#xFF0C;&#x4E00;&#x4E2A; user &#x5B9E;&#x73B0;&#x6216;&#x4E00;&#x4E2A; users &#x96C6;&#x5408;&#x3002;&#x5982;&#x679C;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6216;&#x96C6;&#x5408;&#xFF0C;mailer &#x5C06;&#x81EA;&#x52A8;&#x4F7F;&#x7528; <code>email</code> &#x548C; <code>name</code> &#x5C5E;&#x6027;&#x6765;&#x8BBE;&#x7F6E;&#x90AE;&#x4EF6;&#x6536;&#x4EF6;&#x4EBA;&#xFF0C;&#x6240;&#x4EE5;&#x786E;&#x4FDD;&#x4F60;&#x7684;&#x5BF9;&#x8C61;&#x91CC;&#x6709;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x3002;&#x4E00;&#x65E6;&#x6307;&#x5B9A;&#x6536;&#x4EF6;&#x4EBA;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x5230; mailable &#x7C7B;&#x7684; <code>send</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Order;
+use App\Mail\OrderShipped;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Http\Controllers\Controller;
+
+class OrderController extends Controller
+{
+    /**
+     * Ship the given order.
+     *
+     * @param  Request  $request
+     * @param  int  $orderId
+     * @return Response
+     */
+    public function ship(Request $request, $orderId)
+    {
+        $order = Order::findOrFail($orderId);
+
+        // Ship order...
+
+        Mail::to($request-&gt;user())-&gt;send(new OrderShipped($order));
+    }
+}
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x4E0D;&#x5C40;&#x9650;&#x4E8E;&#x53EA;&#x4F7F;&#x7528;&#x300C;to&#x300D;&#x7ED9;&#x6536;&#x4EF6;&#x4EBA;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x7684;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x6765;&#x81EA;&#x7531;&#x7684;&#x8BBE;&#x7F6E; &#x300C;to&#x300D;&#xFF0C;&#x300C;cc&#x300D;&#x548C; &#x300C;bcc&#x300D;&#x63A5;&#x6536;&#x8005;&#xFF1A;</p>
+<pre><code>Mail::to($request-&gt;user())
+    -&gt;cc($moreUsers)
+    -&gt;bcc($evenMoreUsers)
+    -&gt;send(new OrderShipped($order));
+</code></pre><p><a name="queueing-mail"></a></p>
+<h3 id="&#x961F;&#x5217;-mail">&#x961F;&#x5217; Mail</h3>
+<h4 id="&#x5C06;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x52A0;&#x5165;&#x961F;&#x5217;">&#x5C06;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x52A0;&#x5165;&#x961F;&#x5217;</h4>
+<p>&#x7531;&#x4E8E;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x4F1A;&#x5927;&#x5E45;&#x5EF6;&#x8FDF;&#x5E94;&#x7528;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#xFF0C;&#x8BB8;&#x591A;&#x5F00;&#x53D1;&#x8005;&#x9009;&#x62E9;&#x5C06;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x52A0;&#x5165;&#x961F;&#x5217;&#x5728;&#x540E;&#x53F0;&#x8FDB;&#x884C;&#x53D1;&#x9001;&#x3002;Laravel &#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x7684; <a href="../docs/queues">&#x7EDF;&#x4E00;&#x7684;&#x961F;&#x5217; API</a> &#x6765;&#x8F7B;&#x677E;&#x5B8C;&#x6210;&#x6B64;&#x5DE5;&#x4F5C;&#x3002;&#x5C06;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x52A0;&#x5165;&#x961F;&#x5217;&#xFF0C;&#x4F7F;&#x7528; <code>Mail</code> facade &#x7684; <code>queue</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>Mail::to($request-&gt;user())
+    -&gt;cc($moreUsers)
+    -&gt;bcc($evenMoreUsers)
+    -&gt;queue(new OrderShipped($order));
+</code></pre><p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x5DE5;&#x4F5C;&#x52A0;&#x5165;&#x961F;&#x5217;&#xFF0C;&#x4EE5;&#x4FBF;&#x540E;&#x53F0;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x524D;&#xFF0C;&#x4F60;&#x9700;&#x8981; <a href="../docs/queues">&#x8BBE;&#x7F6E;&#x4F60;&#x7684;&#x961F;&#x5217;</a> &#x3002;</p>
+<h4 id="&#x5EF6;&#x8FDF;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x961F;&#x5217;">&#x5EF6;&#x8FDF;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x961F;&#x5217;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x5EF6;&#x8FDF;&#x53D1;&#x9001;&#x5DF2;&#x52A0;&#x5165;&#x961F;&#x5217;&#x7684;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>later</code> &#x65B9;&#x6CD5;&#x3002;<code>later</code> &#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x63A5;&#x53D7;&#x4E00;&#x4E2A; <code>DateTime</code> &#x5B9E;&#x73B0;&#x4EE5;&#x544A;&#x77E5;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x5E94;&#x8BE5;&#x4F55;&#x65F6;&#x53D1;&#x9001;&#xFF1A;</p>
+<pre><code>$when = Carbon\Carbon::now()-&gt;addMinutes(10);
+
+Mail::to($request-&gt;user())
+    -&gt;cc($moreUsers)
+    -&gt;bcc($evenMoreUsers)
+    -&gt;later($when, new OrderShipped($order));
+</code></pre><h4 id="&#x63A8;&#x9001;&#x5230;&#x7279;&#x5B9A;&#x961F;&#x5217;">&#x63A8;&#x9001;&#x5230;&#x7279;&#x5B9A;&#x961F;&#x5217;</h4>
+<p>&#x56E0;&#x4E3A;&#x6240;&#x6709; mailable &#x7C7B;&#x662F;&#x901A;&#x8FC7; <code>make:mail</code> &#x547D;&#x4EE4;&#x751F;&#x6210;&#x5E76;&#x4F7F;&#x7528; <code>Illuminate\Bus\Queueable</code> trait &#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55; mailable &#x7C7B;&#x5B9E;&#x73B0;&#x4E2D;&#x8C03;&#x7528; <code>onQueue</code> &#x6765;&#x6307;&#x5B9A;&#x961F;&#x5217;&#x540D;&#x79F0;&#xFF0C;&#x8FD8;&#x6709; <code>onConnection</code> &#x65B9;&#x6CD5;&#x6765;&#x6307;&#x5B9A;&#x961F;&#x5217;&#x94FE;&#x63A5;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code>$message = (new OrderShipped($order))
+                -&gt;onConnection(&apos;sqs&apos;)
+                -&gt;onQueue(&apos;emails&apos;);
+
+Mail::to($request-&gt;user())
+    -&gt;cc($moreUsers)
+    -&gt;bcc($evenMoreUsers)
+    -&gt;queue($message);
+</code></pre><h4 id="&#x9ED8;&#x8BA4;&#x961F;&#x5217;">&#x9ED8;&#x8BA4;&#x961F;&#x5217;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684; mailable &#x7C7B;&#x60F3;&#x8981;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x961F;&#x5217;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x7C7B;&#x4E2D;&#x5B9E;&#x73B0; <code>ShouldQueue</code> &#x63A5;&#x53E3;&#x5951;&#x7EA6;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x5373;&#x4FBF;&#x4F60;&#x8C03;&#x7528; <code>send</code> &#x65B9;&#x6CD5;&#x6765;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#xFF0C; mailable &#x7C7B;&#x4ECD;&#x5C06;&#x90AE;&#x4EF6;&#x653E;&#x5165;&#x961F;&#x5217;&#x4E2D;&#x53D1;&#x9001;&#x3002;</p>
+<pre><code>use Illuminate\Contracts\Queue\ShouldQueue;
+
+class OrderShipped extends Mailable implements ShouldQueue
+{
+    //
+}
+</code></pre><p><a name="mail-and-local-development"></a></p>
+<h2 id="&#x90AE;&#x4EF6;&#x548C;&#x672C;&#x5730;&#x5F00;&#x53D1;">&#x90AE;&#x4EF6;&#x548C;&#x672C;&#x5730;&#x5F00;&#x53D1;</h2>
+<p>&#x5F53;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x65F6;&#xFF0C;&#x4F60;&#x6216;&#x8BB8;&#x4E0D;&#x60F3;&#x771F;&#x5B9E;&#x7684;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x5230;&#x771F;&#x5B9E;&#x7684;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#x3002;Laravel &#x63D0;&#x4F9B;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x5F00;&#x53D1;&#x65F6;&#x771F;&#x5B9E;&#x53D1;&#x9001; &#x300C;&#x5931;&#x53BB;&#x80FD;&#x529B;&#x300D;&#x3002;</p>
+<h4 id="&#x65E5;&#x5FD7;&#x9A71;&#x52A8;">&#x65E5;&#x5FD7;&#x9A71;&#x52A8;</h4>
+<p>&#x4EE3;&#x66FF;&#x771F;&#x5B9E;&#x53D1;&#x9001;&#xFF0C;<code>log</code> &#x90AE;&#x4EF6;&#x9A71;&#x52A8;&#x5C06;&#x6240;&#x6709;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x4EE5;&#x4F9B;&#x68C0;&#x67E5;&#xFF0C;&#x9700;&#x8981;&#x66F4;&#x591A;&#x6839;&#x636E;&#x73AF;&#x5883;&#x6765;&#x8BBE;&#x7F6E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x53C2;&#x8003; <a href="../docs/installation#environment-configuration">&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a>.</p>
+<h4 id="&#x901A;&#x7528;&#x6536;&#x4EF6;&#x8005;">&#x901A;&#x7528;&#x6536;&#x4EF6;&#x8005;</h4>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x7531; Laravel &#x63D0;&#x4F9B;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x662F;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x90AE;&#x4EF6;&#x63A5;&#x6536;&#x8005;&#xFF0C;&#x7531;&#x6846;&#x67B6;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5C06;&#x6240;&#x6709;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x5230;&#x4E00;&#x4E2A;&#x90AE;&#x4EF6;&#x5730;&#x5740;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x53D1;&#x9001;&#x7ED9;&#x5B9E;&#x9645;&#x6536;&#x4EF6;&#x4EBA;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>config/mail.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684; <code>to</code> &#x9009;&#x9879;&#x6765;&#x5B8C;&#x6210;&#xFF1A;</p>
+<pre><code>&apos;to&apos; =&gt; [
+    &apos;address&apos; =&gt; &apos;example@example.com&apos;,
+    &apos;name&apos; =&gt; &apos;Example&apos;
+],
+</code></pre><h4 id="mailtrap">Mailtrap</h4>
+<p>&#x6700;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x50CF; <a href="https://mailtrap.io" target="_blank">Mailtrap</a> &#x548C; <code>smtp</code> &#x9A71;&#x52A8;&#x6765;&#x5C06;&#x4F60;&#x7684;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x5230;&#x4E00;&#x4E2A; &#x300C;&#x865A;&#x5047;&#x7684;&#x300D;&#x90AE;&#x7BB1;&#x4E2D;&#xFF0C;&#x4F60;&#x5374;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x771F;&#x5B9E;&#x7684;&#x90AE;&#x4EF6;&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;&#x67E5;&#x770B;&#x5B83;&#x4EEC;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x597D;&#x5904;&#x662F;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x5728; Mailtrap &#x7684;&#x6D88;&#x606F;&#x9605;&#x8BFB;&#x5668;&#x4E2D;&#x67E5;&#x770B;&#x6700;&#x7EC8;&#x7684;&#x5B9E;&#x9645;&#x90AE;&#x4EF6;&#x3002;</p>
+<p><a name="events"></a></p>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<p>Laravel &#x4F1A;&#x5728;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#x6D88;&#x606F;&#x4E4B;&#x524D;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x3002;&#x5207;&#x8BB0;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x53EA;&#x4F1A;&#x5728;&#x90AE;&#x4EF6; <em>&#x53D1;&#x9001;</em> &#x65F6;&#x89E6;&#x53D1;&#xFF0C;&#x5728;&#x52A0;&#x5165;&#x961F;&#x5217;&#x65F6;&#x4E0D;&#x89E6;&#x53D1;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x7684; <code>EventServiceProvider</code> &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#xFF1A;</p>
+<pre><code>/**
+ * &#x5E94;&#x7528;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x6620;&#x5C04;&#x3002;
+ *
+ * @var array
+ */
+protected $listen = [
+    &apos;Illuminate\Mail\Events\MessageSending&apos; =&gt; [
+        &apos;App\Listeners\LogSentMessage&apos;,
+    ],
+];
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8-8 辅助函数.html" class="navigation navigation-prev " aria-label="Previous page: 8-8 辅助函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8-10 消息通知.html" class="navigation navigation-next " aria-label="Next page: 8-10 消息通知">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8-9 邮件发送","level":"1.9.9","depth":2,"next":{"title":"8-10 消息通知","level":"1.9.10","depth":2,"path":"Chapter8/8-10 消息通知.md","ref":"Chapter8/8-10 消息通知.md","articles":[]},"previous":{"title":"8-8 辅助函数","level":"1.9.8","depth":2,"path":"Chapter8/8-8 辅助函数.md","ref":"Chapter8/8-8 辅助函数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter8/8-9 邮件发送.md","mtime":"2018-10-29T12:40:15.144Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

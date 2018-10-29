@@ -1,0 +1,1840 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8-12 队列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8-13 任务调度.html" />
+    
+    
+    <link rel="prev" href="8-11 扩展包开发.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="8-1 Artisan命令行.html">
+            
+                <a href="8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="8-2 广播系统.html">
+            
+                <a href="8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="8-3 缓存系统.html">
+            
+                <a href="8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="8-4 集合.html">
+            
+                <a href="8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="8-5 错误与日志.html">
+            
+                <a href="8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="8-6 事件系统.html">
+            
+                <a href="8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="8-7 文件存储.html">
+            
+                <a href="8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="8-8 辅助函数.html">
+            
+                <a href="8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="8-9 邮件发送.html">
+            
+                <a href="8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="8-10 消息通知.html">
+            
+                <a href="8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="8-11 扩展包开发.html">
+            
+                <a href="8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.12" data-path="8-12 队列.html">
+            
+                <a href="8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="8-13 任务调度.html">
+            
+                <a href="8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8-12 队列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;&#x961F;&#x5217;&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;">Laravel &#x7684;&#x961F;&#x5217;&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a><ul>
+<li><a href="#connections-vs-queues">&#x8FDE;&#x63A5; Vs. &#x961F;&#x5217;</a></li>
+<li><a href="#driver-prerequisites">&#x9A71;&#x52A8;&#x7684;&#x5FC5;&#x8981;&#x8BBE;&#x7F6E;</a></li>
+</ul>
+</li>
+<li><a href="#creating-jobs">&#x521B;&#x5EFA;&#x4EFB;&#x52A1;&#x7C7B;</a><ul>
+<li><a href="#generating-job-classes">&#x751F;&#x6210;&#x4EFB;&#x52A1;&#x7C7B;</a></li>
+<li><a href="#class-structure">&#x4EFB;&#x52A1;&#x7C7B;&#x7ED3;&#x6784;</a></li>
+</ul>
+</li>
+<li><a href="#dispatching-jobs">&#x5206;&#x53D1;&#x4EFB;&#x52A1;</a><ul>
+<li><a href="#delayed-dispatching">&#x5EF6;&#x8FDF;&#x5206;&#x53D1;</a></li>
+<li><a href="#customizing-the-queue-and-connection">&#x81EA;&#x5B9A;&#x4E49;&#x961F;&#x5217; &amp; &#x8FDE;&#x63A5;</a></li>
+<li><a href="#max-job-attempts-and-timeout">&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570; / &#x8D85;&#x65F6;&#x503C;</a></li>
+<li><a href="#error-handling">&#x9519;&#x8BEF;&#x5904;&#x7406;</a></li>
+</ul>
+</li>
+<li><a href="#running-the-queue-worker">&#x8FD0;&#x884C;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;</a><ul>
+<li><a href="#queue-priorities">&#x961F;&#x5217;&#x4F18;&#x5148;&#x7EA7;</a></li>
+<li><a href="#queue-workers-and-deployment">&#x961F;&#x5217;&#x5904;&#x7406;&#x5668; &amp; &#x90E8;&#x7F72;</a></li>
+<li><a href="#job-expirations-and-timeouts">&#x4EFB;&#x52A1;&#x8FC7;&#x671F; &amp; &#x8D85;&#x65F6;</a></li>
+</ul>
+</li>
+<li><a href="#supervisor-configuration">Supervisor &#x914D;&#x7F6E;</a></li>
+<li><a href="#dealing-with-failed-jobs">&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x4EFB;&#x52A1;</a><ul>
+<li><a href="#cleaning-up-after-failed-jobs">&#x6E05;&#x9664;&#x5931;&#x8D25;&#x4EFB;&#x52A1;</a></li>
+<li><a href="#failed-job-events">&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x4E8B;&#x4EF6;</a></li>
+<li><a href="#retrying-failed-jobs">&#x91CD;&#x8BD5;&#x5931;&#x8D25;&#x7684;&#x4EFB;&#x52A1;</a></li>
+</ul>
+</li>
+<li><a href="#job-events">&#x4EFB;&#x52A1;&#x4E8B;&#x4EF6;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>Laravel &#x961F;&#x5217;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x540E;&#x53F0;&#x961F;&#x5217;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x7EDF;&#x4E00;&#x7684; API &#xFF0C; &#x4F8B;&#x5982; Beanstalk&#xFF0C;Amazon SQS&#xFF0C; Redis&#xFF0C;&#x751A;&#x81F3;&#x5176;&#x4ED6;&#x57FA;&#x4E8E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x7684;&#x961F;&#x5217;&#x3002; &#x961F;&#x5217;&#x7684;&#x76EE;&#x7684;&#x662F;&#x5C06;&#x8017;&#x65F6;&#x7684;&#x4EFB;&#x52A1;&#x5EF6;&#x65F6;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982;&#x53D1;&#x9001;&#x90AE;&#x4EF6;&#xFF0C;&#x4ECE;&#x800C;&#x5927;&#x5E45;&#x5EA6;&#x7F29;&#x77ED;Web&#x8BF7;&#x6C42;&#x548C;&#x76F8;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x961F;&#x5217;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x5728; <code>config/queue.php</code>&#x3002; &#x6BCF;&#x4E00;&#x79CD;&#x961F;&#x5217;&#x9A71;&#x52A8;&#x7684;&#x914D;&#x7F6E;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;&#xFF0C; &#x5305;&#x62EC;&#x6570;&#x636E;&#x5E93;&#xFF0C; <a href="https://kr.github.io/beanstalkd/" target="_blank">Beanstalkd</a>&#xFF0C; <a href="https://aws.amazon.com/sqs/" target="_blank">Amazon SQS</a>&#xFF0C; <a href="http://redis.io" target="_blank">Redis</a>&#xFF0C; &#x4EE5;&#x53CA;&#x540C;&#x6B65;&#xFF08;&#x672C;&#x5730;&#x4F7F;&#x7528;&#xFF09;&#x9A71;&#x52A8;&#x3002; &#x5176;&#x4E2D;&#x8FD8;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;<code>null</code>&#x961F;&#x5217;&#x9A71;&#x52A8;&#x7528;&#x4E8E;&#x90A3;&#x4E9B;&#x653E;&#x5F03;&#x961F;&#x5217;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<p><a name="connections-vs-queues"></a></p>
+<h3 id="&#x8FDE;&#x63A5;-vs-&#x961F;&#x5217;">&#x8FDE;&#x63A5; Vs. &#x961F;&#x5217;</h3>
+<p>&#x5728;&#x5F00;&#x59CB;&#x4F7F;&#x7528; Laravel &#x961F;&#x5217;&#x524D;&#xFF0C;&#x5F04;&#x660E;&#x767D; &#x300C;&#x8FDE;&#x63A5;&#x300D; &#x548C; &#x300C;&#x961F;&#x5217;&#x300D; &#x7684;&#x533A;&#x522B;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x3002;&#x5728;&#x4F60;&#x7684; <code>config/queue.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#xFF0C; &#x6709;&#x4E00;&#x4E2A; <code>connections</code> &#x914D;&#x7F6E;&#x9009;&#x9879;&#x3002; &#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x7ED9; Amazon SQS&#xFF0C; Beanstalk &#xFF0C;&#x6216;&#x8005; Redis &#x8FD9;&#x6837;&#x7684;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7279;&#x6709;&#x7684;&#x8FDE;&#x63A5;&#x3002;&#x4E0D;&#x7BA1;&#x662F;&#x54EA;&#x4E00;&#x79CD;&#xFF0C;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x8FDE;&#x63A5;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x591A;&#x4E2A;&#x300C;&#x961F;&#x5217;&#x300D;&#xFF0C;&#x800C; &#x300C;&#x961F;&#x5217;&#x300D;&#x53EF;&#x4EE5;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x6808;&#x6216;&#x8005;&#x5927;&#x91CF;&#x7684;&#x961F;&#x5217;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C; <code>queue</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6BCF;&#x4E2A;&#x8FDE;&#x63A5;&#x7684;&#x914D;&#x7F6E;&#x793A;&#x4F8B;&#x4E2D;&#x90FD;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>queue</code> &#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x961F;&#x5217;&#xFF0C;&#x4EFB;&#x52A1;&#x88AB;&#x53D1;&#x7ED9;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x88AB;&#x5206;&#x53D1;&#x5230;&#x8FD9;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5206;&#x53D1;&#x4EFB;&#x52A1;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x5B9A;&#x4E49;&#x961F;&#x5217;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x4F1A;&#x88AB;&#x653E;&#x5230;&#x8FDE;&#x63A5;&#x914D;&#x7F6E;&#x4E2D; <code>queue</code> &#x5C5E;&#x6027;&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x961F;&#x5217;&#x4E2D;&#xFF1A;</p>
+<pre><code>// &#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5C06;&#x88AB;&#x5206;&#x53D1;&#x5230;&#x9ED8;&#x8BA4;&#x961F;&#x5217;...
+dispatch(new Job);
+
+// &#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5C06;&#x88AB;&#x53D1;&#x9001;&#x5230;&#x300C;emails&#x300D;&#x961F;&#x5217;...
+dispatch((new Job)-&gt;onQueue(&apos;emails&apos;));
+</code></pre><p>&#x6709;&#x4E9B;&#x5E94;&#x7528;&#x53EF;&#x80FD;&#x4E0D;&#x9700;&#x8981;&#x628A;&#x4EFB;&#x52A1;&#x53D1;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x800C;&#x53EA;&#x53D1;&#x5230;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x961F;&#x5217;&#x4E2D;&#x5C31;&#x884C;&#x4E86;&#x3002;&#x4F46;&#x662F;&#x628A;&#x4EFB;&#x52A1;&#x63A8;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x961F;&#x5217;&#x4ECD;&#x7136;&#x662F;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x56E0;&#x4E3A; Laravel &#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x5141;&#x8BB8;&#x4F60;&#x5B9A;&#x4E49;&#x961F;&#x5217;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x80FD;&#x7ED9;&#x4E0D;&#x540C;&#x7684;&#x961F;&#x5217;&#x5212;&#x5206;&#x4E0D;&#x540C;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6216;&#x8005;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x4EFB;&#x52A1;&#x7684;&#x4E0D;&#x540C;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x628A;&#x4EFB;&#x52A1;&#x63A8;&#x5230; <code>high</code> &#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x4F60;&#x5C31;&#x80FD;&#x8BA9;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x4F18;&#x5148;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x4E86;&#xFF1A;</p>
+<pre><code>php artisan queue:work --queue=high,default
+</code></pre><p><a name="driver-prerequisites"></a></p>
+<h3 id="&#x9A71;&#x52A8;&#x7684;&#x5FC5;&#x8981;&#x8BBE;&#x7F6E;">&#x9A71;&#x52A8;&#x7684;&#x5FC5;&#x8981;&#x8BBE;&#x7F6E;</h3>
+<h4 id="&#x6570;&#x636E;&#x5E93;">&#x6570;&#x636E;&#x5E93;</h4>
+<p>&#x8981;&#x4F7F;&#x7528; <code>database</code> &#x8FD9;&#x4E2A;&#x961F;&#x5217;&#x9A71;&#x52A8;&#x7684;&#x8BDD;&#xFF0C; &#x4F60;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x8868;&#x6765;&#x5B58;&#x50A8;&#x4EFB;&#x52A1;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>queue:table</code> &#x8FD9;&#x4E2A; Artisan &#x547D;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x8868;&#x7684;&#x8FC1;&#x79FB;&#x3002; &#x5F53;&#x8FC1;&#x79FB;&#x521B;&#x5EFA;&#x597D;&#x4EE5;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528; <code>migrate</code> &#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x8868;&#xFF1A;</p>
+<pre><code>php artisan queue:table
+
+php artisan migrate
+</code></pre><h4 id="redis">Redis</h4>
+<p>&#x4E3A;&#x4E86;&#x4F7F;&#x7528; <code>redis</code> &#x961F;&#x5217;&#x9A71;&#x52A8;&#xFF0C; &#x4F60;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>config/database.php</code> &#x4E2D;&#x914D;&#x7F6E;Redis&#x7684;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684; Redis &#x961F;&#x5217;&#x8FDE;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#x662F; Redis &#x96C6;&#x7FA4;&#xFF0C; &#x4F60;&#x7684;&#x961F;&#x5217;&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x5305;&#x542B; <a href="https://redis.io/topics/cluster-spec#keys-hash-tags" target="_blank">key hash tag</a> &#x3002; &#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x6240;&#x6709;&#x7684; redis &#x952E;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x961F;&#x5217;&#x90FD;&#x7F6E;&#x4E8E;&#x540C;&#x4E00;&#x54C8;&#x5E0C;&#x4E2D;&#xFF1A;</p>
+<pre><code>&apos;redis&apos; =&gt; [
+    &apos;driver&apos; =&gt; &apos;redis&apos;,
+    &apos;connection&apos; =&gt; &apos;default&apos;,
+    &apos;queue&apos; =&gt; &apos;{default}&apos;,
+    &apos;retry_after&apos; =&gt; 90,
+],
+</code></pre><h4 id="&#x5176;&#x5B83;&#x961F;&#x5217;&#x9A71;&#x52A8;&#x7684;&#x4F9D;&#x8D56;&#x6269;&#x5C55;&#x5305;">&#x5176;&#x5B83;&#x961F;&#x5217;&#x9A71;&#x52A8;&#x7684;&#x4F9D;&#x8D56;&#x6269;&#x5C55;&#x5305;</h4>
+<p>&#x5728;&#x4F7F;&#x7528;&#x5217;&#x8868;&#x91CC;&#x7684;&#x961F;&#x5217;&#x670D;&#x52A1;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x5B89;&#x88C5;&#x4EE5;&#x4E0B;&#x4F9D;&#x8D56;&#x6269;&#x5C55;&#x5305;&#xFF1A;</p>
+<div class="content-list" markdown="1">
+- Amazon SQS: `aws/aws-sdk-php ~3.0`
+- Beanstalkd: `pda/pheanstalk ~3.0`
+- Redis: `predis/predis ~1.0`
+</div>
+
+<p><a name="creating-jobs"></a></p>
+<h2 id="&#x521B;&#x5EFA;&#x4EFB;&#x52A1;">&#x521B;&#x5EFA;&#x4EFB;&#x52A1;</h2>
+<p><a name="generating-job-classes"></a></p>
+<h3 id="&#x751F;&#x6210;&#x4EFB;&#x52A1;&#x7C7B;">&#x751F;&#x6210;&#x4EFB;&#x52A1;&#x7C7B;</h3>
+<p>&#x5728;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x961F;&#x5217;&#x7684;&#x4EFB;&#x52A1;&#x7C7B;&#x90FD;&#x9ED8;&#x8BA4;&#x653E;&#x5728; <code>app/Jobs</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x5F53;&#x4F60;&#x8FD0;&#x884C; <code>make:job</code> artisan &#x547D;&#x4EE4;&#x65F6;&#x76EE;&#x5F55;&#x5C31;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x3002; &#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x7684; Artisan &#x547D;&#x4EE4;&#x6765;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x961F;&#x5217;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<pre><code>php artisan make:job SendReminderEmail
+</code></pre><p>&#x751F;&#x6210;&#x7684;&#x7C7B;&#x5B9E;&#x73B0;&#x4E86; <code>Illuminate\Contracts\Queue\ShouldQueue</code> &#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5C06;&#x4F1A;&#x88AB;&#x63A8;&#x9001;&#x5230;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x540C;&#x6B65;&#x6267;&#x884C;&#x3002;</p>
+<p><a name="class-structure"></a></p>
+<h3 id="&#x4EFB;&#x52A1;&#x7C7B;&#x7ED3;&#x6784;">&#x4EFB;&#x52A1;&#x7C7B;&#x7ED3;&#x6784;</h3>
+<p>&#x4EFB;&#x52A1;&#x7C7B;&#x7684;&#x7ED3;&#x6784;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x53EA;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x8BA9;&#x961F;&#x5217;&#x7528;&#x6765;&#x8C03;&#x7528;&#x6B64;&#x4EFB;&#x52A1;&#x7684; <code>handle</code> &#x65B9;&#x6CD5;&#x3002;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x7684;&#x4EFB;&#x52A1;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x91CC;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x7BA1;&#x7406;&#x7740;&#x4E00;&#x4E2A;&#x64AD;&#x5BA2;&#x53D1;&#x5E03;&#x670D;&#x52A1;&#xFF0C;&#x5728;&#x53D1;&#x5E03;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x5904;&#x7406;&#x4E0A;&#x4F20;&#x64AD;&#x5BA2;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Jobs;
+
+use App\Podcast;
+use App\AudioProcessor;
+use Illuminate\Bus\Queueable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class ProcessPodcast implements ShouldQueue
+{
+    use InteractsWithQueue, Queueable, SerializesModels;
+
+    protected $podcast;
+
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4EFB;&#x52A1;&#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @param  Podcast  $podcast
+     * @return void
+     */
+    public function __construct(Podcast $podcast)
+    {
+        $this-&gt;podcast = $podcast;
+    }
+
+    /**
+     * &#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x3002;
+     *
+     * @param  AudioProcessor  $processor
+     * @return void
+     */
+    public function handle(AudioProcessor $processor)
+    {
+        // Process uploaded podcast...
+    }
+}
+</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4EFB;&#x52A1;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x76F4;&#x63A5;&#x4F20;&#x9012;&#x4E86;&#x4E00;&#x4E2A; <a href="../docs/eloquent">Eloquent &#x6A21;&#x578B;</a>&#x3002;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x5728;&#x4EFB;&#x52A1;&#x7C7B;&#x91CC;&#x5F15;&#x7528;&#x4E86; <code>SerializesModels</code> &#x8FD9;&#x4E2A; 
+&#xFF0C;&#x4F7F;&#x5F97; Eloquent &#x6A21;&#x578B;&#x5728;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x65F6;&#x53EF;&#x4EE5;&#x88AB;&#x4F18;&#x96C5;&#x5730;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x961F;&#x5217;&#x4EFB;&#x52A1;&#x7C7B;&#x5728;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x63A5;&#x6536;&#x4E86;&#x4E00;&#x4E2A; Eloquent &#x6A21;&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x6709;&#x53EF;&#x8BC6;&#x522B;&#x51FA;&#x8BE5;&#x6A21;&#x578B;&#x7684;&#x5C5E;&#x6027;&#x4F1A;&#x88AB;&#x5E8F;&#x5217;&#x5316;&#x5230;&#x961F;&#x5217;&#x91CC;&#x3002;&#x5F53;&#x4EFB;&#x52A1;&#x88AB;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x961F;&#x5217;&#x7CFB;&#x7EDF;&#x4FBF;&#x4F1A;&#x81EA;&#x52A8;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x91CD;&#x65B0;&#x53D6;&#x56DE;&#x5B8C;&#x6574;&#x7684;&#x6A21;&#x578B;&#x3002;&#x8FD9;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x5BF9;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x8BF4;&#x662F;&#x5B8C;&#x5168;&#x900F;&#x660E;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5728;&#x5E8F;&#x5217;&#x5316;&#x5B8C;&#x6574;&#x7684; Eloquent &#x6A21;&#x5F0F;&#x5B9E;&#x4F8B;&#x65F6;&#x6240;&#x5E26;&#x6765;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5728;&#x961F;&#x5217;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; <code>handle</code> &#x65B9;&#x6CD5;&#xFF0C;&#x800C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; handle &#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x63D0;&#x793A;&#xFF0C;&#x8BA9; Laravel &#x7684; <a href="../docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x4F9D;&#x8D56;&#x5BF9;&#x8C61;&#x3002;</p>
+<blockquote>
+<p>{note} &#x50CF;&#x56FE;&#x7247;&#x5185;&#x5BB9;&#x8FD9;&#x79CD;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x636E;&#xFF0C; &#x5728;&#x653E;&#x5165;&#x961F;&#x5217;&#x4EFB;&#x52A1;&#x4E4B;&#x524D;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>base64_encode</code> &#x65B9;&#x6CD5;&#x8F6C;&#x6362;&#x4E00;&#x4E0B;&#x3002; &#x5426;&#x5219;&#xFF0C;&#x5F53;&#x8FD9;&#x9879;&#x4EFB;&#x52A1;&#x653E;&#x7F6E;&#x5230;&#x961F;&#x5217;&#x4E2D;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x6B63;&#x786E;&#x5E8F;&#x5217;&#x5316;&#x4E3A; JSON&#x3002;</p>
+</blockquote>
+<p><a name="dispatching-jobs"></a></p>
+<h2 id="&#x5206;&#x53D1;&#x4EFB;&#x52A1;">&#x5206;&#x53D1;&#x4EFB;&#x52A1;</h2>
+<p>&#x4F60;&#x5199;&#x597D;&#x4EFB;&#x52A1;&#x7C7B;&#x540E;&#xFF0C;&#x5C31;&#x80FD;&#x901A;&#x8FC7; <code>dispatch</code> &#x8F85;&#x52A9;&#x51FD;&#x6570;&#x6765;&#x5206;&#x53D1;&#x5B83;&#x4E86;&#x3002;&#x552F;&#x4E00;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7ED9; <code>dispatch</code> &#x7684;&#x53C2;&#x6570;&#x662F;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Jobs\ProcessPodcast;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class PodcastController extends Controller
+{
+    /**
+     * &#x4FDD;&#x5B58;&#x64AD;&#x5BA2;&#x3002;
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        // &#x521B;&#x5EFA;&#x64AD;&#x5BA2;...
+
+        dispatch(new ProcessPodcast($podcast));
+    }
+}
+</code></pre><blockquote>
+<p>{tip} <code>dispatch</code> &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x7B80;&#x6377;&#x3001;&#x5168;&#x5C40;&#x53EF;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x4E5F;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x6D4B;&#x8BD5;&#x3002;&#x67E5;&#x770B;&#x4E0B; Laravel <a href="../docs/testing">&#x6D4B;&#x8BD5;&#x6587;&#x6863;</a> &#x6765;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x3002;</p>
+</blockquote>
+<p><a name="delayed-dispatching"></a></p>
+<h3 id="&#x5EF6;&#x8FDF;&#x5206;&#x53D1;">&#x5EF6;&#x8FDF;&#x5206;&#x53D1;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x4EFB;&#x52A1;&#x5B9E;&#x4F8B;&#x7684; <code>delay</code> &#x65B9;&#x6CD5;&#x3002; &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x662F; <code>Illuminate\Bus\Queueable</code> trait &#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A; trait &#x5728;&#x6240;&#x6709;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x4EFB;&#x52A1;&#x7C7B;&#x4E2D;&#x90FD;&#x662F;&#x9ED8;&#x8BA4;&#x52A0;&#x8F7D;&#x4E86;&#x7684;&#x3002;&#x5BF9;&#x4E8E;&#x5EF6;&#x8FDF;&#x4EFB;&#x52A1;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x6BD4;&#x5982;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x88AB;&#x5206;&#x53D1;10&#x5206;&#x949F;&#x540E;&#x624D;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Carbon\Carbon;
+use App\Jobs\ProcessPodcast;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class PodcastController extends Controller
+{
+    /**
+     * &#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x64AD;&#x5BA2;&#x3002;
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        // &#x521B;&#x5EFA;&#x64AD;&#x5BA2;...
+
+        $job = (new ProcessPodcast($podcast))
+                    -&gt;delay(Carbon::now()-&gt;addMinutes(10));
+
+        dispatch($job);
+    }
+}
+</code></pre><blockquote>
+<p>{note} Amazon SQS &#x961F;&#x5217;&#x670D;&#x52A1;&#x6700;&#x5927;&#x5EF6;&#x8FDF; 15 &#x5206;&#x949F;&#x3002;</p>
+</blockquote>
+<p><a name="customizing-the-queue-and-connection"></a></p>
+<h3 id="&#x81EA;&#x5B9A;&#x4E49;&#x961F;&#x5217;--&#x8FDE;&#x63A5;">&#x81EA;&#x5B9A;&#x4E49;&#x961F;&#x5217; &amp; &#x8FDE;&#x63A5;</h3>
+<h4 id="&#x5206;&#x53D1;&#x4EFB;&#x52A1;&#x5230;&#x6307;&#x5B9A;&#x961F;&#x5217;">&#x5206;&#x53D1;&#x4EFB;&#x52A1;&#x5230;&#x6307;&#x5B9A;&#x961F;&#x5217;</h4>
+<p>&#x901A;&#x8FC7;&#x63A8;&#x9001;&#x4EFB;&#x52A1;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x961F;&#x5217;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7ED9;&#x961F;&#x5217;&#x4EFB;&#x52A1;&#x5206;&#x7C7B;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x7ED9;&#x4E0D;&#x540C;&#x7684;&#x961F;&#x5217;&#x5206;&#x914D;&#x591A;&#x5C11;&#x4EFB;&#x52A1;&#x3002;&#x8BB0;&#x4F4F;&#xFF0C;&#x8FD9;&#x4E2A;&#x5E76;&#x4E0D;&#x662F;&#x8981;&#x63A8;&#x9001;&#x4EFB;&#x52A1;&#x5230;&#x961F;&#x5217;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4E0D;&#x540C;&#x7684; &#x300C;connections&#x300D; &#x91CC;&#xFF0C;&#x800C;&#x662F;&#x63A8;&#x9001;&#x5230;&#x4E00;&#x4E2A;&#x8FDE;&#x63A5;&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x961F;&#x5217;&#x91CC;&#x3002;&#x8981;&#x6307;&#x5B9A;&#x961F;&#x5217;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x8C03;&#x7528;&#x4EFB;&#x52A1;&#x5B9E;&#x4F8B;&#x7684; <code>onQueue</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Jobs\ProcessPodcast;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class PodcastController extends Controller
+{
+    /**
+     * &#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x64AD;&#x5BA2;&#x3002;
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        // &#x521B;&#x5EFA;&#x64AD;&#x5BA2;...
+
+        $job = (new ProcessPodcast($podcast))-&gt;onQueue(&apos;processing&apos;);
+
+        dispatch($job);
+    }
+}
+</code></pre><h4 id="&#x5206;&#x53D1;&#x4EFB;&#x52A1;&#x5230;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;">&#x5206;&#x53D1;&#x4EFB;&#x52A1;&#x5230;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x591A;&#x4E2A;&#x961F;&#x5217;&#x8FDE;&#x63A5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x4EFB;&#x52A1;&#x63A8;&#x5230;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x3002;&#x8981;&#x6307;&#x5B9A;&#x8FDE;&#x63A5;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x4EFB;&#x52A1;&#x5B9E;&#x4F8B;&#x7684; <code>onConnection</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Jobs\ProcessPodcast;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class PodcastController extends Controller
+{
+    /**
+     * &#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x64AD;&#x5BA2;&#x3002;
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        // &#x521B;&#x5EFA;&#x64AD;&#x5BA2;...
+
+        $job = (new ProcessPodcast($podcast))-&gt;onConnection(&apos;sqs&apos;);
+
+        dispatch($job);
+    }
+}
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x94FE;&#x5F0F;&#x8C03;&#x7528; <code>onConnection</code> &#x548C; <code>onQueue</code> &#x6765;&#x540C;&#x65F6;&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x7684;&#x8FDE;&#x63A5;&#x548C;&#x961F;&#x5217;&#xFF1A;</p>
+<pre><code>$job = (new ProcessPodcast($podcast))
+                -&gt;onConnection(&apos;sqs&apos;)
+                -&gt;onQueue(&apos;processing&apos;);
+</code></pre><p><a name="max-job-attempts-and-timeout"></a></p>
+<h3 id="&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;--&#x8D85;&#x65F6;&#x503C;">&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570; / &#x8D85;&#x65F6;&#x503C;</h3>
+<h4 id="&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;">&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;</h4>
+<p>&#x5728;&#x4E00;&#x9879;&#x4EFB;&#x52A1;&#x4E2D;&#x6307;&#x5B9A;&#x6700;&#x5927;&#x7684;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x901A;&#x8FC7; Artisan &#x547D;&#x4EE4;&#x884C; <code>--tries</code> &#x6765;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<pre><code>php artisan queue:work --tries=3
+</code></pre><p>&#x4F46;&#x662F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x91C7;&#x53D6;&#x66F4;&#x4E3A;&#x7CBE;&#x81F4;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x5B8C;&#x6210;&#x8FD9;&#x9879;&#x5DE5;&#x4F5C;&#x6BD4;&#x5982;&#x8BF4;&#x5728;&#x4EFB;&#x52A1;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#x3002;&#x5982;&#x679C;&#x5728;&#x7C7B;&#x548C;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#xFF0C; Laravel &#x4F1A;&#x4F18;&#x5148;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x7C7B;&#x4E2D;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Jobs;
+
+class ProcessPodcast implements ShouldQueue
+{
+    /**
+     * &#x4EFB;&#x52A1;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;
+     *
+     * @var int
+     */
+    public $tries = 5;
+}
+</code></pre><h4 id="&#x8D85;&#x65F6;">&#x8D85;&#x65F6;</h4>
+<p>&#x540C;&#x6837;&#x7684;&#xFF0C;&#x4EFB;&#x52A1;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x7684;&#x6700;&#x5927;&#x79D2;&#x6570;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Artisan &#x547D;&#x4EE4;&#x884C;&#x4E0A;&#x7684; <code>--timeout</code> &#x5F00;&#x5173;&#x6307;&#x5B9A;&#xFF1A;</p>
+<pre><code>php artisan queue:work --timeout=30
+</code></pre><p>&#x7136;&#x800C;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x52A1;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x6765;&#x8BBE;&#x7F6E;&#x53EF;&#x8FD0;&#x884C;&#x7684;&#x6700;&#x5927;&#x63CF;&#x8FF0;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x7C7B;&#x548C;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#xFF0C; Laravel &#x4F1A;&#x4F18;&#x5148;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x7C7B;&#x4E2D;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Jobs;
+
+class ProcessPodcast implements ShouldQueue
+{
+    /**
+     * &#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;
+     *
+     * @var int
+     */
+    public $timeout = 120;
+}
+</code></pre><p><a name="error-handling"></a></p>
+<h3 id="&#x9519;&#x8BEF;&#x5904;&#x7406;">&#x9519;&#x8BEF;&#x5904;&#x7406;</h3>
+<p>&#x5982;&#x679C;&#x4EFB;&#x52A1;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5C31;&#x81EA;&#x52A8;&#x88AB;&#x91CA;&#x653E;&#x56DE;&#x961F;&#x5217;&#xFF0C;&#x8FD9;&#x6837;&#x5B83;&#x5C31;&#x80FD;&#x88AB;&#x518D;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x4E86;&#x3002;&#x5982;&#x679C;&#x7EE7;&#x7EED;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x4F1A;&#x7EE7;&#x7EED;&#x88AB;&#x91CA;&#x653E;&#x56DE;&#x961F;&#x5217;&#xFF0C;&#x76F4;&#x5230;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#x8FBE;&#x5230;&#x4F60;&#x5E94;&#x7528;&#x5141;&#x8BB8;&#x7684;&#x6700;&#x591A;&#x6B21;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x6700;&#x591A;&#x6B21;&#x6570;&#x662F;&#x5728;&#x8C03;&#x7528; <code>queue:work</code> Artisan &#x547D;&#x4EE4;&#x7684;&#x65F6;&#x5019;&#x901A;&#x8FC7; <code>--tries</code> &#x53C2;&#x6570;&#x6765;&#x5B9A;&#x4E49;&#x7684;&#x3002;&#x66F4;&#x591A;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x7684;&#x4FE1;&#x606F;&#x53EF;&#x4EE5; <a href="#running-the-queue-worker">&#x5728;&#x4E0B;&#x9762;&#x770B;&#x5230;</a> &#x3002;</p>
+<p><a name="running-the-queue-worker"></a></p>
+<h2 id="&#x8FD0;&#x884C;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;">&#x8FD0;&#x884C;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;</h2>
+<p>Laravel &#x5305;&#x542B;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5F53;&#x65B0;&#x4EFB;&#x52A1;&#x88AB;&#x63A8;&#x5230;&#x961F;&#x5217;&#x4E2D;&#x65F6;&#x5B83;&#x80FD;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; queue:work Artisan &#x547D;&#x4EE4;&#x6765;&#x8FD0;&#x884C;&#x5904;&#x7406;&#x5668;&#x3002;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x4E00;&#x65E6; <code>queue:work</code> &#x547D;&#x4EE4;&#x5F00;&#x59CB;&#xFF0C;&#x5B83;&#x5C06;&#x4E00;&#x76F4;&#x8FD0;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x4F60;&#x624B;&#x52A8;&#x505C;&#x6B62;&#x6216;&#x8005;&#x4F60;&#x5173;&#x95ED;&#x63A7;&#x5236;&#x53F0;&#xFF1A;</p>
+<pre><code>php artisan queue:work
+</code></pre><blockquote>
+<p>{tip} &#x8981;&#x8BA9; <code>queue:work</code> &#x8FDB;&#x7A0B;&#x6C38;&#x4E45;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x8FDB;&#x7A0B;&#x76D1;&#x63A7;&#x5DE5;&#x5177;&#xFF0C;&#x6BD4;&#x5982; <code>Supervisor</code> &#x6765;&#x4FDD;&#x8BC1;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x6CA1;&#x6709;&#x505C;&#x6B62;&#x8FD0;&#x884C;&#x3002;</p>
+</blockquote>
+<p>&#x4E00;&#x5B9A;&#x8981;&#x8BB0;&#x5F97;&#xFF0C;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x662F;&#x957F;&#x65F6;&#x95F4;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x5E76;&#x5728;&#x5185;&#x5B58;&#x91CC;&#x4FDD;&#x5B58;&#x7740;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x7684;&#x5E94;&#x7528;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x8FD0;&#x884C;&#x540E;&#x5982;&#x679C;&#x4F60;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x90A3;&#x8FD9;&#x4E9B;&#x6539;&#x53D8;&#x662F;&#x4E0D;&#x4F1A;&#x5E94;&#x7528;&#x5230;&#x5904;&#x7406;&#x5668;&#x4E2D;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x5728;&#x4F60;&#x91CD;&#x65B0;&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E00;&#x5B9A;&#x8981; <a href="#queue-workers-and-deployment">&#x91CD;&#x542F;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;</a> &#x3002;</p>
+<h4 id="&#x6307;&#x5B9A;&#x8FDE;&#x63A5;--&#x961F;&#x5217;">&#x6307;&#x5B9A;&#x8FDE;&#x63A5; &amp; &#x961F;&#x5217;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x3002;&#x4F60;&#x5728; <code>config/queue.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#x5B9A;&#x4E49;&#x4E86;&#x591A;&#x4E2A;&#x8FDE;&#x63A5;&#xFF0C;&#x800C;&#x4F60;&#x4F20;&#x9012;&#x7ED9; <code>work</code> &#x547D;&#x4EE4;&#x7684;&#x8FDE;&#x63A5;&#x540D;&#x5B57;&#x8981;&#x81F3;&#x5C11;&#x8DDF;&#x5B83;&#x4EEC;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF1A;</p>
+<pre><code>php artisan queue:work redis
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x65B9;&#x5F0F;&#x662F;&#x5904;&#x7406;&#x7ED9;&#x5B9A;&#x8FDE;&#x63A5;&#x7684;&#x7279;&#x5B9A;&#x961F;&#x5217;&#x3002;&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6240;&#x6709;&#x7684;&#x90AE;&#x4EF6;&#x90FD;&#x662F;&#x5728; <code>redis</code> &#x8FDE;&#x63A5;&#x4E2D;&#x7684; <code>emails</code> &#x961F;&#x5217;&#x4E2D;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x4F60;&#x5C31;&#x80FD;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x53EA;&#x5904;&#x7406;&#x90A3;&#x4E2A;&#x7279;&#x5B9A;&#x961F;&#x5217;&#x7684;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x4E86;&#xFF1A;</p>
+<pre><code>php artisan queue:work redis --queue=emails
+</code></pre><h4 id="&#x8D44;&#x6E90;&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x8D44;&#x6E90;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h4>
+<p>&#x5B88;&#x62A4;&#x7A0B;&#x5E8F;&#x961F;&#x5217;&#x4E0D;&#x4F1A;&#x5728;&#x5904;&#x7406;&#x6BCF;&#x4E2A;&#x4F5C;&#x4E1A;&#x4E4B;&#x524D; &#x300C;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x300D; &#x6846;&#x67B6;&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x91CA;&#x653E;&#x4EFB;&#x4F55;&#x5360;&#x7528;&#x8FC7;&#x5927;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;GD&#x5E93;&#x8FDB;&#x884C;&#x56FE;&#x50CF;&#x5904;&#x7406;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x5B8C;&#x6210;&#x540E;&#x7528; <code>imagedestroy</code> &#x91CA;&#x653E;&#x5185;&#x5B58;&#x3002;</p>
+<p><a name="queue-priorities"></a></p>
+<h3 id="&#x961F;&#x5217;&#x4F18;&#x5148;&#x7EA7;">&#x961F;&#x5217;&#x4F18;&#x5148;&#x7EA7;</h3>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x5E0C;&#x671B;&#x8BBE;&#x7F6E;&#x5904;&#x7406;&#x961F;&#x5217;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x3002;&#x6BD4;&#x5982;&#x5728; <code>config/queue.php</code> &#x91CC;&#x4F60;&#x53EF;&#x80FD;&#x8BBE;&#x7F6E;&#x4E86; <code>redis</code> &#x8FDE;&#x63A5;&#x4E2D;&#x7684;&#x9ED8;&#x8BA4;&#x961F;&#x5217;&#x4F18;&#x5148;&#x7EA7;&#x4E3A; <code>low</code>&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x53EF;&#x80FD;&#x5076;&#x5C14;&#x5E0C;&#x671B;&#x628A;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x63A8;&#x5230; <code>high</code> &#x4F18;&#x5148;&#x7EA7;&#x7684;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code>dispatch((new Job)-&gt;onQueue(&apos;high&apos;));
+</code></pre><p>&#x8981;&#x9A8C;&#x8BC1; <code>high</code> &#x961F;&#x5217;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x90FD;&#x662F;&#x5728; <code>low</code> &#x961F;&#x5217;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x4E4B;&#x524D;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x4F60;&#x8981;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x961F;&#x5217;&#x540D;&#x5B57;&#x7684;&#x5217;&#x8868;&#x5E76;&#x4EE5;&#x82F1;&#x6587;&#x9017;&#x53F7;&#xFF0C;&#x95F4;&#x9694;&#xFF1A;</p>
+<pre><code>php artisan queue:work --queue=high,low
+</code></pre><p><a name="queue-workers-and-deployment"></a></p>
+<h3 id="&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;--&#x90E8;&#x7F72;">&#x961F;&#x5217;&#x5904;&#x7406;&#x5668; &amp; &#x90E8;&#x7F72;</h3>
+<p>&#x56E0;&#x4E3A;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x90FD;&#x662F; long-lived &#x8FDB;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x4EE3;&#x7801;&#x6539;&#x53D8;&#x800C;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x6CA1;&#x6709;&#x91CD;&#x542F;&#xFF0C;&#x4ED6;&#x4EEC;&#x662F;&#x4E0D;&#x80FD;&#x5E94;&#x7528;&#x65B0;&#x4EE3;&#x7801;&#x7684;&#x3002;&#x6240;&#x4EE5;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x91CD;&#x65B0;&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;&#x4E2D;&#x8981;&#x91CD;&#x542F;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x4F18;&#x96C5;&#x5730;&#x53EA;&#x8F93;&#x5165; <code>queue:restart</code> &#x6765;&#x91CD;&#x542F;&#x6240;&#x6709;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x3002;</p>
+<pre><code>php artisan queue:restart
+</code></pre><p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x5C06;&#x4F1A;&#x544A;&#x8BC9;&#x6240;&#x6709;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x5728;&#x6267;&#x884C;&#x5B8C;&#x5F53;&#x524D;&#x4EFB;&#x52A1;&#x540E;&#x7ED3;&#x675F;&#x8FDB;&#x7A0B;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x52A1;&#x4E22;&#x5931;&#x3002;&#x56E0;&#x4E3A;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x5728;&#x6267;&#x884C; <code>queue:restart</code> &#x547D;&#x4EE4;&#x65F6;&#x5BF9;&#x7ED3;&#x675F;&#x8FDB;&#x7A0B;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x6BD4;&#x5982; <a href="#supervisor-configuration">Supervisor</a> &#x6765;&#x81EA;&#x52A8;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x3002;</p>
+<p><a name="job-expirations-and-timeouts"></a></p>
+<h3 id="&#x4EFB;&#x52A1;&#x8FC7;&#x671F;--&#x8D85;&#x65F6;">&#x4EFB;&#x52A1;&#x8FC7;&#x671F; &amp; &#x8D85;&#x65F6;</h3>
+<h4 id="&#x4EFB;&#x52A1;&#x8FC7;&#x671F;">&#x4EFB;&#x52A1;&#x8FC7;&#x671F;</h4>
+<p><code>config/queue.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x8FDE;&#x63A5;&#x90FD;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A; <code>retry_after</code> &#x9009;&#x9879;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x4E86;&#x4EFB;&#x52A1;&#x6700;&#x591A;&#x5904;&#x7406;&#x591A;&#x5C11;&#x79D2;&#x540E;&#x5C31;&#x88AB;&#x5F53;&#x505A;&#x5931;&#x8D25;&#x91CD;&#x8BD5;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x4E3A; <code>90</code>&#xFF0C;&#x90A3;&#x4E48;&#x5F53;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x6301;&#x7EED;&#x6267;&#x884C;&#x4E86; <code>90</code> &#x79D2;&#x800C;&#x6CA1;&#x6709;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x88AB;&#x91CA;&#x653E;&#x56DE;&#x961F;&#x5217;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x628A; <code>retry_after</code> &#x8BBE;&#x7F6E;&#x4E3A;&#x6700;&#x957F;&#x8017;&#x65F6;&#x7684;&#x4EFB;&#x52A1;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<blockquote>
+<p>{note} &#x552F;&#x4E00;&#x6CA1;&#x6709; <code>retry_after</code> &#x9009;&#x9879;&#x7684;&#x8FDE;&#x63A5;&#x662F; Amazon SQS&#x3002;&#x5F53;&#x7528; Amazon SQS &#x65F6;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x901A;&#x8FC7; <a href="https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/AboutVT.html" target="_blank">Amazon</a> &#x547D;&#x4EE4;&#x884C;&#x6765;&#x914D;&#x7F6E;&#x8FD9;&#x4E2A;&#x91CD;&#x8BD5;&#x9608;&#x503C;&#x3002;</p>
+</blockquote>
+<h4 id="&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x8D85;&#x65F6;">&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x8D85;&#x65F6;</h4>
+<p><code>queue:work</code> Artisan &#x547D;&#x4EE4;&#x5BF9;&#x5916;&#x6709;&#x4E00;&#x4E2A; <code>--timeout</code> &#x9009;&#x9879;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x6307;&#x5B9A;&#x4E86; <code>Laravel</code> &#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#x6700;&#x591A;&#x6267;&#x884C;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x540E;&#x5C31;&#x5E94;&#x8BE5;&#x88AB;&#x5173;&#x95ED;&#x6389;&#x3002;&#x6709;&#x65F6;&#x5019;&#x4E00;&#x4E2A;&#x961F;&#x5217;&#x7684;&#x5B50;&#x8FDB;&#x7A0B;&#x4F1A;&#x56E0;&#x4E3A;&#x5F88;&#x591A;&#x539F;&#x56E0;&#x50F5;&#x6B7B;&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x5916;&#x90E8;&#x7684; HTTP &#x8BF7;&#x6C42;&#x6CA1;&#x6709;&#x54CD;&#x5E94;&#x3002;&#x8FD9;&#x4E2A; <code>--timeout</code> &#x9009;&#x9879;&#x4F1A;&#x79FB;&#x9664;&#x8D85;&#x51FA;&#x6307;&#x5B9A;&#x4E8B;&#x4EF6;&#x9650;&#x5236;&#x7684;&#x50F5;&#x6B7B;&#x8FDB;&#x7A0B;&#x3002;</p>
+<pre><code>php artisan queue:work --timeout=60
+</code></pre><p><code>retry_after</code> &#x914D;&#x7F6E;&#x9009;&#x9879;&#x548C; <code>--timeout</code> &#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5DE5;&#x4F5C;&#x6765;&#x4FDD;&#x8BC1;&#x4EFB;&#x52A1;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x91CD;&#x590D;&#x6267;&#x884C;&#x3002;</p>
+<blockquote>
+<p>{note} <code>--timeout</code> &#x5E94;&#x8BE5;&#x6C38;&#x8FDC;&#x90FD;&#x8981;&#x6BD4; <code>retry_after</code> &#x77ED;&#x81F3;&#x5C11;&#x51E0;&#x79D2;&#x949F;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x4FDD;&#x8BC1;&#x4EFB;&#x52A1;&#x8FDB;&#x7A0B;&#x603B;&#x80FD;&#x5728;&#x5931;&#x8D25;&#x91CD;&#x8BD5;&#x524D;&#x5C31;&#x88AB;&#x6740;&#x6B7B;&#x4E86;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684; <code>--timeout</code> &#x9009;&#x9879;&#x5927;&#x4E8E; <code>retry_after</code> &#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF0C;&#x4F60;&#x7684;&#x4EFB;&#x52A1;&#x53EF;&#x80FD;&#x88AB;&#x6267;&#x884C;&#x4E24;&#x6B21;&#x3002;</p>
+</blockquote>
+<h4 id="&#x961F;&#x5217;&#x8FDB;&#x7A0B;&#x7761;&#x7720;&#x65F6;&#x95F4;">&#x961F;&#x5217;&#x8FDB;&#x7A0B;&#x7761;&#x7720;&#x65F6;&#x95F4;</h4>
+<p>&#x5F53;&#x961F;&#x5217;&#x9700;&#x8981;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x8FDB;&#x7A0B;&#x5C06;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x4EFB;&#x52A1;&#xFF0C;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x5EF6;&#x8FDF;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x65B0;&#x7684;&#x5DE5;&#x4F5C;&#x53EF;&#x7528;&#xFF0C;<code>sleep</code> &#x53C2;&#x6570;&#x51B3;&#x5B9A;&#x4E86;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x5C06;&#x300C;&#x7761;&#x7720;&#x300D;&#x591A;&#x957F;&#x65F6;&#x95F4;&#xFF1A;</p>
+<pre><code>php artisan queue:work --sleep=3
+</code></pre><p><a name="supervisor-configuration"></a></p>
+<h2 id="supervisor-&#x914D;&#x7F6E;">Supervisor &#x914D;&#x7F6E;</h2>
+<h4 id="&#x5B89;&#x88C5;-supervisor">&#x5B89;&#x88C5; Supervisor</h4>
+<p>Supervisor &#x662F;&#x4E00;&#x4E2A; Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x7684;&#x8FDB;&#x7A0B;&#x76D1;&#x63A7;&#x8F6F;&#x4EF6;&#xFF0C;&#x5B83;&#x4F1A;&#x5728; <code>queue:listen</code> &#x6216; <code>queue:work</code> &#x547D;&#x4EE4;&#x53D1;&#x751F;&#x5931;&#x8D25;&#x540E;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x5B83;&#x4EEC;&#x3002;&#x8981;&#x5728; Ubuntu &#x5B89;&#x88C5; Supervisor&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>sudo apt-get install supervisor
+</code></pre><blockquote>
+<p>{tip} &#x5982;&#x679C;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x914D;&#x7F6E; Supervisor &#x542C;&#x8D77;&#x6765;&#x6709;&#x70B9;&#x96BE;&#x4EE5;&#x5E94;&#x4ED8;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528; <a href="https://forge.laravel.com" target="_blank">Laravel Forge</a> &#xFF0C;&#x5B83;&#x80FD;&#x7ED9;&#x4F60;&#x7684; Laravel &#x9879;&#x76EE;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x4E0E;&#x914D;&#x7F6E; Supervisor&#x3002; </p>
+</blockquote>
+<h4 id="&#x914D;&#x7F6E;-supervisor">&#x914D;&#x7F6E; Supervisor</h4>
+<p>Supervisor &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x662F;&#x653E;&#x5728; <code>/etc/supervisor/conf.d</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x4F60;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x8981;&#x6C42; Supervisor &#x600E;&#x6837;&#x76D1;&#x63A7;&#x4F60;&#x7684;&#x8FDB;&#x7A0B;&#x3002;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>laravel-worker.conf</code> &#x6765;&#x542F;&#x52A8;&#x4E0E;&#x76D1;&#x63A7;&#x4E00;&#x4E2A; <code>queue:work</code> &#x8FDB;&#x7A0B;&#xFF1A;</p>
+<pre><code>[program:laravel-worker]
+process_name=%(program_name)s_%(process_num)02d
+command=php /home/forge/app.com/artisan queue:work sqs --sleep=3 --tries=3
+autostart=true
+autorestart=true
+user=forge
+numprocs=8
+redirect_stderr=true
+stdout_logfile=/home/forge/app.com/worker.log
+</code></pre><p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#x7684; <code>numprocs</code> &#x547D;&#x4EE4;&#x4F1A;&#x8981;&#x6C42; Supervisor &#x8FD0;&#x884C;&#x5E76;&#x76D1;&#x63A7; 8 &#x4E2A; <code>queue:work</code> &#x8FDB;&#x7A0B;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x5B83;&#x4EEC;&#x8FD0;&#x884C;&#x5931;&#x8D25;&#x540E;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x66F4;&#x6539; <code>command</code> &#x547D;&#x4EE4;&#x7684; <code>queue:work sqs</code>&#xFF0C;&#x4EE5;&#x663E;&#x793A;&#x4F60;&#x6240;&#x9009;&#x62E9;&#x7684;&#x961F;&#x5217;&#x9A71;&#x52A8;&#x3002;</p>
+<h4 id="&#x542F;&#x52A8;-supervisor">&#x542F;&#x52A8; Supervisor</h4>
+<p>&#x5F53;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x88AB;&#x521B;&#x5EFA;&#x540E;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x66F4;&#x65B0; Supervisor &#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6765;&#x542F;&#x52A8;&#x8BE5;&#x8FDB;&#x7A0B;&#xFF1A;</p>
+<pre><code>sudo supervisorctl reread
+
+sudo supervisorctl update
+
+sudo supervisorctl start laravel-worker:*
+</code></pre><p>&#x66F4;&#x591A;&#x6709;&#x5173; Supervisor &#x7684;&#x8BBE;&#x7F6E;&#x4E0E;&#x4F7F;&#x7528;&#xFF0C;&#x8BF7;&#x53C2;&#x8003; <a href="http://supervisord.org/index.html" target="_blank">Supervisor</a> &#x5B98;&#x65B9;&#x6587;&#x6863;&#x3002;</p>
+<p><a name="dealing-with-failed-jobs"></a></p>
+<h2 id="&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x4EFB;&#x52A1;">&#x5904;&#x7406;&#x5931;&#x8D25;&#x7684;&#x4EFB;&#x52A1;</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x4EFB;&#x52A1;&#x4F1A;&#x5931;&#x8D25;&#x3002;&#x4E0D;&#x8981;&#x62C5;&#x5FC3;&#xFF0C;&#x672C;&#x6765;&#x4E8B;&#x60C5;&#x5C31;&#x4E0D;&#x4F1A;&#x4E00;&#x5E06;&#x98CE;&#x987A;&#x3002; Laravel &#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x4E2A;&#x65B9;&#x4FBF;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x91CD;&#x8BD5;&#x7684;&#x6700;&#x5927;&#x6B21;&#x6570;&#x3002;&#x5F53;&#x4EFB;&#x52A1;&#x8D85;&#x51FA;&#x8FD9;&#x4E2A;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#x540E;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x88AB;&#x63D2;&#x5165;&#x5230; <code>failed_jobs</code> &#x6570;&#x636E;&#x8868;&#x91CC;&#x9762;&#x3002;&#x8981;&#x521B;&#x5EFA; <code>failed_jobs</code> &#x8868;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528; <code>queue:failed-table</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>php artisan queue:failed-table
+
+php artisan migrate
+</code></pre><p>&#x7136;&#x540E;&#x8FD0;&#x884C;&#x961F;&#x5217;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5728;&#x8C03;&#x7528; <a href="#running-the-queue-worker">queue:work</a> &#x547D;&#x4EE4;&#x65F6;&#x4F60;&#x5E94;&#x8BE5;&#x901A;&#x8FC7; <code>--tries</code> &#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x7684;&#x6700;&#x5927;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#xFF0C;&#x4EFB;&#x52A1;&#x5C31;&#x4F1A;&#x6C38;&#x4E45;&#x91CD;&#x8BD5;&#xFF1A;</p>
+<pre><code>php artisan queue:work redis --tries=3
+</code></pre><p><a name="cleaning-up-after-failed-jobs"></a></p>
+<h3 id="&#x6E05;&#x9664;&#x5931;&#x8D25;&#x4EFB;&#x52A1;">&#x6E05;&#x9664;&#x5931;&#x8D25;&#x4EFB;&#x52A1;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x52A1;&#x7C7B;&#x91CC;&#x76F4;&#x63A5;&#x5B9A;&#x4E49; <code>failed</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x80FD;&#x5728;&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x65F6;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x7684;&#x6E05;&#x9664;&#x903B;&#x8F91;&#x3002;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x7528;&#x6765;&#x53D1;&#x4E00;&#x6761;&#x8B66;&#x544A;&#x7ED9;&#x7528;&#x6237;&#x6216;&#x8005;&#x91CD;&#x7F6E;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x7B49;&#x518D;&#x597D;&#x4E0D;&#x8FC7;&#x4E86;&#x3002;&#x5BFC;&#x81F4;&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x7684;&#x5F02;&#x5E38;&#x4FE1;&#x606F;&#x4F1A;&#x88AB;&#x4F20;&#x9012;&#x5230; <code>failed</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Jobs;
+
+use Exception;
+use App\Podcast;
+use App\AudioProcessor;
+use Illuminate\Bus\Queueable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Contracts\Queue\ShouldQueue;
+
+class ProcessPodcast implements ShouldQueue
+{
+    use InteractsWithQueue, Queueable, SerializesModels;
+
+    protected $podcast;
+
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4EFB;&#x52A1;&#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @param  Podcast  $podcast
+     * @return void
+     */
+    public function __construct(Podcast $podcast)
+    {
+        $this-&gt;podcast = $podcast;
+    }
+
+    /**
+     * &#x6267;&#x884C;&#x4EFB;&#x52A1;&#x3002;
+     *
+     * @param  AudioProcessor  $processor
+     * @return void
+     */
+    public function handle(AudioProcessor $processor)
+    {
+        // &#x5904;&#x7406;&#x4E0A;&#x4F20;&#x64AD;&#x5BA2;...
+    }
+
+    /**
+     * &#x8981;&#x5904;&#x7406;&#x7684;&#x5931;&#x8D25;&#x4EFB;&#x52A1;&#x3002;
+     *
+     * @param  Exception  $exception
+     * @return void
+     */
+    public function failed(Exception $exception)
+    {
+        // &#x7ED9;&#x7528;&#x6237;&#x53D1;&#x9001;&#x5931;&#x8D25;&#x901A;&#x77E5;&#xFF0C;&#x7B49;&#x7B49;...
+    }
+}
+</code></pre><p><a name="failed-job-events"></a>
+&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x4E8B;&#x4EF6;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x5F53;&#x961F;&#x5217;&#x4EFB;&#x52A1;&#x5931;&#x8D25;&#x65F6;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x7528; <code>Queue::failing</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x6837;&#x4F60;&#x5C31;&#x6709;&#x673A;&#x4F1A;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x6765;&#x7528; e-mail &#x6216; <a href="https://www.hipchat.com" target="_blank">HipChat</a> &#x901A;&#x77E5;&#x4F60;&#x7684;&#x56E2;&#x961F;&#x3002;&#x4F8B;&#x5982;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; Laravel &#x5185;&#x7F6E;&#x7684; <code>AppServiceProvider</code> &#x4E2D;&#x5BF9;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x9644;&#x52A0;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Providers;
+
+use Illuminate\Support\Facades\Queue;
+use Illuminate\Queue\Events\JobFailed;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * &#x542F;&#x52A8;&#x4EFB;&#x610F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x670D;&#x52A1;&#x3002;
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Queue::failing(function (JobFailed $event) {
+            // $event-&gt;connectionName
+            // $event-&gt;job
+            // $event-&gt;exception
+        });
+    }
+
+    /**
+     * &#x6CE8;&#x518C;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x3002;
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}
+</code></pre><p><a name="retrying-failed-jobs"></a></p>
+<h3 id="&#x91CD;&#x8BD5;&#x5931;&#x8D25;&#x4EFB;&#x52A1;">&#x91CD;&#x8BD5;&#x5931;&#x8D25;&#x4EFB;&#x52A1;</h3>
+<p>&#x8981;&#x67E5;&#x770B;&#x4F60;&#x5728; <code>failed_jobs</code> &#x6570;&#x636E;&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5931;&#x8D25;&#x4EFB;&#x52A1;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x7528; <code>queue:failed</code> &#x8FD9;&#x4E2A; Artisan &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>php artisan queue:failed
+</code></pre><p><code>queue:failed</code> &#x547D;&#x4EE4;&#x4F1A;&#x5217;&#x51FA;&#x6240;&#x6709;&#x4EFB;&#x52A1;&#x7684; ID&#x3001;&#x8FDE;&#x63A5;&#x3001;&#x961F;&#x5217;&#x4EE5;&#x53CA;&#x5931;&#x8D25;&#x65F6;&#x95F4;&#xFF0C;&#x4EFB;&#x52A1; ID &#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x5728;&#x91CD;&#x8BD5;&#x5931;&#x8D25;&#x7684;&#x4EFB;&#x52A1;&#x4E0A;&#x3002;&#x4F8B;&#x5982;&#x8981;&#x91CD;&#x8BD5;&#x4E00;&#x4E2A; ID &#x4E3A; <code>5</code> &#x7684;&#x5931;&#x8D25;&#x4EFB;&#x52A1;&#xFF0C;&#x5176;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>php artisan queue:retry 5
+</code></pre><p>&#x8981;&#x91CD;&#x8BD5;&#x6240;&#x6709;&#x5931;&#x8D25;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>queue:retry</code> &#x5E76;&#x4F7F;&#x7528; <code>all</code> &#x4F5C;&#x4E3A; ID&#xFF1A;</p>
+<pre><code>php artisan queue:retry all
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5220;&#x9664;&#x6389;&#x4E00;&#x4E2A;&#x5931;&#x8D25;&#x4EFB;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; <code>queue:forget</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>php artisan queue:forget 5
+</code></pre><p><code>queue:flush</code> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5220;&#x9664;&#x6240;&#x6709;&#x5931;&#x8D25;&#x7684;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<pre><code>php artisan queue:flush
+</code></pre><p><a name="job-events"></a></p>
+<h2 id="&#x4EFB;&#x52A1;&#x4E8B;&#x4EF6;">&#x4EFB;&#x52A1;&#x4E8B;&#x4EF6;</h2>
+<p>&#x4F7F;&#x7528;&#x961F;&#x5217;&#x7684; <code>before</code> &#x548C; <code>after</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F60;&#x80FD;&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x5904;&#x7406;&#x524D;&#x548C;&#x5904;&#x7406;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x5904;&#x7406;&#x3002;&#x5728;&#x8FD9;&#x4E9B;&#x56DE;&#x8C03;&#x91CC;&#x6B63;&#x662F;&#x5B9E;&#x73B0;&#x989D;&#x5916;&#x7684;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x6216;&#x8005;&#x589E;&#x52A0;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#x7684;&#x597D;&#x65F6;&#x673A;&#x3002;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728; <a href="../docs/providers">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x4E2D;&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; Laravel &#x4E2D;&#x7684; AppServiceProvider&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Providers;
+
+use Illuminate\Support\Facades\Queue;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Queue\Events\JobProcessed;
+use Illuminate\Queue\Events\JobProcessing;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * &#x542F;&#x52A8;&#x4EFB;&#x610F;&#x670D;&#x52A1;&#x3002;
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Queue::before(function (JobProcessing $event) {
+            // $event-&gt;connectionName
+            // $event-&gt;job
+            // $event-&gt;job-&gt;payload()
+        });
+
+        Queue::after(function (JobProcessed $event) {
+            // $event-&gt;connectionName
+            // $event-&gt;job
+            // $event-&gt;job-&gt;payload()
+        });
+    }
+
+    /**
+     * &#x6CE8;&#x518C;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x3002;
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}
+</code></pre><p>&#x5728; <code>&#x961F;&#x5217;</code> <a href="../docs/facades">facade</a> &#x4E2D;&#x4F7F;&#x7528; <code>looping</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x5728;&#x961F;&#x5217;&#x83B7;&#x53D6;&#x4EFB;&#x52A1;&#x4E4B;&#x524D;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x95ED;&#x5305;&#x6765;&#x56DE;&#x6EDA;&#x4E4B;&#x524D;&#x5DF2;&#x5931;&#x8D25;&#x4EFB;&#x52A1;&#x7684;&#x4E8B;&#x52A1;&#x3002;</p>
+<pre><code>Queue::looping(function () {
+    while (DB::transactionLevel() &gt; 0) {
+        DB::rollBack();
+    }
+});
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="8-11 扩展包开发.html" class="navigation navigation-prev " aria-label="Previous page: 8-11 扩展包开发">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8-13 任务调度.html" class="navigation navigation-next " aria-label="Next page: 8-13 任务调度">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8-12 队列","level":"1.9.12","depth":2,"next":{"title":"8-13 任务调度","level":"1.9.13","depth":2,"path":"Chapter8/8-13 任务调度.md","ref":"Chapter8/8-13 任务调度.md","articles":[]},"previous":{"title":"8-11 扩展包开发","level":"1.9.11","depth":2,"path":"Chapter8/8-11 扩展包开发.md","ref":"Chapter8/8-11 扩展包开发.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter8/8-12 队列.md","mtime":"2018-10-29T12:40:15.142Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1844 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>11-3 浏览器测试 Dusk · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="11-4 数据库测试.html" />
+    
+    
+    <link rel="prev" href="11-2 HTTP 测试.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Chapter8/8-1 Artisan命令行.html">
+            
+                <a href="../Chapter8/8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Chapter8/8-2 广播系统.html">
+            
+                <a href="../Chapter8/8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Chapter8/8-3 缓存系统.html">
+            
+                <a href="../Chapter8/8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Chapter8/8-4 集合.html">
+            
+                <a href="../Chapter8/8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Chapter8/8-5 错误与日志.html">
+            
+                <a href="../Chapter8/8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Chapter8/8-6 事件系统.html">
+            
+                <a href="../Chapter8/8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Chapter8/8-7 文件存储.html">
+            
+                <a href="../Chapter8/8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Chapter8/8-8 辅助函数.html">
+            
+                <a href="../Chapter8/8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Chapter8/8-9 邮件发送.html">
+            
+                <a href="../Chapter8/8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Chapter8/8-10 消息通知.html">
+            
+                <a href="../Chapter8/8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../Chapter8/8-11 扩展包开发.html">
+            
+                <a href="../Chapter8/8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../Chapter8/8-12 队列.html">
+            
+                <a href="../Chapter8/8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../Chapter8/8-13 任务调度.html">
+            
+                <a href="../Chapter8/8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="11-1 快速入门.html">
+            
+                <a href="11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="11-2 HTTP 测试.html">
+            
+                <a href="11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12.3" data-path="11-3 浏览器测试 Dusk.html">
+            
+                <a href="11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="11-4 数据库测试.html">
+            
+                <a href="11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="11-5 测试模拟器.html">
+            
+                <a href="11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >11-3 浏览器测试 Dusk</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x6D4B;&#x8BD5;&#x4E4B;---&#x6D4F;&#x89C8;&#x5668;&#x6D4B;&#x8BD5;-laravel-dusk">Laravel &#x6D4B;&#x8BD5;&#x4E4B; - &#x6D4F;&#x89C8;&#x5668;&#x6D4B;&#x8BD5; (Laravel Dusk)</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#installation">&#x5B89;&#x88C5;</a><ul>
+<li><a href="#using-other-browsers">&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;</a></li>
+</ul>
+</li>
+<li><a href="#getting-started">&#x5F00;&#x59CB;</a><ul>
+<li><a href="#generating-tests">&#x521B;&#x5EFA;&#x6D4B;&#x8BD5;</a></li>
+<li><a href="#running-tests">&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;</a></li>
+<li><a href="#environment-handling">&#x73AF;&#x5883;&#x5904;&#x7406;</a></li>
+<li><a href="#creating-browsers">&#x521B;&#x5EFA;&#x6D4F;&#x89C8;&#x5668;</a></li>
+<li><a href="#authentication">&#x8BA4;&#x8BC1;</a></li>
+</ul>
+</li>
+<li><a href="#interacting-with-elements">&#x4E0E;&#x5143;&#x7D20;&#x4EA4;&#x4E92;</a><ul>
+<li><a href="#clicking-links">&#x70B9;&#x51FB;&#x94FE;&#x63A5;</a></li>
+<li><a href="#text-values-and-attributes">&#x6587;&#x672C;&#x3001;&#x503C;&#x548C;&#x5C5E;&#x6027;</a></li>
+<li><a href="#using-forms">&#x4F7F;&#x7528;&#x8868;&#x5355;</a></li>
+<li><a href="#attaching-files">&#x9644;&#x52A0;&#x6587;&#x4EF6;</a></li>
+<li><a href="#using-the-keyboard">&#x4F7F;&#x7528;&#x952E;&#x76D8;</a></li>
+<li><a href="#using-the-mouse">&#x4F7F;&#x7528;&#x9F20;&#x6807;</a></li>
+<li><a href="#scoping-selectors">&#x5143;&#x7D20;&#x4F5C;&#x7528;&#x57DF;</a></li>
+<li><a href="#waiting-for-elements">&#x7B49;&#x5F85;&#x5143;&#x7D20;</a></li>
+</ul>
+</li>
+<li><a href="#available-assertions">&#x53EF;&#x7528;&#x7684;&#x65AD;&#x8A00;</a></li>
+<li><a href="#pages">&#x9875;&#x9762;</a><ul>
+<li><a href="#generating-pages">&#x521B;&#x5EFA;&#x9875;&#x9762;</a></li>
+<li><a href="#configuring-pages">&#x914D;&#x7F6E;&#x9875;&#x9762;</a></li>
+<li><a href="#navigating-to-pages">&#x5BFC;&#x822A;&#x81F3;&#x9875;&#x9762;</a></li>
+<li><a href="#shorthand-selectors">&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;</a></li>
+<li><a href="#page-methods">&#x9875;&#x9762;&#x65B9;&#x6CD5;</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>Laravel Dusk &#x63D0;&#x4F9B;&#x4E86;&#x5BCC;&#x6709;&#x8868;&#x73B0;&#x529B;&#x3001;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x52A8;&#x5316;&#x4EE5;&#x53CA;&#x76F8;&#x5E94;&#x7684;&#x6D4B;&#x8BD5; API&#x3002;Dusk &#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; <a href="https://sites.google.com/a/chromium.org/chromedriver/home" target="_blank">ChromeDriver</a>&#xFF0C;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684;&#x673A;&#x5668;&#x4E2D;&#x5B89;&#x88C5; JDK &#x6216;&#x8005; Selenium&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x5176;&#x4ED6; Selenium &#x517C;&#x5BB9;&#x7684;&#x9A71;&#x52A8;&#x5F15;&#x64CE;&#x3002;</p>
+<p><a name="installation"></a></p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<p>&#x4F60;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#x6DFB;&#x52A0; <code>laravel/dusk</code> Composer &#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre><code>composer require laravel/dusk
+</code></pre><p>&#x5B89;&#x88C5;&#x4E86; Dusk &#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x6CE8;&#x518C; <code>Laravel\Dusk\DuskServiceProvider</code> &#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x3002;&#x7531;&#x4E8E; Dusk &#x63D0;&#x4F9B;&#x4E86;&#x767B;&#x5F55;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x9650;&#x5236; Dusk &#x7684;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x4F60;&#x7684; <code>AppServiceProvider</code> &#x4E2D;&#x4F7F;&#x7528; <code>register</code> &#x65B9;&#x6CD5;&#x6765;&#x6CE8;&#x518C;&#xFF1A;</p>
+<pre><code>use Laravel\Dusk\DuskServiceProvider;
+
+/**
+ * &#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x6CE8;&#x518C;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x3002;
+ *
+ * @return void
+ */
+public function register()
+{
+    if ($this-&gt;app-&gt;environment(&apos;local&apos;, &apos;testing&apos;)) {
+        $this-&gt;app-&gt;register(DuskServiceProvider::class);
+    }
+}
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#x8FD0;&#x884C; <code>dusk:install</code> Artisan &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>php artisan dusk:install
+</code></pre><p>&#x4F1A;&#x5728;&#x4F60;&#x7684; <code>tests</code> &#x76EE;&#x5F55;&#x4E0B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>Browser</code> &#x76EE;&#x5F55;&#xFF0C;&#x540C;&#x65F6;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x6A21;&#x7248;&#x3002;&#x7136;&#x540E;&#x5728;&#x4F60;&#x7684; <code>.env</code> &#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E; <code>APP_URL</code> &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x503C;&#x8981;&#x4E0E;&#x4F60;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x4F60;&#x5E94;&#x7528;&#x7684; URL &#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x4F7F;&#x7528; <code>dusk</code> Artisan &#x547D;&#x4EE4;&#x6765;&#x8FD0;&#x884C;&#x4F60;&#x7684;&#x6D4B;&#x8BD5;&#x3002;<code>dusk</code> &#x547D;&#x4EE4;&#x652F;&#x6301;&#x63A5;&#x53D7; <code>phpunit</code> &#x547D;&#x4EE4;&#x7684;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre><code>php artisan dusk
+</code></pre><p><a name="using-other-browsers"></a></p>
+<h3 id="&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;">&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;</h3>
+<p>Dusk &#x9ED8;&#x8BA4;&#x4F7F;&#x7528; Google Chrome &#x548C; <a href="https://sites.google.com/a/chromium.org/chromedriver/home" target="_blank">ChromeDriver</a> &#x6765;&#x8FD0;&#x884C;&#x4F60;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x6D4B;&#x8BD5;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x4F60;&#x7684; Selenium &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x4EFB;&#x4F55;&#x4F60;&#x60F3;&#x8981;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
+<p>&#x6253;&#x5F00;&#x4F60;&#x7684; <code>tests/DuskTestCase.php</code> &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x4F60;&#x5E94;&#x7528;&#x4E2D;&#x6700;&#x57FA;&#x7840;&#x7684; Dusk &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x79FB;&#x9664; <code>startChromeDriver</code> &#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x6837; Dusk &#x5C31;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x8FD0;&#x884C; ChromeDriver&#xFF1A;</p>
+<pre><code>/**
+ * &#x4E3A; Dusk &#x7684;&#x6D4B;&#x8BD5;&#x505A;&#x51C6;&#x5907;&#x3002;
+ *
+ * @beforeClass
+ * @return void
+ */
+public static function prepare()
+{
+    // static::startChromeDriver();
+}
+</code></pre><p>&#x7136;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x5730;&#x4FEE;&#x6539; <code>driver</code> &#x65B9;&#x6CD5;&#x6765;&#x8FDE;&#x63A5;&#x5230;&#x4F60;&#x6307;&#x5B9A;&#x7684; URL &#x548C; &#x7AEF;&#x53E3;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x4F60;&#x8981;&#x4FEE;&#x6539;&#x4F20;&#x9012;&#x7ED9; WebDriver &#x7684;&#x300C;desired capabilities&#x300D;&#xFF1A;</p>
+<pre><code>/**
+ * &#x521B;&#x5EFA; RemoteWebDriver &#x5B9E;&#x4F8B;&#x3002;
+ *
+ * @return \Facebook\WebDriver\Remote\RemoteWebDriver
+ */
+protected function driver()
+{
+    return RemoteWebDriver::create(
+        &apos;http://localhost:4444&apos;, DesiredCapabilities::phantomjs()
+    );
+}
+</code></pre><p><a name="getting-started"></a></p>
+<h2 id="&#x5F00;&#x59CB;">&#x5F00;&#x59CB;</h2>
+<p><a name="generating-tests"></a></p>
+<h3 id="&#x521B;&#x5EFA;&#x6D4B;&#x8BD5;">&#x521B;&#x5EFA;&#x6D4B;&#x8BD5;</h3>
+<p>&#x4F7F;&#x7528; <code>dusk:make</code> Artisan &#x547D;&#x4EE4;&#x6765;&#x521B;&#x5EFA; Dusk &#x6D4B;&#x8BD5;&#x3002;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x6D4B;&#x8BD5;&#x7C7B;&#x4F1A;&#x653E;&#x5728; <code>tests/Browser</code> &#x76EE;&#x5F55;&#xFF1A;</p>
+<pre><code>php artisan dusk:make LoginTest
+</code></pre><p><a name="running-tests"></a></p>
+<h3 id="&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;">&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;</h3>
+<p>&#x4F7F;&#x7528; <code>dusk</code> Artisan &#x547D;&#x4EE4;&#x6765;&#x8FD0;&#x884C;&#x4F60;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre><code>php artisan dusk
+</code></pre><p><code>dusk</code> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4EFB;&#x4F55;  PHPUnit &#x80FD;&#x63A5;&#x53D7;&#x7684;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x53EA;&#x5728;&#x6307;&#x5B9A; <a href="https://phpunit.de/manual/current/en/appendixes.annotations.html#appendixes.annotations.group" target="_blank">&#x5206;&#x7EC4;</a> &#x4E2D;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;:</p>
+<pre><code>php artisan dusk --group=foo
+</code></pre><h4 id="&#x624B;&#x52A8;&#x8FD0;&#x884C;-chromedriver">&#x624B;&#x52A8;&#x8FD0;&#x884C; ChromeDriver</h4>
+<p>Dusk &#x9ED8;&#x8BA4;&#x4F1A;&#x5C1D;&#x8BD5;&#x81EA;&#x52A8;&#x8FD0;&#x884C; ChromeDriver&#x3002;&#x5982;&#x679C;&#x5728;&#x4F60;&#x7279;&#x5B9A;&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C; <code>dusk</code> &#x547D;&#x4EE4;&#x4E4B;&#x524D;&#x901A;&#x8FC7;&#x624B;&#x52A8;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FD0;&#x884C; ChromeDriver&#x3002;&#x5982;&#x679C;&#x4F60;&#x9009;&#x62E9;&#x624B;&#x52A8;&#x8FD0;&#x884C; ChromeDriver&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684; <code>tests/DuskTestCase.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x6CE8;&#x91CA;&#x6389;&#x4E0B;&#x9762;&#x8FD9;&#x884C;&#xFF1A;</p>
+<pre><code>/**
+ * &#x4E3A; Dusk &#x7684;&#x6D4B;&#x8BD5;&#x505A;&#x51C6;&#x5907;&#x3002;
+ *
+ * @beforeClass
+ * @return void
+ */
+public static function prepare()
+{
+    // static::startChromeDriver();
+}
+</code></pre><p>&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x5728;&#x975E; 9515 &#x7AEF;&#x53E3;&#x8FD0;&#x884C; ChromeDriver &#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728; <code>tests/DuskTestCase.php</code> &#x4FEE;&#x6539; <code>driver</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>/**
+ * &#x521B;&#x5EFA; RemoteWebDriver &#x5B9E;&#x4F8B;&#x3002;
+ *
+ * @return \Facebook\WebDriver\Remote\RemoteWebDriver
+ */
+protected function driver()
+{
+    return RemoteWebDriver::create(
+        &apos;http://localhost:9515&apos;, DesiredCapabilities::chrome()
+    );
+}
+</code></pre><p><a name="environment-handling"></a></p>
+<h3 id="&#x73AF;&#x5883;&#x5904;&#x7406;">&#x73AF;&#x5883;&#x5904;&#x7406;</h3>
+<p>&#x5728;&#x4F60;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x521B;&#x5EFA; <code>.env.dusk.{environment}</code> &#x6587;&#x4EF6;&#x6765;&#x5F3A;&#x5236; Dusk &#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x7684;&#x73AF;&#x5883;&#x6587;&#x4EF6;&#x6765;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4EE5; <code>local</code> &#x73AF;&#x5883;&#x6765;&#x8FD0;&#x884C; <code>duck</code> &#x547D;&#x4EE4;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>.env.dusk.local</code> &#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;Dusk &#x4F1A;&#x5907;&#x4EFD;&#x4F60;&#x7684; <code>.env</code> &#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x547D;&#x540D;&#x4F60;&#x7684; Dusk &#x73AF;&#x5883;&#x6587;&#x4EF6;&#x4E3A; <code>.env</code>&#x3002;&#x4E00;&#x65E6;&#x6D4B;&#x8BD5;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x4F1A;&#x6062;&#x590D;&#x4F60;&#x7684; <code>.env</code> &#x6587;&#x4EF6;&#x3002;</p>
+<p><a name="creating-browsers"></a></p>
+<h3 id="&#x521B;&#x5EFA;&#x6D4F;&#x89C8;&#x5668;">&#x521B;&#x5EFA;&#x6D4F;&#x89C8;&#x5668;</h3>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x5199;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF0C;&#x8FD9;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x53EF;&#x4EE5;&#x9A8C;&#x8BC1;&#x6211;&#x4EEC;&#x662F;&#x5426;&#x80FD;&#x591F;&#x767B;&#x5F55;&#x7CFB;&#x7EDF;&#x3002;&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x7C7B;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x7C7B;&#xFF0C;&#x8BA9;&#x5B83;&#x53EF;&#x4EE5;&#x8DF3;&#x8F6C;&#x5230;&#x767B;&#x5F55;&#x9875;&#x9762;&#xFF0C;&#x8F93;&#x5165;&#x67D0;&#x4E9B;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#xFF0C;&#x70B9;&#x51FB; &#x300C;&#x767B;&#x5F55;&#x300D; &#x6309;&#x94AE;&#x3002;&#x4F7F;&#x7528; <code>browse</code> &#x65B9;&#x6CD5;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace Tests\Browser;
+
+use App\User;
+use Tests\DuskTestCase;
+use Laravel\Dusk\Chrome;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+
+class ExampleTest extends DuskTestCase
+{
+    use DatabaseMigrations;
+
+    /**
+     * &#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x6D4B;&#x8BD5;&#x793A;&#x4F8B;&#x3002;
+     *
+     * @return void
+     */
+    public function testBasicExample()
+    {
+        $user = factory(User::class)-&gt;create([
+            &apos;email&apos; =&gt; &apos;taylor@laravel.com&apos;,
+        ]);
+
+        $this-&gt;browse(function ($browser) use ($user) {
+            $browser-&gt;visit(&apos;/login&apos;)
+                    -&gt;type(&apos;email&apos;, $user-&gt;email)
+                    -&gt;type(&apos;password&apos;, &apos;secret&apos;)
+                    -&gt;press(&apos;Login&apos;)
+                    -&gt;assertPathIs(&apos;/home&apos;);
+        });
+    }
+}
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>browse</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x53C2;&#x6570;&#x3002; Dusk &#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x8FD9;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x4F8B;&#x6CE8;&#x5165;&#x5230;&#x56DE;&#x8C03;&#x5F53;&#x4E2D;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x4F8B;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x4E0E;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x548C;&#x65AD;&#x8A00;&#x3002;</p>
+<blockquote>
+<p>{tip} &#x8FD9;&#x4E2A;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x53EF;&#x4EE5;&#x6D4B;&#x8BD5;&#x7531; <code>make:auth</code> Artisan &#x547D;&#x4EE4;&#x6765;&#x751F;&#x6210;&#x7684;&#x767B;&#x5F55;&#x9875;&#x9762;&#x3002;</p>
+</blockquote>
+<h4 id="&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;">&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;</h4>
+<p>&#x6709;&#x65F6;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x624D;&#x80FD;&#x6B63;&#x786E;&#x5730;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x80FD;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x901A;&#x8FC7; websockets &#x901A;&#x8BAF;&#x7684;&#x5728;&#x7EBF;&#x804A;&#x5929;&#x9875;&#x9762;&#x3002;&#x8981;&#x60F3;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x7B80;&#x5355;&#x5730;&#x5728; <code>browse</code> &#x65B9;&#x6CD5;&#x7684;&#x56DE;&#x8C03;&#x4E2D;&#xFF0C;&#x7528;&#x540D;&#x5B57;&#x6765;&#x533A;&#x5206;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x4F8B;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x7ED9;&#x56DE;&#x8C03;&#x6765; &#x300C;&#x7533;&#x8BF7;&#x300D; &#x591A;&#x4E2A;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x4F8B;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre><code>$this-&gt;browse(function ($first, $second) {
+    $first-&gt;loginAs(User::find(1))
+          -&gt;visit(&apos;/home&apos;)
+          -&gt;waitForText(&apos;Message&apos;);
+
+    $second-&gt;loginAs(User::find(2))
+           -&gt;visit(&apos;/home&apos;)
+           -&gt;waitForText(&apos;Message&apos;)
+           -&gt;type(&apos;message&apos;, &apos;Hey Taylor&apos;)
+           -&gt;press(&apos;Send&apos;);
+
+    $first-&gt;waitForText(&apos;Hey Taylor&apos;)
+          -&gt;assertSee(&apos;Jeffrey Way&apos;);
+});
+</code></pre><p><a name="authentication"></a></p>
+<h3 id="&#x8BA4;&#x8BC1;">&#x8BA4;&#x8BC1;</h3>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x7ECF;&#x5E38;&#x4F1A;&#x6D4B;&#x8BD5;&#x4E00;&#x4E9B;&#x9700;&#x8981;&#x8BA4;&#x8BC1;&#x7684;&#x9875;&#x9762;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Dusk &#x7684; <code>loginAs</code> &#x65B9;&#x6CD5;&#x6765;&#x907F;&#x514D;&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x90FD;&#x53BB;&#x767B;&#x5F55;&#x9875;&#x9762;&#x767B;&#x5F55;&#x4E00;&#x6B21;&#x3002; <code>loginAs</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x7528;&#x6237; ID &#x6216;&#x8005;&#x7528;&#x6237;&#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre><code>$this-&gt;browse(function ($first, $second) {
+    $first-&gt;loginAs(User::find(1))
+          -&gt;visit(&apos;/home&apos;);
+});
+</code></pre><p><a name="interacting-with-elements"></a></p>
+<h2 id="&#x4E0E;&#x5143;&#x7D20;&#x4EA4;&#x4E92;">&#x4E0E;&#x5143;&#x7D20;&#x4EA4;&#x4E92;</h2>
+<p><a name="clicking-links"></a></p>
+<h3 id="&#x70B9;&#x51FB;&#x94FE;&#x63A5;">&#x70B9;&#x51FB;&#x94FE;&#x63A5;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x4F8B;&#x4E2D;&#x4F7F;&#x7528; <code>clickLink</code> &#x65B9;&#x6CD5;&#x6765;&#x6A21;&#x62DF;&#x70B9;&#x51FB;&#x4E00;&#x4E2A;&#x94FE;&#x63A5;&#x3002;<code>clickLink</code> &#x65B9;&#x6CD5;&#x4F1A;&#x70B9;&#x51FB;&#x4F20;&#x5165;&#x7684;&#x663E;&#x793A;&#x6587;&#x672C;&#xFF1A;</p>
+<pre><code>$browser-&gt;clickLink($linkText);
+</code></pre><blockquote>
+<p>{note} &#x8FD9;&#x65B9;&#x6CD5;&#x57FA;&#x4E8E; JQuery &#x6765;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x5982;&#x679C;&#x9875;&#x9762;&#x4E2D;&#x6CA1;&#x6709;&#x53EF;&#x7528;&#x7684; jQuery&#xFF0C;Dusk &#x4F1A;&#x81EA;&#x52A8;&#x5C06; jQuery &#x6CE8;&#x5165;&#x5230;&#x9875;&#x9762;&#x4E2D;&#x3002;&#x6240;&#x4EE5;&#x4ED6;&#x53EF;&#x80FD;&#x4F1A;&#x589E;&#x52A0;&#x6D4B;&#x8BD5;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+</blockquote>
+<p><a name="text-values-and-attributes"></a></p>
+<h3 id="&#x6587;&#x672C;&#x3001;&#x503C;&#x548C;&#x5C5E;&#x6027;">&#x6587;&#x672C;&#x3001;&#x503C;&#x548C;&#x5C5E;&#x6027;</h3>
+<h4 id="&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x503C;">&#x83B7;&#x53D6;&#x548C;&#x8BBE;&#x7F6E;&#x503C;</h4>
+<p>Dusk &#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x8BA9;&#x4F60;&#x548C;&#x5F53;&#x524D;&#x9875;&#x9762;&#x5143;&#x7D20;&#x4E2D;&#x7684;&#x663E;&#x793A;&#x6587;&#x672C;&#x3001;&#x503C;&#x548C;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x4E3E;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x60F3;&#x83B7;&#x5F97;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x5BF9;&#x5E94;&#x5143;&#x7D20;&#x7684; &#x300C;&#x503C;&#x300D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>value</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>// &#x83B7;&#x53D6;&#x503C;...
+$value = $browser-&gt;value(&apos;selector&apos;);
+
+// &#x8BBE;&#x7F6E;&#x503C;...
+$browser-&gt;value(&apos;selector&apos;, &apos;value&apos;);
+</code></pre><h4 id="&#x83B7;&#x53D6;&#x6587;&#x672C;">&#x83B7;&#x53D6;&#x6587;&#x672C;</h4>
+<p><code>text</code> &#x65B9;&#x6CD5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5143;&#x7D20;&#x7684;&#x663E;&#x793A;&#x6587;&#x672C;&#xFF1A;</p>
+<pre><code>$text = $browser-&gt;text(&apos;selector&apos;);
+</code></pre><h4 id="&#x83B7;&#x53D6;&#x5C5E;&#x6027;">&#x83B7;&#x53D6;&#x5C5E;&#x6027;</h4>
+<p><code>attribute</code> &#x65B9;&#x6CD5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code>$attribute = $browser-&gt;attribute(&apos;selector&apos;, &apos;value&apos;);
+</code></pre><p><a name="using-forms"></a></p>
+<h3 id="&#x4F7F;&#x7528;&#x8868;&#x5355;">&#x4F7F;&#x7528;&#x8868;&#x5355;</h3>
+<h4 id="&#x8F93;&#x5165;&#x503C;">&#x8F93;&#x5165;&#x503C;</h4>
+<p>Dusk &#x63D0;&#x4F9B;&#x4E86;&#x4E0E;&#x8868;&#x5355;&#x548C; input &#x5143;&#x7D20;&#x4EA4;&#x4E92;&#x7684;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x4E00;&#x4E2A;&#x5728; input &#x6846;&#x4E2D;&#x8F93;&#x5165;&#x6587;&#x672C;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>$browser-&gt;type(&apos;email&apos;, &apos;taylor@laravel.com&apos;);
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;&#x867D;&#x7136; <code>type</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4F20;&#x9012; CSS &#x9009;&#x62E9;&#x5668;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4F46;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x5F3A;&#x5236;&#x8981;&#x6C42;&#x3002;&#x5982;&#x679C;&#x4F20;&#x5165;&#x7684;&#x4E0D;&#x662F; CSS &#x9009;&#x62E9;&#x5668;&#xFF0C;Dusk &#x4F1A;&#x5C1D;&#x8BD5;&#x5339;&#x914D;&#x4F20;&#x5165;&#x503C;&#x4E0E; name &#x5C5E;&#x6027;&#x76F8;&#x7B26;&#x7684; input &#x6846;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x627E;&#x5230;&#xFF0C;&#x6700;&#x540E; Dusk &#x4F1A;&#x5C1D;&#x8BD5;&#x67E5;&#x627E;&#x5339;&#x914D;&#x4F20;&#x5165;&#x503C;&#x4E0E; name &#x5C5E;&#x6027;&#x76F8;&#x7B26;&#x7684; <code>textarea</code>&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>clear</code> &#x65B9;&#x6CD5;&#x6765; &#x300C;&#x6E05;&#x9664;&#x300D; &#x8F93;&#x5165;&#x503C;&#x3002;</p>
+<pre><code>$browser-&gt;clear(&apos;email&apos;);
+</code></pre><h4 id="&#x4E0B;&#x62C9;&#x83DC;&#x5355;">&#x4E0B;&#x62C9;&#x83DC;&#x5355;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>select</code> &#x65B9;&#x6CD5;&#x6765;&#x9009;&#x62E9;&#x4E0B;&#x6765;&#x83DC;&#x5355;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x9009;&#x9879;&#x3002;&#x7C7B;&#x4F3C;&#x4E8E; <code>type</code> &#x65B9;&#x6CD5;&#xFF0C;<code>select</code> &#x65B9;&#x6CD5;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x5B9A;&#x8981;&#x4F20;&#x5165; CSS &#x9009;&#x62E9;&#x5668;&#x3002;&#x5F53;&#x4F60;&#x4F7F;&#x7528; <code>select</code> &#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#x5E94;&#x8BE5;&#x6CE8;&#x610F;&#xFF0C;&#x4F60;&#x4F20;&#x7684;&#x503C;&#x5E94;&#x8BE5;&#x662F;&#x4F4E;&#x5C42;&#x9009;&#x9879;&#x7684;&#x503C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x663E;&#x793A;&#x7684;&#x503C;&#xFF1A;</p>
+<pre><code>$browser-&gt;select(&apos;size&apos;, &apos;Large&apos;);
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7701;&#x7565;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x6765;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>$browser-&gt;select(&apos;size&apos;);
+</code></pre><h4 id="&#x590D;&#x9009;&#x6846;">&#x590D;&#x9009;&#x6846;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>check</code> &#x65B9;&#x6CD5;&#x6765;&#x9009;&#x4E2D;&#x67D0;&#x4E2A;&#x590D;&#x9009;&#x6846;&#x3002;&#x50CF;&#x5176;&#x4ED6; input &#x76F8;&#x5173;&#x7684;&#x65B9;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x4F20;&#x5165; CSS &#x9009;&#x62E9;&#x5668;&#x3002;&#x5982;&#x679C;&#x51C6;&#x786E;&#x7684;&#x9009;&#x62E9;&#x5668;&#x6CA1;&#x6CD5;&#x627E;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;Dusk &#x4F1A;&#x641C;&#x7D22;&#x4E0E; <code>name</code> &#x5C5E;&#x6027;&#x5339;&#x914D;&#x7684;&#x590D;&#x9009;&#x6846;&#xFF1A; </p>
+<pre><code>$browser-&gt;check(&apos;terms&apos;);
+
+$browser-&gt;uncheck(&apos;terms&apos;);
+</code></pre><h4 id="&#x5355;&#x9009;&#x6309;&#x94AE;">&#x5355;&#x9009;&#x6309;&#x94AE;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>radio</code> &#x65B9;&#x6CD5;&#x6765;&#x9009;&#x62E9;&#x67D0;&#x4E2A;&#x5355;&#x9009;&#x9009;&#x9879;&#x3002;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x4F20;&#x5165; CSS &#x9009;&#x62E9;&#x5668;&#x3002;&#x5982;&#x679C;&#x51C6;&#x786E;&#x7684;&#x9009;&#x62E9;&#x5668;&#x6CA1;&#x6CD5;&#x627E;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;Dusk &#x4F1A;&#x641C;&#x7D22;&#x4E0E; <code>name</code> &#x5C5E;&#x6027;&#x6216;&#x8005; <code>value</code> &#x5C5E;&#x6027;&#x5339;&#x914D;&#x7684;&#x5355;&#x9009;&#x6309;&#x94AE;&#xFF1A;</p>
+<pre><code>$browser-&gt;radio(&apos;version&apos;, &apos;php7&apos;);
+</code></pre><p><a name="attaching-files"></a></p>
+<h3 id="&#x9644;&#x52A0;&#x6587;&#x4EF6;">&#x9644;&#x52A0;&#x6587;&#x4EF6;</h3>
+<p><code>attach</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x9644;&#x52A0;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5230; <code>file</code> input &#x6846;&#x4E2D;&#x3002;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x4F20;&#x5165; CSS &#x9009;&#x62E9;&#x5668;&#x3002;&#x5982;&#x679C;&#x51C6;&#x786E;&#x7684;&#x9009;&#x62E9;&#x5668;&#x6CA1;&#x6CD5;&#x627E;&#x5230;&#x7684;&#x65F6;&#x5019;&#xFF0C;Dusk &#x4F1A;&#x641C;&#x7D22;&#x4E0E; <code>name</code> &#x5C5E;&#x6027;&#x5339;&#x914D;&#x7684;&#x6587;&#x4EF6;&#x8F93;&#x5165;&#x6846;&#xFF1A;</p>
+<pre><code>$browser-&gt;attach(&apos;photo&apos;, __DIR__.&apos;/photos/me.png&apos;);
+</code></pre><p><a name="using-the-keyboard"></a></p>
+<h3 id="&#x4F7F;&#x7528;&#x952E;&#x76D8;">&#x4F7F;&#x7528;&#x952E;&#x76D8;</h3>
+<p><code>keys</code> &#x65B9;&#x6CD5;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x4E2D;&#x8F93;&#x5165;&#x6BD4; <code>type</code> &#x65B9;&#x6CD5;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x8F93;&#x5165;&#x5E8F;&#x5217;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8F93;&#x5165;&#x503C;&#x7684;&#x540C;&#x65F6;&#x6309;&#x4E0B;&#x6309;&#x952E;&#x3002;&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x5728;&#x8F93;&#x5165; <code>taylor</code> &#x7684;&#x540C;&#x65F6;&#xFF0C;<code>shift</code> &#x6309;&#x952E;&#x4E5F;&#x540C;&#x65F6;&#x88AB;&#x6309;&#x4E0B;&#xFF0C;&#x5F53; <code>taylor</code> &#x8F93;&#x5165;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;<code>otwell</code> &#x5219;&#x4F1A;&#x6B63;&#x5E38;&#x8F93;&#x5165;&#xFF0C;&#x4E0D;&#x4F1A;&#x6309;&#x4E0B;&#x4EFB;&#x4F55;&#x6309;&#x952E;&#xFF1A;</p>
+<pre><code>$browser-&gt;keys(&apos;selector&apos;, [&apos;{shift}&apos;, &apos;taylor&apos;], &apos;otwell&apos;);
+</code></pre><p>&#x751A;&#x81F3;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x5E94;&#x7528;&#x4E2D;&#x9009;&#x4E2D;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x4E4B;&#x540E;&#x6309;&#x4E0B; &#x300C;&#x5FEB;&#x6377;&#x952E;&#x300D;&#xFF1A;</p>
+<pre><code>$browser-&gt;keys(&apos;.app&apos;, [&apos;{command}&apos;, &apos;j&apos;]);
+</code></pre><blockquote>
+<p>{tip} &#x6240;&#x6709;&#x5305;&#x5728; <code>{}</code> &#x4E2D;&#x7684;&#x4FEE;&#x9970;&#x6309;&#x952E;&#xFF0C;&#x90FD;&#x5E94;&#x8BE5;&#x4E0E; <code>Facebook\WebDriver\WebDriverKeys</code> &#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5E38;&#x91CF;&#x4E00;&#x81F4;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <a href="https://github.com/facebook/php-webdriver/blob/community/lib/WebDriverKeys.php" target="_blank">GitHub &#x4E2D;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x7C7B;</a>&#x3002;</p>
+</blockquote>
+<p><a name="using-the-mouse"></a></p>
+<h3 id="&#x4F7F;&#x7528;&#x9F20;&#x6807;">&#x4F7F;&#x7528;&#x9F20;&#x6807;</h3>
+<h4 id="&#x70B9;&#x51FB;&#x5143;&#x7D20;">&#x70B9;&#x51FB;&#x5143;&#x7D20;</h4>
+<p><code>click</code> &#x65B9;&#x6CD5;&#x7528;&#x6765; &#x300C;&#x70B9;&#x51FB;&#x300D; &#x4E0E;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code>$browser-&gt;click(&apos;.selector&apos;);
+</code></pre><h4 id="&#x9F20;&#x6807;&#x60AC;&#x505C;">&#x9F20;&#x6807;&#x60AC;&#x505C;</h4>
+<p><code>mouseover</code> &#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5C06;&#x9F20;&#x6807;&#x60AC;&#x505C;&#x5728;&#x4E0E;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code>$browser-&gt;mouseover(&apos;.selector&apos;);
+</code></pre><h4 id="&#x62D6;&#x62FD;">&#x62D6;&#x62FD;</h4>
+<p><code>drag</code> &#x65B9;&#x6CD5;&#x7528;&#x6765;&#x62D6;&#x62FD;&#x4E0E;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90A3;&#x91CC;&#xFF1A;</p>
+<pre><code>$browser-&gt;drag(&apos;.from-selector&apos;, &apos;.to-selector&apos;);
+</code></pre><p><a name="scoping-selectors"></a></p>
+<h3 id="&#x5143;&#x7D20;&#x4F5C;&#x7528;&#x57DF;">&#x5143;&#x7D20;&#x4F5C;&#x7528;&#x57DF;</h3>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B; <strong>&#x53EA;</strong> &#x5728;&#x67D0;&#x4E2A;&#x4E0E;&#x9009;&#x62E9;&#x5668;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;&#x4E2D;&#x6267;&#x884C;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5728;&#x67D0;&#x4E2A; table &#x4E2D;&#x65AD;&#x8A00;&#x6709;&#x67D0;&#x4E9B;&#x6587;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x540C;&#x4E00;&#x4E2A; table &#x4E2D;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>with</code> &#x65B9;&#x6CD5;&#x6765;&#x8FBE;&#x5230;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#x3002;<code>with</code> &#x65B9;&#x6CD5;&#x7684;&#x56DE;&#x8C03;&#x53C2;&#x6570;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x4F5C;&#x7528;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x539F;&#x59CB;&#x5143;&#x7D20;&#x4E0A;:</p>
+<pre><code>$browser-&gt;with(&apos;.table&apos;, function ($table) {
+    $table-&gt;assertSee(&apos;Hello World&apos;)
+          -&gt;clickLink(&apos;Delete&apos;);
+});
+</code></pre><p><a name="waiting-for-elements"></a></p>
+<h3 id="&#x7B49;&#x5F85;&#x5143;&#x7D20;">&#x7B49;&#x5F85;&#x5143;&#x7D20;</h3>
+<p>&#x5728;&#x6D4B;&#x8BD5;&#x5E94;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E;&#x7ECF;&#x5E38;&#x4F1A;&#x7528;&#x5230; JavaScript&#x3002;&#x6240;&#x4EE5;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x5728;&#x5F00;&#x59CB;&#x4E4B;&#x524D; &#x300C;&#x7B49;&#x5F85;&#x300D; &#x67D0;&#x4E9B;&#x5143;&#x7D20;&#x6216;&#x8005;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x5728;&#x6D4B;&#x8BD5;&#x4E2D;&#x662F;&#x6709;&#x6548;&#x53EF;&#x7528;&#x7684;&#x3002;Dusk &#x8BA9;&#x8FD9;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#x3002;&#x4F7F;&#x7528;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x7B49;&#x5F85;&#x9875;&#x9762;&#x5143;&#x7D20;&#x5B8C;&#x5168;&#x663E;&#x793A;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x7ED9;&#x5B9A;&#x7684; JavaScript &#x8868;&#x8FBE;&#x5F0F;&#x8FD4;&#x56DE; <code>true</code> &#x7684;&#x65F6;&#x5019;&#x624D;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<h4 id="&#x7B49;&#x5F85;">&#x7B49;&#x5F85;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x6682;&#x505C;&#x6307;&#x5B9A;&#x6BEB;&#x79D2;&#x6570;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>pause</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>$browser-&gt;pause(1000);
+</code></pre><h4 id="&#x7B49;&#x5F85;&#x9009;&#x62E9;&#x5668;&#x5143;&#x7D20;">&#x7B49;&#x5F85;&#x9009;&#x62E9;&#x5668;&#x5143;&#x7D20;</h4>
+<p><code>waitFor</code> &#x65B9;&#x6CD5;&#x7528;&#x6765;&#x6682;&#x505C;&#x6D4B;&#x8BD5;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x4E0E; CSS &#x9009;&#x62E9;&#x5668;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;&#x663E;&#x793A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x3002;&#x5728;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x4E4B;&#x524D;&#xFF0C;&#x9ED8;&#x8BA4;&#x6700;&#x591A;&#x6682;&#x505C; 5 &#x79D2;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x7ED9;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>// &#x6700;&#x591A;&#x7B49;&#x5F85;&#x8FD9;&#x4E2A;&#x5143;&#x7D20; 5 &#x79D2;...
+$browser-&gt;waitFor(&apos;.selector&apos;);
+
+// &#x6700;&#x591A;&#x7B49;&#x5F85;&#x8FD9;&#x4E2A;&#x5143;&#x7D20; 1 &#x79D2;...
+$browser-&gt;waitFor(&apos;.selector&apos;, 1);
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x7B49;&#x5F85;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#x76F4;&#x5230;&#x8D85;&#x65F6;&#x90FD;&#x8FD8;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x627E;&#x4E0D;&#x5230;&#xFF1A;</p>
+<pre><code>$browser-&gt;waitUntilMissing(&apos;.selector&apos;);
+
+$browser-&gt;waitUntilMissing(&apos;.selector&apos;, 1);
+</code></pre><h4 id="&#x53EF;&#x7528;&#x5143;&#x7D20;&#x7684;&#x4F5C;&#x7528;&#x57DF;">&#x53EF;&#x7528;&#x5143;&#x7D20;&#x7684;&#x4F5C;&#x7528;&#x57DF;</h4>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x7B49;&#x5F85;&#x4E0E;&#x7ED9;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x5339;&#x914D;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x7136;&#x540E;&#x4E0E;&#x8FD9;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x7B49;&#x5F85;&#x67D0;&#x4E2A;&#x6A21;&#x6001;&#x7A97;&#x53E3;&#x53EF;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6A21;&#x6001;&#x7A97;&#x53E3;&#x4E2D;&#x70B9;&#x51FB; &#x300C;OK&#x300D; &#x6309;&#x94AE;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>whenAvailable</code> &#x65B9;&#x6CD5;&#x3002;&#x6240;&#x6709;&#x95ED;&#x5305;&#x4E2D;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x9488;&#x5BF9;&#x8FD9;&#x4E2A;&#x539F;&#x59CB;&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre><code>$browser-&gt;whenAvailable(&apos;.modal&apos;, function ($modal) {
+    $modal-&gt;assertSee(&apos;Hello World&apos;)
+          -&gt;press(&apos;OK&apos;);
+});
+</code></pre><h4 id="&#x7B49;&#x5F85;&#x6587;&#x672C;">&#x7B49;&#x5F85;&#x6587;&#x672C;</h4>
+<p><code>waitForText</code> &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x7B49;&#x5F85;&#x6307;&#x5B9A;&#x6587;&#x672C;&#xFF0C;&#x76F4;&#x5230;&#x663E;&#x793A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x4E3A;&#x6B62;&#xFF1A;</p>
+<pre><code>// &#x6700;&#x591A;&#x7B49;&#x5F85;&#x8FD9;&#x4E2A;&#x6587;&#x672C;&#x663E;&#x793A; 5 &#x79D2;...
+$browser-&gt;waitForText(&apos;Hello World&apos;);
+
+// &#x6700;&#x591A;&#x7B49;&#x5F85;&#x8FD9;&#x4E2A;&#x6587;&#x672C;&#x663E;&#x793A; 1 &#x79D2;...
+$browser-&gt;waitForText(&apos;Hello World&apos;, 1);
+</code></pre><h4 id="&#x7B49;&#x5F85;&#x8D85;&#x94FE;&#x63A5;">&#x7B49;&#x5F85;&#x8D85;&#x94FE;&#x63A5;</h4>
+<p><code>waitForLink</code> &#x65B9;&#x6CD5;&#x7528;&#x6765;&#x7B49;&#x5F85;&#x6307;&#x5B9A;&#x94FE;&#x63A5;&#x6587;&#x672C;&#xFF0C;&#x76F4;&#x5230;&#x94FE;&#x63A5;&#x6587;&#x672C;&#x663E;&#x793A;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x4E3A;&#x6B62;&#xFF1A;</p>
+<pre><code>// &#x6700;&#x591A;&#x7B49;&#x5F85;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5; 5 &#x79D2;...
+$browser-&gt;waitForLink(&apos;Create&apos;);
+
+// &#x6700;&#x591A;&#x7B49;&#x5F85;&#x8FD9;&#x4E2A;&#x94FE;&#x63A5; 1 &#x79D2;...
+$browser-&gt;waitForLink(&apos;Create&apos;, 1);
+</code></pre><h4 id="&#x7B49;&#x5F85;-javascript-&#x8868;&#x8FBE;&#x5F0F;">&#x7B49;&#x5F85; JavaScript &#x8868;&#x8FBE;&#x5F0F;</h4>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x6682;&#x505C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x7684;&#x6267;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x6307;&#x5B9A;&#x7684; JavaScript &#x8868;&#x8FBE;&#x5F0F;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4E3A; <code>true</code>&#x3002;&#x4F7F;&#x7528; <code>waitUntil</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5F88;&#x5BB9;&#x6613;&#x505A;&#x5230;&#x8FD9;&#x4E00;&#x70B9;&#x3002;&#x4F20;&#x9012;&#x8868;&#x8FBE;&#x5F0F;&#x7ED9;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x5305;&#x62EC; <code>return</code> &#x5173;&#x952E;&#x8BCD;&#x6216;&#x8005;&#x7ED3;&#x675F;&#x5206;&#x53F7;&#xFF1A;</p>
+<pre><code>// &#x6700;&#x591A;&#x82B1; 5 &#x79D2;&#x7B49;&#x5F85;&#x8868;&#x8FBE;&#x5F0F;&#x6210;&#x7ACB;...
+$browser-&gt;waitUntil(&apos;App.dataLoaded&apos;);
+
+$browser-&gt;waitUntil(&apos;App.data.servers.length &gt; 0&apos;);
+
+// &#x6700;&#x591A;&#x82B1; 1 &#x79D2;&#x7B49;&#x5F85;&#x8868;&#x8FBE;&#x5F0F;&#x6210;&#x7ACB;...
+$browser-&gt;waitUntil(&apos;App.data.servers.length &gt; 0&apos;, 1);
+</code></pre><p><a name="available-assertions"></a></p>
+<h2 id="&#x53EF;&#x7528;&#x7684;&#x65AD;&#x8A00;">&#x53EF;&#x7528;&#x7684;&#x65AD;&#x8A00;</h2>
+<p>Dusk &#x4E3A;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x3002;&#x6240;&#x6709;&#x7684;&#x65AD;&#x8A00;&#x65B9;&#x6CD5;&#x90FD;&#x8BB0;&#x5F55;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8868;&#x683C;&#x4E2D;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Assertion</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$browser-&gt;assertTitle($title)</code></td>
+<td>&#x65AD;&#x8A00;&#x9875;&#x9762;&#x6807;&#x9898;&#x7B26;&#x5408;&#x6307;&#x5B9A;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertTitleContains($title)</code></td>
+<td>&#x65AD;&#x8A00;&#x9875;&#x9762;&#x6807;&#x9898;&#x5305;&#x542B;&#x6307;&#x5B9A;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertPathIs(&apos;/home&apos;)</code></td>
+<td>&#x65AD;&#x8A00;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x7B26;&#x5408;&#x6307;&#x5B9A;&#x8DEF;&#x5F84;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertHasCookie($name)</code></td>
+<td>&#x65AD;&#x8A00;&#x5B58;&#x5728;&#x6307;&#x5B9A; Cookie&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertCookieValue($name, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A; Cookie &#x4E3A;&#x6307;&#x5B9A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertPlainCookieValue($name, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x4E00;&#x4E2A;&#x672A;&#x52A0;&#x5BC6;&#x7684; Cookie &#x4E3A;&#x6307;&#x5B9A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertSee($text)</code></td>
+<td>&#x65AD;&#x8A00;&#x9875;&#x9762;&#x4E2D;&#x5B58;&#x5728;&#x6307;&#x5B9A;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertDontSee($text)</code></td>
+<td>&#x65AD;&#x8A00;&#x9875;&#x9762;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x6307;&#x5B9A;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertSeeIn($selector, $text)</code></td>
+<td>&#x65AD;&#x8A00;&#x9009;&#x62E9;&#x5668;&#x4E2D;&#x5B58;&#x5728;&#x6307;&#x5B9A;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertDontSeeIn($selector, $text)</code></td>
+<td>&#x65AD;&#x8A00;&#x9009;&#x62E9;&#x5668;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x6307;&#x5B9A;&#x6587;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertSeeLink($linkText)</code></td>
+<td>&#x65AD;&#x8A00;&#x9875;&#x9762;&#x4E2D;&#x5B58;&#x5728;&#x6307;&#x5B9A;&#x94FE;&#x63A5;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertDontSeeLink($linkText)</code></td>
+<td>&#x65AD;&#x8A00;&#x9875;&#x9762;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x6307;&#x5B9A;&#x94FE;&#x63A5;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertInputValue($field, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x8F93;&#x5165;&#x6846;&#x4E3A;&#x6307;&#x5B9A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertInputValueIsNot($field, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x8F93;&#x5165;&#x6846;&#x4E0D;&#x4E3A;&#x6307;&#x5B9A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertChecked($field)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x590D;&#x9009;&#x6846;&#x88AB;&#x9009;&#x4E2D;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertNotChecked($field)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x590D;&#x9009;&#x6846;&#x6CA1;&#x6709;&#x88AB;&#x9009;&#x4E2D;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertRadioSelected($field, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x5355;&#x9009;&#x6309;&#x94AE;&#x88AB;&#x9009;&#x4E2D;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertRadioNotSelected($field, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x5355;&#x9009;&#x6309;&#x94AE;&#x6CA1;&#x6709;&#x88AB;&#x9009;&#x4E2D;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertSelected($field, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x9009;&#x4E2D;&#x4E86;&#x6307;&#x5B9A;&#x9009;&#x9879;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertNotSelected($field, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x6307;&#x5B9A;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x6CA1;&#x6709;&#x9009;&#x4E2D;&#x4E86;&#x6307;&#x5B9A;&#x9009;&#x9879;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertValue($selector, $value)</code></td>
+<td>&#x65AD;&#x8A00;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5143;&#x7D20;&#x4E3A;&#x6307;&#x5B9A;&#x503C;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertVisible($selector)</code></td>
+<td>&#x65AD;&#x8A00;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5143;&#x7D20;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$browser-&gt;assertMissing($selector)</code></td>
+<td>&#x65AD;&#x8A00;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5143;&#x7D20;&#x662F;&#x4E0D;&#x53EF;&#x89C1;&#x7684;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p><a name="pages"></a></p>
+<h2 id="&#x9875;&#x9762;">&#x9875;&#x9762;</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x6D4B;&#x8BD5;&#x6709;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684;&#x52A8;&#x4F5C;&#x9700;&#x8981;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002; &#x8FD9;&#x5F88;&#x5BB9;&#x6613;&#x8BA9;&#x4F60;&#x7684;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x53D8;&#x5F97;&#x96BE;&#x8BFB;&#xFF0C;&#x5E76;&#x4E14;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#x3002;&#x9875;&#x9762;&#x5141;&#x8BB8;&#x4F60;&#x5B9A;&#x4E49;&#x8BED;&#x4E49;&#x5316;&#x7684;&#x52A8;&#x4F5C;&#x884C;&#x4E3A;&#xFF0C;&#x7136;&#x540E;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x7ED9;&#x5B9A;&#x9875;&#x9762;&#x4E2D;&#x4F7F;&#x7528;&#x5355;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x9875;&#x9762;&#x4E5F;&#x5141;&#x8BB8;&#x4F60;&#x4E3A;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x6216;&#x8005;&#x5355;&#x4E2A;&#x9875;&#x9762;&#x5B9A;&#x4E49;&#x7B80;&#x5199;&#x7684;&#x516C;&#x5171;&#x9009;&#x62E9;&#x5668;&#x3002;</p>
+<p><a name="generating-pages"></a></p>
+<h3 id="&#x521B;&#x5EFA;&#x9875;&#x9762;">&#x521B;&#x5EFA;&#x9875;&#x9762;</h3>
+<p>&#x4F7F;&#x7528; <code>dusk:page</code> Artisan &#x547D;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x9875;&#x9762;&#x5BF9;&#x8C61;&#x3002;&#x6240;&#x6709;&#x7684;&#x9875;&#x9762;&#x5BF9;&#x8C61;&#x4F1A;&#x5B58;&#x653E;&#x5728; <code>tests/Browser/Pages</code> &#x76EE;&#x5F55;&#x4E2D;&#xFF1A;</p>
+<pre><code>php artisan dusk:page Login
+</code></pre><p><a name="configuring-pages"></a></p>
+<h3 id="&#x914D;&#x7F6E;&#x9875;&#x9762;">&#x914D;&#x7F6E;&#x9875;&#x9762;</h3>
+<p>&#x9875;&#x9762;&#x9ED8;&#x8BA4;&#x62E5;&#x6709; 3 &#x4E2A;&#x65B9;&#x6CD5;&#xFF1A; <code>url</code>&#xFF0C; <code>assert</code> &#x548C; <code>elements</code>&#x3002; &#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5148;&#x8BE6;&#x8FF0; <code>url</code> &#x548C; <code>assert</code> &#x65B9;&#x6CD5;&#x3002;<code>elements</code> &#x65B9;&#x6CD5;&#x5C06;&#x4F1A; <a href="#shorthand-selectors">&#x5728;&#x4E0B;&#x9762;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;</a>&#x3002;</p>
+<h4 id="url-&#x65B9;&#x6CD5;"><code>url</code> &#x65B9;&#x6CD5;</h4>
+<p><code>url</code> &#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x8868;&#x793A;&#x9875;&#x9762; URL &#x7684;&#x8DEF;&#x5F84;&#x3002; Dusk &#x5C06;&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A; URL &#x6765;&#x5BFC;&#x822A;&#x5230;&#x5177;&#x4F53;&#x9875;&#x9762;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x5F97;&#x5F53;&#x524D;&#x9875;&#x9762; URL
+ *
+ * @return string
+ */
+public function url()
+{
+    return &apos;/login&apos;;
+}
+</code></pre><h4 id="assert-&#x65B9;&#x6CD5;"><code>assert</code> &#x65B9;&#x6CD5;</h4>
+<p><code>assert</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4F5C;&#x51FA;&#x4EFB;&#x4F55;&#x65AD;&#x8A00;&#x6765;&#x9A8C;&#x8BC1;&#x6D4F;&#x89C8;&#x5668;&#x662F;&#x5426;&#x5728;&#x7ED9;&#x5B9A;&#x9875;&#x9762;&#x4E0A;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5E76;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x6765;&#x505A;&#x51FA;&#x8FD9;&#x4E9B;&#x65AD;&#x8A00;&#x3002;&#x8FD9;&#x4E9B;&#x65AD;&#x8A00;&#x4F1A;&#x5728;&#x4F60;&#x6D4F;&#x89C8;&#x5230;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code>/**
+ * &#x65AD;&#x8A00;&#x6D4F;&#x89C8;&#x5668;&#x662F;&#x5426;&#x6B63;&#x5728;&#x7ED9;&#x5B9A;&#x9875;&#x9762;&#x3002;
+ *
+ * @return void
+ */
+public function assert(Browser $browser)
+{
+    $browser-&gt;assertPathIs($this-&gt;url());
+}
+</code></pre><p><a name="navigating-to-pages"></a></p>
+<h3 id="&#x5BFC;&#x822A;&#x81F3;&#x9875;&#x9762;">&#x5BFC;&#x822A;&#x81F3;&#x9875;&#x9762;</h3>
+<p>&#x4E00;&#x65E6;&#x9875;&#x9762;&#x914D;&#x7F6E;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>visit</code> &#x65B9;&#x6CD5;&#x5BFC;&#x822A;&#x81F3;&#x9875;&#x9762;&#xFF1A;</p>
+<pre><code>use Tests\Browser\Pages\Login;
+
+$browser-&gt;visit(new Login);
+</code></pre><p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x5728;&#x6307;&#x5B9A;&#x9875;&#x9762;&#x4E86;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x7684;&#x53EA;&#x662F; &#x300C;&#x52A0;&#x8F7D;&#x300D; &#x5F53;&#x524D;&#x9875;&#x9762;&#x7684;&#x9009;&#x62E9;&#x5668;&#x548C;&#x65B9;&#x6CD5;&#x5230;&#x5F53;&#x524D;&#x6D4B;&#x8BD5;&#x4E2D;&#x6765;&#x3002;&#x5E38;&#x89C1;&#x7684;&#x4F8B;&#x5B50;&#x6709;&#xFF1A;&#x5F53;&#x4F60;&#x6309;&#x4E0B;&#x4E00;&#x4E2A;&#x6309;&#x94AE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x4F1A;&#x88AB;&#x91CD;&#x5B9A;&#x5411;&#x81F3;&#x6307;&#x5B9A;&#x9875;&#x9762;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x5BFC;&#x822A;&#x81F3;&#x6307;&#x5B9A;&#x9875;&#x9762;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>on</code> &#x65B9;&#x6CD5;&#x6765;&#x52A0;&#x8F7D;&#x9875;&#x9762;&#xFF1A;</p>
+<pre><code>use Tests\Browser\Pages\CreatePlaylist;
+
+$browser-&gt;visit(&apos;/dashboard&apos;)
+        -&gt;clickLink(&apos;Create Playlist&apos;)
+        -&gt;on(new CreatePlaylist)
+        -&gt;assertSee(&apos;@create&apos;);
+</code></pre><p><a name="shorthand-selectors"></a></p>
+<h3 id="&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;">&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;</h3>
+<p><code>elements</code> &#x65B9;&#x6CD5;&#x5141;&#x8BB8;&#x4F60;&#x4E3A;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x4EFB;&#x4F55; CSS &#x9009;&#x62E9;&#x5668;&#x5B9A;&#x4E49;&#x7B80;&#x5355;&#x6613;&#x8BB0;&#x7684;&#x7B80;&#x5199;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x4E3A;&#x5E94;&#x7528;&#x767B;&#x5F55;&#x9875;&#x4E2D;&#x7684; <code>email</code> &#x8F93;&#x5165;&#x6846;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7B80;&#x5199;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x9875;&#x9762;&#x7684;&#x5143;&#x7D20;&#x7B80;&#x5199;&#x3002;
+ *
+ * @return array
+ */
+public function elements()
+{
+    return [
+        &apos;@email&apos; =&gt; &apos;input[name=email]&apos;,
+    ];
+}
+</code></pre><p>&#x73B0;&#x5728;&#x4F60;&#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x7B80;&#x5199;&#x6765;&#x4EE3;&#x66FF;&#x4E4B;&#x524D;&#x9875;&#x9762;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5B8C;&#x6574; CSS &#x9009;&#x62E9;&#x5668;&#xFF1A;</p>
+<pre><code>$browser-&gt;type(&apos;@email&apos;, &apos;taylor@laravel.com&apos;);
+</code></pre><h4 id="&#x5168;&#x5C40;&#x7684;&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;">&#x5168;&#x5C40;&#x7684;&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;</h4>
+<p>&#x5B89;&#x88C5; Dusk &#x4E4B;&#x540E;&#xFF0C;<code>Page</code> &#x57FA;&#x7C7B;&#x5B58;&#x653E;&#x5728;&#x4F60;&#x7684; <code>tests/Browser/Pages</code> &#x76EE;&#x5F55;&#x3002;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A; <code>siteElements</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x5168;&#x5C40;&#x7684;&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x4F60;&#x5E94;&#x7528;&#x4E2D;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x5168;&#x5C40;&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;&#x4E86;&#xFF1A;</p>
+<pre><code>/**
+ * &#x83B7;&#x53D6;&#x7AD9;&#x70B9;&#x5168;&#x5C40;&#x7684;&#x9009;&#x62E9;&#x5668;&#x7B80;&#x5199;&#x3002;.
+ *
+ * @return array
+ */
+public static function siteElements()
+{
+    return [
+        &apos;@element&apos; =&gt; &apos;#selector&apos;,
+    ];
+}
+</code></pre><p><a name="page-methods"></a></p>
+<h3 id="&#x9875;&#x9762;&#x65B9;&#x6CD5;">&#x9875;&#x9762;&#x65B9;&#x6CD5;</h3>
+<p>&#x5904;&#x7406;&#x9875;&#x9762;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x7684;&#x9ED8;&#x8BA4;&#x65B9;&#x6CD5;&#x4E4B;&#x5916;&#xFF0C;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x5728;&#x6574;&#x4E2A;&#x6D4B;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x4E00;&#x4E0B;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x97F3;&#x4E50;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#x3002;&#x5728;&#x5E94;&#x7528;&#x4E2D;&#x90FD;&#x53EF;&#x80FD;&#x7528;&#x5230;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x521B;&#x5EFA;&#x5217;&#x8868;&#x3002;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x6BCF;&#x4E00;&#x9875;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x7C7B;&#x4E2D;&#x90FD;&#x91CD;&#x5199;&#x4E00;&#x904D;&#x521B;&#x5EFA;&#x64AD;&#x653E;&#x5217;&#x8868;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x7684;&#x9875;&#x9762;&#x7C7B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>createPlaylist</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace Tests\Browser\Pages;
+
+use Laravel\Dusk\Browser;
+
+class Dashboard extends Page
+{
+    // &#x5176;&#x4ED6;&#x9875;&#x9762;&#x65B9;&#x6CD5;...
+
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x64AD;&#x653E;&#x5217;&#x8868;&#x3002;
+     *
+     * @param  \Laravel\Dusk\Browser  $browser
+     * @param  string  $name
+     * @return void
+     */
+    public function createPlaylist(Browser $browser, $name)
+    {
+        $browser-&gt;type(&apos;name&apos;, $name)
+                -&gt;check(&apos;share&apos;)
+                -&gt;press(&apos;Create Playlist&apos;);
+    }
+}
+</code></pre><p>&#x4E00;&#x65E6;&#x65B9;&#x6CD5;&#x88AB;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x4F7F;&#x7528;&#x5230;&#x8BE5;&#x9875;&#x7684;&#x6D4B;&#x8BD5;&#x4E2D;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E86;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x4F8B;&#x4F1A;&#x81EA;&#x52A8;&#x4F20;&#x9012;&#x7ED9;&#x9875;&#x9762;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>use Tests\Browser\Pages\Dashboard;
+
+$browser-&gt;visit(new Dashboard)
+        -&gt;createPlaylist(&apos;My Playlist&apos;)
+        -&gt;assertSee(&apos;My Playlist&apos;);
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="11-2 HTTP 测试.html" class="navigation navigation-prev " aria-label="Previous page: 11-2 HTTP 测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="11-4 数据库测试.html" class="navigation navigation-next " aria-label="Next page: 11-4 数据库测试">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"11-3 浏览器测试 Dusk","level":"1.12.3","depth":2,"next":{"title":"11-4 数据库测试","level":"1.12.4","depth":2,"path":"Chapter11/11-4 数据库测试.md","ref":"Chapter11/11-4 数据库测试.md","articles":[]},"previous":{"title":"11-2 HTTP 测试","level":"1.12.2","depth":2,"path":"Chapter11/11-2 HTTP 测试.md","ref":"Chapter11/11-2 HTTP 测试.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter11/11-3 浏览器测试 Dusk.md","mtime":"2018-10-29T12:40:15.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

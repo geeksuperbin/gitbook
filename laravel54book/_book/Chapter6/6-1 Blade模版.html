@@ -1,0 +1,1692 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6-1 Blade模版 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6-2 本地化.html" />
+    
+    
+    <link rel="prev" href="../6 前端.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Chapter5/5-1 路由.html">
+            
+                <a href="../Chapter5/5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Chapter5/5-2 中间件.html">
+            
+                <a href="../Chapter5/5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Chapter5/5-3 CSRF保护.html">
+            
+                <a href="../Chapter5/5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Chapter5/5-4 控制器.html">
+            
+                <a href="../Chapter5/5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../Chapter5/5-5 请求.html">
+            
+                <a href="../Chapter5/5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../Chapter5/5-6 响应.html">
+            
+                <a href="../Chapter5/5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../Chapter5/5-7 视图.html">
+            
+                <a href="../Chapter5/5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../Chapter5/5-8 Session.html">
+            
+                <a href="../Chapter5/5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../Chapter5/5-9 表单验证.html">
+            
+                <a href="../Chapter5/5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="6-1 Blade模版.html">
+            
+                <a href="6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="6-2 本地化.html">
+            
+                <a href="6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="6-3 前端指南.html">
+            
+                <a href="6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="6-4 编辑资源Mix.html">
+            
+                <a href="6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Chapter8/8-1 Artisan命令行.html">
+            
+                <a href="../Chapter8/8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Chapter8/8-2 广播系统.html">
+            
+                <a href="../Chapter8/8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Chapter8/8-3 缓存系统.html">
+            
+                <a href="../Chapter8/8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Chapter8/8-4 集合.html">
+            
+                <a href="../Chapter8/8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Chapter8/8-5 错误与日志.html">
+            
+                <a href="../Chapter8/8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Chapter8/8-6 事件系统.html">
+            
+                <a href="../Chapter8/8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Chapter8/8-7 文件存储.html">
+            
+                <a href="../Chapter8/8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Chapter8/8-8 辅助函数.html">
+            
+                <a href="../Chapter8/8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Chapter8/8-9 邮件发送.html">
+            
+                <a href="../Chapter8/8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Chapter8/8-10 消息通知.html">
+            
+                <a href="../Chapter8/8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../Chapter8/8-11 扩展包开发.html">
+            
+                <a href="../Chapter8/8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../Chapter8/8-12 队列.html">
+            
+                <a href="../Chapter8/8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../Chapter8/8-13 任务调度.html">
+            
+                <a href="../Chapter8/8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6-1 Blade模版</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;-blade-&#x6A21;&#x677F;&#x5F15;&#x64CE;">Laravel &#x7684; Blade &#x6A21;&#x677F;&#x5F15;&#x64CE;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#template-inheritance">&#x6A21;&#x677F;&#x7EE7;&#x627F;</a><ul>
+<li><a href="#defining-a-layout">&#x5B9A;&#x4E49;&#x9875;&#x9762;&#x5E03;&#x5C40;</a></li>
+<li><a href="#extending-a-layout">&#x7EE7;&#x627F;&#x9875;&#x9762;&#x5E03;&#x5C40;</a></li>
+</ul>
+</li>
+<li><a href="#components-and-slots">&#x7EC4;&#x4EF6; &amp; Slots</a></li>
+<li><a href="#displaying-data">&#x663E;&#x793A;&#x6570;&#x636E;</a><ul>
+<li><a href="#blade-and-javascript-frameworks">Blade &amp; JavaScript &#x6846;&#x67B6;</a></li>
+</ul>
+</li>
+<li><a href="#control-structures">&#x63A7;&#x5236;&#x7ED3;&#x6784;</a><ul>
+<li><a href="#if-statements">If &#x8BED;&#x53E5;</a></li>
+<li><a href="#loops">&#x5FAA;&#x73AF;</a></li>
+<li><a href="#the-loop-variable">&#x5FAA;&#x73AF;&#x53D8;&#x91CF;</a></li>
+<li><a href="#comments">&#x6CE8;&#x91CA;</a></li>
+<li><a href="#php">PHP</a></li>
+</ul>
+</li>
+<li><a href="#including-sub-views">&#x5F15;&#x5165;&#x5B50;&#x89C6;&#x56FE;</a><ul>
+<li><a href="#rendering-views-for-collections">&#x4E3A;&#x96C6;&#x5408;&#x6E32;&#x67D3;&#x89C6;&#x56FE;</a></li>
+</ul>
+</li>
+<li><a href="#stacks">&#x5806;&#x6808;</a></li>
+<li><a href="#service-injection">&#x670D;&#x52A1;&#x6CE8;&#x5165;</a></li>
+<li><a href="#extending-blade">&#x6269;&#x5145; Blade</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>Blade &#x662F; Laravel &#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x65E2;&#x7B80;&#x5355;&#x53C8;&#x5F3A;&#x5927;&#x7684;&#x6A21;&#x677F;&#x5F15;&#x64CE;&#x3002;&#x548C;&#x5176;&#x4ED6;&#x6D41;&#x884C;&#x7684; PHP &#x6A21;&#x677F;&#x5F15;&#x64CE;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;Blade &#x5E76;&#x4E0D;&#x9650;&#x5236;&#x4F60;&#x5728;&#x89C6;&#x56FE;&#x4E2D;&#x4F7F;&#x7528;&#x539F;&#x751F; PHP &#x4EE3;&#x7801;&#x3002;&#x6240;&#x6709; Blade &#x89C6;&#x56FE;&#x6587;&#x4EF6;&#x90FD;&#x5C06;&#x88AB;&#x7F16;&#x8BD1;&#x6210;&#x539F;&#x751F;&#x7684; PHP &#x4EE3;&#x7801;&#x5E76;&#x7F13;&#x5B58;&#x8D77;&#x6765;&#xFF0C;&#x9664;&#x975E;&#x5B83;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#xFF0C;&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740; Blade &#x57FA;&#x672C;&#x4E0A;&#x4E0D;&#x4F1A;&#x7ED9;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x589E;&#x52A0;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x8D1F;&#x62C5;&#x3002;Blade &#x89C6;&#x56FE;&#x6587;&#x4EF6;&#x4F7F;&#x7528; <code>.blade.php</code> &#x6269;&#x5C55;&#x540D;&#xFF0C;&#x4E00;&#x822C;&#x88AB;&#x5B58;&#x653E;&#x5728; <code>resources/views</code> &#x76EE;&#x5F55;&#x3002;</p>
+<p><a name="template-inheritance"></a></p>
+<h2 id="&#x6A21;&#x677F;&#x7EE7;&#x627F;">&#x6A21;&#x677F;&#x7EE7;&#x627F;</h2>
+<p><a name="defining-a-layout"></a></p>
+<h3 id="&#x5B9A;&#x4E49;&#x9875;&#x9762;&#x5E03;&#x5C40;">&#x5B9A;&#x4E49;&#x9875;&#x9762;&#x5E03;&#x5C40;</h3>
+<p>Blade &#x7684;&#x4E24;&#x4E2A;&#x4E3B;&#x8981;&#x4F18;&#x70B9;&#x662F; <em>&#x6A21;&#x677F;&#x7EE7;&#x627F;</em> &#x548C; <em>&#x533A;&#x5757;</em> &#x3002; </p>
+<p>&#x4E3A;&#x65B9;&#x4FBF;&#x5F00;&#x59CB;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5148;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x4E0A;&#x624B;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x4E00;&#x4E2A; &quot;master&quot; &#x7684;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x3002;&#x56E0;&#x4E3A;&#x5927;&#x591A;&#x6570; web &#x5E94;&#x7528;&#x662F;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x9875;&#x9762;&#x4E2D;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x5B9A;&#x4E49;&#x8FD9;&#x4E2A; Blade &#x5E03;&#x5C40;&#x89C6;&#x56FE;&#xFF1A;</p>
+<pre><code>&lt;!-- &#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x4E8E; resources/views/layouts/app.blade.php --&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x540D;&#x79F0; - @yield(&apos;title&apos;)&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        @section(&apos;sidebar&apos;)
+            &#x8FD9;&#x662F; master &#x7684;&#x4FA7;&#x8FB9;&#x680F;&#x3002;
+        @show
+
+        &lt;div class=&quot;container&quot;&gt;
+            @yield(&apos;content&apos;)
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>&#x5982;&#x4F60;&#x6240;&#x89C1;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x5178;&#x578B;&#x7684; HTML &#x8BED;&#x6CD5;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F; <code>@section</code> &#x548C; <code>@yield</code> &#x547D;&#x4EE4;&#x3002; <code>@section</code> &#x547D;&#x4EE4;&#x6B63;&#x5982;&#x5176;&#x540D;&#x5B57;&#x6240;&#x6697;&#x793A;&#x7684;&#x4E00;&#x6837;&#x662F;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x89C6;&#x56FE;&#x533A;&#x5757;&#x7684;&#xFF0C;&#x800C;  <code>@yield</code> &#x6307;&#x4EE4;&#x662F;&#x7528;&#x6765;&#x663E;&#x793A;&#x6307;&#x5B9A;&#x533A;&#x5757;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x597D;&#x4E86;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;&#x6B64;&#x5E03;&#x5C40;&#x7684;&#x5B50;&#x9875;&#x9762;&#x3002;</p>
+<p><a name="extending-a-layout"></a></p>
+<h3 id="&#x7EE7;&#x627F;&#x9875;&#x9762;&#x5E03;&#x5C40;">&#x7EE7;&#x627F;&#x9875;&#x9762;&#x5E03;&#x5C40;</h3>
+<p>&#x5F53;&#x5B9A;&#x4E49;&#x5B50;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Blade &#x63D0;&#x4F9B;&#x7684; <code>@extends</code> &#x547D;&#x4EE4;&#x6765;&#x4E3A;&#x5B50;&#x9875;&#x9762;&#x6307;&#x5B9A;&#x5176;&#x6240; &#x300C;&#x7EE7;&#x627F;&#x300D; &#x7684;&#x9875;&#x9762;&#x5E03;&#x5C40;&#x3002; &#x5F53;&#x5B50;&#x9875;&#x9762;&#x7EE7;&#x627F;&#x5E03;&#x5C40;&#x4E4B;&#x540E;&#xFF0C;&#x5373;&#x53EF;&#x4F7F;&#x7528; <code>@section</code> &#x547D;&#x4EE4;&#x5C06;&#x5185;&#x5BB9;&#x6CE8;&#x5165;&#x4E8E;&#x5E03;&#x5C40;&#x7684; <code>@section</code> &#x533A;&#x5757;&#x4E2D;&#x3002;&#x5207;&#x8BB0;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;&#x5E03;&#x5C40;&#x4E2D;&#x4F7F;&#x7528; <code>@yield</code> &#x7684;&#x5730;&#x65B9;&#x5C06;&#x4F1A;&#x663E;&#x793A;&#x8FD9;&#x4E9B;&#x533A;&#x5757;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>&lt;!-- Stored in resources/views/child.blade.php --&gt;
+
+@extends(&apos;layouts.app&apos;)
+
+@section(&apos;title&apos;, &apos;Page Title&apos;)
+
+@section(&apos;sidebar&apos;)
+    @@parent
+
+    &lt;p&gt;This is appended to the master sidebar.&lt;/p&gt;
+@endsection
+
+@section(&apos;content&apos;)
+    &lt;p&gt;This is my body content.&lt;/p&gt;
+@endsection
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;<code>sidebar</code> &#x533A;&#x5757;&#x5229;&#x7528;&#x4E86; <code>@@parent</code> &#x547D;&#x4EE4;&#x8FFD;&#x52A0;&#x5E03;&#x5C40;&#x4E2D;&#x7684; sidebar &#x533A;&#x5757;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x4F7F;&#x7528;&#x5219;&#x4F1A;&#x8986;&#x76D6;&#x6389;&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002; <code>@@parent</code> &#x547D;&#x4EE4;&#x4F1A;&#x5728;&#x89C6;&#x56FE;&#x88AB;&#x6E32;&#x67D3;&#x65F6;&#x66FF;&#x6362;&#x4E3A;&#x5E03;&#x5C40;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x8DEF;&#x7531;&#x4E2D;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x8F85;&#x52A9;&#x51FD;&#x6570; <code>view</code> &#x6765;&#x8FD4;&#x56DE; Blade &#x89C6;&#x56FE;&#xFF1A;</p>
+<pre><code>Route::get(&apos;blade&apos;, function () {
+    return view(&apos;child&apos;);
+});
+</code></pre><p><a name="components-and-slots"></a></p>
+<h2 id="&#x7EC4;&#x4EF6;--slots">&#x7EC4;&#x4EF6; &amp; Slots</h2>
+<p>&#x7EC4;&#x4EF6;&#x548C; slots &#x80FD;&#x63D0;&#x4F9B;&#x7C7B;&#x4F3C;&#x4E8E;&#x533A;&#x5757;&#x548C;&#x5E03;&#x5C40;&#x7684;&#x597D;&#x5904;&#xFF1B;&#x4E0D;&#x8FC7;&#xFF0C;&#x4E00;&#x4E9B;&#x4EBA;&#x53EF;&#x80FD;&#x53D1;&#x73B0;&#x7EC4;&#x4EF6;&#x548C; slots &#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x4F1A;&#x5728;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x4E2D;&#x91CD;&#x590D;&#x4F7F;&#x7528;&#x7684;&#x300C;&#x8B66;&#x544A;&#x300D;&#x7EC4;&#x4EF6;:</p>
+<pre><code>&lt;!-- /resources/views/alert.blade.php --&gt;
+
+&lt;div class=&quot;alert alert-danger&quot;&gt;
+    {{ $slot }} 
+&lt;/div&gt;
+</code></pre><p><code>{% raw %}{{ $slot }} {% endraw %}</code> &#x53D8;&#x91CF;&#x5C06;&#x5305;&#x542B;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x6CE8;&#x5165;&#x5230;&#x7EC4;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>@component</code> &#x6307;&#x4EE4;&#x6765;&#x6784;&#x9020;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code>@component(&apos;alert&apos;)
+    &lt;strong&gt;&#x54C7;&#xFF01;&lt;/strong&gt; &#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF01;
+@endcomponent
+</code></pre><p>&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x5B83;&#x5BF9;&#x4E8E;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x591A;&#x4E2A; slots &#x662F;&#x975E;&#x5E38;&#x6709;&#x5E2E;&#x52A9;&#x7684;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x6211;&#x4EEC;&#x7684;&#x8B66;&#x544A;&#x7EC4;&#x4EF6;&#xFF0C;&#x8BA9;&#x5B83;&#x652F;&#x6301;&#x6CE8;&#x5165;&#x4E00;&#x4E2A;&#x300C;&#x6807;&#x9898;&#x300D;&#x3002; &#x5DF2;&#x547D;&#x540D;&#x7684; slots &#x5C06;&#x663E;&#x793A;&#x300C;&#x76F8;&#x5BF9;&#x5E94;&#x300D;&#x540D;&#x79F0;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x503C;:</p>
+<pre><code>&lt;!-- /resources/views/alert.blade.php --&gt;
+
+&lt;div class=&quot;alert alert-danger&quot;&gt;
+    &lt;div class=&quot;alert-title&quot;&gt;{{ $title }} &lt;/div&gt;
+
+    {{ $slot }} 
+&lt;/div&gt;
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>@slot</code> &#x6307;&#x4EE4;&#x6CE8;&#x5165;&#x5185;&#x5BB9;&#x5230;&#x5DF2;&#x547D;&#x540D;&#x7684; slot &#x4E2D;&#xFF0C;&#x4EFB;&#x4F55;&#x6CA1;&#x6709;&#x88AB; <code>@slot</code> &#x6307;&#x4EE4;&#x5305;&#x88F9;&#x4F4F;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684; <code>$slot</code> &#x53D8;&#x91CF;:</p>
+<pre><code>@component(&apos;alert&apos;)
+    @slot(&apos;title&apos;)
+        &#x62D2;&#x7EDD;
+    @endslot
+
+    &#x4F60;&#x6CA1;&#x6709;&#x6743;&#x9650;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x8D44;&#x6E90;&#xFF01;
+@endcomponent
+</code></pre><h4 id="&#x4F20;&#x9012;&#x989D;&#x5916;&#x7684;&#x6570;&#x636E;&#x7ED9;&#x7EC4;&#x4EF6;">&#x4F20;&#x9012;&#x989D;&#x5916;&#x7684;&#x6570;&#x636E;&#x7ED9;&#x7EC4;&#x4EF6;</h4>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4F20;&#x9012;&#x989D;&#x5916;&#x7684;&#x6570;&#x636E;&#x7ED9;&#x7EC4;&#x4EF6;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9; <code>@component</code> &#x6307;&#x4EE4;&#x3002;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x5C06;&#x4EE5;&#x53D8;&#x91CF;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;&#x6A21;&#x7248;:</p>
+<pre><code>@component(&apos;alert&apos;, [&apos;foo&apos; =&gt; &apos;bar&apos;])
+    ...
+@endcomponent
+</code></pre><p><a name="displaying-data"></a></p>
+<h2 id="&#x663E;&#x793A;&#x6570;&#x636E;">&#x663E;&#x793A;&#x6570;&#x636E;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x300C;&#x4E2D;&#x62EC;&#x53F7;&#x300D; &#x5305;&#x4F4F;&#x53D8;&#x91CF;&#x4EE5;&#x663E;&#x793A;&#x4F20;&#x9012;&#x81F3; Blade &#x89C6;&#x56FE;&#x7684;&#x6570;&#x636E;&#x3002;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<pre><code>Route::get(&apos;greeting&apos;, function () {
+    return view(&apos;welcome&apos;, [&apos;name&apos; =&gt; &apos;Samantha&apos;]);
+});
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x8FD9;&#x6837;&#x663E;&#x793A; <code>name</code> &#x53D8;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>Hello, {% raw %}{{ $name }} {% endraw %}.
+</code></pre><p>&#x5F53;&#x7136;&#x4E5F;&#x4E0D;&#x662F;&#x8BF4;&#x4E00;&#x5B9A;&#x53EA;&#x80FD;&#x663E;&#x793A;&#x4F20;&#x9012;&#x81F3;&#x89C6;&#x56FE;&#x7684;&#x53D8;&#x91CF;&#x5185;&#x5BB9;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x663E;&#x793A; PHP &#x51FD;&#x6570;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728; Blade &#x4E2D;&#x663E;&#x793A;&#x4EFB;&#x610F;&#x7684; PHP &#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>The current UNIX timestamp is {% raw %}{{ time() }} {% endraw %}.
+</code></pre><blockquote>
+<p>{note} Blade <code>{{ }}</code> &#x8BED;&#x6CD5;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528; PHP <code>htmlspecialchars</code> &#x51FD;&#x6570;&#x6765;&#x907F;&#x514D; XSS &#x653B;&#x51FB;&#x3002;</p>
+</blockquote>
+<h4 id="&#x5F53;&#x6570;&#x636E;&#x5B58;&#x5728;&#x65F6;&#x8F93;&#x51FA;">&#x5F53;&#x6570;&#x636E;&#x5B58;&#x5728;&#x65F6;&#x8F93;&#x51FA;</h4>
+<p>&#x6709;&#x65F6;&#x5019;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x5E76;&#x4E0D;&#x786E;&#x5B9A;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x5B9A;&#x4E49;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x50CF;&#x8FD9;&#x6837;&#x7684;&#x5197;&#x957F; PHP &#x4EE3;&#x7801;&#x8868;&#x8FBE;&#xFF1A;</p>
+<pre><code>{% raw %}{{ isset($name) ? $name : &apos;Default&apos; }} {% endraw %}
+</code></pre><p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;Blade &#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x4FBF;&#x6377;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4EE3;&#x66FF;&#x8FD9;&#x79CD;&#x4E09;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#x8868;&#x8FBE;&#x5F0F;&#xFF1A;</p>
+<pre><code>{% raw %}{{ $name or &apos;Default&apos; }} {% endraw %}
+</code></pre><p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5982;&#x679C; <code>$name</code> &#x53D8;&#x91CF;&#x5B58;&#x5728;&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x5C06;&#x88AB;&#x663E;&#x793A;&#x51FA;&#x6765;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x663E;&#x793A; <code>Default</code> &#x3002;</p>
+<h4 id="&#x663E;&#x793A;&#x672A;&#x8F6C;&#x4E49;&#x8FC7;&#x7684;&#x6570;&#x636E;">&#x663E;&#x793A;&#x672A;&#x8F6C;&#x4E49;&#x8FC7;&#x7684;&#x6570;&#x636E;</h4>
+<p>&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Blade &#x6A21;&#x677F;&#x4E2D;&#x7684; <code>{% raw %}{{ }} {% endraw %}</code> &#x8868;&#x8FBE;&#x5F0F;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528; PHP <code>htmlspecialchars</code> &#x51FD;&#x6570;&#x6765;&#x8F6C;&#x4E49;&#x6570;&#x636E;&#x4EE5;&#x907F;&#x514D; XSS &#x7684;&#x653B;&#x51FB;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#x4F60;&#x7684;&#x6570;&#x636E;&#x88AB;&#x8F6C;&#x4E49;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>Hello, {!! $name !!}.
+</code></pre><blockquote>
+<p>{note} &#x8981;&#x975E;&#x5E38;&#x5C0F;&#x5FC3;&#x5904;&#x7406;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x603B;&#x662F;&#x4F7F;&#x7528; <code>{{  }}</code> &#x8BED;&#x6CD5;&#x6765;&#x8F6C;&#x4E49;&#x5185;&#x5BB9;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x7684; HTML &#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x907F;&#x514D; XSS &#x653B;&#x51FB;&#x3002;</p>
+</blockquote>
+<p><a name="blade-and-javascript-frameworks"></a></p>
+<h3 id="blade--javascript-&#x6846;&#x67B6;">Blade &amp; JavaScript &#x6846;&#x67B6;</h3>
+<p>&#x7531;&#x4E8E;&#x5F88;&#x591A; JavaScript &#x6846;&#x67B6;&#x90FD;&#x4F7F;&#x7528;&#x82B1;&#x62EC;&#x53F7;&#x6765;&#x8868;&#x660E;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>@</code> &#x7B26;&#x53F7;&#x6765;&#x544A;&#x77E5; Blade &#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4F60;&#x9700;&#x8981;&#x4FDD;&#x7559;&#x8FD9;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x539F;&#x59CB;&#x5F62;&#x6001;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>&lt;h1&gt;Laravel&lt;/h1&gt;
+
+Hello, @{{ name }} .
+</code></pre><p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;<code>@</code> &#x7B26;&#x53F7;&#x6700;&#x7EC8;&#x4F1A;&#x88AB; Blade &#x5F15;&#x64CE;&#x5254;&#x9664;&#xFF0C;&#x5E76;&#x4E14; <code>{% raw %}{{ name }} {% endraw %}</code> &#x8868;&#x8FBE;&#x5F0F;&#x4F1A;&#x88AB;&#x539F;&#x6837;&#x7684;&#x4FDD;&#x7559;&#x4E0B;&#x6765;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5141;&#x8BB8;&#x4F60;&#x7684; JavaScript &#x6846;&#x67B6;&#x6765;&#x4F7F;&#x7528;&#x5B83;&#x4E86;&#x3002;</p>
+<h4 id="verbatim-&#x6307;&#x4EE4;"><code>@verbatim</code> &#x6307;&#x4EE4;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x5927;&#x7247;&#x533A;&#x5757;&#x4E2D;&#x5C55;&#x793A; JavaScript &#x53D8;&#x91CF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>@verbatim</code> &#x6307;&#x4EE4;&#x6765;&#x5305;&#x88F9; HTML &#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x6837;&#x4F60;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x4E3A;&#x6BCF;&#x4E2A;&#x9700;&#x8981;&#x89E3;&#x6790;&#x7684;&#x53D8;&#x91CF;&#x589E;&#x52A0; <code>@</code> &#x7B26;&#x53F7;&#x524D;&#x7F00;&#x4E86;&#xFF1A;</p>
+<pre><code>@verbatim
+    &lt;div class=&quot;container&quot;&gt;
+        Hello, {% raw %}{{ name }} {% endraw %}.
+    &lt;/div&gt;
+@endverbatim
+</code></pre><p><a name="control-structures"></a></p>
+<h2 id="&#x63A7;&#x5236;&#x7ED3;&#x6784;">&#x63A7;&#x5236;&#x7ED3;&#x6784;</h2>
+<p>&#x9664;&#x4E86;&#x6A21;&#x677F;&#x7EE7;&#x627F;&#x4E0E;&#x6570;&#x636E;&#x663E;&#x793A;&#x7684;&#x529F;&#x80FD;&#x4EE5;&#x5916;&#xFF0C;Blade &#x4E5F;&#x7ED9;&#x4E00;&#x822C;&#x7684; PHP &#x7ED3;&#x6784;&#x63A7;&#x5236;&#x8BED;&#x53E5;&#x63D0;&#x4F9B;&#x4E86;&#x65B9;&#x4FBF;&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x6BD4;&#x5982;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x548C;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x3002;&#x8FD9;&#x4E9B;&#x7F29;&#x5199;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x4E3A;&#x6E05;&#x6670;&#x7B80;&#x660E;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x4F7F;&#x7528; PHP &#x7684;&#x63A7;&#x5236;&#x7ED3;&#x6784;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x4FDD;&#x6301;&#x4E0E; PHP &#x8BED;&#x53E5;&#x7684;&#x76F8;&#x4F3C;&#x6027;&#x3002;</p>
+<p><a name="if-statements"></a></p>
+<h3 id="if-&#x8BED;&#x53E5;">If &#x8BED;&#x53E5;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>@if</code>, <code>@elseif</code>, <code>@else</code> &#x53CA;  <code>@endif</code> &#x6307;&#x4EE4;&#x6784;&#x5EFA; <code>if</code> &#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x7684;&#x529F;&#x80FD;&#x7B49;&#x540C;&#x4E8E;&#x5728; PHP &#x4E2D;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>@if (count($records) === 1)
+    &#x6211;&#x6709;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF01;
+@elseif (count($records) &gt; 1)
+    &#x6211;&#x6709;&#x591A;&#x6761;&#x8BB0;&#x5F55;&#xFF01;
+@else
+    &#x6211;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x8BB0;&#x5F55;&#xFF01;
+@endif
+</code></pre><p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;Blade &#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A; <code>@unless</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>@unless (Auth::check())
+    &#x4F60;&#x5C1A;&#x672A;&#x767B;&#x5F55;&#x3002;
+@endunless
+</code></pre><p><a name="loops"></a></p>
+<h3 id="&#x5FAA;&#x73AF;">&#x5FAA;&#x73AF;</h3>
+<p>&#x9664;&#x4E86;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x5916;&#xFF0C;Blade &#x4E5F;&#x652F;&#x6301; PHP &#x7684;&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x7684;&#x529F;&#x80FD;&#x7B49;&#x540C;&#x4E8E;&#x5728; PHP &#x4E2D;&#x7684;&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code>@for ($i = 0; $i &lt; 10; $i++)
+    &#x76EE;&#x524D;&#x7684;&#x503C;&#x4E3A; {% raw %}{{ $i }} {% endraw %}
+@endfor
+
+@foreach ($users as $user)
+    &lt;p&gt;&#x6B64;&#x7528;&#x6237;&#x4E3A; {{ $user-&gt;id }} &lt;/p&gt;
+@endforeach
+
+@forelse ($users as $user)
+    &lt;li&gt;{{ $user-&gt;name }} &lt;/li&gt;
+@empty
+    &lt;p&gt;&#x6CA1;&#x6709;&#x7528;&#x6237;&lt;/p&gt;
+@endforelse
+
+@while (true)
+    &lt;p&gt;&#x6211;&#x6C38;&#x8FDC;&#x90FD;&#x5728;&#x8DD1;&#x5FAA;&#x73AF;&#x3002;&lt;/p&gt;
+@endwhile
+</code></pre><blockquote>
+<p>{tip} &#x5F53;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="#the-loop-variable">&#x5FAA;&#x73AF;&#x53D8;&#x91CF;</a> &#x6765;&#x83B7;&#x53D6;&#x5FAA;&#x73AF;&#x4E2D;&#x6709;&#x4EF7;&#x503C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x5FAA;&#x73AF;&#x4E2D;&#x7684;&#x9996;&#x6B21;&#x6216;&#x6700;&#x540E;&#x7684;&#x8FED;&#x4EE3;&#x3002;</p>
+</blockquote>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4E5F;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x7ED3;&#x675F;&#x5FAA;&#x73AF;&#x6216;&#x8005;&#x8DF3;&#x51FA;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x7684;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>@foreach ($users as $user)
+    @if ($user-&gt;type == 1)
+        @continue
+    @endif
+
+    &lt;li&gt;{{ $user-&gt;name }} &lt;/li&gt;
+
+    @if ($user-&gt;number == 5)
+        @break
+    @endif
+@endforeach
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x58F0;&#x660E;&#x5305;&#x542B;&#x6761;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x5728;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#x4E2D;&#x8FBE;&#x5230;&#x4E2D;&#x65AD;:</p>
+<pre><code>@foreach ($users as $user)
+    @continue($user-&gt;type == 1)
+
+    &lt;li&gt;{{ $user-&gt;name }} &lt;/li&gt;
+
+    @break($user-&gt;number == 5)
+@endforeach
+</code></pre><p><a name="the-loop-variable"></a></p>
+<h3 id="&#x5FAA;&#x73AF;&#x53D8;&#x91CF;">&#x5FAA;&#x73AF;&#x53D8;&#x91CF;</h3>
+<p>&#x5F53;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x5FAA;&#x73AF;&#x5185;&#x8BBF;&#x95EE; <code>$loop</code> &#x53D8;&#x91CF;&#x3002;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6BD4;&#x5982;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x662F;&#x4E0D;&#x662F;&#x9996;&#x6B21;&#x8FED;&#x4EE3;&#xFF0C;&#x53C8;&#x6216;&#x8005;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x662F;&#x4E0D;&#x662F;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x8FED;&#x4EE3;&#xFF1A;</p>
+<pre><code>@foreach ($users as $user)
+    @if ($loop-&gt;first)
+        This is the first iteration.
+    @endif
+
+    @if ($loop-&gt;last)
+        This is the last iteration.
+    @endif
+
+    &lt;p&gt;This is user {{ $user-&gt;id }} &lt;/p&gt;
+@endforeach
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x5D4C;&#x5957;&#x7684;&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>$loop</code> &#x53D8;&#x91CF;&#x7684; <code>parent</code> &#x5C5E;&#x6027;&#x6765;&#x83B7;&#x53D6;&#x7236;&#x5FAA;&#x73AF;&#x4E2D;&#x7684; <code>$loop</code> &#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code>@foreach ($users as $user)
+    @foreach ($user-&gt;posts as $post)
+        @if ($loop-&gt;parent-&gt;first)
+            This is first iteration of the parent loop.
+        @endif
+    @endforeach
+@endforeach
+</code></pre><p><code>$loop</code> &#x53D8;&#x91CF;&#x4E5F;&#x5305;&#x542B;&#x4E86;&#x5176;&#x5B83;&#x5404;&#x79CD;&#x6709;&#x7528;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5C5E;&#x6027;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$loop-&gt;index</code></td>
+<td>&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x6240;&#x8FED;&#x4EE3;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x8D77;&#x59CB;&#x4E3A; 0&#x3002;</td>
+</tr>
+<tr>
+<td><code>$loop-&gt;iteration</code></td>
+<td>&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x6570;&#xFF0C;&#x8D77;&#x59CB;&#x4E3A; 1&#x3002;</td>
+</tr>
+<tr>
+<td><code>$loop-&gt;remaining</code></td>
+<td>&#x5FAA;&#x73AF;&#x4E2D;&#x8FED;&#x4EE3;&#x5269;&#x4F59;&#x7684;&#x6570;&#x91CF;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$loop-&gt;count</code></td>
+<td>&#x88AB;&#x8FED;&#x4EE3;&#x9879;&#x7684;&#x603B;&#x6570;&#x91CF;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$loop-&gt;first</code></td>
+<td>&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x662F;&#x5426;&#x662F;&#x5FAA;&#x73AF;&#x4E2D;&#x7684;&#x9996;&#x6B21;&#x8FED;&#x4EE3;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$loop-&gt;last</code></td>
+<td>&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x662F;&#x5426;&#x662F;&#x5FAA;&#x73AF;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x8FED;&#x4EE3;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$loop-&gt;depth</code></td>
+<td>&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#x7684;&#x5D4C;&#x5957;&#x6DF1;&#x5EA6;&#x3002;</td>
+</tr>
+<tr>
+<td><code>$loop-&gt;parent</code></td>
+<td>&#x5F53;&#x5728;&#x5D4C;&#x5957;&#x7684;&#x5FAA;&#x73AF;&#x5185;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5230;&#x7236;&#x5FAA;&#x73AF;&#x4E2D;&#x7684; $loop &#x53D8;&#x91CF;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p><a name="comments"></a></p>
+<h3 id="&#x6CE8;&#x91CA;">&#x6CE8;&#x91CA;</h3>
+<p>Blade &#x4E5F;&#x5141;&#x8BB8;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x5B9A;&#x4E49;&#x6CE8;&#x91CA;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x8DDF; HTML &#x7684;&#x6CE8;&#x91CA;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;Blade &#x6CE8;&#x91CA;&#x4E0D;&#x4F1A;&#x88AB;&#x5305;&#x542B;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8FD4;&#x56DE;&#x7684; HTML &#x5185;&#xFF1A;</p>
+<pre><code>{% raw %}{{-- &#x6B64;&#x6CE8;&#x91CA;&#x5C06;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x6E32;&#x67D3;&#x540E;&#x7684; HTML --}} {% endraw %}
+</code></pre><p><a name="php"></a></p>
+<h3 id="php">PHP</h3>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x5BF9;&#x4E8E;&#x4F60;&#x5728;&#x89C6;&#x56FE;&#x6587;&#x4EF6;&#x4E2D;&#x5D4C;&#x5165; php &#x4EE3;&#x7801;&#x662F;&#x975E;&#x5E38;&#x6709;&#x5E2E;&#x52A9;&#x7684;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x7684;&#x6A21;&#x7248;&#x4E2D;&#x4F7F;&#x7528; Blade &#x63D0;&#x4F9B;&#x7684; <code>@php</code> &#x6307;&#x4EE4;&#x6765;&#x6267;&#x884C;&#x4E00;&#x6BB5;&#x7EAF; PHP &#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>@php
+    //
+@endphp
+</code></pre><blockquote>
+<p>{tip} &#x867D;&#x7136; Blade &#x63D0;&#x4F9B;&#x4E86;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x9891;&#x7E41;&#x5730;&#x4F7F;&#x7528;&#x4E5F;&#x540C;&#x65F6;&#x610F;&#x5473;&#x7740;&#x4F60;&#x5728;&#x4F60;&#x7684;&#x6A21;&#x7248;&#x4E2D;&#x5D4C;&#x5165;&#x4E86;&#x592A;&#x591A;&#x7684;&#x903B;&#x8F91;&#x4E86;&#x3002;</p>
+</blockquote>
+<p><a name="including-sub-views"></a></p>
+<h2 id="&#x5F15;&#x5165;&#x5B50;&#x89C6;&#x56FE;">&#x5F15;&#x5165;&#x5B50;&#x89C6;&#x56FE;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Blade &#x7684; <code>@include</code> &#x547D;&#x4EE4;&#x6765;&#x5F15;&#x5165;&#x4E00;&#x4E2A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x6240;&#x6709;&#x5728;&#x7236;&#x89C6;&#x56FE;&#x7684;&#x53EF;&#x7528;&#x53D8;&#x91CF;&#x5728;&#x88AB;&#x5F15;&#x5165;&#x7684;&#x89C6;&#x56FE;&#x4E2D;&#x90FD;&#x662F;&#x53EF;&#x7528;&#x7684;&#x3002;</p>
+<pre><code>&lt;div&gt;
+    @include(&apos;shared.errors&apos;)
+
+    &lt;form&gt;
+        &lt;!-- Form Contents --&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+</code></pre><p>&#x5C3D;&#x7BA1;&#x88AB;&#x5F15;&#x5165;&#x7684;&#x89C6;&#x56FE;&#x4F1A;&#x7EE7;&#x627F;&#x7236;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x989D;&#x5916;&#x7684;&#x6570;&#x7EC4;&#x6570;&#x636E;&#x81F3;&#x88AB;&#x5F15;&#x5165;&#x7684;&#x9875;&#x9762;&#xFF1A;</p>
+<pre><code>@include(&apos;view.name&apos;, [&apos;some&apos; =&gt; &apos;data&apos;])
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5C1D;&#x8BD5;&#x4F7F;&#x7528; <code>@include</code> &#x53BB;&#x5F15;&#x7528;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x89C6;&#x56FE;&#xFF0C;Laravel &#x4F1A;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5F15;&#x5165;&#x4E00;&#x4E2A;&#x89C6;&#x56FE;&#xFF0C;&#x800C;&#x4F60;&#x53C8;&#x65E0;&#x6CD5;&#x786E;&#x8BA4;&#x8FD9;&#x4E2A;&#x89C6;&#x56FE;&#x5B58;&#x5728;&#x4E0E;&#x5426;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>@includeIf</code> &#x6307;&#x4EE4;:</p>
+<pre><code>@includeIf(&apos;view.name&apos;, [&apos;some&apos; =&gt; &apos;data&apos;])
+</code></pre><blockquote>
+<p>{note} &#x8BF7;&#x907F;&#x514D;&#x5728; Blade &#x89C6;&#x56FE;&#x4E2D;&#x4F7F;&#x7528; <code>__DIR__</code> &#x53CA; <code>__FILE__</code> &#x5E38;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x4F1A;&#x5F15;&#x7528;&#x89C6;&#x56FE;&#x88AB;&#x7F13;&#x5B58;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<p><a name="rendering-views-for-collections"></a></p>
+<h3 id="&#x4E3A;&#x96C6;&#x5408;&#x6E32;&#x67D3;&#x89C6;&#x56FE;">&#x4E3A;&#x96C6;&#x5408;&#x6E32;&#x67D3;&#x89C6;&#x56FE;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Blade &#x7684; <code>@each</code> &#x547D;&#x4EE4;&#x5C06;&#x5FAA;&#x73AF;&#x53CA;&#x5F15;&#x5165;&#x7ED3;&#x5408;&#x6210;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>@each(&apos;view.name&apos;, $jobs, &apos;job&apos;)
+</code></pre><p>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x5B50;&#x89C6;&#x56FE;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4F60;&#x8981;&#x8FED;&#x4EE3;&#x7684;&#x6570;&#x7EC4;&#x6216;&#x96C6;&#x5408;&#xFF0C;&#x800C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x8FED;&#x4EE3;&#x65F6;&#x88AB;&#x5206;&#x914D;&#x81F3;&#x5B50;&#x89C6;&#x56FE;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x8FED;&#x4EE3;&#x4E00;&#x4E2A; <code>jobs</code> &#x6570;&#x7EC4;&#xFF0C;&#x901A;&#x5E38;&#x5B50;&#x89C6;&#x56FE;&#x4F1A;&#x4F7F;&#x7528; <code>job</code> &#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x6765;&#x8BBF;&#x95EE; job &#x4FE1;&#x606F;&#x3002;&#x5B50;&#x89C6;&#x56FE;&#x4F7F;&#x7528; <code>key</code> &#x53D8;&#x91CF;&#x4F5C;&#x4E3A;&#x5F53;&#x524D;&#x8FED;&#x4EE3;&#x7684;&#x952E;&#x540D;&#x3002;</p>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x5230; <code>@each</code> &#x547D;&#x4EE4;&#x3002;&#x5F53;&#x9700;&#x8981;&#x8FED;&#x4EE3;&#x7684;&#x6570;&#x7EC4;&#x4E3A;&#x7A7A;&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x63D0;&#x4F9B;&#x7684;&#x89C6;&#x56FE;&#x6765;&#x6E32;&#x67D3;&#x3002;</p>
+<pre><code>@each(&apos;view.name&apos;, $jobs, &apos;job&apos;, &apos;view.empty&apos;)
+</code></pre><p><a name="stacks"></a></p>
+<h2 id="&#x5806;&#x6808;">&#x5806;&#x6808;</h2>
+<p>Blade &#x4E5F;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x5176;&#x5B83;&#x89C6;&#x56FE;&#x6216;&#x5E03;&#x5C40;&#x4E2D;&#x4E3A;&#x5DF2;&#x7ECF;&#x547D;&#x540D;&#x7684;&#x5806;&#x6808;&#x4E2D;&#x538B;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x5728;&#x5B50;&#x89C6;&#x56FE;&#x4E2D;&#x5F15;&#x5165;&#x5FC5;&#x5907;&#x7684; JavaScript &#x7C7B;&#x5E93;&#x65F6;&#x5C24;&#x5176;&#x6709;&#x7528;&#xFF1A;</p>
+<pre><code>@push(&apos;scripts&apos;)
+    &lt;script src=&quot;/example.js&quot;&gt;&lt;/script&gt;
+@endpush
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x591A;&#x6B21;&#x538B;&#x5165;&#x5806;&#x6808;&#xFF0C;&#x901A;&#x8FC7; <code>@stack</code> &#x547D;&#x4EE4;&#x4E2D;&#x952E;&#x5165;&#x5806;&#x6808;&#x7684;&#x540D;&#x5B57;&#x6765;&#x6E32;&#x67D3;&#x6574;&#x4E2A;&#x5806;&#x6808;&#xFF1A;</p>
+<pre><code>&lt;head&gt;
+    &lt;!-- Head Contents --&gt;
+
+    @stack(&apos;scripts&apos;)
+&lt;/head&gt;
+</code></pre><p><a name="service-injection"></a></p>
+<h2 id="&#x670D;&#x52A1;&#x6CE8;&#x5165;">&#x670D;&#x52A1;&#x6CE8;&#x5165;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>@inject</code> &#x547D;&#x4EE4;&#x6765;&#x4ECE; Larvel <a href="../docs/%7B%7Bversion%7D%7D%20/container">service container</a> &#x4E2D;&#x53D6;&#x51FA;&#x670D;&#x52A1;&#x3002;&#x4F20;&#x9012;&#x7ED9; <code>@inject</code> &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x7F6E;&#x653E;&#x8BE5;&#x670D;&#x52A1;&#x7684;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;&#x4F60;&#x60F3;&#x8981;&#x89E3;&#x6790;&#x7684;&#x670D;&#x52A1;&#x7684;&#x7C7B;&#x6216;&#x662F;&#x63A5;&#x53E3;&#x7684;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code>@inject(&apos;metrics&apos;, &apos;App\Services\MetricsService&apos;)
+
+&lt;div&gt;
+    Monthly Revenue: {{ $metrics-&gt;monthlyRevenue() }} .
+&lt;/div&gt;
+</code></pre><p><a name="extending-blade"></a></p>
+<h2 id="&#x62D3;&#x5C55;-blade">&#x62D3;&#x5C55; Blade</h2>
+<p>Blade &#x751A;&#x81F3;&#x5141;&#x8BB8;&#x4F60;&#x4F7F;&#x7528; <code>directive</code> &#x65B9;&#x6CD5;&#x6765;&#x6CE8;&#x518C;&#x81EA;&#x5DF1;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x5F53; Blade &#x7F16;&#x8BD1;&#x5668;&#x9047;&#x5230;&#x8BE5;&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x5E26;&#x53C2;&#x6570;&#x8C03;&#x7528;&#x63D0;&#x4F9B;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x628A;&#x6307;&#x5B9A;&#x7684; <code>$var</code> &#x683C;&#x5F0F;&#x5316;&#x7684; <code>@datetime($var)</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Providers;
+
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\ServiceProvider;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * &#x8FD0;&#x884C;&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x540E;&#x7684;&#x542F;&#x52A8;&#x8FDB;&#x7A0B;&#x3002;
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Blade::directive(&apos;datetime&apos;, function ($expression) {
+            return &quot;&lt;?php echo ($expression)-&gt;format(&apos;m/d/Y H:i&apos;); ?&gt;&quot;;
+        });
+    }
+
+    /**
+     * &#x5728;&#x5BB9;&#x5668;&#x6CE8;&#x518C;&#x7ED1;&#x5B9A;&#x3002;
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}
+</code></pre><p>&#x5982;&#x4F60;&#x6240;&#x89C1;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x94FE;&#x5F0F;&#x8C03;&#x7528; <code>format</code> &#x65B9;&#x6CD5;&#x7684;&#x8868;&#x8FF0;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x5230;&#x6307;&#x4EE4;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;&#x6700;&#x7EC8;&#x8BE5;&#x6307;&#x4EE4;&#x751F;&#x6210;&#x4E86;&#x7684; PHP &#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&lt;?php echo $var-&gt;format(&apos;m/d/Y H:i&apos;); ?&gt;
+</code></pre><blockquote>
+<p>{note} &#x5728;&#x66F4;&#x65B0; Blade &#x6307;&#x4EE4;&#x7684;&#x903B;&#x8F91;&#x540E;&#xFF0C;&#x4F60;&#x5C06;&#x9700;&#x8981;&#x5220;&#x9664;&#x6240;&#x6709;&#x5DF2;&#x7F13;&#x5B58;&#x7684; Blade &#x89C6;&#x56FE;&#xFF0C;&#x4F7F;&#x7528; <code>view:clear</code> Artisan &#x547D;&#x4EE4;&#x6765;&#x6E05;&#x9664;&#x88AB;&#x7F13;&#x5B58;&#x7684;&#x89C6;&#x56FE;&#x3002;</p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../6 前端.html" class="navigation navigation-prev " aria-label="Previous page: 6 前端">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6-2 本地化.html" class="navigation navigation-next " aria-label="Next page: 6-2 本地化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6-1 Blade模版","level":"1.7.1","depth":2,"next":{"title":"6-2 本地化","level":"1.7.2","depth":2,"path":"Chapter6/6-2 本地化.md","ref":"Chapter6/6-2 本地化.md","articles":[]},"previous":{"title":"6 前端","level":"1.7","depth":1,"path":"6 前端.md","ref":"6 前端.md","articles":[{"title":"6-1 Blade模版","level":"1.7.1","depth":2,"path":"Chapter6/6-1 Blade模版.md","ref":"Chapter6/6-1 Blade模版.md","articles":[]},{"title":"6-2 本地化","level":"1.7.2","depth":2,"path":"Chapter6/6-2 本地化.md","ref":"Chapter6/6-2 本地化.md","articles":[]},{"title":"6-3 前端指南","level":"1.7.3","depth":2,"path":"Chapter6/6-3 前端指南.md","ref":"Chapter6/6-3 前端指南.md","articles":[]},{"title":"6-4 编辑资源Mix","level":"1.7.4","depth":2,"path":"Chapter6/6-4 编辑资源Mix.md","ref":"Chapter6/6-4 编辑资源Mix.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["fontsettings","sharing","lunr","search","highlight","livereload","livereload"],"pluginsConfig":{"fontsettings":{"family":"sans","size":2,"theme":"white"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"search":{},"highlight":{},"livereload":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter6/6-1 Blade模版.md","mtime":"2018-10-29T12:49:57.104Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T12:52:17.553Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+
