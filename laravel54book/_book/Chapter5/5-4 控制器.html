@@ -1,0 +1,1654 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5-4 控制器 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-yahei/yahei.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5-5 请求.html" />
+    
+    
+    <link rel="prev" href="5-3 CSRF保护.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../1 前言.html">
+            
+                <a href="../1 前言.html">
+            
+                    
+                    1 前言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1-1 翻译说明.html">
+            
+                <a href="../Chapter1/1-1 翻译说明.html">
+            
+                    
+                    1-1 翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1-2 发行说明.html">
+            
+                <a href="../Chapter1/1-2 发行说明.html">
+            
+                    
+                    1-2 发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Chapter1/1-3 升级说明.html">
+            
+                <a href="../Chapter1/1-3 升级说明.html">
+            
+                    
+                    1-3 升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Chapter1/1-4 贡献引导.html">
+            
+                <a href="../Chapter1/1-4 贡献引导.html">
+            
+                    
+                    1-4 贡献引导
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2 入门指南.html">
+            
+                <a href="../2 入门指南.html">
+            
+                    
+                    2 入门指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Chapter2/2-1 安装.html">
+            
+                <a href="../Chapter2/2-1 安装.html">
+            
+                    
+                    2-1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Chapter2/2-2 配置信息.html">
+            
+                <a href="../Chapter2/2-2 配置信息.html">
+            
+                    
+                    2-2 配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Chapter2/2-3 文件夹结构.html">
+            
+                <a href="../Chapter2/2-3 文件夹结构.html">
+            
+                    
+                    2-3 文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Chapter2/2-4 请求周期.html">
+            
+                <a href="../Chapter2/2-4 请求周期.html">
+            
+                    
+                    2-4 请求周期 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../3 开发环境部署.html">
+            
+                <a href="../3 开发环境部署.html">
+            
+                    
+                    3 开发环境部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Chapter3/3-1 Homestead.html">
+            
+                <a href="../Chapter3/3-1 Homestead.html">
+            
+                    
+                    3-1 Homestead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Chapter3/3-2 Valet.html">
+            
+                <a href="../Chapter3/3-2 Valet.html">
+            
+                    
+                    3-2 Valet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../4 核心概念.html">
+            
+                <a href="../4 核心概念.html">
+            
+                    
+                    4 核心概念
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4-1 服务容器.html">
+            
+                <a href="../Chapter4/4-1 服务容器.html">
+            
+                    
+                    4-1 服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4-2 服务提供者.html">
+            
+                <a href="../Chapter4/4-2 服务提供者.html">
+            
+                    
+                    4-2 服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4-3 Facades.html">
+            
+                <a href="../Chapter4/4-3 Facades.html">
+            
+                    
+                    4-3 Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Chapter4/4-4 Contracts.html">
+            
+                <a href="../Chapter4/4-4 Contracts.html">
+            
+                    
+                    4-4 Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../5 HTTP层.html">
+            
+                <a href="../5 HTTP层.html">
+            
+                    
+                    5 HTTP层
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="5-1 路由.html">
+            
+                <a href="5-1 路由.html">
+            
+                    
+                    5-1 路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="5-2 中间件.html">
+            
+                <a href="5-2 中间件.html">
+            
+                    
+                    5-2 中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="5-3 CSRF保护.html">
+            
+                <a href="5-3 CSRF保护.html">
+            
+                    
+                    5-3 CSRF保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4" data-path="5-4 控制器.html">
+            
+                <a href="5-4 控制器.html">
+            
+                    
+                    5-4 控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="5-5 请求.html">
+            
+                <a href="5-5 请求.html">
+            
+                    
+                    5-5 请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="5-6 响应.html">
+            
+                <a href="5-6 响应.html">
+            
+                    
+                    5-6 响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="5-7 视图.html">
+            
+                <a href="5-7 视图.html">
+            
+                    
+                    5-7 视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="5-8 Session.html">
+            
+                <a href="5-8 Session.html">
+            
+                    
+                    5-8 Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="5-9 表单验证.html">
+            
+                <a href="5-9 表单验证.html">
+            
+                    
+                    5-9 表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../6 前端.html">
+            
+                <a href="../6 前端.html">
+            
+                    
+                    6 前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Chapter6/6-1 Blade模版.html">
+            
+                <a href="../Chapter6/6-1 Blade模版.html">
+            
+                    
+                    6-1 Blade模版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Chapter6/6-2 本地化.html">
+            
+                <a href="../Chapter6/6-2 本地化.html">
+            
+                    
+                    6-2 本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Chapter6/6-3 前端指南.html">
+            
+                <a href="../Chapter6/6-3 前端指南.html">
+            
+                    
+                    6-3 前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Chapter6/6-4 编辑资源Mix.html">
+            
+                <a href="../Chapter6/6-4 编辑资源Mix.html">
+            
+                    
+                    6-4 编辑资源Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../7 安全.html">
+            
+                <a href="../7 安全.html">
+            
+                    
+                    7 安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Chapter7/7-1 用户认证.html">
+            
+                <a href="../Chapter7/7-1 用户认证.html">
+            
+                    
+                    7-1 用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                <a href="../Chapter7/7-2 Passport OAuth 认证.html">
+            
+                    
+                    7-2 Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Chapter7/7-3 用户授权.html">
+            
+                <a href="../Chapter7/7-3 用户授权.html">
+            
+                    
+                    7-3 用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Chapter7/7-4 加密解密.html">
+            
+                <a href="../Chapter7/7-4 加密解密.html">
+            
+                    
+                    7-4 加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Chapter7/7-5 哈希.html">
+            
+                <a href="../Chapter7/7-5 哈希.html">
+            
+                    
+                    7-5 哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Chapter7/7-6 重置密码.html">
+            
+                <a href="../Chapter7/7-6 重置密码.html">
+            
+                    
+                    7-6 重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../8 综合话题.html">
+            
+                <a href="../8 综合话题.html">
+            
+                    
+                    8 综合话题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Chapter8/8-1 Artisan命令行.html">
+            
+                <a href="../Chapter8/8-1 Artisan命令行.html">
+            
+                    
+                    8-1 Artisan命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Chapter8/8-2 广播系统.html">
+            
+                <a href="../Chapter8/8-2 广播系统.html">
+            
+                    
+                    8-2 广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Chapter8/8-3 缓存系统.html">
+            
+                <a href="../Chapter8/8-3 缓存系统.html">
+            
+                    
+                    8-3 缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Chapter8/8-4 集合.html">
+            
+                <a href="../Chapter8/8-4 集合.html">
+            
+                    
+                    8-4 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../Chapter8/8-5 错误与日志.html">
+            
+                <a href="../Chapter8/8-5 错误与日志.html">
+            
+                    
+                    8-5 错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../Chapter8/8-6 事件系统.html">
+            
+                <a href="../Chapter8/8-6 事件系统.html">
+            
+                    
+                    8-6 事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../Chapter8/8-7 文件存储.html">
+            
+                <a href="../Chapter8/8-7 文件存储.html">
+            
+                    
+                    8-7 文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../Chapter8/8-8 辅助函数.html">
+            
+                <a href="../Chapter8/8-8 辅助函数.html">
+            
+                    
+                    8-8 辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../Chapter8/8-9 邮件发送.html">
+            
+                <a href="../Chapter8/8-9 邮件发送.html">
+            
+                    
+                    8-9 邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../Chapter8/8-10 消息通知.html">
+            
+                <a href="../Chapter8/8-10 消息通知.html">
+            
+                    
+                    8-10 消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../Chapter8/8-11 扩展包开发.html">
+            
+                <a href="../Chapter8/8-11 扩展包开发.html">
+            
+                    
+                    8-11 扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../Chapter8/8-12 队列.html">
+            
+                <a href="../Chapter8/8-12 队列.html">
+            
+                    
+                    8-12 队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../Chapter8/8-13 任务调度.html">
+            
+                <a href="../Chapter8/8-13 任务调度.html">
+            
+                    
+                    8-13 任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../9 数据库.html">
+            
+                <a href="../9 数据库.html">
+            
+                    
+                    9 数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Chapter9/9-1 快速入门.html">
+            
+                <a href="../Chapter9/9-1 快速入门.html">
+            
+                    
+                    9-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Chapter9/9-2 查询构造器.html">
+            
+                <a href="../Chapter9/9-2 查询构造器.html">
+            
+                    
+                    9-2 查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Chapter9/9-3 分页.html">
+            
+                <a href="../Chapter9/9-3 分页.html">
+            
+                    
+                    9-3 分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../Chapter9/9-4 数据库迁移.html">
+            
+                <a href="../Chapter9/9-4 数据库迁移.html">
+            
+                    
+                    9-4 数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../Chapter9/9-5 数据填充.html">
+            
+                <a href="../Chapter9/9-5 数据填充.html">
+            
+                    
+                    9-5 数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../Chapter9/9-6 Redis.html">
+            
+                <a href="../Chapter9/9-6 Redis.html">
+            
+                    
+                    9-6 Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../10  Eloquent ORM.html">
+            
+                <a href="../10  Eloquent ORM.html">
+            
+                    
+                    10 Eloquent ORM
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Chapter10/10-1 快速入门.html">
+            
+                <a href="../Chapter10/10-1 快速入门.html">
+            
+                    
+                    10-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Chapter10/10-2 模型关联.html">
+            
+                <a href="../Chapter10/10-2 模型关联.html">
+            
+                    
+                    10-2 模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Chapter10/10-3 Eloquent 集合.html">
+            
+                <a href="../Chapter10/10-3 Eloquent 集合.html">
+            
+                    
+                    10-3 Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Chapter10/10-4 修改器.html">
+            
+                <a href="../Chapter10/10-4 修改器.html">
+            
+                    
+                    10-4 修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Chapter10/10-5 序列化.html">
+            
+                <a href="../Chapter10/10-5 序列化.html">
+            
+                    
+                    10-5 序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../11 测试.html">
+            
+                <a href="../11 测试.html">
+            
+                    
+                    11 测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Chapter11/11-1 快速入门.html">
+            
+                <a href="../Chapter11/11-1 快速入门.html">
+            
+                    
+                    11-1 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Chapter11/11-2 HTTP 测试.html">
+            
+                <a href="../Chapter11/11-2 HTTP 测试.html">
+            
+                    
+                    11-2 HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                <a href="../Chapter11/11-3 浏览器测试 Dusk.html">
+            
+                    
+                    11-3 浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Chapter11/11-4 数据库测试.html">
+            
+                <a href="../Chapter11/11-4 数据库测试.html">
+            
+                    
+                    11-4 数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Chapter11/11-5 测试模拟器.html">
+            
+                <a href="../Chapter11/11-5 测试模拟器.html">
+            
+                    
+                    11-5 测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../12 官方扩展包.html">
+            
+                <a href="../12 官方扩展包.html">
+            
+                    
+                    12 官方扩展包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                <a href="../Chapter12/12-1 Cashier 交易工具包.html">
+            
+                    
+                    12-1 Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                <a href="../Chapter12/12-2 Envoy 部署工具.html">
+            
+                    
+                    12-2 Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                <a href="../Chapter12/12-3  Scout 全文搜索.html">
+            
+                    
+                    12-3 Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                <a href="../Chapter12/12-4 Socialite 社会化登录.html">
+            
+                    
+                    12-4 Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5-4 控制器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;-http-&#x63A7;&#x5236;&#x5668;">Laravel &#x7684; HTTP &#x63A7;&#x5236;&#x5668;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#basic-controllers">&#x57FA;&#x7840;&#x63A7;&#x5236;&#x5668;</a><ul>
+<li><a href="#defining-controllers">&#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x5668;</a></li>
+<li><a href="#controllers-and-namespaces">&#x63A7;&#x5236;&#x5668;&#x4E0E;&#x547D;&#x540D;&#x7A7A;&#x95F4;</a></li>
+<li><a href="#single-action-controllers">&#x5355;&#x4E00;&#x64CD;&#x4F5C;&#x63A7;&#x5236;&#x5668;</a></li>
+</ul>
+</li>
+<li><a href="#controller-middleware">&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x95F4;&#x4EF6;</a></li>
+<li><a href="#resource-controllers">&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;</a><ul>
+<li><a href="#restful-partial-resource-routes">&#x90E8;&#x5206;&#x8D44;&#x6E90;&#x8DEF;&#x7531;</a></li>
+<li><a href="#restful-naming-resource-routes">&#x547D;&#x540D;&#x8D44;&#x6E90;&#x8DEF;&#x7531;</a></li>
+<li><a href="#restful-naming-resource-route-parameters">&#x547D;&#x540D;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x53C2;&#x6570;</a></li>
+<li><a href="#restful-localizing-resource-uris">&#x672C;&#x5730;&#x5316;&#x8D44;&#x6E90; URI</a></li>
+<li><a href="#restful-supplementing-resource-controllers">&#x9644;&#x52A0;&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;</a></li>
+</ul>
+</li>
+<li><a href="#dependency-injection-and-controllers">&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x4E0E;&#x63A7;&#x5236;&#x5668;</a></li>
+<li><a href="#route-caching">&#x8DEF;&#x7531;&#x7F13;&#x5B58;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x9664;&#x4E86;&#x5728;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#x4E2D;&#x4EE5;&#x95ED;&#x5305;&#x7684;&#x5F62;&#x5F0F;&#x5B9A;&#x4E49;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x903B;&#x8F91;&#x5916;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x8FD8;&#x60F3;&#x4F7F;&#x7528;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x6765;&#x7EC4;&#x7EC7;&#x6B64;&#x7C7B;&#x64CD;&#x4F5C;&#x3002;&#x63A7;&#x5236;&#x5668;&#x80FD;&#x591F;&#x5C06;&#x76F8;&#x5173;&#x7684;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x903B;&#x8F91;&#x7EC4;&#x6210;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7C7B;&#x3002;&#x63A7;&#x5236;&#x5668;&#x88AB;&#x5B58;&#x653E;&#x5728; <code>app/Http/Controllers</code> &#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p><a name="basic-controllers"></a></p>
+<h2 id="&#x57FA;&#x7840;&#x63A7;&#x5236;&#x5668;">&#x57FA;&#x7840;&#x63A7;&#x5236;&#x5668;</h2>
+<p><a name="defining-controllers"></a></p>
+<h3 id="&#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x5668;">&#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x5668;</h3>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x7840;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8BE5;&#x63A7;&#x5236;&#x5668;&#x7EE7;&#x627F;&#x4E86; Laravel &#x5185;&#x7F6E;&#x7684;&#x57FA;&#x7840;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x3002;&#x8BE5;&#x57FA;&#x7840;&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x4FBF;&#x6377;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982; <code>middleware</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x7ED9;&#x63A7;&#x5236;&#x5668;&#x64CD;&#x4F5C;&#x6DFB;&#x52A0;&#x4E2D;&#x95F4;&#x4EF6;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Http\Controllers\Controller;
+
+class UserController extends Controller
+{
+    /**
+     * &#x5C55;&#x793A;&#x7ED9;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#x3002;
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; User::findOrFail($id)]);
+    }
+}
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x8BE5;&#x63A7;&#x5236;&#x5668;&#x64CD;&#x4F5C;&#x7684;&#x8DEF;&#x7531;&#xFF1A;</p>
+<pre><code>Route::get(&apos;user/{id}&apos;, &apos;UserController@show&apos;);
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x5F53;&#x8BF7;&#x6C42;&#x548C;&#x6B64;&#x7279;&#x5B9A;&#x8DEF;&#x7531;&#x7684; URI &#x5339;&#x914D;&#x65F6;&#xFF0C;<code>UserController</code> &#x7C7B;&#x7684; <code>show</code> &#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x88AB;&#x6267;&#x884C;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#x4E5F;&#x4F1A;&#x88AB;&#x4F20;&#x9012;&#x81F3;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>{tip} &#x63A7;&#x5236;&#x5668;&#x5E76;&#x4E0D;&#x662F; <strong>&#x4E00;&#x5B9A;</strong> &#x8981;&#x7EE7;&#x627F;&#x57FA;&#x7840;&#x7C7B;&#x3002;&#x53EA;&#x662F;&#xFF0C;&#x4F60;&#x5C06;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x4E00;&#x4E9B;&#x4FBF;&#x6377;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982; <code>middleware</code>&#xFF0C;<code>validate</code> &#x548C; <code>dispatch</code> &#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<p><a name="controllers-and-namespaces"></a></p>
+<h3 id="&#x63A7;&#x5236;&#x5668;&#x4E0E;&#x547D;&#x540D;&#x7A7A;&#x95F4;">&#x63A7;&#x5236;&#x5668;&#x4E0E;&#x547D;&#x540D;&#x7A7A;&#x95F4;</h3>
+<p>&#x8FD9;&#x4E00;&#x70B9;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x5668;&#x8DEF;&#x7531;&#x65F6;&#xFF0C;&#x4E0D;&#x5FC5;&#x6307;&#x5B9A;&#x5B8C;&#x6574;&#x7684;&#x63A7;&#x5236;&#x5668;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;<code>RouteServiceProvider</code> &#x4F1A;&#x5728;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x8DEF;&#x7531;&#x7EC4;&#x4E2D;&#x52A0;&#x8F7D;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x7C7B;&#x540D;&#x4E2D; <code>App\Http\Controllers</code> &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E4B;&#x540E;&#x7684;&#x90E8;&#x5206;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x9009;&#x62E9;&#x5C06;&#x63A7;&#x5236;&#x5668;&#x5B58;&#x653E;&#x5728; <code>App\Http\Controllers</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x53EA;&#x9700;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x4E8E;&#x6839;&#x547D;&#x540D;&#x7A7A;&#x95F4; <code>App\Http\Controllers</code> &#x7684;&#x7279;&#x5B9A;&#x7C7B;&#x540D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;&#x5B8C;&#x6574;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x662F; <code>App\Http\Controllers\Photos\AdminController</code>&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x6CE8;&#x518C;&#x6307;&#x5411;&#x8BE5;&#x63A7;&#x5236;&#x5668;&#x7684;&#x8DEF;&#x7531;&#xFF1A;</p>
+<pre><code>Route::get(&apos;foo&apos;, &apos;Photos\AdminController@method&apos;);
+</code></pre><p><a name="single-action-controllers"></a></p>
+<h3 id="&#x5355;&#x4E00;&#x64CD;&#x4F5C;&#x63A7;&#x5236;&#x5668;">&#x5355;&#x4E00;&#x64CD;&#x4F5C;&#x63A7;&#x5236;&#x5668;</h3>
+<p>&#x5982;&#x679C;&#x60F3;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53EA;&#x5904;&#x7406;&#x5355;&#x4E2A;&#x64CD;&#x4F5C;&#x7684;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x53EA;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A; <code>__invoke</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\User;
+use App\Http\Controllers\Controller;
+
+class ShowProfile extends Controller
+{
+    /**
+     * &#x5C55;&#x793A;&#x7ED9;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#x3002;
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function __invoke($id)
+    {
+        return view(&apos;user.profile&apos;, [&apos;user&apos; =&gt; User::findOrFail($id)]);
+    }
+}
+</code></pre><p>&#x4E3A;&#x5355;&#x4E00;&#x64CD;&#x4F5C;&#x63A7;&#x5236;&#x5668;&#x6CE8;&#x518C;&#x8DEF;&#x7531;&#x65F6;&#xFF0C;&#x65E0;&#x9700;&#x6307;&#x5B9A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>Route::get(&apos;user/{id}&apos;, &apos;ShowProfile&apos;);
+</code></pre><p><a name="controller-middleware"></a></p>
+<h2 id="&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x95F4;&#x4EF6;">&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x95F4;&#x4EF6;</h2>
+<p><a href="../docs/middleware">&#x4E2D;&#x95F4;&#x4EF6;</a> &#x53EF;&#x4EE5;&#x5728;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x7ED9;&#x63A7;&#x5236;&#x5668;&#x8DEF;&#x7531;&#xFF1A;</p>
+<pre><code>Route::get(&apos;profile&apos;, &apos;UserController@show&apos;)-&gt;middleware(&apos;auth&apos;);
+</code></pre><p>&#x7136;&#x800C;&#xFF0C;&#x5728;&#x63A7;&#x5236;&#x5668;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x6307;&#x5B9A;&#x4E2D;&#x95F4;&#x4EF6;&#x4F1A;&#x66F4;&#x4E3A;&#x4FBF;&#x6377;&#x3002;&#x5728;&#x63A7;&#x5236;&#x5668;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528; <code>middleware</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x5C06;&#x4E2D;&#x95F4;&#x4EF6;&#x6307;&#x5B9A;&#x7ED9;&#x63A7;&#x5236;&#x5668;&#x64CD;&#x4F5C;&#x3002;&#x4F60;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x7EA6;&#x675F;&#x4E2D;&#x95F4;&#x4EF6;&#x53EA;&#x5BF9;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x65B9;&#x6CD5;&#x751F;&#x6548;&#xFF1A;</p>
+<pre><code>class UserController extends Controller
+{
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this-&gt;middleware(&apos;auth&apos;);
+
+        $this-&gt;middleware(&apos;log&apos;)-&gt;only(&apos;index&apos;);
+
+        $this-&gt;middleware(&apos;subscribed&apos;)-&gt;except(&apos;store&apos;);
+    }
+}
+</code></pre><p>&#x63A7;&#x5236;&#x5668;&#x4E5F;&#x5141;&#x8BB8;&#x4F60;&#x4F7F;&#x7528;&#x95ED;&#x5305;&#x7684;&#x65B9;&#x5F0F;&#x6CE8;&#x518C;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;&#x8FD9;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x5F88;&#x4FBF;&#x6377;&#x5730;&#x4E3A;&#x5355;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x7C7B;&#xFF1A;</p>
+<pre><code>$this-&gt;middleware(function ($request, $next) {
+    // ...
+
+    return $next($request);
+});
+</code></pre><blockquote>
+<p>{tip} &#x4F60;&#x53EF;&#x80FD;&#x5C06;&#x4E2D;&#x95F4;&#x4EF6;&#x6307;&#x5B9A;&#x5230;&#x63A7;&#x5236;&#x5668;&#x7684;&#x90E8;&#x5206;&#x64CD;&#x4F5C;&#x4E0A;&#xFF0C;&#x7136;&#x800C;&#xFF0C;&#x8FD9;&#x4F1A;&#x4F7F;&#x4F60;&#x7684;&#x63A7;&#x5236;&#x5668;&#x8FC7;&#x4E8E;&#x81C3;&#x80BF;&#x3002;&#x6362;&#x4E2A;&#x89D2;&#x5EA6;&#xFF0C;&#x8003;&#x8651;&#x5C06;&#x63A7;&#x5236;&#x5668;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x66F4;&#x5C0F;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;</p>
+</blockquote>
+<p><a name="resource-controllers"></a></p>
+<h2 id="&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;">&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;</h2>
+<p>Laravel &#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x53EF;&#x4EE5;&#x5C06;&#x5178;&#x578B;&#x7684;&#x300C;CURD&#x300D;&#x8DEF;&#x7531;&#x6307;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x4E0A;&#xFF0C;&#x4EC5;&#x9700;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#x6765;&#x5904;&#x7406;&#x6240;&#x6709;&#x5E94;&#x7528;&#x4FDD;&#x5B58;&#x7684;&#x300C;&#x76F8;&#x7247;&#x300D;&#x7684; HTTP &#x8BF7;&#x6C42;&#x3002;&#x4F7F;&#x7528; Artisan &#x547D;&#x4EE4; <code>make:controller</code>&#xFF0C;&#x5C31;&#x80FD;&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#xFF1A;</p>
+<pre><code>php artisan make:controller PhotoController --resource
+</code></pre><p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x5728; <code>app/Http/Controllers/PhotoController.php</code> &#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x63A7;&#x5236;&#x5668;&#xFF0C;&#x8BE5;&#x63A7;&#x5236;&#x5668;&#x5305;&#x542B;&#x4E86;&#x5404;&#x79CD;&#x53EF;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7ED9;&#x63A7;&#x5236;&#x5668;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#xFF1A;</p>
+<pre><code>Route::resource(&apos;photos&apos;, &apos;PhotoController&apos;);
+</code></pre><p>&#x8FD9;&#x4E2A;&#x8DEF;&#x7531;&#x58F0;&#x660E;&#x4F1A;&#x521B;&#x5EFA;&#x591A;&#x4E2A;&#x8DEF;&#x7531;&#x6765;&#x5904;&#x7406;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x8D44;&#x6E90;&#x64CD;&#x4F5C;&#x3002;&#x524D;&#x9762;&#x751F;&#x6210;&#x7684;&#x63A7;&#x5236;&#x5668;&#x5DF2;&#x7ECF;&#x5305;&#x542B;&#x4E86;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD8;&#x5305;&#x62EC;&#x4E86; HTTP &#x52A8;&#x4F5C;&#x548C;&#x64CD;&#x4F5C; URI &#x7684;&#x6CE8;&#x91CA;&#x3002;</p>
+<h4 id="&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;&#x64CD;&#x4F5C;&#x5904;&#x7406;">&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;&#x64CD;&#x4F5C;&#x5904;&#x7406;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x52A8;&#x4F5C;</th>
+<th>URI</th>
+<th>&#x64CD;&#x4F5C;</th>
+<th>&#x8DEF;&#x7531;&#x540D;&#x79F0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/photos</code></td>
+<td>index</td>
+<td>photos.index</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/photos/create</code></td>
+<td>create</td>
+<td>photos.create</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/photos</code></td>
+<td>store</td>
+<td>photos.store</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/photos/{photo}</code></td>
+<td>show</td>
+<td>photos.show</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/photos/{photo}/edit</code></td>
+<td>edit</td>
+<td>photos.edit</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td><code>/photos/{photo}</code></td>
+<td>update</td>
+<td>photos.update</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/photos/{photo}</code></td>
+<td>destroy</td>
+<td>photos.destroy</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x6A21;&#x578B;">&#x6307;&#x5B9A;&#x8D44;&#x6E90;&#x6A21;&#x578B;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x8DEF;&#x7531;&#x6A21;&#x578B;&#x7ED1;&#x5B9A;&#xFF0C;&#x5E76;&#x4E14;&#x60F3;&#x5728;&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#x5BF9;&#x67D0;&#x4E2A;&#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#x505A;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x751F;&#x6210;&#x63A7;&#x5236;&#x5668;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528; <code>--model</code> &#x9009;&#x9879;&#xFF1A;</p>
+<pre><code>php artisan make:controller PhotoController --resource --model=Photo
+</code></pre><h4 id="&#x4F2A;&#x9020;&#x8868;&#x5355;&#x65B9;&#x6CD5;">&#x4F2A;&#x9020;&#x8868;&#x5355;&#x65B9;&#x6CD5;</h4>
+<p>&#x9001; <code>PUT</code>&#xFF0C;<code>PATCH</code> &#x6216;&#x8005; <code>DELETE</code> &#x8BF7;&#x6C42;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>_method</code> &#x9690;&#x85CF;&#x57DF;&#x5B57;&#x6BB5;&#x6765;&#x4F2A;&#x9020; HTTP &#x52A8;&#x4F5C;&#x3002;<code>method_field</code> &#x8F85;&#x52A9;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4E3A;&#x4F60;&#x521B;&#x5EFA;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre><code>{{ method_field(&apos;PUT&apos;) }}
+</code></pre><p><a name="restful-partial-resource-routes"></a></p>
+<h3 id="&#x90E8;&#x5206;&#x8D44;&#x6E90;&#x8DEF;&#x7531;">&#x90E8;&#x5206;&#x8D44;&#x6E90;&#x8DEF;&#x7531;</h3>
+<p>&#x58F0;&#x660E;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x63A7;&#x5236;&#x5668;&#x5904;&#x7406;&#x90E8;&#x5206;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x4F7F;&#x7528;&#x5168;&#x90E8;&#x9ED8;&#x8BA4;&#x7684;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre><code>Route::resource(&apos;photo&apos;, &apos;PhotoController&apos;, [&apos;only&apos; =&gt; [
+    &apos;index&apos;, &apos;show&apos;
+]]);
+
+Route::resource(&apos;photo&apos;, &apos;PhotoController&apos;, [&apos;except&apos; =&gt; [
+    &apos;create&apos;, &apos;store&apos;, &apos;update&apos;, &apos;destroy&apos;
+]]);
+</code></pre><p><a name="restful-naming-resource-routes"></a></p>
+<h3 id="&#x547D;&#x540D;&#x8D44;&#x6E90;&#x8DEF;&#x7531;">&#x547D;&#x540D;&#x8D44;&#x6E90;&#x8DEF;&#x7531;</h3>
+<p>&#x9ED8;&#x8BA4;&#x5730;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x64CD;&#x4F5C;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x8DEF;&#x7531;&#x540D;&#x79F0;&#xFF1B;&#x4E0D;&#x8FC7;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x53C2;&#x6570;&#x9009;&#x9879;&#x4E2D;&#x4F20;&#x5165;&#x4E00;&#x4E2A; <code>names</code> &#x6570;&#x7EC4;&#x6765;&#x91CD;&#x5199;&#x8FD9;&#x4E9B;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre><code>Route::resource(&apos;photo&apos;, &apos;PhotoController&apos;, [&apos;names&apos; =&gt; [
+    &apos;create&apos; =&gt; &apos;photo.build&apos;
+]]);
+</code></pre><p><a name="restful-naming-resource-route-parameters"></a></p>
+<h3 id="&#x547D;&#x540D;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x53C2;&#x6570;">&#x547D;&#x540D;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x53C2;&#x6570;</h3>
+<p>&#x9ED8;&#x8BA4;&#x5730;&#xFF0C;<code>Route::resource</code> &#x4F1A;&#x57FA;&#x4E8E;&#x8D44;&#x6E90;&#x540D;&#x79F0;&#x7684;&#x300C;&#x5355;&#x6570;&#x300D;&#x5F62;&#x5F0F;&#x751F;&#x6210;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x9009;&#x9879;&#x6570;&#x7EC4;&#x4E2D;&#x4F20;&#x5165; <code>parameters</code> &#x53C2;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x6BCF;&#x4E2A;&#x8D44;&#x6E90;&#x57FA;&#x7840;&#x4E2D;&#x53C2;&#x6570;&#x540D;&#x79F0;&#x7684;&#x91CD;&#x5199;&#x3002;<code>parameters</code> &#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x4E2A;&#x5C06;&#x8D44;&#x6E90;&#x540D;&#x79F0;&#x548C;&#x53C2;&#x6570;&#x540D;&#x79F0;&#x8054;&#x7CFB;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>Route::resource(&apos;user&apos;, &apos;AdminUserController&apos;, [&apos;parameters&apos; =&gt; [
+    &apos;user&apos; =&gt; &apos;admin_user&apos;
+]]);
+</code></pre><p> &#x4E0A;&#x4F8B;&#x5C06;&#x4F1A;&#x4E3A; <code>show</code> &#x65B9;&#x6CD5;&#x7684;&#x8DEF;&#x7531;&#x751F;&#x6210;&#x5982;&#x4E0B;&#x7684; URI&#xFF1A;</p>
+<pre><code>/user/{admin_user}
+</code></pre><p><a name="restful-localizing-resource-uris"></a></p>
+<h3 id="&#x672C;&#x5730;&#x5316;&#x8D44;&#x6E90;-uri">&#x672C;&#x5730;&#x5316;&#x8D44;&#x6E90; URI</h3>
+<p>&#x9ED8;&#x8BA4;&#x5730;&#xFF0C;<code>Route::resource</code> &#x5C06;&#x4F1A;&#x7528;&#x82F1;&#x6587;&#x52A8;&#x8BCD;&#x521B;&#x5EFA;&#x8D44;&#x6E90; URI&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x672C;&#x5730;&#x5316; <code>create</code> &#x548C; <code>edit</code> &#x7684;&#x52A8;&#x4F5C;&#x540D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>Route::resourceVerb</code> &#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <code>AppServiceProvider</code> &#x7684; <code>boot</code> &#x65B9;&#x6CD5;&#x4E2D;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code>use Illuminate\Support\Facades\Route;
+
+/**
+ * &#x81EA;&#x5B9A;&#x4E49;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x3002;
+ *
+ * @return void
+ */
+public function boot()
+{
+    Route::resourceVerbs([
+        &apos;create&apos; =&gt; &apos;crear&apos;,
+        &apos;edit&apos; =&gt; &apos;editar&apos;,
+    ]);
+}
+</code></pre><p>&#x52A8;&#x4F5C;&#x540D;&#x88AB;&#x81EA;&#x5B9A;&#x4E49;&#x540E;&#xFF0C;&#x50CF; <code>Route::resource(&apos;fotos&apos;, &apos;PhtotController&apos;)</code> &#x8FD9;&#x6837;&#x6CE8;&#x518C;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x5C06;&#x4F1A;&#x4EA7;&#x751F;&#x5982;&#x4E0B;&#x7684; URI:</p>
+<pre><code>/fotos/crear
+
+/fotos/{foto}/editar
+</code></pre><p><a name="restful-supplementing-resource-controllers"></a></p>
+<h3 id="&#x9644;&#x52A0;&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;">&#x9644;&#x52A0;&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x9ED8;&#x8BA4;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x7531;&#x4E4B;&#x5916;&#x589E;&#x52A0;&#x8D44;&#x6E90;&#x63A7;&#x5236;&#x5668;&#x8DEF;&#x7531;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x5728;&#x8C03;&#x7528; <code>Route::resource</code> &#x4E4B;&#x524D;&#x5B9A;&#x4E49;&#x8FD9;&#x4E9B;&#x8DEF;&#x7531;&#xFF1B;&#x5426;&#x5219;&#xFF0C;<code>resource</code> &#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x7684;&#x8DEF;&#x7531;&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x5C0F;&#x5FC3;&#x8986;&#x76D6;&#x4F60;&#x7684;&#x9644;&#x52A0;&#x8DEF;&#x7531;&#xFF1A;</p>
+<pre><code>Route::get(&apos;photos/popular&apos;, &apos;PhotoController@method&apos;);
+
+Route::resource(&apos;photos&apos;, &apos;PhotoController&apos;);
+</code></pre><blockquote>
+<p>{tip} &#x8BB0;&#x4F4F;&#x4FDD;&#x6301;&#x63A7;&#x5236;&#x5668;&#x7684;&#x4E13;&#x4E00;&#x6027;&#x3002;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x5178;&#x578B;&#x7684;&#x8D44;&#x6E90;&#x64CD;&#x4F5C;&#x4E4B;&#x5916;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8003;&#x8651;&#x5C06;&#x4F60;&#x7684;&#x63A7;&#x5236;&#x5668;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x66F4;&#x5C0F;&#x7684;&#x63A7;&#x5236;&#x5668;&#x5427;&#x3002;</p>
+</blockquote>
+<p><a name="dependency-injection-and-controllers"></a></p>
+<h2 id="&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x4E0E;&#x63A7;&#x5236;&#x5668;">&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x4E0E;&#x63A7;&#x5236;&#x5668;</h2>
+<h4 id="&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6CE8;&#x5165;">&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6CE8;&#x5165;</h4>
+<p>Laravel &#x4F7F;&#x7528; <a href="../docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x6765;&#x89E3;&#x6790;&#x6240;&#x6709;&#x7684;&#x63A7;&#x5236;&#x5668;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x63A7;&#x5236;&#x5668;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x4E2D;&#x5BF9;&#x4EFB;&#x4F55;&#x4F9D;&#x8D56;&#x4F7F;&#x7528;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#xFF0C;&#x58F0;&#x660E;&#x7684;&#x4F9D;&#x8D56;&#x4F1A;&#x81EA;&#x52A8;&#x88AB;&#x89E3;&#x6790;&#x5E76;&#x6CE8;&#x5165;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x4F8B;&#x4E2D;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use App\Repositories\UserRepository;
+
+class UserController extends Controller
+{
+    /**
+     * &#x7528;&#x6237; repository &#x5B9E;&#x4F8B;&#x3002;
+     */
+    protected $users;
+
+    /**
+     * &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x4F8B;&#x3002;
+     *
+     * @param  UserRepository  $users
+     * @return void
+     */
+    public function __construct(UserRepository $users)
+    {
+        $this-&gt;users = $users;
+    }
+}
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5BF9;&#x4EFB;&#x4F55;&#x7684; <a href="../docs/contracts">Laravel contract</a> &#x4F7F;&#x7528;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#x3002;&#x5F53;&#x5BB9;&#x5668;&#x89E3;&#x6790; contract &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#x3002;&#x76F4;&#x63A5;&#x5C06;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;&#x63A7;&#x5236;&#x5668;&#x53EF;&#x80FD;&#x4F1A;&#x63D0;&#x4F9B;&#x66F4;&#x597D;&#x7684;&#x53EF;&#x6D4B;&#x8BD5;&#x6027;&#xFF0C;&#x4F46;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x7684;&#x9879;&#x76EE;&#x7684;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#x3002;</p>
+<h4 id="&#x65B9;&#x6CD5;&#x6CE8;&#x5165;">&#x65B9;&#x6CD5;&#x6CE8;&#x5165;</h4>
+<p>&#x9664;&#x4E86;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#x6CE8;&#x5165;&#x4E4B;&#x5916;&#xFF0C;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;&#x4F9D;&#x8D56;&#x7C7B;&#x578B;&#x7EA6;&#x675F;&#x3002;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x6CD5;&#x5C31;&#x662F;&#x5C06; <code>Illuminate\Http\Request</code> &#x5B9E;&#x4F8B;&#x6CE8;&#x5165;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#x4E2D;&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    /**
+     * &#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x65B0;&#x7528;&#x6237;&#x3002;
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        $name = $request-&gt;name;
+
+        //
+    }
+}
+</code></pre><p>&#x5982;&#x679C;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x4ECE;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#x4E2D;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#xFF0C;&#x53EA;&#x9700;&#x5728;&#x5176;&#x4ED6;&#x4F9D;&#x8D56;&#x540E;&#x5217;&#x51FA;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#x5373;&#x53EF;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x8DEF;&#x7531;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>Route::put(&apos;user/{id}&apos;, &apos;UserController@update&apos;);
+</code></pre><p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;&#x63A7;&#x5236;&#x5668;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5728;&#x4F7F;&#x7528; <code>Illuminate\Http\Request</code> &#x7C7B;&#x578B;&#x7EA6;&#x675F;&#x7684;&#x540C;&#x65F6;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x53C2;&#x6570; <code>id</code>&#xFF1A;</p>
+<pre><code>&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    /**
+     * &#x66F4;&#x65B0;&#x7ED9;&#x5B9A;&#x7528;&#x6237;&#x7684;&#x4FE1;&#x606F;&#x3002;
+     *
+     * @param  Request  $request
+     * @param  string  $id
+     * @return Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+}
+</code></pre><p><a name="route-caching"></a></p>
+<h2 id="&#x8DEF;&#x7531;&#x7F13;&#x5B58;">&#x8DEF;&#x7531;&#x7F13;&#x5B58;</h2>
+<blockquote>
+<p>{note} &#x57FA;&#x4E8E;&#x95ED;&#x5305;&#x7684;&#x8DEF;&#x7531;&#x5E76;&#x4E0D;&#x80FD;&#x88AB;&#x7F13;&#x5B58;&#x3002;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;&#x8DEF;&#x7531;&#x7F13;&#x5B58;&#xFF0C;&#x4F60;&#x5FC5;&#x987B;&#x5C06;&#x6240;&#x6709;&#x7684;&#x95ED;&#x5305;&#x8DEF;&#x7531;&#x8F6C;&#x6362;&#x6210;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x3002;</p>
+</blockquote>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x53EA;&#x7528;&#x5230;&#x4E86;&#x57FA;&#x4E8E;&#x63A7;&#x5236;&#x5668;&#x7684;&#x8DEF;&#x7531;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5E94;&#x8BE5;&#x5145;&#x5206;&#x5229;&#x7528; Laravel &#x7684;&#x8DEF;&#x7531;&#x7F13;&#x5B58;&#x3002;&#x4F7F;&#x7528;&#x8DEF;&#x7531;&#x7F13;&#x5B58;&#x5C06;&#x6781;&#x5927;&#x5730;&#x51CF;&#x5C11;&#x6CE8;&#x518C;&#x5168;&#x90E8;&#x5E94;&#x7528;&#x8DEF;&#x7531;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8DEF;&#x7531;&#x6CE8;&#x518C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x5FEB;&#x4E00;&#x767E;&#x500D;&#x3002;&#x8981;&#x751F;&#x6210;&#x8DEF;&#x7531;&#x7F13;&#x5B58;&#xFF0C;&#x53EA;&#x9700;&#x5728; Artisan &#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x6267;&#x884C; <code>route:cache</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre><code>php artisan route:cache
+</code></pre><p>&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4E4B;&#x540E;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x5C06;&#x4F1A;&#x52A0;&#x8F7D;&#x7F13;&#x5B58;&#x7684;&#x8DEF;&#x7531;&#x6587;&#x4EF6;&#x3002;&#x8BB0;&#x4F4F;&#xFF0C;&#x5982;&#x679C;&#x6DFB;&#x52A0;&#x4E86;&#x65B0;&#x7684;&#x8DEF;&#x7531;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5237;&#x65B0;&#x8DEF;&#x7531;&#x7F13;&#x5B58;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x53EA;&#x5728;&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x65F6;&#x624D;&#x8FD0;&#x884C; <code>route:cache</code> &#x547D;&#x4EE4;&#xFF1A;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>route:clear</code> &#x547D;&#x4EE4;&#x6E05;&#x9664;&#x8DEF;&#x7531;&#x7F13;&#x5B58;&#xFF1A;</p>
+<pre><code>php artisan route:clear
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="5-3 CSRF保护.html" class="navigation navigation-prev " aria-label="Previous page: 5-3 CSRF保护">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5-5 请求.html" class="navigation navigation-next " aria-label="Next page: 5-5 请求">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5-4 控制器","level":"1.6.4","depth":2,"next":{"title":"5-5 请求","level":"1.6.5","depth":2,"path":"Chapter5/5-5 请求.md","ref":"Chapter5/5-5 请求.md","articles":[]},"previous":{"title":"5-3 CSRF保护","level":"1.6.3","depth":2,"path":"Chapter5/5-3 CSRF保护.md","ref":"Chapter5/5-3 CSRF保护.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","yahei","livereload"],"pluginsConfig":{"yahei":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":18,"fontFamily":"Arial","paperSize":"a3","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":30,"left":30,"top":30,"bottom":50},"toc":true},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter5/5-4 控制器.md","mtime":"2018-10-29T07:40:07.870Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T08:18:39.164Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
